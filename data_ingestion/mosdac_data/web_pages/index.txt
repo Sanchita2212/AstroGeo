@@ -1,0 +1,187 @@
+URL: https://www.mosdac.gov.in/#main-content
+
+--- EXTRACTED TEXT ---
+Skip to main Content
+Secondary menu
+SignUp
+Login
+Logout
+Meteorological & Oceanographic Satellite Data Archival Centre
+Home
+Missions INSAT-3DR INSAT-3D KALPANA-1 INSAT-3A MeghaTropiques SARAL-AltiKa OCEANSAT-2 OCEANSAT-3 INSAT-3DS SCATSAT-1
+INSAT-3DR
+INSAT-3D
+KALPANA-1
+INSAT-3A
+MeghaTropiques
+SARAL-AltiKa
+OCEANSAT-2
+OCEANSAT-3
+INSAT-3DS
+SCATSAT-1
+Catalog Satellite Insitu (AWS) RADAR
+Satellite
+Insitu (AWS)
+RADAR
+Galleries Satellite Products Weather Forecast Ocean Forecast RADAR (DWR) Global Ocean Current
+Satellite Products
+Weather Forecast
+Ocean Forecast
+RADAR (DWR)
+Global Ocean Current
+Data Access Order Data Open Data Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy Cal-Val Forecast RSS Feeds
+Order Data
+Open Data Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy
+Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties
+Bayesian based MT-SAPHIR rainfall
+GPS derived Integrated water vapour
+GSMap ISRO Rain
+METEOSAT8 Cloud Properties
+Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture
+3D Volumetric TERLS DWRproduct
+Inland Water Height
+River Discharge
+Soil Moisture
+Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy
+Global Ocean Surface Current
+High Resolution Sea Surface Salinity
+Indian Mainland Coastal Product
+Ocean Subsurface
+Oceanic Eddies Detection
+Sea Ice Occurrence Probability
+Wave based Renewable Energy
+Cal-Val
+Forecast
+RSS Feeds
+Reports Calibration Insitu Relative Validation Data Quality Weather
+Calibration Insitu Relative
+Insitu
+Relative
+Validation
+Data Quality
+Weather
+Atlases
+Tools
+Sitemap
+Help
+Satellite Images
+RADAR
+Weather
+OceanState
+LIVE
+
+Services
+Forecast
+Nowcast
+Current Events
+Alerts
+Met Applications
+Ocean Applications
+City Weather 3-hourly Weather forecast.
+City Weather
+3-hourly Weather forecast.
+Cold Waves Cold wave prediction over India (WRF Model)
+Cold Waves
+Cold wave prediction over India (WRF Model)
+Cyclone Sat. Based Cyclone Obser. and Realtime Pred. over IO.
+Cyclone
+Sat. Based Cyclone Obser. and Realtime Pred. over IO.
+Heat Waves Heat Wave Prediction over India (WRF Model)
+Heat Waves
+Heat Wave Prediction over India (WRF Model)
+Heavy Rain Heavy Rain (>5mm/hr) forecast using NWP model.
+Heavy Rain
+Heavy Rain (>5mm/hr) forecast using NWP model.
+Lightning Lightning Forecast
+Lightning
+Lightning Forecast
+Monsoon Monsoon Prediction 2024
+Monsoon
+Monsoon Prediction 2024
+Sea State Sea State forecast in terms of Wave Height, Wave period etc.
+Sea State
+Sea State forecast in terms of Wave Height, Wave period etc.
+Solar & Wind 3 Days Solar and Wind Forecast for every 15 minutes
+Solar & Wind
+3 Days Solar and Wind Forecast for every 15 minutes
+Cloud Burst Cloud Burst Nowcast for 6 hours over Western Himalayan region.
+Cloud Burst
+Cloud Burst Nowcast for 6 hours over Western Himalayan region.
+Heavy Rain Satellite based nowcast for Heavy rain events for 6 hours.
+Heavy Rain
+Satellite based nowcast for Heavy rain events for 6 hours.
+AWS Time Series AWS Time Series
+AWS Time Series
+AWS Time Series
+Heavy Rain Heavy Rain Events
+Heavy Rain
+Heavy Rain Events
+MOSDAC LIVE Let's Interactively Visualise the Earth (LIVE)
+MOSDAC LIVE
+Let's Interactively Visualise the Earth (LIVE)
+Indian State Portal Alerts for Indian States
+Indian State Portal
+Alerts for Indian States
+South East Asian Countries Alerts for South East Asian Countries
+South East Asian Countries
+Alerts for South East Asian Countries
+Urja Solar Energy
+Urja
+Solar Energy
+VARSHA Rainfall
+VARSHA
+Rainfall
+VAYU Air Quality
+VAYU
+Air Quality
+Soil Moisture Soil Wetness Index
+Soil Moisture
+Soil Wetness Index
+SCORPIO Sat. Based Cyclone Obser. and Realtime Pred. over IO.
+SCORPIO
+Sat. Based Cyclone Obser. and Realtime Pred. over IO.
+OIL SPILL ALTIMETER LCS-CORES AND STRETCHING DIRECTIONS
+OIL SPILL
+ALTIMETER LCS-CORES AND STRETCHING DIRECTIONS
+Ocean Subsurface Fields Ocean Subsurface Fields
+Ocean Subsurface Fields
+Ocean Subsurface Fields
+Safe Beach RIP Current Forecast for All-India beaches.
+Safe Beach
+RIP Current Forecast for All-India beaches.
+Ocean-Eye Ocean State Forecast
+Ocean-Eye
+Ocean State Forecast
+Eddy Currents Eddy Currents
+Eddy Currents
+Eddy Currents
+Announcements
+Search
+Follow Us
+
+
+
+Website owned and maintained by MOSDAC, Space Applications Centre, Indian Space Research Organisation, Govt. of INDIA.
+
+Feedback
+About Us
+Contact Us
+Copyright Policy
+Data Access Policy
+Hyperlink Policy
+Privacy Policy
+Website Policies
+Terms & Conditions
+FAQs
+
+
+
+
+
+
+"Ver 3.0; Last reviewed and updated on
+07 Aug, 2025& Served By:
+Web-Srv-Pri
+
+
+--- EXTRACTED TABLES ---

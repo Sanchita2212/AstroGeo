@@ -1,0 +1,29 @@
+# For the Streamlit UI
+streamlit
+pandas
+plotly
+folium
+streamlit-folium
+
+# For the Data Ingestion Agent (Web Crawling & PDF processing)
+requests
+beautifulsoup4
+PyMuPDF
+
+# For the Knowledge Graph Agent (NLP & Relationship Extraction)
+spacy
+tqdm
+
+# For the Satellite Data Processing (NetCDF files)
+netCDF4
+numpy
+xarray
+rasterio
+geopandas
+
+# For advanced RAG & Vector Search (future steps)
+langchain
+faiss-cpu
+chromadb
+neo4j
+networkx

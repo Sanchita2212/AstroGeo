@@ -1,0 +1,913 @@
+SC1/DP/L4FORMAT-DOC/V1.1/JUL2017 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SCATSAT-1 Level 4 Data Products 
+Format Document 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+By 
+Scatsat1 DP Team 
+ 
+ 
+ 
+ 
+Microwave Data Processing Division 
+Signal and Image Processing Group 
+Space Applications Centre 
+Ahmedabad 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DOCUMENT CHANGE HISTORY 
+ 
+ 
+Version 
+No. 
+Date 
+Changed 
+section 
+Nature of change 
+(A,M,D)* 
+Description 
+1.1 
+01/08/2017 2.2 
+M 
+Updated data decoding 
+formulae 
+ 
+ 
+3 
+M 
+Changed file names to 
+reflect version number 
+ 
+ 
+4 
+M 
+Updated xml outputs to 
+with those generated with 
+Ver. 1.1 
+ 
+ 
+5 
+M 
+Updated browse images 
+with those generated with 
+Ver. 1.1 
+ 
+ 
+ 
+ 
+ 
+ 
+*: (A: Addition, M: Modification, D: Deletion) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+CONTENTS 
+ 
+ 
+No. 
+Title 
+Page No. 
+1.0 
+Introduction 
+1 
+2.0 
+Details of product format 
+2 
+   2.1 Details of GeoTIFF 
+2 
+   2.2 Details of Level4 Products 
+3 
+3.0 
+File Naming Convention 
+5 
+4.0 
+Information in xml files 
+6 
+5.0 
+Visualization through browse products 
+9 
+6.0 
+Product Generation and Dissemination 
+12 
+7.0 
+Abbreviations 
+12 
+8.0 
+Related Documents 
+12 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1 
+1.0 Introduction 
+ 
+The SCATSAT1 is an active Scatterometer designed to measure ocean surface wind 
+velocity. The sensor transmits signals at regular interval and receives energy back 
+scattered by the targets on the Earth. The DPGS generates Level 1B product from the 
+sensor data. The Level 1B product carries back scattering coefficient (or sigma0) and 
+other radiometric parameters along with geolocation information. The Level 4 products 
+are generated from Level 1B products.  
+This document describes format of Level 4 products of SCATSAT1 (operational version 
+1.0). These are high resolution products and are generated using Scatterometer Image 
+Reconstruction (or SIR) technique.  
+Currently, three parameters are given as a product: sigma0, gamma0 and brightness 
+temperature. Depending on geo location extent, various categories of a product are 
+defined. Depending on combinations of polarization/pass/look and temporal extent of 
+data, various sub-categories of Level 4 products are defined. For a product (say, of 
+sigma0, gamma0 or brightness temperature), the categories are described in Table 1 
+below: 
+Table 1 Categories of Level 4 Products 
+Category 
+Sub-category 
+Spatial Extent 
+Lat. Range Lon. Range 
+India 
+VVDES, VVASC, VVBOTH, 
+HHDES, HHASC, HHBOTH 
+[6:40] 
+[64:100] 
+Global 
+VVDES, VVASC, VVBOTH, 
+HHDES, HHASC, HHBOTH 
+[-90:90] 
+[-180:180] 
+NorthPolar24 
+VVBOTH, HHBOTH 
+[60:90] 
+[-180:180] 
+NorthPolar72 
+VVDES, HHDES 
+[60:90] 
+[-180:180] 
+SouthPolar24 
+VVBOTH, HHBOTH 
+[-90:-50] 
+[-180:180] 
+SouthPolar72 
+VVASC, HHASC 
+[-90:-50] 
+[-180:180] 
+ 
+The products for all three parameters will be generated once daily using previous Level 
+1B data products. The product generation strategy is described in Table 2 below: 
+ 
+Table 2 Generation of Level 4 Products 
+Category 
+Product Generation for all sub-categories 
+India 
+Generated once every day using L1B products of last 48 hours, so 6 
+products per day per parameter 
+Global 
+Generated once every day using L1B products of last 48 hours, so 6 
+products per day per parameter 
+NorthPolar24 Generated once every day using L1B products of last 24 hours, so 2 
+products per day per parameter 
+NorthPolar72 Generated once every day using L1B products of last 72 hours, so 2 
+products per day per parameter 
+SouthPolar24 Generated once every day using L1B products of last 24 hours, so 2 
+products per day per parameter 
+SouthPolar72 Generated once every day using L1B products of last 72 hours, so 2 
+products per day per parameter 
+ 
+ 
+ 
+ 
+ 
+2 
+The Polar products will be having data for all the features such as land, ocean or ice. 
+However, Global and India products will be having data for pure land only. The product 
+format is GeoTIFF. The India Products and Global Products are defined in geographic 
+lat-lon grid. The Polar products are defined in Polar Projection as specified by NPs.mpp 
+and SPs.mpp of NSIDC (National Snow and Ice Data Centre) maps library. The EPSG 
+codes for North and South polar projection defined by NPs.mpp and SPs.mpp are 3411 
+and 3412 respectively. The spatial resolution of INDIA products for all parameters is 
+0.02°. The spatial resolution of GLOBAL sigma0 and gamma0 products is 0.02°, 
+whereas spatial resolution of GLOBAL brightness temperature product is 0.0625°. The 
+details are given in Table 3 below:  
+ 
+Table 3 Product parameters 
+Category 
+NumPixels NumScans 
+Projection 
+Spatial Resolution 
+India 
+1800 
+1700 
+Geographic 
+0.02° per pixel 
+Global2 
+18000 
+9000 
+Geographic 
+0.02° per pixel 
+Global625 
+5760 
+2880 
+Geographic 
+0.0625° per pixel 
+NorthPolar24 
+3001 
+3001 
+Polar Projection 
+- 
+NorthPolar72 
+3001 
+3001 
+Polar Projection 
+- 
+SouthPolar24 
+4001 
+4001 
+Polar Projection 
+- 
+SouthPolar72 
+4001 
+4001 
+Polar Projection 
+- 
+ 
+2.0 Details of Product Format:  
+ 
+All products of Level 4 are supplied in GeoTIFF format. The brief introduction of the 
+format is presented in section 2.1. Relevant information about Level 4 product is placed 
+in next sub section. 
+ 
+2.1 Details of GeoTIFF:  
+Remote sensing and its applications use data in digital form. These datasets generally 
+contain digital image along with other information which are further used for data 
+interpretation and other applications. Different communities use these data for their 
+required purpose. To make it convenient to the users, standards are required to store these 
+datasets. Many image file formats like GIF, PGM, BMP, JPEG etc. are available 
+globally. These formats have an image header with fixed fields containing information 
+such as image dimensions, color space specification, etc.  
+However, these formats have no facility to store information related to geo-location of 
+image pixels. They also do not support storage of cartographic data. Due to these 
+limitations, a new format is required to store image data along with image geometry as 
+well as cartographic information along with ancillary information required for further 
+processing. The new format has to be platform independent, flexible and extensible. The 
+Tagged Image File Format (TIFF) is one of the popularly available image formats. It is 
+platform independent extensible. Several third party solutions exist for recording 
+ 
+ 
+ 
+ 
+ 
+3 
+cartographic information using TIFF tags. The specifications for these tags (fields) are 
+available in TIFF-6.0 documents. These fields contain information ranging from the most 
+primary, like image dimensions, over the most sophisticated information like copyright, 
+up to so-called 'private tags' or 'custom tags' that can define to hold application-specific 
+information. The TIFF specification defines a framework for an image header called 
+'IFD' (Image File Directory) that is essentially a flexible set of specifically those tags that 
+the TIFF writer software wishes to specify.  
+The TIFF file format can be used to store and digital satellite image data, scanned aerial 
+photos, elevation models, scanned maps and the results of many types of geographic 
+analysis. TIFF is the only full-featured format in the public domain, capable of 
+supporting extension to include geographic metadata. GeoTIFF implements the 
+geographic metadata formally, using compliant TIFF tags and structures. A GeoTIFF file 
+actually contains geographic (or cartographic) data attached as tags within the TIFF file. 
+The geographic data can then be used to position the image in the correct location and 
+geometry on the screen of a geographic information display. GeoTIFF is a metadata 
+format, which provides geographic information to associate with the image data. But the 
+TIFF file structure allows both the metadata and the image data to be encoded into the 
+same file. GeoTIFF makes use of a public tag structure which is platform interoperable 
+between any and all GeoTIFF- readers. 
+The GeoTIFF format is supported by TIFF – 6.0. That is, the GeoTIFF images conform 
+in every way to the TIFF formal specifications. The tags used for the "Geo" portion of 
+the TIFF format conform to the acceptable and customary use of "private" or "registered" 
+TIFF tags. The GeoTIFF tags and definitions are considered completely to the baseline 
+and extended TIFF tag definitions currently supported in TIFF-6 by Aldus Corp.  
+ 
+2.2 Details of Level 4 products: 
+ 
+A set of geographic parameters required to interpret the product for each category has 
+been defined. This set is used for placing geographic information in GeoTIFF in form of 
+tags (or keys). The sets for various categories of products are shown in Table 4 below: 
+ 
+Table 4 (a) Parameters of INDIA and GLOBAL products 
+Paramter 
+Value for 
+INDIA 
+Value for 
+GLOBAL 0.02° 
+Value for 
+GLOBAL 0.0625° 
+OutputLineSpacing 
+0.02 
+0.02 
+0.0625 
+OutputPixelSpacing 
+0.02 
+0.02 
+0.0625 
+NoScans 
+1700 
+9000 
+2880 
+NoPixels 
+1800 
+18000 
+5760 
+ULLat 
+39.99 
+89.99 
+89.968750 
+ULLon 
+64.01 
+-179.99 
+-179.968750 
+URLat 
+39.99 
+89.99 
+89.968750 
+ 
+ 
+ 
+ 
+ 
+4 
+URLon 
+99.99 
+179.99 
+179.968750 
+LRLat 
+6.01 
+-89.99 
+-89.968750 
+LRLon 
+99.99 
+179.99 
+179.968750 
+LLLat 
+6.01 
+-89.99 
+-89.968750 
+LLLon 
+64.01 
+-179.99 
+-179.968750 
+SceneCenterLat 
+23.00 
+0.00 
+0.00 
+SceneCenterLon 
+82.00 
+180.00 
+180.00 
+EllipsoidSemiMajorAxis 
+6378137.0 
+6378137.0 
+6378137.0 
+EllipsoidSemiMinorAxis 6356752.3139897 6356752.3139897 
+6356752.3139897 
+ 
+Table 4 (b) Parameters of POLAR products 
+Parameter 
+Value for NORTH POLAR Value for SOUTH POLAR 
+OutputLineSpacing 
+2216.453682 
+2257.350185 
+OutputPixelSpacing 
+2216.453682 
+2257.350185 
+NoScans 
+3001 
+4001 
+NoPixels 
+3001 
+4001 
+MapOriginLat 
+90.0 
+-90.0 
+MapOriginLon 
+-45.0 
+0.0 
+ULLat 
+48.457512 
+-35.429245 
+ULLon 
+179.999710 
+-44.989052 
+URLat 
+48.457512 
+-35.429245 
+URLon 
+90.002022 
+45.010746 
+LRLat 
+48.457512 
+-35.429245 
+LRLon 
+0.001852 
+135.010422 
+LLLat 
+48.457512 
+-35.429245 
+LLLon 
+-89.998314 
+-134.989563 
+ULMapX 
+-3323679.50 
+-4514076.50 
+ULMapY 
+3323713.25 
+4515802.00 
+URMapX 
+3323579.00 
+4515786.00 
+URMapY 
+3323813.50 
+4514092.50 
+LRMapX 
+3323803.75 
+4514118.00 
+LRMapY 
+-3323589.00 
+-4515760.50 
+LLMapX 
+-3323598.50 
+-4515761.50 
+LLMapY 
+-3323794.25 
+-4514117.00 
+SceneCenterLat 
+90.0 
+-90.0 
+SceneCenterLon 
+-45.0 
+0.0 
+StandardParallel1 
+70.0 
+-70.0 
+FalseEasting 
+0.0 
+0.0 
+FalseNorthing 
+0.0 
+0.0 
+EllipsoidSemiMajorAxis 
+6378273.0 
+6378273.0 
+EllipsoidSemiMinorAxis 
+6356889.4489106 
+6356889.4489106 
+EllipsoidEccentricity 
+0.081816153 
+0.081816153 
+ 
+The corner lat-lon and mapx-mapy values define in GeoTIFF refers to the value of centre 
+of the corner pixel. 
+ 
+ 
+ 
+ 
+ 
+5 
+The data part of the product carries the parameter values in range defined by minimum 
+and maximum defined in Table 5 below. Any value out of this range is clipped (to lower 
+or upper bound of range) appropriately. The image pixels are coded as unsigned short 
+integer using slope and offset. The slope and offset are mentioned in the corresponding 
+xml file. The BT value can be obtained from unsigned short integer value as shown by 
+equation 1. The sigma0 or gamma0 value can be obtained from unsigned integer value as 
+shown by equations 2 to 7. Basically, LSB of sigma0 or gamma0 product carries the sign 
+of parameter in linear scale. Rest of the bits carry sigma0/gamma0 value in dB. 
+For BT: 
+BT_value_in_degK = unsigned_short_int_value*slope + offset 
+ 
+ 
+(1) 
+For sigma0 and gamma0: 
+intermediate_value = unsigned_short_int_value AND (0xFFFE) 
+ 
+ 
+(2) 
+sign_bit = unsigned_short_int_value AND (0x0001)  
+ 
+ 
+ 
+(3) 
+para_value_in_dB = intermediate_value*slope + offset 
+ 
+ 
+ 
+(4) 
+sign_value = -1 if sign_bit = 1 
+ 
+ 
+ 
+ 
+ 
+ 
+(5) 
+sign_value =  1 if sign_bit = 0 
+ 
+ 
+ 
+ 
+ 
+ 
+(6) 
+para_value_in_linear_scale = sign_value*10.0^(para_value_in_dB/10.0)  
+(7) 
+ 
+The absence of parameter is denoted by coded value of 65535. So, value of parameter 
+should be computed only if coded value is not equal to 65535. 
+ 
+Table 5 Slope and Offset for products 
+Product Parameter 
+Slope Offset Minimum Maximum Physical unit 
+Sigma0 
+0.001 
+-50.0 
+-50.0  
+ 15.0 
+dB 
+Brightness Temperature 0.01 
+0.0 
+0.0 
+640.0 
+deg. K 
+Gamma0 
+0.001 
+-50.0 
+-50.0 
+15.0 
+dB 
+ 
+3.0 File Naming Convention 
+ 
+The naming convention is designed to convey necessary information about the product. 
+The products formed using multiple days of data has start day as well as end day 
+information. The products generated using single day of data has the corresponding day 
+in the file name. The file name also conveys parameter, category and sub-category of the 
+product. The convention is described below: 
+ For NorthPolar24 and SouthPolar24 products: 
+S1L4PL_yyyyddd_AAA_CC_V_R.tif 
+ For India, NorthPolar72, SouthPolar72 and Global products: 
+S1L4PL_yyyyddd_yyyyddd _AAA_CC_V_R.tif 
+where 
+ 
+S1 
+    = product of SCATSAT1 
+ 
+L4             = product of level 4 
+ 
+P 
+    = S/B/G for product of sigma0/brightness temperature/gamma0 
+ 
+L  
+    = H/V for HH/VV polarization 
+yyyyddd   = Acquisition start and end date in year and Julian day. 
+AAA        =ASC/DES/BTH corresponding to ascending/descending/both passes 
+CC           = IN/NP/SP/GL2/GL625 for INDIA/NPOLAR/SPOLAR/GLOBAL category 
+ 
+ 
+ 
+ 
+ 
+6 
+V              = Version number of L1B product used as input (e.g., v1.1.2) 
+R              = Version of L4 product generation algorithm (e.g., 1.1) 
+Following table shows example file names for all categories of sigma0 products having 
+end date of 28th September 2016. For 24 hrs products, the start and end acquisition time 
+are start and end acquisition time of first and last revolution of Julian day mentioned by 
+the filename. For a product spanning more than 24 hrs, start acquisition time is 
+acquisition start time of first revolution of first Julian day and end acquisition time is 
+acquisition end time of last revolution of second Julian day.  
+ 
+Table 6 Naming convention of products 
+Category 
+FileName 
+INDIA 
+S1L4SH_2016271_2016272_ASC_IN_v1.1.2_1.1.tif 
+S1L4SH_2016271_2016272_BTH_IN_v1.1.2_1.1.tif 
+S1L4SH_2016271_2016272_DES_IN_v1.1.2_1.1.tif 
+S1L4SV_2016271_2016272_ASC_IN_v1.1.2_1.1.tif 
+S1L4SV_2016271_2016272_BTH_IN_v1.1.2_1.1.tif 
+S1L4SV_2016271_2016272_DES_IN_v1.1.2_1.1.tif 
+ 
+ 
+GLOBAL2 
+S1L4SH_2016271_2016272_ASC_GL2_v1.1.2_1.1.tif 
+S1L4SH_2016271_2016272_BTH_GL2_v1.1.2_1.1.tif 
+S1L4SH_2016271_2016272_DES_GL2_v1.1.2_1.1.tif 
+S1L4SV_2016271_2016272_ASC_GL2_v1.1.2_1.1.tif 
+S1L4SV_2016271_2016272_BTH_GL2_v1.1.2_1.1.tif 
+S1L4SV_2016271_2016272_DES_GL2_v1.1.2_1.1.tif 
+ 
+ 
+NPOLAR24 
+S1L4SH_2016272_BTH_NP_v1.1.2_1.1.tif 
+S1L4SV_2016272_BTH_NP_v1.1.2_1.1.tif 
+ 
+ 
+NPOLAR72 
+S1L4SH_2016271_2016272_DES_NP_v1.1.2_1.1.tif 
+S1L4SV_2016271_2016272_DES_NP_v1.1.2_1.1.tif 
+ 
+ 
+SPOLAR24 
+S1L4SH_2016272_BTH_SP_v1.1.2_1.1.tif 
+S1L4SV_2016272_BTH_SP_v1.1.2_1.1.tif 
+ 
+ 
+SPOLAR72 
+S1L4SH_2016271_2016272_ASC_SP_v1.1.2_1.1.tif 
+S1L4SV_2016271_2016272_ASC_SP_v1.1.2_1.1.tif 
+ 
+4.0 Information in xml files 
+ 
+Corresponding to each GeoTIFF product, one xml file and one browse image are also 
+generated. The file naming will be same as product except the extension. The xml file 
+carries metadata of the product such as geographical and temporal extent of product, 
+product generation time and version, quality of product, etc. Sample xml files for 
+different categories of products having end date of 2nd May 2017 are shown below: 
+ 
+ 
+ 
+ 
+ 
+ 
+7 
+Sample xml for INDIA VV DES sigma0 product: 
+<xml version="1.0"> 
+<DATA_FILENAME>S1L4SV_2017121_2017122_DES_IN_v1.1.2_1.1.tif</DATA_FILENAME> 
+<DATA_FILESIZE>6139298</DATA_FILESIZE> 
+<ACQUISITION_START_TIME>01-05-2017 00:14:15</ACQUISITION_START_TIME> 
+<ACQUISITION_END_TIME>03-05-2017 00:18:52</ACQUISITION_END_TIME> 
+<NORTH_LAT>40.0</NORTH_LAT> 
+<SOUTH_LAT>6.0</SOUTH_LAT> 
+<WEST_LONG>64.0</WEST_LONG> 
+<EAST_LONG>100.0</EAST_LONG> 
+<L4SOFTWARE_VERSION>1.1</L4SOFTWARE_VERSION> 
+<START_ORBIT>03143_03144_SN</START_ORBIT> 
+<END_ORBIT>03172_03173_SN</END_ORBIT> 
+<NUM_REV>5</NUM_REV> 
+<DATA_SCALE>0.001</DATA_SCALE> 
+<DATA_OFFSET>-50.0</DATA_OFFSET> 
+<PROD_CREATION_DATE>24-07-2017:03:55:37</PROD_CREATION_DATE> 
+<QC>2</QC> 
+</xml> 
+ 
+Sample xml for NPOLAR24 HH BTH sigma0 product: 
+<xml version="1.0"> 
+<DATA_FILENAME>S1L4SH_2017122_BTH_NP_v1.1.2_1.1.tif</DATA_FILENAME> 
+<DATA_FILESIZE>18041708</DATA_FILESIZE> 
+<ACQUISITION_START_TIME>02-05-2017 00:22:48</ACQUISITION_START_TIME> 
+<ACQUISITION_END_TIME>03-05-2017 00:18:52</ACQUISITION_END_TIME> 
+<NORTH_LAT>60.0</NORTH_LAT> 
+<SOUTH_LAT>90.0</SOUTH_LAT> 
+<WEST_LONG>-180.0</WEST_LONG> 
+<EAST_LONG>180.0</EAST_LONG> 
+<L4SOFTWARE_VERSION>1.1</L4SOFTWARE_VERSION> 
+<START_ORBIT>03158_03159_SN</START_ORBIT> 
+<END_ORBIT>03172_03173_SN</END_ORBIT> 
+<NUM_REV>29</NUM_REV> 
+<DATA_SCALE>0.001</DATA_SCALE> 
+<DATA_OFFSET>-50.0</DATA_OFFSET> 
+<PROD_CREATION_DATE>24-07-2017:01:57:46</PROD_CREATION_DATE> 
+<QC>2</QC> 
+</xml> 
+ 
+Sample xml for SPOLAR24 HH BTH sigma0 product: 
+<xml version="1.0"> 
+<DATA_FILENAME>S1L4SH_2017122_BTH_SP_v1.1.2_1.1.tif</DATA_FILENAME> 
+<DATA_FILESIZE>32053708</DATA_FILESIZE> 
+<ACQUISITION_START_TIME>02-05-2017 00:22:48</ACQUISITION_START_TIME> 
+<ACQUISITION_END_TIME>03-05-2017 00:18:52</ACQUISITION_END_TIME> 
+<NORTH_LAT>-90.0</NORTH_LAT> 
+<SOUTH_LAT>-50.0</SOUTH_LAT> 
+<WEST_LONG>-180.0</WEST_LONG> 
+<EAST_LONG>180.0</EAST_LONG> 
+<L4SOFTWARE_VERSION>1.1</L4SOFTWARE_VERSION> 
+<START_ORBIT>03158_03159_SN</START_ORBIT> 
+<END_ORBIT>03172_03173_SN</END_ORBIT> 
+<NUM_REV>29</NUM_REV> 
+<DATA_SCALE>0.001</DATA_SCALE> 
+<DATA_OFFSET>-50.0</DATA_OFFSET> 
+<PROD_CREATION_DATE>24-07-2017:01:18:25</PROD_CREATION_DATE> 
+<QC>2</QC> 
+</xml> 
+ 
+Sample xml for NPOLAR72 VV DES sigma0 product: 
+ 
+ 
+ 
+ 
+ 
+8 
+<xml version="1.0"> 
+<DATA_FILENAME>S1L4SV_2017120_2017122_DES_NP_v1.1.2_1.1.tif</DATA_FILENAME> 
+<DATA_FILESIZE>18041708</DATA_FILESIZE> 
+<ACQUISITION_START_TIME>30-04-2017 00:21:18</ACQUISITION_START_TIME> 
+<ACQUISITION_END_TIME>03-05-2017 00:18:52</ACQUISITION_END_TIME> 
+<NORTH_LAT>60.0</NORTH_LAT> 
+<SOUTH_LAT>90.0</SOUTH_LAT> 
+<WEST_LONG>-180.0</WEST_LONG> 
+<EAST_LONG>180.0</EAST_LONG> 
+<L4SOFTWARE_VERSION>1.1</L4SOFTWARE_VERSION> 
+<START_ORBIT>03129_03130_SN</START_ORBIT> 
+<END_ORBIT>03172_03173_SN</END_ORBIT> 
+<NUM_REV>43</NUM_REV> 
+<DATA_SCALE>0.001</DATA_SCALE> 
+<DATA_OFFSET>-50.0</DATA_OFFSET> 
+<PROD_CREATION_DATE>24-07-2017:01:30:24</PROD_CREATION_DATE> 
+<QC>1</QC> 
+</xml> 
+ 
+Sample xml for SPOLAR72 VV ASC sigma0 product: 
+<xml version="1.0"> 
+<DATA_FILENAME>S1L4SV_2017120_2017122_ASC_SP_v1.1.2_1.1.tif</DATA_FILENAME> 
+<DATA_FILESIZE>32053708</DATA_FILESIZE> 
+<ACQUISITION_START_TIME>30-04-2017 00:21:18</ACQUISITION_START_TIME> 
+<ACQUISITION_END_TIME>03-05-2017 00:18:52</ACQUISITION_END_TIME> 
+<NORTH_LAT>-90.0</NORTH_LAT> 
+<SOUTH_LAT>-50.0</SOUTH_LAT> 
+<WEST_LONG>-180.0</WEST_LONG> 
+<EAST_LONG>180.0</EAST_LONG> 
+<L4SOFTWARE_VERSION>1.1</L4SOFTWARE_VERSION> 
+<START_ORBIT>03129_03130_SN</START_ORBIT> 
+<END_ORBIT>03172_03173_SN</END_ORBIT> 
+<NUM_REV>44</NUM_REV> 
+<DATA_SCALE>0.001</DATA_SCALE> 
+<DATA_OFFSET>-50.0</DATA_OFFSET> 
+<PROD_CREATION_DATE>24-07-2017:05:12:33</PROD_CREATION_DATE> 
+<QC>1</QC> 
+</xml> 
+ 
+Sample xml for GLOBAL625 HH BTH BT product: 
+<xml version="1.0"> 
+<DATA_FILENAME>S1L4BH_2017121_2017122_BTH_GL625_v1.1.2_1.1.tif</DATA_FILENAME> 
+<DATA_FILESIZE>33206338</DATA_FILESIZE> 
+<ACQUISITION_START_TIME>01-05-2017 00:14:15</ACQUISITION_START_TIME> 
+<ACQUISITION_END_TIME>03-05-2017 00:18:52</ACQUISITION_END_TIME> 
+<NORTH_LAT>-90.0</NORTH_LAT> 
+<SOUTH_LAT>90.0</SOUTH_LAT> 
+<WEST_LONG>-180.0</WEST_LONG> 
+<EAST_LONG>180.0</EAST_LONG> 
+<L4SOFTWARE_VERSION>1.1</L4SOFTWARE_VERSION> 
+<START_ORBIT>03143_03144_SN</START_ORBIT> 
+<END_ORBIT>03172_03173_SN</END_ORBIT> 
+<NUM_REV>59</NUM_REV> 
+<DATA_SCALE>0.01</DATA_SCALE> 
+<DATA_OFFSET>0.0</DATA_OFFSET> 
+<PROD_CREATION_DATE>26-07-2017:05:26:42</PROD_CREATION_DATE> 
+<QC>2</QC> 
+</xml> 
+The lat-lon given in xml files shows the lat-lon coverage of the product. The start and end 
+orbit number conveys the start and end revolution number used for product generation. 
+ 
+ 
+ 
+ 
+ 
+9 
+The NUM_REV entry indicates actual number of revolutions available for generation for 
+product. Similar information is conveyed in the quality parameter. The QC will have 
+value of 0/1/2 depending on quality being poor/partially good/good respectively. The 
+DATA_SCALE and DATA_OFFSET indicate the scale and offset values (as specified in 
+section 2) used for generating particular product. 
+ 
+5.0 Visualization through browse products 
+ 
+The browse products are generated for each tif product. These jpg images are intended to 
+help user visualize the quality of product before using it. The range chosen for browse 
+product is subset of range specified by section 2. The browse product range has been 
+reduced for better visualization. 
+India VV BOTH gamma0 Product 
+ 
+ 
+ 
+ 
+ 
+10 
+NorthPolar 24hours HH BOTH gamma0 product 
+SouthPolar 24hours HH BOTH gamma0 product 
+ 
+ 
+ 
+ 
+ 
+11 
+ 
+NorthPolar 72hours VV DES sigma0 product 
+SouthPolar 72hours VV ASC sigma0 product 
+ 
+ 
+ 
+ 
+ 
+12 
+Global 0.0625° HH BOTH BT  product 
+ 
+6.0 Product Generation and Dissemination 
+ 
+The SCATSAT1 Level 4 data products are generated at MOSDAC using Level 1B data 
+products. The Data Product Generation System is installed at MOSDAC. The DPGS 
+regularly fetches L1B products and invokes product generation software for all kinds of 
+Level 4 products. After generation of products, the DPGS uploads product files on 
+MOSDAC site.  
+The products are disseminated from the MOSDAC site (www.mosdac.gov.in). Along 
+with the products in GeoTIFF format, browse jpeg images and xml metadata files are 
+made available to the users. The users can search the products based on information in 
+xml files and view the product using browse images. 
+ 
+7.0 Abbreviations 
+ 
+NSIDC 
+National Snow and Ice Data Centre 
+EPSG  
+European Petroleum Survey Group 
+MOSDAC 
+Meteorological & Oceanographic Satellite Data Archival Centre 
+xml 
+ 
+Extensible Markup Language 
+SIR 
+ 
+Scatterometer Image Reconstruction 
+TIFF  
+Tagged Image File Format 
+DPGS  
+Data Product Generation System 
+ 
+8.0 Related Documents 
+ 
+Specifications and Formats for SCATSAT-1 Scatterometer Data Products 
+SC1/DP/SPFDOC/1.0/APR2017 

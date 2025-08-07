@@ -1,0 +1,9138 @@
+MADRAS
+L1A
+Estimated Size
+for typical  [Number_of_Scans]
+72.475 Mb
+[2467]
+Science data group associated attributes
+ScienceData
+Attributes
+Index
+Name
+Value
+Type
+Size
+#1
+Product_Identification
+MT1MADSL1A__1.00_9_01_I_2012_05_09_0000H5T_C_S1
+84
+#2
+Organization_Name
+ISRO
+H5T_C_S1
+5
+#3
+Property_of_data
+ISRO_ and_CNES
+H5T_C_S1
+15
+#4
+Satellite_Name
+MEGHA-TROPIQUES
+H5T_C_S1
+16
+#5
+Payload_Name
+MADRAS
+H5T_C_S1
+12
+#6
+Product_Name
+Level-1A-segment wise
+H5T_C_S1
+35
+#7
+Product_Format
+NCSA-HDF
+H5T_C_S1
+9
+#8
+Product_Format_Version
+HDF5.1.6.4
+H5T_C_S1
+11
+#9
+Product_Generation_Date
+2012MAI09
+H5T_C_S1
+10
+#10
+Imaging_Date
+2012MAI09
+H5T_C_S1
+10
+#11
+Date_Format
+YYYYMMMDD
+H5T_C_S1
+10
+#12
+INS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#13
+PRO_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#14
+RAD_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#15
+GEO_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#16
+PCS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#17
+SLC_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#18
+GRB_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#19
+UCS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#20
+Number_of_Channels
+9
+H5T_C_S1
+8
+#21
+Channel_CentralFrequency
+18.7GHz 18.7GHz 23.8GHz 36.5GHz 36.5GHz 8H5T_C_S1
+74
+#22
+Channel_Polarization
+H V V H V H V H V
+H5T_C_S1
+18
+#23
+Channel_Bandwith
+100MHz 100MHz 200MHz 500MHz 500MHz 135H5T_C_S1
+67
+#24
+Number_of_Resolutions
+3
+H5T_C_S1
+8
+#25
+ChannelList_LF
+18.7GHz 23.8GHz 36.5GHz
+H5T_C_S1
+24
+#26
+ChannelList_MF
+89.0GHz
+H5T_C_S1
+8
+#27
+ChannelList_HF
+157.0GHz
+H5T_C_S1
+9
+#28
+Sample_Size_LF[Across, Along]
+[40.00,67.25]km
+H5T_C_S1
+16
+#29
+Sample_Size_MF[Across, Along] [10.00,16.81]km
+H5T_C_S1
+16
+#30
+Sample_Size_HF[Across, Along] [6.0,10.1]km
+H5T_C_S1
+13
+#31
+SunGlint_Limits
+[0,30]degree
+H5T_C_S1
+13
+#32
+Orbit_StartNumber
+00001
+H5T_C_S1
+19
+#33
+Orbit_EndNumber
+00001
+H5T_C_S1
+17
+#34
+Orbit_Cycle_Number
+01
+H5T_C_S1
+3
+#35
+SLConf
+100001
+H5T_C_S1
+7
+#36
+Nskip
+0005
+H5T_C_S1
+5
+#37
+ProcessorVersion
+1.00
+H5T_C_S1
+5
+1
+#38
+MADRAS_QF_Scan_Definition
+16-bits array (=0:good, =1:bad) :
+#15:Scan/row validity flag,
+#14:pass type ,
+#13:scanning type ,
+#12:scan/row error ,
+#11:datation error ,
+#10:PRT error ,
+#9:encoder error ,
+#8 madras correction  flag
+#7 to 6 blank  ,
+# 5 to 3:Payload mod ,
+#2 to 0 :Satellite mod
+H5T_C_S1
+16x24
+#39
+MADRAS_QF_Sample_Definition 16-bits array (=0:good / =1:bad):,   #15:TB vaH5T_C_S1
+16x24
+#40
+Skip_StartScanNumber
+[00000064,00000165,00000266,00000367,00H5T_C_S1
+1*Nskip
+#41
+Skip_EndScanNumber
+[00000066,00000167,00000268,00000370,00H5T_C_S1
+1*Nskip
+#42
+Flip_StartScanNumber
+00000012
+H5T_C_S1
+9
+#43
+Flip_EndScanNumber
+00000042
+H5T_C_S1
+9
+#44
+Maneuver_StartScanNumber
+00000011
+H5T_C_S1
+9
+#45
+Maneuver_EndScanNumber
+00000043
+H5T_C_S1
+9
+#46
+FirstScanNumber
+00000000
+H5T_C_S1
+8
+#47
+Time_Sample_Interval_LF
+2
+H5T_C_S1
+4
+#48
+Time_Sample_Interval_MF
+2
+H5T_C_S1
+4
+#49
+Time_Sample_Interval_HF
+1
+H5T_C_S1
+4
+#50
+Number_of_Samples_LF
+480
+H5T_C_S1
+8
+#51
+Number_of_Samples_MF
+480
+H5T_C_S1
+8
+#52
+Number_of_Samples_HF
+960
+H5T_C_S1
+8
+#53
+ValidEarthSamplesIndex_LF
+[012,469]
+H5T_C_S1
+10
+#54
+ValidEarthSamplesIndex_MF
+[016,466]
+H5T_C_S1
+10
+#55
+ValidEarthSamplesIndex_HF
+[031,930]
+H5T_C_S1
+10
+#56
+Number_of_Scans
+00002467
+H5T_C_S1
+8
+#57
+QF_Product_%Processed_Scans 099
+H5T_C_S1
+4
+Science data group elements
+Estimated size of
+dataset [Mb]
+Index
+Name
+Type
+Typical Value
+0.005
+#1
+MADRAS_QF_scan
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality flag applicable to the scan line
+H5T_C_S1
+41
+comment
+16-bits array (=0:good, =1:bad) :
+#15:Scan/row validity flag,
+#14:pass type ,
+#13:scanning type ,
+#12:scan/row error ,
+#11:datation error ,
+#10:PRT error ,
+#9:encoder error ,
+#8 madras correction  flag
+#7 to 6 blank  ,
+# 5 to 3:Payload mod ,
+#2 to 0 :Satellite mod
+H5T_C_S1
+29
+2
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+geolocation_label
+Scan_FirstSampleAcqTime_LF
+H5T_C_S1
+54
+0.005
+#2
+Scan_Number
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Scan Number
+H5T_C_S1
+12
+valid_range
+[0,65535]
+H5T_C_S1
+10
+min_max
+[0,65535]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+scan number from the first scan of the
+product
+H5T_C_S1
+47
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.005
+#3
+Latitude_Nadir
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+latitude of subsatellite point
+H5T_C_S1
+31
+standard_name
+latitude
+H5T_C_S1
+9
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+-40.0
+H5T_C_S1
+6
+valid_range
+[-40.0,40.0]
+H5T_C_S1
+13
+min_max
+[0,8000]
+H5T_C_S1
+9
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+accuracy 1km
+H5T_C_S1
+13
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.005
+#4
+Longitude_Nadir
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+longitude of subsatellite point
+H5T_C_S1
+32
+standard_name
+longitude
+H5T_C_S1
+10
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0.0,360.0]
+H5T_C_S1
+12
+min_max
+[0,36000]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Longitude [0,360]: 0 is Greenwich
+meridian (accuracy 1km)
+H5T_C_S1
+59
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.005
+#5
+Scan_HotLoadTemperature
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Hot load temperature
+H5T_C_S1
+21
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0.0,400.0]
+H5T_C_S1
+12
+min_max
+[0,40000]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Estimated average physical
+temperature of the hot load used for TB
+calculation
+H5T_C_S1
+79
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+geolocation_label
+Scan_FirstSampleAcqTime_LF
+H5T_C_S1
+54
+3
+0.085
+#6
+Scan_Gain
+H5T_IEEE_F32LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Estimated gain
+H5T_C_S1
+15
+units
+count/K
+H5T_C_S1
+8
+scale_factor
+1.0
+H5T_C_S1
+4
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[5.0,13.0]
+H5T_C_S1
+21
+min_max
+[5.0,13.0]
+H5T_C_S1
+21
+_FillValue
+3.4E38
+H5T_C_S1
+7
+comment
+Estimated gain value applied to TB
+calculation for each channels in the
+following sequence: 18.7H, 18.7V, 23.8
+V,36.5H, 36.5V, 89.0H, 89.0V, 157.0H,
+157.0V
+H5T_C_S1
+124
+dimension_label
+Number_of_Scans, Number_of_Channels H5T_C_S1
+36
+0.085
+#7
+Scan_Offset
+H5T_IEEE_F32LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Estimated offset
+H5T_C_S1
+17
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+1.0
+H5T_C_S1
+4
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0.0,150.0]
+H5T_C_S1
+23
+min_max
+[0.0,150.0]
+H5T_C_S1
+23
+_FillValue
+3.4E38
+H5T_C_S1
+7
+comment
+Estimated offset value used for TB
+calculation for each channels in the
+following sequence: 18.7H, 18.7V, 23.8
+V,36.5H, 36.5V, 89.0H, 89.0V, 157.0H,
+157.0V
+H5T_C_S1
+113
+dimension_label
+Number_of_Scans, Number_of_Channels H5T_C_S1
+36
+0.002
+#8
+Scan_FirstSampleAcqTime_LF
+H5T_C_S1
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+date of the first sample
+H5T_C_S1
+45
+standard_name
+time
+H5T_C_S1
+5
+units
+UTC Time in microseconds
+H5T_C_S1
+25
+_FillValue
+yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+22
+comment
+format: yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+30
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.002
+#9
+Scan_FirstSampleAcqTime_MF
+H5T_C_S1
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+date of the first sample
+H5T_C_S1
+45
+standard_name
+time
+H5T_C_S1
+5
+units
+UTC Time in microseconds
+H5T_C_S1
+25
+_FillValue
+yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+22
+comment
+format: yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+30
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.002
+#10
+Scan_FirstSampleAcqTime_HF
+H5T_C_S1
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+date of the first sample
+H5T_C_S1
+45
+4
+standard_name
+time
+H5T_C_S1
+5
+units
+UTC Time in microseconds
+H5T_C_S1
+25
+_FillValue
+yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+22
+comment
+format: yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+30
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+2.259
+#11
+Latitude_Samples_LF
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+latitude of low-resolution (18.7 GHz,
+23.8 GHz, 36.5 GHz) samples
+H5T_C_S1
+77
+standard_name
+latitude
+H5T_C_S1
+9
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+-40.0
+H5T_C_S1
+6
+valid_range
+[-40.0,40.0]
+H5T_C_S1
+13
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+accuracy 1km
+H5T_C_S1
+13
+dimension_label
+Number_of_Scans,
+Number_of_Samples_LF
+H5T_C_S1
+59
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+2.259
+#12
+Latitude_Samples_MF
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+latitude of medium-resolution (89.0
+GHz) samples
+H5T_C_S1
+77
+standard_name
+latitude
+H5T_C_S1
+9
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+-40.0
+H5T_C_S1
+6
+valid_range
+[-40.0,40.0]
+H5T_C_S1
+13
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+accuracy 1km
+H5T_C_S1
+13
+dimension_label
+Number_of_Scans,
+Number_of_Samples_MF
+H5T_C_S1
+59
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+4.517
+#13
+Latitude_Samples_HF
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+latitude of high-resolution (157.0 GHz)
+samples
+H5T_C_S1
+77
+standard_name
+latitude
+H5T_C_S1
+9
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+-40.0
+H5T_C_S1
+6
+valid_range
+[-40.0,40.0]
+H5T_C_S1
+13
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+accuracy 1km
+H5T_C_S1
+13
+dimension_label
+Number_of_Scans,
+Number_of_Samples_HF
+H5T_C_S1
+59
+CLASS
+IMAGE
+H5T_C_S1
+6
+5
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+2.259
+#14
+Longitude_Samples_LF
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+longitude of low-resolution (18.7 GHz,
+23.8 GHz, 36.5 GHz) samples
+H5T_C_S1
+78
+standard_name
+longitude
+H5T_C_S1
+10
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0.0,360.0]
+H5T_C_S1
+12
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Longitude [0,360]: 0 is Greenwich
+meridian (accuracy 1km)
+H5T_C_S1
+59
+dimension_label
+Number_of_Scans,
+Number_of_Samples_LF
+H5T_C_S1
+59
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,36000]
+H5T_STD_U16LE
+4
+2.259
+#15
+Longitude_Samples_MF
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+longitude of medium-resolution (89.0
+GHz) samples
+H5T_C_S1
+78
+standard_name
+longitude
+H5T_C_S1
+10
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0.0,360.0]
+H5T_C_S1
+12
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Longitude [0,360]: 0 is Greenwich
+meridian (accuracy 1km)
+H5T_C_S1
+59
+dimension_label
+Number_of_Scans,
+Number_of_Samples_MF
+H5T_C_S1
+59
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,36000]
+H5T_STD_U16LE
+4
+4.517
+#16
+Longitude_Samples_HF
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+longitude of high-resolution (157.0 GHz)
+samples
+H5T_C_S1
+78
+standard_name
+longitude
+H5T_C_S1
+10
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0.0,360.0]
+H5T_C_S1
+12
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Longitude [0,360]: 0 is Greenwich
+meridian (accuracy 1km)
+H5T_C_S1
+59
+dimension_label
+Number_of_Scans,
+Number_of_Samples_HF
+H5T_C_S1
+59
+CLASS
+IMAGE
+H5T_C_S1
+6
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,36000]
+H5T_STD_U16LE
+4
+1.129
+#17
+IncidenceAngle_Samples_LF
+H5T_STD_I8LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Incidence angle at the center of
+samples
+H5T_C_S1
+52
+standard_name
+incidence_angle
+H5T_C_S1
+16
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+53.0
+H5T_C_S1
+5
+valid_range
+[51.72,54.27]
+H5T_C_S1
+14
+_FillValue
+127
+H5T_C_S1
+4
+comment
+angle between zenith and line of sight
+H5T_C_S1
+39
+dimension_label
+Number_of_Scans,
+Number_of_Samples_LF
+H5T_C_S1
+59
+geolocation_label
+Latitude_Samples_LF,
+Longitude_Samples_LF
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[-128,127]
+H5T_STD_I8LE
+2
+1.129
+#18
+IncidenceAngle_Samples_MF
+H5T_STD_I8LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Incidence angle at the center of
+samples
+H5T_C_S1
+52
+standard_name
+incidence_angle
+H5T_C_S1
+16
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+53.0
+H5T_C_S1
+5
+valid_range
+[51.72,54.27]
+H5T_C_S1
+14
+_FillValue
+127
+H5T_C_S1
+4
+comment
+angle between zenith and line of sight
+H5T_C_S1
+39
+dimension_label
+Number_of_Scans,
+Number_of_Samples_MF
+H5T_C_S1
+59
+geolocation_label
+Latitude_Samples_LF,
+Longitude_Samples_LF
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[-128,127]
+H5T_STD_I8LE
+2
+2.259
+#19
+IncidenceAngle_Samples_HF
+H5T_STD_I8LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Incidence angle at the center of
+samples
+H5T_C_S1
+52
+standard_name
+incidence_angle
+H5T_C_S1
+16
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+53.0
+H5T_C_S1
+5
+valid_range
+[51.72,54.27]
+H5T_C_S1
+14
+_FillValue
+127
+H5T_C_S1
+4
+comment
+angle between zenith and line of sight
+H5T_C_S1
+39
+dimension_label
+Number_of_Scans,
+Number_of_Samples_HF
+H5T_C_S1
+59
+geolocation_label
+Latitude_Samples_LF,
+Longitude_Samples_LF
+H5T_C_S1
+78
+7
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[-128,127]
+H5T_STD_I8LE
+2
+2.259
+#20
+TB_Samples_18.7_H
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Samples brightness temperatures at
+18.7_H
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Samples_18.7_H
+H5T_C_S1
+44
+comment
+TB estimated from raw instrumental
+measurements (see additionnal
+geometrical information in attributes of
+MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans,
+Number_of_Samples_LF
+H5T_C_S1
+56
+geolocation_label
+Latitude_Samples_LF,
+Longitude_Samples_LF
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+2.259
+#21
+TB_Samples_18.7_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Samples brightness temperatures at
+18.7_V
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Samples_18.7_V
+H5T_C_S1
+44
+comment
+TB estimated from raw instrumental
+measurements (see additionnal
+geometrical information in attributes of
+MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans,
+Number_of_Samples_LF
+H5T_C_S1
+56
+geolocation_label
+Latitude_Samples_LF,
+Longitude_Samples_LF
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+2.259
+#22
+TB_Samples_23.8_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Samples brightness temperatures at
+23.8_V
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Samples_23.8_V
+H5T_C_S1
+44
+comment
+TB estimated from raw instrumental
+measurements (see additionnal
+geometrical information in attributes of
+MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans,
+Number_of_Samples_LF
+H5T_C_S1
+56
+geolocation_label
+Latitude_Samples_LF,
+Longitude_Samples_LF
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+2.259
+#23
+TB_Samples_36.5_H
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Samples brightness temperatures at
+36.5_H
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Samples_36.5_H
+H5T_C_S1
+44
+comment
+TB estimated from raw instrumental
+measurements (see additionnal
+geometrical information in attributes of
+MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans,
+Number_of_Samples_LF
+H5T_C_S1
+56
+geolocation_label
+Latitude_Samples_LF,
+Longitude_Samples_LF
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+2.259
+#24
+TB_Samples_36.5_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Samples brightness temperatures at
+36.5_V
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Samples_36.5_V
+H5T_C_S1
+44
+comment
+TB estimated from raw instrumental
+measurements (see additionnal
+geometrical information in attributes of
+MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans,
+Number_of_Samples_LF
+H5T_C_S1
+56
+9
+geolocation_label
+Latitude_Samples_LF,
+Longitude_Samples_LF
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+2.259
+#25
+TB_Samples_89.0_H
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Samples brightness temperatures at
+89.0_H
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Samples_89.0_H
+H5T_C_S1
+44
+comment
+TB estimated from raw instrumental
+measurements (see additionnal
+geometrical information in attributes of
+MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans,
+Number_of_Samples_MF
+H5T_C_S1
+56
+geolocation_label
+Latitude_Samples_MF,
+Longitude_Samples_MF
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+2.259
+#26
+TB_Samples_89.0_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Samples brightness temperatures at
+89.0_V
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Samples_89.0_V
+H5T_C_S1
+44
+comment
+TB estimated from raw instrumental
+measurements (see additionnal
+geometrical information in attributes of
+MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans,
+Number_of_Samples_MF
+H5T_C_S1
+56
+geolocation_label
+Latitude_Samples_MF,
+Longitude_Samples_MF
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+4.517
+#27
+TB_Samples_157.0_H
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Samples brightness temperatures at
+157.0_H
+H5T_C_S1
+53
+10
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Samples_157.0_H
+H5T_C_S1
+44
+comment
+TB estimated from raw instrumental
+measurements (see additionnal
+geometrical information in attributes of
+MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans,
+Number_of_Samples_HF
+H5T_C_S1
+56
+geolocation_label
+Latitude_Samples_HF,
+Longitude_Samples_HF
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+4.517
+#28
+TB_Samples_157.0_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Samples brightness temperatures at
+157.0_V
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Samples_157.0_V
+H5T_C_S1
+44
+comment
+TB estimated from raw instrumental
+measurements (see additionnal
+geometrical information in attributes of
+MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans,
+Number_of_Samples_HF
+H5T_C_S1
+56
+geolocation_label
+Latitude_Samples_HF,
+Longitude_Samples_HF
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+2.259
+#29
+QF_Samples_18.7_H
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of sample for channel 18.7
+_H
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+11
+dimension_label
+Number_of_Scans,
+Number_of_Samples_LF
+H5T_C_S1
+56
+geolocation_label
+Latitude_Samples_LF,
+Longitude_Samples_LF
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+2.259
+#30
+QF_Samples_18.7_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of sample for channel 18.7
+_V
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans,
+Number_of_Samples_LF
+H5T_C_S1
+56
+geolocation_label
+Latitude_Samples_LF,
+Longitude_Samples_LF
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+2.259
+#31
+QF_Samples_23.8_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of sample for channel 23.8
+_V
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans,
+Number_of_Samples_LF
+H5T_C_S1
+56
+geolocation_label
+Latitude_Samples_LF,
+Longitude_Samples_LF
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+2.259
+#32
+QF_Samples_36.5_H
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of sample for channel 36.5
+_H
+H5T_C_S1
+71
+12
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans,
+Number_of_Samples_LF
+H5T_C_S1
+56
+geolocation_label
+Latitude_Samples_LF,
+Longitude_Samples_LF
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+2.259
+#33
+QF_Samples_36.5_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of sample for channel 36.5
+_V
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans,
+Number_of_Samples_LF
+H5T_C_S1
+56
+geolocation_label
+Latitude_Samples_LF,
+Longitude_Samples_LF
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+2.259
+#34
+QF_Samples_89.0_H
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of sample for channel 89.0
+_H
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+13
+dimension_label
+Number_of_Scans,
+Number_of_Samples_MF
+H5T_C_S1
+56
+geolocation_label
+Latitude_Samples_MF,
+Longitude_Samples_MF
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+2.259
+#35
+QF_Samples_89.0_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of sample for channel 89.0
+_V
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans,
+Number_of_Samples_MF
+H5T_C_S1
+56
+geolocation_label
+Latitude_Samples_MF,
+Longitude_Samples_MF
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+4.517
+#36
+QF_Samples_157.0_H
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of sample for channel
+157.0_H
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans,
+Number_of_Samples_HF
+H5T_C_S1
+56
+geolocation_label
+Latitude_Samples_HF,
+Longitude_Samples_HF
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+4.517
+#37
+QF_Samples_157.0_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+14
+long_name
+Quality Flag of sample for channel
+157.0_V
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans,
+Number_of_Samples_HF
+H5T_C_S1
+56
+geolocation_label
+Latitude_Samples_HF,
+Longitude_Samples_HF
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+15
+MADRAS
+L1A2
+Estimated Size
+for typical  [Number_of_Scans]
+21.850 Mb
+[2467]
+Science data group associated attributes
+ScienceData
+Attributes
+Index
+Name
+Value
+Type
+Size
+#1
+Product_Identification
+MT1MADSL1A2__1.00_9_01_I_2012_05_09_000H5T_C_S1
+84
+#2
+Organization_Name
+ISRO
+H5T_C_S1
+5
+#3
+Property_of_data
+ISRO_ and_CNES
+H5T_C_S1
+15
+#4
+Satellite_Name
+MEGHA-TROPIQUES
+H5T_C_S1
+16
+#5
+Payload_Name
+MADRAS
+H5T_C_S1
+12
+#6
+Product_Name
+Level-1A2-segment wise
+H5T_C_S1
+35
+#7
+Product_Format
+NCSA-HDF
+H5T_C_S1
+9
+#8
+Product_Format_Version
+HDF5.1.6.4
+H5T_C_S1
+11
+#9
+Product_Generation_Date
+2012MAI09
+H5T_C_S1
+10
+#10
+Imaging_Date
+2012MAI09
+H5T_C_S1
+10
+#11
+Date_Format
+YYYYMMMDD
+H5T_C_S1
+10
+#12
+INS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#13
+PRO_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#14
+RAD_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#15
+GEO_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#16
+PCS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#17
+SLC_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#18
+GRB_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#19
+UCS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#20
+Number_of_Channels
+9
+H5T_C_S1
+8
+#21
+Channel_CentralFrequency
+18.7GHz 18.7GHz 23.8GHz 36.5GHz 36.5GHz 8H5T_C_S1
+74
+#22
+Channel_Polarization
+H V V H V H V H V
+H5T_C_S1
+18
+#23
+Channel_Bandwith
+100MHz 100MHz 200MHz 500MHz 500MHz 135H5T_C_S1
+67
+#24
+Number_of_Resolutions
+3
+H5T_C_S1
+8
+#25
+ChannelList_LF
+18.7GHz 23.8GHz 36.5GHz
+H5T_C_S1
+24
+#26
+ChannelList_MF
+89.0GHz
+H5T_C_S1
+8
+#27
+ChannelList_HF
+157.0GHz
+H5T_C_S1
+9
+#28
+Pixel_Size_LF
+[40.00,67.25]km
+H5T_C_S1
+16
+#29
+Pixel_Size_MF
+[10.00,16.81]km
+H5T_C_S1
+16
+#30
+Pixel_Size_HF
+[6.0,10.1]km
+H5T_C_S1
+13
+#31
+SunGlint_Limits
+[0,30]degree
+H5T_C_S1
+13
+#32
+Orbit_StartNumber
+00001
+H5T_C_S1
+19
+#33
+Orbit_EndNumber
+00001
+H5T_C_S1
+17
+#34
+Orbit_Cycle_Number
+01
+H5T_C_S1
+3
+#35
+SLConf
+100001
+H5T_C_S1
+7
+#36
+Nskip
+0005
+H5T_C_S1
+5
+#37
+ProcessorVersion
+1.00
+H5T_C_S1
+5
+16
+#38
+MADRAS_QF_Scan_Definition
+16-bits array (=0:good, =1:bad) :
+#15:Scan/row validity flag,
+#14:pass type ,
+#13:scanning type ,
+#12:scan/row error ,
+#11:datation error ,
+#10:PRT error ,
+#9:encoder error ,
+#8 madras correction  flag
+#7 to 6 blank  ,
+# 5 to 3:Payload mod ,
+#2 to 0 :Satellite mod
+H5T_C_S1
+16x24
+#39
+MADRAS_QF_Pixel_Definition
+16-bits array (=0:good / =1:bad):,   #15:TB vaH5T_C_S1
+16x24
+#40
+Skip_StartScanNumber
+[00000064,00000165,00000266,00000367,00H5T_C_S1
+1*Nskip
+#41
+Skip_EndScanNumber
+[00000066,00000167,00000268,00000370,00H5T_C_S1
+1*Nskip
+#42
+Flip_StartScanNumber
+00000012
+H5T_C_S1
+9
+#43
+Flip_EndScanNumber
+00000042
+H5T_C_S1
+9
+#44
+Maneuver_StartScanNumber
+00000011
+H5T_C_S1
+9
+#45
+Maneuver_EndScanNumber
+00000043
+H5T_C_S1
+9
+#46
+FirstScanNumber
+00000000
+H5T_C_S1
+8
+#47
+Time_Pixel_Interval
+4.2
+H5T_C_S1
+4
+#48
+Number_of_Pixels
+214
+H5T_C_S1
+8
+#49
+Number_of_Scans
+00002467
+H5T_C_S1
+8
+#50
+QF_Product_%Processed_Scans 099
+H5T_C_S1
+4
+Science data group elements
+Estimated size of
+dataset [Mb]
+Index
+Name
+Type
+Typical Value
+0.005
+#1
+MADRAS_QF_scan
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality flag applicable to the scan line
+H5T_C_S1
+41
+comment
+16-bits array (=0:good, =1:bad) :
+#15:Scan/row validity flag,
+#14:pass type ,
+#13:scanning type ,
+#12:scan/row error ,
+#11:datation error ,
+#10:PRT error ,
+#9:encoder error ,
+#8 madras correction  flag
+#7 to 6 blank  ,
+# 5 to 3:Payload mod ,
+#2 to 0 :Satellite mod
+H5T_C_S1
+29
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+geolocation_label
+Scan_FirstPixelAcqTime
+H5T_C_S1
+54
+0.005
+#2
+Scan_Number
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Scan Number
+H5T_C_S1
+12
+valid_range
+[0,65535]
+H5T_C_S1
+10
+17
+min_max
+[0,65535]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+scan number from the first scan of the
+product
+H5T_C_S1
+47
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.005
+#3
+Latitude_Nadir
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+latitude of subsatellite point
+H5T_C_S1
+31
+standard_name
+latitude
+H5T_C_S1
+9
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+-40.0
+H5T_C_S1
+6
+valid_range
+[-40.0,40.0]
+H5T_C_S1
+13
+min_max
+[0,8000]
+H5T_C_S1
+9
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+accuracy 1km
+H5T_C_S1
+13
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.005
+#4
+Longitude_Nadir
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+longitude of subsatellite point
+H5T_C_S1
+32
+standard_name
+longitude
+H5T_C_S1
+10
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0.0,360.0]
+H5T_C_S1
+12
+min_max
+[0,36000]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Longitude [0,360]: 0 is Greenwich
+meridian (accuracy 1km)
+H5T_C_S1
+59
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.005
+#5
+Scan_HotLoadTemperature
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Hot load temperature
+H5T_C_S1
+21
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0.0,400.0]
+H5T_C_S1
+12
+min_max
+[0,40000]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Estimated average physical
+temperature of the hot load used for TB
+calculation
+H5T_C_S1
+79
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+geolocation_label
+Scan_FirstPixelAcqTime
+H5T_C_S1
+54
+0.085
+#6
+Scan_Gain
+H5T_IEEE_F32LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Estimated gain
+H5T_C_S1
+15
+units
+count/K
+H5T_C_S1
+8
+scale_factor
+1.0
+H5T_C_S1
+4
+add_offset
+0.0
+H5T_C_S1
+4
+18
+valid_range
+[5.0,13.0]
+H5T_C_S1
+21
+min_max
+[5.0,13.0]
+H5T_C_S1
+21
+_FillValue
+3.4E38
+H5T_C_S1
+7
+comment
+Estimated gain value applied to TB
+calculation for each channels in the
+following sequence: 18.7H, 18.7V, 23.8
+V,36.5H, 36.5V, 89.0H, 89.0V, 157.0H,
+157.0V
+H5T_C_S1
+124
+dimension_label
+Number_of_Scans, Number_of_Channels H5T_C_S1
+36
+0.085
+#7
+Scan_Offset
+H5T_IEEE_F32LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Estimated offset
+H5T_C_S1
+17
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+1.0
+H5T_C_S1
+4
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0.0,150.0]
+H5T_C_S1
+23
+min_max
+[0.0,150.0]
+H5T_C_S1
+23
+_FillValue
+3.4E38
+H5T_C_S1
+7
+comment
+Estimated offset value used for TB
+calculation for each channels in the
+following sequence: 18.7H, 18.7V, 23.8
+V,36.5H, 36.5V, 89.0H, 89.0V, 157.0H,
+157.0V
+H5T_C_S1
+113
+dimension_label
+Number_of_Scans, Number_of_Channels H5T_C_S1
+36
+0.002
+#8
+Scan_FirstPixelAcqTime_LF
+H5T_C_S1
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+date of the first pixel
+H5T_C_S1
+45
+standard_name
+time
+H5T_C_S1
+5
+units
+UTC Time in microseconds
+H5T_C_S1
+25
+_FillValue
+yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+22
+comment
+format: yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+30
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.002
+#9
+Scan_FirstPixelAcqTime_MF
+H5T_C_S1
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+date of the first pixel
+H5T_C_S1
+45
+standard_name
+time
+H5T_C_S1
+5
+units
+UTC Time in microseconds
+H5T_C_S1
+25
+_FillValue
+yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+22
+comment
+format: yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+30
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.002
+#10
+Scan_FirstPixelAcqTime_HF
+H5T_C_S1
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+date of the first pixel
+H5T_C_S1
+45
+standard_name
+time
+H5T_C_S1
+5
+units
+UTC Time in microseconds
+H5T_C_S1
+25
+_FillValue
+yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+22
+comment
+format: yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+30
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+1.007
+#11
+Latitude_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+19
+Name
+Value
+Type
+Size
+long_name
+latitude of pixels
+H5T_C_S1
+77
+standard_name
+latitude
+H5T_C_S1
+9
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+-40.0
+H5T_C_S1
+6
+valid_range
+[-40.0,40.0]
+H5T_C_S1
+13
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+accuracy 1km
+H5T_C_S1
+13
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+59
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.007
+#12
+Longitude_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+longitude of pixels
+H5T_C_S1
+78
+standard_name
+longitude
+H5T_C_S1
+10
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0.0,360.0]
+H5T_C_S1
+12
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Longitude [0,360]: 0 is Greenwich
+meridian (accuracy 1km)
+H5T_C_S1
+59
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+59
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,36000]
+H5T_STD_U16LE
+4
+0.503
+#13
+IncidenceAngle_Pixels_LF
+H5T_STD_I8LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Incidence angle at the center of pixels
+H5T_C_S1
+52
+standard_name
+incidence_angle
+H5T_C_S1
+16
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+53.0
+H5T_C_S1
+5
+valid_range
+[51.72,54.27]
+H5T_C_S1
+14
+_FillValue
+127
+H5T_C_S1
+4
+comment
+angle between zenith and line of sight
+H5T_C_S1
+39
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+59
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[-128,127]
+H5T_STD_I8LE
+2
+0.503
+#14
+IncidenceAngle_Pixels_MF
+H5T_STD_I8LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Incidence angle at the center of pixels
+H5T_C_S1
+52
+standard_name
+incidence_angle
+H5T_C_S1
+16
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+53.0
+H5T_C_S1
+5
+20
+valid_range
+[51.72,54.27]
+H5T_C_S1
+14
+_FillValue
+127
+H5T_C_S1
+4
+comment
+angle between zenith and line of sight
+H5T_C_S1
+39
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+59
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[-128,127]
+H5T_STD_I8LE
+2
+0.503
+#15
+IncidenceAngle_Pixels_HF
+H5T_STD_I8LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Incidence angle at the center of pixels
+H5T_C_S1
+52
+standard_name
+incidence_angle
+H5T_C_S1
+16
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+53.0
+H5T_C_S1
+5
+valid_range
+[51.72,54.27]
+H5T_C_S1
+14
+_FillValue
+127
+H5T_C_S1
+4
+comment
+angle between zenith and line of sight
+H5T_C_S1
+39
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+59
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[-128,127]
+H5T_STD_I8LE
+2
+1.007
+#16
+TB_Pixels_18.7_H
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 18.7
+_H
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Pixels_18.7_H
+H5T_C_S1
+44
+comment
+TB interpolated from L1A1 TB samples
+(see additionnal geometrical
+information in attributes of MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.007
+#17
+TB_Pixels_18.7_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 18.7
+_V
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+21
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Pixels_18.7_V
+H5T_C_S1
+44
+comment
+TB interpolated from L1A1 TB samples
+(see additionnal geometrical
+information in attributes of MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.007
+#18
+TB_Pixels_23.8_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 23.8
+_V
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Pixels_23.8_V
+H5T_C_S1
+44
+comment
+TB interpolated from L1A1 TB samples
+(see additionnal geometrical
+information in attributes of MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.007
+#19
+TB_Pixels_36.5_H
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 36.5
+_H
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Pixels_36.5_H
+H5T_C_S1
+44
+comment
+TB interpolated from L1A1 TB samples
+(see additionnal geometrical
+information in attributes of MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.007
+#20
+TB_Pixels_36.5_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+22
+long_name
+Pixels brightness temperatures at 36.5
+_V
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Pixels_36.5_V
+H5T_C_S1
+44
+comment
+TB interpolated from L1A1 TB samples
+(see additionnal geometrical
+information in attributes of MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.007
+#21
+TB_Pixels_89.0_H
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 89.0
+_H
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Pixels_89.0_H
+H5T_C_S1
+44
+comment
+TB interpolated from L1A1 TB samples
+(see additionnal geometrical
+information in attributes of MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.007
+#22
+TB_Pixels_89.0_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 89.0
+_V
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Pixels_89.0_V
+H5T_C_S1
+44
+comment
+TB interpolated from L1A1 TB samples
+(see additionnal geometrical
+information in attributes of MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+23
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.007
+#23
+TB_Pixels_157.0_H
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 157.0
+_H
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Pixels_157.0_H
+H5T_C_S1
+44
+comment
+TB interpolated from L1A1 TB samples
+(see additionnal geometrical
+information in attributes of MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.007
+#24
+TB_Pixels_157.0_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 157.0
+_V
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Pixels_157.0_V
+H5T_C_S1
+44
+comment
+TB interpolated from L1A1 TB samples
+(see additionnal geometrical
+information in attributes of MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.007
+#25
+QF_Pixels_18.7_H
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of pixel for channel 18.7_H
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+24
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.007
+#26
+QF_Pixels_18.7_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of pixel for channel 18.7_V
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.007
+#27
+QF_Pixels_23.8_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of pixel for channel 23.8_V
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.007
+#28
+QF_Pixels_36.5_H
+H5T_STD_U16LE
+Number_of_Scansx
+25
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of pixel for channel 36.5_H
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.007
+#29
+QF_Pixels_36.5_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of pixel for channel 36.5_V
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.007
+#30
+QF_Pixels_89.0_H
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of pixel for channel 89.0_H
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+26
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.007
+#31
+QF_Pixels_89.0_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of pixel for channel 89.0_V
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.007
+#32
+QF_Pixels_157.0_H
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of pixel for channel 157.0
+_H
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.007
+#33
+QF_Pixels_157.0_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of pixel for channel 157.0
+_V
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+27
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+28
+MADRAS
+L1A3
+Estimated Size
+for typical  [Number_of_Scans]
+21.850 Mb
+[2467]
+Science data group associated attributes
+ScienceData
+Attributes
+Index
+Name
+Value
+Type
+Size
+#1
+Product_Identification
+MT1MADSL1A3__1.00_9_01_I_2012_05_09_000H5T_C_S1
+84
+#2
+Organization_Name
+ISRO
+H5T_C_S1
+5
+#3
+Property_of_data
+ISRO_ and_CNES
+H5T_C_S1
+15
+#4
+Satellite_Name
+MEGHA-TROPIQUES
+H5T_C_S1
+16
+#5
+Payload_Name
+MADRAS
+H5T_C_S1
+12
+#6
+Product_Name
+Level-1A3-segment wise
+H5T_C_S1
+35
+#7
+Product_Format
+NCSA-HDF
+H5T_C_S1
+9
+#8
+Product_Format_Version
+HDF5.1.6.4
+H5T_C_S1
+11
+#9
+Product_Generation_Date
+2012MAI09
+H5T_C_S1
+10
+#10
+Imaging_Date
+2012MAI09
+H5T_C_S1
+10
+#11
+Date_Format
+YYYYMMMDD
+H5T_C_S1
+10
+#12
+INS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#13
+PRO_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#14
+RAD_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#15
+GEO_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#16
+PCS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#17
+SLC_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#18
+GRB_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#19
+UCS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#20
+Number_of_Channels
+9
+H5T_C_S1
+8
+#21
+Channel_CentralFrequency
+18.7GHz 18.7GHz 23.8GHz 36.5GHz 36.5GHz 8H5T_C_S1
+74
+#22
+Channel_Polarization
+H V V H V H V H V
+H5T_C_S1
+18
+#23
+Channel_Bandwith
+100MHz 100MHz 200MHz 500MHz 500MHz 135H5T_C_S1
+67
+#24
+Number_of_Resolutions
+3
+H5T_C_S1
+8
+#25
+ChannelList_LF
+18.7GHz 23.8GHz 36.5GHz
+H5T_C_S1
+24
+#26
+ChannelList_MF
+89.0GHz
+H5T_C_S1
+8
+#27
+ChannelList_HF
+157.0GHz
+H5T_C_S1
+9
+#28
+Pixel_Size_LF
+[40.00,67.25]km
+H5T_C_S1
+16
+#29
+Pixel_Size_MF
+[10.00,16.81]km
+H5T_C_S1
+16
+#30
+Pixel_Size_HF
+[6.0,10.1]km
+H5T_C_S1
+13
+#31
+SunGlint_Limits
+[0,30]degree
+H5T_C_S1
+13
+#32
+Orbit_StartNumber
+00001
+H5T_C_S1
+19
+#33
+Orbit_EndNumber
+00001
+H5T_C_S1
+17
+#34
+Orbit_Cycle_Number
+01
+H5T_C_S1
+3
+#35
+SLConf
+100001
+H5T_C_S1
+7
+#36
+Nskip
+0005
+H5T_C_S1
+5
+#37
+ProcessorVersion
+1.00
+H5T_C_S1
+5
+29
+#38
+MADRAS_QF_Scan_Definition
+16-bits array (=0:good, =1:bad) :
+#15:Scan/row validity flag,
+#14:pass type ,
+#13:scanning type ,
+#12:scan/row error ,
+#11:datation error ,
+#10:PRT error ,
+#9:encoder error ,
+#8 madras correction  flag
+#7 to 6 blank  ,
+# 5 to 3:Payload mod ,
+#2 to 0 :Satellite mod
+H5T_C_S1
+16x24
+#39
+MADRAS_QF_Pixel_Definition
+16-bits array (=0:good / =1:bad):,   #15:TB vaH5T_C_S1
+16x24
+#40
+Skip_StartScanNumber
+[00000064,00000165,00000266,00000367,00H5T_C_S1
+1*Nskip
+#41
+Skip_EndScanNumber
+[00000066,00000167,00000268,00000370,00H5T_C_S1
+1*Nskip
+#42
+Flip_StartScanNumber
+00000012
+H5T_C_S1
+9
+#43
+Flip_EndScanNumber
+00000042
+H5T_C_S1
+9
+#44
+Maneuver_StartScanNumber
+00000011
+H5T_C_S1
+9
+#45
+Maneuver_EndScanNumber
+00000043
+H5T_C_S1
+9
+#46
+FirstScanNumber
+00000000
+H5T_C_S1
+8
+#47
+Time_Pixel_Interval
+4.2
+H5T_C_S1
+4
+#48
+Number_of_Pixels
+214
+H5T_C_S1
+8
+#49
+Number_of_Scans
+00002467
+H5T_C_S1
+8
+#50
+QF_Product_%Processed_Scans 099
+H5T_C_S1
+4
+Science data group elements
+Estimated size of
+dataset [Mb]
+Index
+Name
+Type
+Typical Value
+0.005
+#1
+MADRAS_QF_scan
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality flag applicable to the scan line
+H5T_C_S1
+41
+comment
+16-bits array (=0:good, =1:bad) :
+#15:Scan/row validity flag,
+#14:pass type ,
+#13:scanning type ,
+#12:scan/row error ,
+#11:datation error ,
+#10:PRT error ,
+#9:encoder error ,
+#8 madras correction  flag
+#7 to 6 blank  ,
+# 5 to 3:Payload mod ,
+#2 to 0 :Satellite mod
+H5T_C_S1
+29
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+geolocation_label
+Scan_FirstPixelAcqTime
+H5T_C_S1
+54
+0.005
+#2
+Scan_Number
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Scan Number
+H5T_C_S1
+12
+valid_range
+[0,65535]
+H5T_C_S1
+10
+30
+min_max
+[0,65535]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+scan number from the first scan of the
+product
+H5T_C_S1
+47
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.005
+#3
+Latitude_Nadir
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+latitude of subsatellite point
+H5T_C_S1
+31
+standard_name
+latitude
+H5T_C_S1
+9
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+-40.0
+H5T_C_S1
+6
+valid_range
+[-40.0,40.0]
+H5T_C_S1
+13
+min_max
+[0,8000]
+H5T_C_S1
+9
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+accuracy 1km
+H5T_C_S1
+13
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.005
+#4
+Longitude_Nadir
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+longitude of subsatellite point
+H5T_C_S1
+32
+standard_name
+longitude
+H5T_C_S1
+10
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0.0,360.0]
+H5T_C_S1
+12
+min_max
+[0,36000]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Longitude [0,360]: 0 is Greenwich
+meridian (accuracy 1km)
+H5T_C_S1
+59
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.005
+#5
+Scan_HotLoadTemperature
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Hot load temperature
+H5T_C_S1
+21
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0.0,400.0]
+H5T_C_S1
+12
+min_max
+[0,40000]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Estimated average physical
+temperature of the hot load used for TB
+calculation
+H5T_C_S1
+79
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+geolocation_label
+Scan_FirstPixelAcqTime
+H5T_C_S1
+54
+0.085
+#6
+Scan_Gain
+H5T_IEEE_F32LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Estimated gain
+H5T_C_S1
+15
+units
+count/K
+H5T_C_S1
+8
+scale_factor
+1.0
+H5T_C_S1
+4
+add_offset
+0.0
+H5T_C_S1
+4
+31
+valid_range
+[5.0,13.0]
+H5T_C_S1
+21
+min_max
+[5.0,13.0]
+H5T_C_S1
+21
+_FillValue
+3.4E38
+H5T_C_S1
+7
+comment
+Estimated gain value applied to TB
+calculation for each channels in the
+following sequence: 18.7H, 18.7V, 23.8
+V,36.5H, 36.5V, 89.0H, 89.0V, 157.0H,
+157.0V
+H5T_C_S1
+124
+dimension_label
+Number_of_Scans, Number_of_Channels H5T_C_S1
+36
+0.085
+#7
+Scan_Offset
+H5T_IEEE_F32LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Estimated offset
+H5T_C_S1
+17
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+1.0
+H5T_C_S1
+4
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0.0,150.0]
+H5T_C_S1
+23
+min_max
+[0.0,150.0]
+H5T_C_S1
+23
+_FillValue
+3.4E38
+H5T_C_S1
+7
+comment
+Estimated offset value used for TB
+calculation for each channels in the
+following sequence: 18.7H, 18.7V, 23.8
+V,36.5H, 36.5V, 89.0H, 89.0V, 157.0H,
+157.0V
+H5T_C_S1
+113
+dimension_label
+Number_of_Scans, Number_of_Channels H5T_C_S1
+36
+0.002
+#8
+Scan_FirstPixelAcqTime_LF
+H5T_C_S1
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+date of the first pixel
+H5T_C_S1
+45
+standard_name
+time
+H5T_C_S1
+5
+units
+UTC Time in microseconds
+H5T_C_S1
+25
+_FillValue
+yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+22
+comment
+format: yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+30
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.002
+#9
+Scan_FirstPixelAcqTime_MF
+H5T_C_S1
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+date of the first pixel
+H5T_C_S1
+45
+standard_name
+time
+H5T_C_S1
+5
+units
+UTC Time in microseconds
+H5T_C_S1
+25
+_FillValue
+yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+22
+comment
+format: yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+30
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.002
+#10
+Scan_FirstPixelAcqTime_HF
+H5T_C_S1
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+date of the first pixel
+H5T_C_S1
+45
+standard_name
+time
+H5T_C_S1
+5
+units
+UTC Time in microseconds
+H5T_C_S1
+25
+_FillValue
+yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+22
+comment
+format: yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+30
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+1.007
+#11
+Latitude_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+32
+Name
+Value
+Type
+Size
+long_name
+latitude of pixels
+H5T_C_S1
+77
+standard_name
+latitude
+H5T_C_S1
+9
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+-40.0
+H5T_C_S1
+6
+valid_range
+[-40.0,40.0]
+H5T_C_S1
+13
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+accuracy 1km
+H5T_C_S1
+13
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+59
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.007
+#12
+Longitude_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+longitude of pixels
+H5T_C_S1
+78
+standard_name
+longitude
+H5T_C_S1
+10
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0.0,360.0]
+H5T_C_S1
+12
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Longitude [0,360]: 0 is Greenwich
+meridian (accuracy 1km)
+H5T_C_S1
+59
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+59
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,36000]
+H5T_STD_U16LE
+4
+0.503
+#13
+IncidenceAngle_Pixels_LF
+H5T_STD_I8LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Incidence angle at the center of pixels
+H5T_C_S1
+52
+standard_name
+incidence_angle
+H5T_C_S1
+16
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+53.0
+H5T_C_S1
+5
+valid_range
+[51.72,54.27]
+H5T_C_S1
+14
+_FillValue
+127
+H5T_C_S1
+4
+comment
+angle between zenith and line of sight
+H5T_C_S1
+39
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+59
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[-128,127]
+H5T_STD_I8LE
+2
+0.503
+#14
+IncidenceAngle_Pixels_MF
+H5T_STD_I8LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Incidence angle at the center of pixels
+H5T_C_S1
+52
+standard_name
+incidence_angle
+H5T_C_S1
+16
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+53.0
+H5T_C_S1
+5
+33
+valid_range
+[51.72,54.27]
+H5T_C_S1
+14
+_FillValue
+127
+H5T_C_S1
+4
+comment
+angle between zenith and line of sight
+H5T_C_S1
+39
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+59
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[-128,127]
+H5T_STD_I8LE
+2
+0.503
+#15
+IncidenceAngle_Pixels_HF
+H5T_STD_I8LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Incidence angle at the center of pixels
+H5T_C_S1
+52
+standard_name
+incidence_angle
+H5T_C_S1
+16
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+53.0
+H5T_C_S1
+5
+valid_range
+[51.72,54.27]
+H5T_C_S1
+14
+_FillValue
+127
+H5T_C_S1
+4
+comment
+angle between zenith and line of sight
+H5T_C_S1
+39
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+59
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[-128,127]
+H5T_STD_I8LE
+2
+1.007
+#16
+TB_Pixels_18.7_H
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 18.7
+_H
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Pixels_18.7_H
+H5T_C_S1
+44
+comment
+TB interpolated from L1A1 TB samples
+(see additionnal geometrical
+information in attributes of MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.007
+#17
+TB_Pixels_18.7_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 18.7
+_V
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+34
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Pixels_18.7_V
+H5T_C_S1
+44
+comment
+TB interpolated from L1A1 TB samples
+(see additionnal geometrical
+information in attributes of MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.007
+#18
+TB_Pixels_23.8_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 23.8
+_V
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Pixels_23.8_V
+H5T_C_S1
+44
+comment
+TB interpolated from L1A1 TB samples
+(see additionnal geometrical
+information in attributes of MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.007
+#19
+TB_Pixels_36.5_H
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 36.5
+_H
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Pixels_36.5_H
+H5T_C_S1
+44
+comment
+TB interpolated from L1A1 TB samples
+(see additionnal geometrical
+information in attributes of MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.007
+#20
+TB_Pixels_36.5_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+35
+long_name
+Pixels brightness temperatures at 36.5
+_V
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Pixels_36.5_V
+H5T_C_S1
+44
+comment
+TB interpolated from L1A1 TB samples
+(see additionnal geometrical
+information in attributes of MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.007
+#21
+TB_Pixels_89.0_H
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 89.0
+_H
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Pixels_89.0_H
+H5T_C_S1
+44
+comment
+TB interpolated from L1A1 TB samples
+(see additionnal geometrical
+information in attributes of MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.007
+#22
+TB_Pixels_89.0_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 89.0
+_V
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Pixels_89.0_V
+H5T_C_S1
+44
+comment
+TB interpolated from L1A1 TB samples
+(see additionnal geometrical
+information in attributes of MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+36
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.007
+#23
+TB_Pixels_157.0_H
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 157.0
+_H
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Pixels_157.0_H
+H5T_C_S1
+44
+comment
+TB interpolated from L1A1 TB samples
+(see additionnal geometrical
+information in attributes of MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.007
+#24
+TB_Pixels_157.0_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 157.0
+_V
+H5T_C_S1
+53
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF__Pixels_157.0_V
+H5T_C_S1
+44
+comment
+TB interpolated from L1A1 TB samples
+(see additionnal geometrical
+information in attributes of MADRAS)
+H5T_C_S1
+88
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.007
+#25
+QF_Pixels_18.7_H
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of pixel for channel 18.7_H
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+37
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.007
+#26
+QF_Pixels_18.7_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of pixel for channel 18.7_V
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.007
+#27
+QF_Pixels_23.8_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of pixel for channel 23.8_V
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.007
+#28
+QF_Pixels_36.5_H
+H5T_STD_U16LE
+Number_of_Scansx
+38
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of pixel for channel 36.5_H
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.007
+#29
+QF_Pixels_36.5_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of pixel for channel 36.5_V
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.007
+#30
+QF_Pixels_89.0_H
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of pixel for channel 89.0_H
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+39
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.007
+#31
+QF_Pixels_89.0_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of pixel for channel 89.0_V
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.007
+#32
+QF_Pixels_157.0_H
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of pixel for channel 157.0
+_H
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.007
+#33
+QF_Pixels_157.0_V
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of pixel for channel 157.0
+_V
+H5T_C_S1
+71
+standard_name
+quality flag
+H5T_C_S1
+13
+40
+comment
+16-bits array (=0:good / =1:bad):,
+#15:TB validity flag,  #14:sun glint ,
+#13: Land/Sea contamination,  #12:
+surface type,  #11:Channel ON/OFF
+status,  #10:Level 0 count error,  #9
+Level 0 hot or cold error ,  #8:
+geolocation poor estimation,  #7-6:
+calibration flag,  #5-4: TB corrected,
+#3: interpolation quality, #2: AGC/AOC
+loop,  #1-0:ice flag
+H5T_C_S1
+1
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+geolocation_label
+Latitude_Pixels, Longitude_Pixels
+H5T_C_S1
+78
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+41
+MADRAS
+L1B
+Estimated Size
+for typical  [Number_of_Rows_5km,
+Number_of_Rows_10km]
+76.786 Mb
+[7674,3837]
+Science data group associated attributes
+ScienceData
+Attributes
+Index
+Name
+Value
+Type
+Size
+#1
+Product_Identification
+MT1MADSL1B__1.00_9_01_I_2012_05_09_0000H5T_C_S1
+84
+#2
+Organization_Name
+ISRO
+H5T_C_S1
+5
+#3
+Property_of_data
+ISRO_ and_CNES
+H5T_C_S1
+15
+#4
+Satellite_Name
+MEGHA-TROPIQUES
+H5T_C_S1
+16
+#5
+Payload_Name
+MADRAS
+H5T_C_S1
+12
+#6
+Product_Name
+Level-1B-segment wise
+H5T_C_S1
+35
+#7
+Product_Format
+NCSA-HDF
+H5T_C_S1
+9
+#8
+Product_Format_Version
+HDF5-1.6.4
+H5T_C_S1
+11
+#9
+Product_Generation_Date
+2012MAI09
+H5T_C_S1
+10
+#10
+Imaging_Date
+2012MAI09
+H5T_C_S1
+10
+#11
+Date_Format
+YYYYMMMDD
+H5T_C_S1
+10
+#12
+INS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#13
+PRO_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#14
+RAD_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#15
+GEO_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#16
+PCS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#17
+SLC_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#18
+GRB_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#19
+UCS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#20
+Number_of_Channels
+9
+H5T_C_S1
+8
+#21
+Channel_CentralFrequency
+[018.7 GHz,018.7 GHz,023.8 GHz,036.5 GHz,0 H5T_C_S1
+92
+#22
+Channel_Polarization
+[H,V,V,H,V,H,V,H,V]
+H5T_C_S1
+20
+#23
+Channel_Bandwith
+[100 MHz,100 MHz,200 MHz,500 MHz,500 MHzH5T_C_S1
+78
+#24
+Number_of_Resolutions
+3
+H5T_C_S1
+8
+#25
+ChannelList_LF
+[18.7 GHz, 23.8 GHz, 36.5 GHz]
+H5T_C_S1
+31
+#26
+ChannelList_MF
+[89.0 GHz]
+H5T_C_S1
+11
+#27
+ChannelList_HF
+[157.0 GHz]
+H5T_C_S1
+12
+#28
+GridFrequencyList_5km
+[157 GHz]
+H5T_C_S1
+10
+#29
+GridFrequencyList_10km
+[18.7 GHz,23.8 GHz,36.5 GHz,89.0 GHz]
+H5T_C_S1
+38
+#30
+SunGlint_Limits
+[0,30]degrees
+H5T_C_S1
+15
+#31
+Orbit_StartNumber
+00001
+H5T_C_S1
+19
+#32
+Orbit_EndNumber
+00001
+H5T_C_S1
+17
+#33
+Orbit_Cycle_Number
+01
+H5T_C_S1
+3
+#34
+SLConf
+100001
+H5T_C_S1
+7
+#35
+Nskip
+0005
+H5T_C_S1
+5
+#36
+ProcessorVersion
+1.00
+H5T_C_S1
+5
+42
+#37
+MADRAS_QF_Row_Definition
+16-bits array (=0:good, =1:bad) :
+#15:Scan/row validity flag,
+#14:pass type ,
+#13:scanning type ,
+#12:scan/row error ,
+#11:datation error ,
+#10:PRT error ,
+#9:encoder error ,
+#8 madras correction  flag
+#7 to 6 blank  ,
+# 5 to 3:Payload mod ,
+#2 to 0 :Satellite mod
+H5T_C_S1
+16x24
+#38
+MADRAS_QF_Cell_Definition
+16-bits array (=0:good / =1:bad):,   #15:TB vaH5T_C_S1
+16x24
+#39
+Skip_StartScanNumber
+[00000064,00000165,00000266,00000367,00H5T_C_S1
+1*Nskip
+#40
+Skip_EndScanNumber
+[00000066,00000167,00000268,00000370,00H5T_C_S1
+1*Nskip
+#41
+Flip_StartScanNumber
+00000012
+H5T_C_S1
+9
+#42
+Flip_EndScanNumber
+00000042
+H5T_C_S1
+9
+#43
+Maneuver_StartScanNumber
+00000011
+H5T_C_S1
+9
+#44
+Maneuver_EndScanNumber
+00000043
+H5T_C_S1
+9
+#45
+Number_of_Rows_5km
+7674
+H5T_C_S1
+8
+#46
+Number_of_Columns_5km
+361
+H5T_C_S1
+8
+#47
+Number_of_Rows_10km
+3837
+H5T_C_S1
+8
+#48
+Number_of_Columns_10km
+181
+H5T_C_S1
+8
+#49
+Number_of_Processed_Rows_5km7500
+H5T_C_S1
+8
+#50
+Number_of_Processed_Rows_10k3830
+H5T_C_S1
+8
+#51
+QF_Product_%Processed_Rows_5 099
+H5T_C_S1
+4
+#52
+QF_Product_%Processed_Rows_1 099
+H5T_C_S1
+4
+Science data group elements
+Estimated size of
+dataset [Mb]
+Index
+Name
+Type
+Typical Value
+0.007
+#1
+Row_MADRAS_QF_10km
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality flag applicable to the row line
+H5T_C_S1
+40
+comment
+16-bits array (=0:good, =1:bad) : #0:
+scan/row quality flag validity,  #1: pass
+type,  #2: Scanning type, #3: Scan/Row
+error out of limits,  #4: datation error,
+#5: PRT error,  #6: encoder error,  #7:
+AGC/AOC loop, #8-9: Blank, #10-12:
+payload mode, #13-15: satellite mode
+H5T_C_S1
+274
+dimension_label
+Number_of_Rows_10km
+H5T_C_S1
+20
+geolocation_label
+Row_StartTime_10km_LF
+H5T_C_S1
+22
+0.015
+#2
+Row_MADRAS_QF_5km
+H5T_STD_U16LE
+Number_of_Rows_5
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality flag applicable to the row line
+H5T_C_S1
+40
+43
+comment
+16-bits array (=0:good, =1:bad) : #0:
+scan/row quality flag validity,  #1: pass
+type,  #2: Scanning type, #3: Scan/Row
+error out of limits,  #4: datation error,
+#5: PRT error,  #6: encoder error,  #7:
+AGC/AOC loop, #8-9: Blank, #10-12:
+payload mode, #13-15: satellite mode
+H5T_C_S1
+274
+dimension_label
+Number_of_Rows_5km
+H5T_C_S1
+19
+geolocation_label
+Row_StartTime_5km_157
+H5T_C_S1
+22
+0.029
+#3
+Row_Number_5km
+H5T_STD_U32LE
+Number_of_Rows_5
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Row Number (5km grid)
+H5T_C_S1
+29
+comment
+Row Number (5km grid)
+H5T_C_S1
+29
+dimension_label
+Number_of_Rows_5km
+H5T_C_S1
+26
+0.015
+#4
+Row_Number_10km
+H5T_STD_U32LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Row Number (10km grid)
+H5T_C_S1
+29
+comment
+Row Number (10km grid)
+H5T_C_S1
+29
+dimension_label
+Number_of_Rows_10km
+H5T_C_S1
+26
+0.004
+#5
+Row_FirstCellAcqTime_10km_LF
+H5T_C_S1
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+date for the first cell of the row (10km
+grid) for LF channels
+H5T_C_S1
+105
+standard_name
+time
+H5T_C_S1
+5
+units
+UTC Time in microseconds
+H5T_C_S1
+25
+_FillValue
+yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+22
+comment
+format: yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+32
+dimension_label
+Number_of_Rows_10km
+H5T_C_S1
+37
+0.004
+#6
+Row_FirstCellAcqTime_10km_MF
+H5T_C_S1
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+date for the first cell of the row (10km
+grid) for MF channels
+H5T_C_S1
+105
+standard_name
+time
+H5T_C_S1
+5
+units
+UTC Time in microseconds
+H5T_C_S1
+25
+_FillValue
+yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+22
+comment
+format: yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+32
+dimension_label
+Number_of_Rows_10km
+H5T_C_S1
+37
+0.007
+#7
+Row_FirstCellAcqTime_5km_HF
+H5T_C_S1
+Number_of_Rows_5
+Attributes
+Name
+Value
+Type
+Size
+long_name
+date for the first cell of the row (5km
+grid) for HF channels
+H5T_C_S1
+105
+standard_name
+time
+H5T_C_S1
+5
+units
+UTC Time in microseconds
+H5T_C_S1
+25
+_FillValue
+yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+22
+comment
+format: yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+32
+dimension_label
+Number_of_Rows_5km
+H5T_C_S1
+37
+1.325
+#8
+Cell_population_10km_18.7H
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+44
+long_name
+Cell population for channel 18.7
+H5T_C_S1
+52
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+number of samples per Cell
+H5T_C_S1
+40
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_10km,
+Longitude_Cells_10km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,65535]
+H5T_STD_U16LE
+4
+1.325
+#9
+Cell_population_10km_18.7V
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Cell population for channel 18.7
+H5T_C_S1
+52
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+number of samples per Cell
+H5T_C_S1
+40
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_10km,
+Longitude_Cells_10km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,65535]
+H5T_STD_U16LE
+4
+1.325
+#10
+Cell_population_10km_23.8V
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Cell population for channel 23.8
+H5T_C_S1
+52
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+number of samples per Cell
+H5T_C_S1
+40
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_10km,
+Longitude_Cells_10km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,65535]
+H5T_STD_U16LE
+4
+1.325
+#11
+Cell_population_10km_36.5H
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Cell population for channel 36.5
+H5T_C_S1
+52
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+number of samples per Cell
+H5T_C_S1
+40
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_10km,
+Longitude_Cells_10km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,65535]
+H5T_STD_U16LE
+4
+1.325
+#12
+Cell_population_10km_36.5V
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Cell population for channel 36.5
+H5T_C_S1
+52
+_FillValue
+65535
+H5T_C_S1
+6
+45
+comment
+number of samples per Cell
+H5T_C_S1
+40
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_10km,
+Longitude_Cells_10km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,65535]
+H5T_STD_U16LE
+4
+1.325
+#13
+Cell_population_10km_89.0H
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Cell population for channel 89.0
+H5T_C_S1
+52
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+number of samples per Cell
+H5T_C_S1
+40
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_10km,
+Longitude_Cells_10km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,65535]
+H5T_STD_U16LE
+4
+1.325
+#14
+Cell_population_10km_89.0V
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Cell population for channel 89.0
+H5T_C_S1
+52
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+number of samples per Cell
+H5T_C_S1
+40
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_10km,
+Longitude_Cells_10km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,65535]
+H5T_STD_U16LE
+4
+5.284
+#15
+Cell_population_5km_157.0H
+H5T_STD_U16LE
+Number_of_Rows_5
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Cell population for channel 157.0
+H5T_C_S1
+52
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+number of samples per Cell
+H5T_C_S1
+40
+dimension_label
+Number_of_Rows_5km,
+Number_of_Columns_5km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_5km,
+Longitude_Cells_5km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,65535]
+H5T_STD_U16LE
+4
+5.284
+#16
+Cell_population_5km_157.0V
+H5T_STD_U16LE
+Number_of_Rows_5
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Cell population for channel 157.0
+H5T_C_S1
+52
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+number of samples per Cell
+H5T_C_S1
+40
+46
+dimension_label
+Number_of_Rows_5km,
+Number_of_Columns_5km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_5km,
+Longitude_Cells_5km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,65535]
+H5T_STD_U16LE
+4
+5.284
+#17
+Latitude_Cells_5km
+H5T_STD_U16LE
+Number_of_Rows_5
+Attributes
+Name
+Value
+Type
+Size
+long_name
+latitude of cells (5km grid)
+H5T_C_S1
+49
+standard_name
+latitude
+H5T_C_S1
+9
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+-40
+H5T_C_S1
+4
+valid_range
+[-40,40]
+H5T_C_S1
+9
+min_max
+[0,8000]
+H5T_C_S1
+9
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+accuracy 1km
+H5T_C_S1
+13
+dimension_label
+Number_of_Rows_5km,
+Number_of_Columns_5km
+H5T_C_S1
+56
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.325
+#18
+Latitude_Cells_10km
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+latitude of cells (10km grid)
+H5T_C_S1
+49
+standard_name
+latitude
+H5T_C_S1
+9
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+-40
+H5T_C_S1
+4
+valid_range
+[-40,40]
+H5T_C_S1
+9
+min_max
+[0,8000]
+H5T_C_S1
+9
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+accuracy 1km
+H5T_C_S1
+13
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+56
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+5.284
+#19
+Longitude_Cells_5km
+H5T_STD_U16LE
+Number_of_Rows_5
+Attributes
+Name
+Value
+Type
+Size
+long_name
+longitude of cells (5km grid)
+H5T_C_S1
+50
+standard_name
+longitude
+H5T_C_S1
+10
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,360]
+H5T_C_S1
+8
+min_max
+[0,36000]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+47
+comment
+Longitude [0,360]: 0 is Greenwich
+meridian (accuracy 1km)
+H5T_C_S1
+59
+dimension_label
+Number_of_Rows_5km,
+Number_of_Columns_5km
+H5T_C_S1
+56
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,36000]
+H5T_STD_U16LE
+4
+1.325
+#20
+Longitude_Cells_10km
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+longitude of cells (10km grid)
+H5T_C_S1
+50
+standard_name
+longitude
+H5T_C_S1
+10
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,360]
+H5T_C_S1
+8
+min_max
+[0,36000]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Longitude [0,360]: 0 is Greenwich
+meridian (accuracy 1km)
+H5T_C_S1
+59
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+56
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,36000]
+H5T_STD_U16LE
+4
+0.662
+#21
+IncidenceAngle_Cells_10km_LF
+H5T_STD_I8LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Incidence angle at the center of the cell
+for LF channels
+H5T_C_S1
+83
+standard_name
+incidence_angle
+H5T_C_S1
+16
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+53.0
+H5T_C_S1
+5
+valid_range
+[51.72,54.27]
+H5T_C_S1
+14
+_FillValue
+127
+H5T_C_S1
+4
+comment
+angle between zenith and line of sight
+H5T_C_S1
+39
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+78
+geolocation_label
+Latitude_Cells_10km,
+Longitude_Cells_10km
+H5T_C_S1
+84
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[-128,127]
+H5T_STD_I8LE
+2
+0.662
+#22
+IncidenceAngle_Cells_10km_MF
+H5T_STD_I8LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Incidence angle at the center of the cell
+for MF channels
+H5T_C_S1
+83
+standard_name
+incidence_angle
+H5T_C_S1
+16
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+53.0
+H5T_C_S1
+5
+48
+valid_range
+[51.72,54.27]
+H5T_C_S1
+14
+_FillValue
+127
+H5T_C_S1
+4
+comment
+angle between zenith and line of sight
+H5T_C_S1
+39
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+78
+geolocation_label
+Latitude_Cells_10km,
+Longitude_Cells_10km
+H5T_C_S1
+84
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[-128,127]
+H5T_STD_I8LE
+2
+2.642
+#23
+IncidenceAngle_Cells_5km_HF
+H5T_STD_I8LE
+Number_of_Rows_5
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Incidence angle at the center of the cell
+for HF channels
+H5T_C_S1
+83
+standard_name
+incidence_angle
+H5T_C_S1
+16
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+53.0
+H5T_C_S1
+5
+valid_range
+[51.72,54.27]
+H5T_C_S1
+14
+_FillValue
+127
+H5T_C_S1
+4
+comment
+angle between zenith and line of sight
+H5T_C_S1
+39
+dimension_label
+Number_of_Rows_5km,
+Number_of_Columns_5km
+H5T_C_S1
+78
+geolocation_label
+Latitude_Cells_5km,
+Longitude_Cells_5km
+H5T_C_S1
+84
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[-128,127]
+H5T_STD_I8LE
+2
+1.325
+#24
+TB_Cells_18.7_H
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 18.7H H5T_C_S1
+63
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+min_max
+[0,40000]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_cells_18.7_H
+H5T_C_S1
+52
+comment
+TB interpolated on all-instruments
+common grid (10km grid) (see
+additionnal geometrical information in
+attributes of MADRAS)
+H5T_C_S1
+149
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_10km,
+Longitude_Cells_10km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.325
+#25
+TB_Cells_18.7_V
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+49
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 18.7V H5T_C_S1
+63
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+min_max
+[0,40000]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_cells_18.7_V
+H5T_C_S1
+52
+comment
+TB interpolated on all-instruments
+common grid (10km grid) (see
+additionnal geometrical information in
+attributes of MADRAS)
+H5T_C_S1
+149
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_10km,
+Longitude_Cells_10km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.325
+#26
+TB_Cells_23.8_V
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 23.8V H5T_C_S1
+63
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+min_max
+[0,40000]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_cells_23.8_V
+H5T_C_S1
+52
+comment
+TB interpolated on all-instruments
+common grid (10km grid) (see
+additionnal geometrical information in
+attributes of MADRAS)
+H5T_C_S1
+149
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_10km,
+Longitude_Cells_10km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.325
+#27
+TB_Cells_36.5_H
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 36.5H H5T_C_S1
+63
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+min_max
+[0,40000]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+50
+quality_flag
+QF_cells_36.5_H
+H5T_C_S1
+52
+comment
+TB interpolated on all-instruments
+common grid (10km grid) (see
+additionnal geometrical information in
+attributes of MADRAS)
+H5T_C_S1
+149
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_10km,
+Longitude_Cells_10km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.325
+#28
+TB_Cells_36.5_V
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 36.5V H5T_C_S1
+63
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+min_max
+[0,40000]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_cells_36.5_V
+H5T_C_S1
+52
+comment
+TB interpolated on all-instruments
+common grid (10km grid) (see
+additionnal geometrical information in
+attributes of MADRAS)
+H5T_C_S1
+149
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_10km,
+Longitude_Cells_10km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.325
+#29
+TB_Cells_89.0_H
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 89.0H H5T_C_S1
+63
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+min_max
+[0,40000]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_cells_89.0_H
+H5T_C_S1
+52
+comment
+TB interpolated on all-instruments
+common grid (10km grid) (see
+additionnal geometrical information in
+attributes of MADRAS)
+H5T_C_S1
+149
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_10km,
+Longitude_Cells_10km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+51
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.325
+#30
+TB_Cells_89.0_V
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 89.0V H5T_C_S1
+63
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+min_max
+[0,40000]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_cells_89.0_V
+H5T_C_S1
+52
+comment
+TB interpolated on all-instruments
+common grid (10km grid) (see
+additionnal geometrical information in
+attributes of MADRAS)
+H5T_C_S1
+149
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_10km,
+Longitude_Cells_10km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+5.284
+#31
+TB_Cells_157.0_H
+H5T_STD_U16LE
+Number_of_Rows_5
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 157.0
+H
+H5T_C_S1
+63
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+min_max
+[0,40000]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_cells_157.0_H
+H5T_C_S1
+52
+comment
+TB interpolated on all-instruments
+common grid (5km grid) (see
+additionnal geometrical information in
+attributes of MADRAS)
+H5T_C_S1
+149
+dimension_label
+Number_of_Rows_5km,
+Number_of_Columns_5km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_5km,
+Longitude_Cells_5km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+5.284
+#32
+TB_Cells_157.0_V
+H5T_STD_U16LE
+Number_of_Rows_5
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixels brightness temperatures at 157.0
+V
+H5T_C_S1
+63
+standard_name
+brightness_temperature
+H5T_C_S1
+23
+52
+units
+Kelvin
+H5T_C_S1
+7
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,400]
+H5T_C_S1
+8
+min_max
+[0,40000]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_cells_157.0_V
+H5T_C_S1
+52
+comment
+TB interpolated on all-instruments
+common grid (5km grid) (see
+additionnal geometrical information in
+attributes of MADRAS)
+H5T_C_S1
+149
+dimension_label
+Number_of_Rows_5km,
+Number_of_Columns_5km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_5km,
+Longitude_Cells_5km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000]
+H5T_STD_U16LE
+4
+1.325
+#33
+QF_Cells_18.7_H
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of cell for channel 18.7H
+H5T_C_S1
+84
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array : #0:quality flag validity ,
+#1:sun glint,  #2:land/sea
+contamination, #3:surface type, #4:TB
+validity, #5:Level-0 Count Saturated,
+#6:Level-0 Count poor value, #7:
+geolocation estimation, #8:calibration
+failure, #9:partial calibration, #10:hot
+count error, #11:cold sky count error,
+#12:interpolation quality, #13: Blank,
+#14 to #15: Ice flag
+H5T_C_S1
+358
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_10km,
+Longitude_Cells_10km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.325
+#34
+QF_Cells_18.7_V
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of cell for channel 18.7V
+H5T_C_S1
+84
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array : #0:quality flag validity ,
+#1:sun glint,  #2:land/sea
+contamination, #3:surface type, #4:TB
+validity, #5:Level-0 Count Saturated,
+#6:Level-0 Count poor value, #7:
+geolocation estimation, #8:calibration
+failure, #9:partial calibration, #10:hot
+count error, #11:cold sky count error,
+#12:interpolation quality, #13: Blank,
+#14 to #15: Ice flag
+H5T_C_S1
+358
+53
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_10km,
+Longitude_Cells_10km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.325
+#35
+QF_Cells_23.8_V
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of cell for channel 23.8V
+H5T_C_S1
+84
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array : #0:quality flag validity ,
+#1:sun glint,  #2:land/sea
+contamination, #3:surface type, #4:TB
+validity, #5:Level-0 Count Saturated,
+#6:Level-0 Count poor value, #7:
+geolocation estimation, #8:calibration
+failure, #9:partial calibration, #10:hot
+count error, #11:cold sky count error,
+#12:interpolation quality, #13: Blank,
+#14 to #15: Ice flag
+H5T_C_S1
+358
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_10km,
+Longitude_Cells_10km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.325
+#36
+QF_Cells_36.5_H
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of cell for channel 36.5H
+H5T_C_S1
+84
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array : #0:quality flag validity ,
+#1:sun glint,  #2:land/sea
+contamination, #3:surface type, #4:TB
+validity, #5:Level-0 Count Saturated,
+#6:Level-0 Count poor value, #7:
+geolocation estimation, #8:calibration
+failure, #9:partial calibration, #10:hot
+count error, #11:cold sky count error,
+#12:interpolation quality, #13: Blank,
+#14 to #15: Ice flag
+H5T_C_S1
+358
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_10km,
+Longitude_Cells_10km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.325
+#37
+QF_Cells_36.5_V
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of cell for channel 36.5V
+H5T_C_S1
+84
+standard_name
+quality flag
+H5T_C_S1
+13
+54
+comment
+16-bits array : #0:quality flag validity ,
+#1:sun glint,  #2:land/sea
+contamination, #3:surface type, #4:TB
+validity, #5:Level-0 Count Saturated,
+#6:Level-0 Count poor value, #7:
+geolocation estimation, #8:calibration
+failure, #9:partial calibration, #10:hot
+count error, #11:cold sky count error,
+#12:interpolation quality, #13: Blank,
+#14 to #15: Ice flag
+H5T_C_S1
+358
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_10km,
+Longitude_Cells_10km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.325
+#38
+QF_Cells_89.0_H
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of cell for channel 89.0H
+H5T_C_S1
+84
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array : #0:quality flag validity ,
+#1:sun glint,  #2:land/sea
+contamination, #3:surface type, #4:TB
+validity, #5:Level-0 Count Saturated,
+#6:Level-0 Count poor value, #7:
+geolocation estimation, #8:calibration
+failure, #9:partial calibration, #10:hot
+count error, #11:cold sky count error,
+#12:interpolation quality, #13: Blank,
+#14 to #15: Ice flag
+H5T_C_S1
+358
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_10km,
+Longitude_Cells_10km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.325
+#39
+QF_Cells_89.0_V
+H5T_STD_U16LE
+Number_of_Rows_1
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of cell for channel 89.0V
+H5T_C_S1
+84
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array : #0:quality flag validity ,
+#1:sun glint,  #2:land/sea
+contamination, #3:surface type, #4:TB
+validity, #5:Level-0 Count Saturated,
+#6:Level-0 Count poor value, #7:
+geolocation estimation, #8:calibration
+failure, #9:partial calibration, #10:hot
+count error, #11:cold sky count error,
+#12:interpolation quality, #13: Blank,
+#14 to #15: Ice flag
+H5T_C_S1
+358
+dimension_label
+Number_of_Rows_10km,
+Number_of_Columns_10km
+H5T_C_S1
+82
+55
+geolocation_label
+Latitude_Cells_10km,
+Longitude_Cells_10km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+5.284
+#40
+QF_Cells_157.0_H
+H5T_STD_U16LE
+Number_of_Rows_5
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of cell for channel 157.0H
+H5T_C_S1
+84
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array : #0:quality flag validity ,
+#1:sun glint,  #2:land/sea
+contamination, #3:surface type, #4:TB
+validity, #5:Level-0 Count Saturated,
+#6:Level-0 Count poor value, #7:
+geolocation estimation, #8:calibration
+failure, #9:partial calibration, #10:hot
+count error, #11:cold sky count error,
+#12:interpolation quality, #13: Blank,
+#14 to #15: Ice flag
+H5T_C_S1
+358
+dimension_label
+Number_of_Rows_5km,
+Number_of_Columns_5km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_5km,
+Longitude_Cells_5km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+5.284
+#41
+QF_Cells_157.0_V
+H5T_STD_U16LE
+Number_of_Rows_5
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality Flag of cell for channel 157.0V
+H5T_C_S1
+84
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array : #0:quality flag validity ,
+#1:sun glint,  #2:land/sea
+contamination, #3:surface type, #4:TB
+validity, #5:Level-0 Count Saturated,
+#6:Level-0 Count poor value, #7:
+geolocation estimation, #8:calibration
+failure, #9:partial calibration, #10:hot
+count error, #11:cold sky count error,
+#12:interpolation quality, #13: Blank,
+#14 to #15: Ice flag
+H5T_C_S1
+358
+dimension_label
+Number_of_Rows_5km,
+Number_of_Columns_5km
+H5T_C_S1
+82
+geolocation_label
+Latitude_Cells_5km,
+Longitude_Cells_5km
+H5T_C_S1
+88
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+56

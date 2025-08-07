@@ -1,0 +1,112 @@
+URL: https://www.mosdac.gov.in/megha-tropiques-objectives
+
+--- EXTRACTED TEXT ---
+Skip to main Content
+Secondary menu
+SignUp
+Login
+Logout
+Home
+Missions INSAT-3DR INSAT-3D KALPANA-1 INSAT-3A MeghaTropiques SARAL-AltiKa OCEANSAT-2 OCEANSAT-3 INSAT-3DS SCATSAT-1
+INSAT-3DR
+INSAT-3D
+KALPANA-1
+INSAT-3A
+MeghaTropiques
+SARAL-AltiKa
+OCEANSAT-2
+OCEANSAT-3
+INSAT-3DS
+SCATSAT-1
+Catalog Satellite Insitu (AWS) RADAR
+Satellite
+Insitu (AWS)
+RADAR
+Galleries Satellite Products Weather Forecast Ocean Forecast RADAR (DWR) Global Ocean Current
+Satellite Products
+Weather Forecast
+Ocean Forecast
+RADAR (DWR)
+Global Ocean Current
+Data Access Order Data Open Data Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy Cal-Val Forecast RSS Feeds
+Order Data
+Open Data Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy
+Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties
+Bayesian based MT-SAPHIR rainfall
+GPS derived Integrated water vapour
+GSMap ISRO Rain
+METEOSAT8 Cloud Properties
+Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture
+3D Volumetric TERLS DWRproduct
+Inland Water Height
+River Discharge
+Soil Moisture
+Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy
+Global Ocean Surface Current
+High Resolution Sea Surface Salinity
+Indian Mainland Coastal Product
+Ocean Subsurface
+Oceanic Eddies Detection
+Sea Ice Occurrence Probability
+Wave based Renewable Energy
+Cal-Val
+Forecast
+RSS Feeds
+Reports Calibration Insitu Relative Validation Data Quality Weather
+Calibration Insitu Relative
+Insitu
+Relative
+Validation
+Data Quality
+Weather
+Atlases
+Tools
+Sitemap
+Help
+You are here
+Megha Tropiques Objectives
+T he main objective of the Megha-Tropiques mission is to study the convective systems that influence the tropical weather and climate. The Megha-Tropiques mission goals are as follows:
+To provide, simultaneous measurements of several elements of the atmospheric water cycle (water vapour, clouds, condensed water in clouds, precipitation and evaporation),
+To measure the corresponding radiative budget at the top of the atmosphere,
+To ensure high temporal sampling in order to characterize the life cycle of the convective systems and to obtain significant statistics.
+The payloads have swaths of around 1700-200km. It is necessary to measure the above parameters for a minimum duration of 3 years in order to observe the inter-annual variability and getting an opportunity to observe El Nino-type events in the tropics.
+The satellite is launched into a non-sun synchronous orbit, unlike other IRS spacecraft. This Megha-Tropiques satellite carries four payloads namely, MADRAS-a microwave imager, SAPHIR-scanning radiometer instrument, SCARAB-scanner for radiative budget and GPS occultation receiver for atmospheric studies. The major orbit parameters are:
+Missions MeghaTropiques Introduction Objectives SpaceCraft Payloads Data Products Documents
+MeghaTropiques Introduction Objectives SpaceCraft Payloads Data Products Documents
+Introduction
+Objectives
+SpaceCraft
+Payloads
+Data Products
+Documents
+Search
+Follow Us
+
+
+
+Website owned and maintained by MOSDAC, Space Applications Centre, Indian Space Research Organisation, Govt. of INDIA.
+
+Feedback
+About Us
+Contact Us
+Copyright Policy
+Data Access Policy
+Hyperlink Policy
+Privacy Policy
+Website Policies
+Terms & Conditions
+FAQs
+
+
+
+
+
+
+"Ver 3.0; Last reviewed and updated on
+07 Aug, 2025& Served By:
+Web-Srv-Pri
+
+
+--- EXTRACTED TABLES ---
+Headers: []
+Data: [['Altitude:', '867 km, circular'], ['Inclination:', '20°'], ['Period:', '102.16 minutes'], ['Repetitivity:', '97 orbits in 7 days'], ['No. of Orbits Per day:', '14 (approx.)']]

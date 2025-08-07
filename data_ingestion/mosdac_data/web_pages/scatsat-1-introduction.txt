@@ -1,0 +1,106 @@
+URL: https://www.mosdac.gov.in/scatsat-1-introduction
+
+--- EXTRACTED TEXT ---
+Skip to main Content
+Secondary menu
+SignUp
+Login
+Logout
+Home
+Missions INSAT-3DR INSAT-3D KALPANA-1 INSAT-3A MeghaTropiques SARAL-AltiKa OCEANSAT-2 OCEANSAT-3 INSAT-3DS SCATSAT-1
+INSAT-3DR
+INSAT-3D
+KALPANA-1
+INSAT-3A
+MeghaTropiques
+SARAL-AltiKa
+OCEANSAT-2
+OCEANSAT-3
+INSAT-3DS
+SCATSAT-1
+Catalog Satellite Insitu (AWS) RADAR
+Satellite
+Insitu (AWS)
+RADAR
+Galleries Satellite Products Weather Forecast Ocean Forecast RADAR (DWR) Global Ocean Current
+Satellite Products
+Weather Forecast
+Ocean Forecast
+RADAR (DWR)
+Global Ocean Current
+Data Access Order Data Open Data Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy Cal-Val Forecast RSS Feeds
+Order Data
+Open Data Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy
+Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties
+Bayesian based MT-SAPHIR rainfall
+GPS derived Integrated water vapour
+GSMap ISRO Rain
+METEOSAT8 Cloud Properties
+Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture
+3D Volumetric TERLS DWRproduct
+Inland Water Height
+River Discharge
+Soil Moisture
+Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy
+Global Ocean Surface Current
+High Resolution Sea Surface Salinity
+Indian Mainland Coastal Product
+Ocean Subsurface
+Oceanic Eddies Detection
+Sea Ice Occurrence Probability
+Wave based Renewable Energy
+Cal-Val
+Forecast
+RSS Feeds
+Reports Calibration Insitu Relative Validation Data Quality Weather
+Calibration Insitu Relative
+Insitu
+Relative
+Validation
+Data Quality
+Weather
+Atlases
+Tools
+Sitemap
+Help
+You are here
+SCATSAT-1 Introduction
+I ndian Space Research Organisation launched SCATSAT-1 for ocean and weather related studies and seven co-passenger satellites into polar Sun Synchronous Orbit (SSO) on September 26, 2016. The Polar Satellite Launch Vehicle, in its 37th flight, (PSLV-C35) launched the satellites at 9:12 hours on September 26, 2016 from Satish Dhawan Space Centre in Sriharikota. The 377 kg SCATSAT-1 satellite have satellites from Algeria, Canada and USA, as well as two satellites from Indian Universities as its co-passengers. SCATSAT-1 is placed into a 720 km Polar Sun Synchronous Orbit, whereas the two Universities' satellites and the five foreign satellites are placed into a 670 km polar orbit. This PSLV mission is unique in itself as it is for the first time that its payloads are placed into two different orbits. PSLV-C35 launched from the First Launch Pad (FLP) of Satish Dhawan Space Centre and is the 15th flight of PSLV in 'XL' configuration (with the use of solid strap-on motors).
+
+Missions SCATSAT-1 Introduction Objectives SpaceCraft Payloads Data Products Documents
+SCATSAT-1 Introduction Objectives SpaceCraft Payloads Data Products Documents
+Introduction
+Objectives
+SpaceCraft
+Payloads
+Data Products
+Documents
+Search
+Follow Us
+
+
+
+Website owned and maintained by MOSDAC, Space Applications Centre, Indian Space Research Organisation, Govt. of INDIA.
+
+Feedback
+About Us
+Contact Us
+Copyright Policy
+Data Access Policy
+Hyperlink Policy
+Privacy Policy
+Website Policies
+Terms & Conditions
+FAQs
+
+
+
+
+
+
+"Ver 3.0; Last reviewed and updated on
+07 Aug, 2025& Served By:
+Web-Srv-Pri
+
+
+--- EXTRACTED TABLES ---

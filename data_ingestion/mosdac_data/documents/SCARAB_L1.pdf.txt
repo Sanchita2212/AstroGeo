@@ -1,0 +1,6439 @@
+SCARAB
+L1A
+Estimated Size
+for typical  [Number_of_Scans]
+2.207 Mb
+[1020]
+Science data group associated attributes
+ScienceData
+Attributes
+Index
+Name
+Value
+Type
+Size
+#1
+Product_Identification
+MT1SCASL1A__1.00_9_01_I_2012_05_09_0000 H5T_C_S1
+84
+#2
+Organization_Name
+ISRO
+H5T_C_S1
+5
+#3
+Property_of_data
+ISRO_ and_CNES
+H5T_C_S1
+15
+#4
+Satellite_Name
+MEGHA-TROPIQUES
+H5T_C_S1
+16
+#5
+Payload_Name
+SCARAB
+H5T_C_S1
+12
+#6
+Product_Name
+Level-1A-segment wise
+H5T_C_S1
+35
+#7
+Product_Format
+NCSA-HDF
+H5T_C_S1
+9
+#8
+Product_Format_Version
+HDF5-1.6.4
+H5T_C_S1
+11
+#9
+Product_Generation_Date
+2012MAI09
+H5T_C_S1
+10
+#10
+Imaging_Date
+2012MAI09
+H5T_C_S1
+10
+#11
+Date_Format
+YYYYMMMDD
+H5T_C_S1
+10
+#12
+INS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#13
+PRO_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#14
+RAD_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#15
+GEO_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#16
+PCS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#17
+GRB_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#18
+UCS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#19
+Number_of_Channels
+4
+H5T_C_S1
+8
+#20
+Synthetic_LW_Channel
+1
+H5T_C_S1
+2
+#21
+Channel_Bandwith
+[0.5, 0.7]  [0.2, 4] [0.2, 200] [10.5, 12.5] microH5T_C_S1
+53
+#22
+Orbit_StartNumber
+00001
+H5T_C_S1
+19
+#23
+Orbit_EndNumber
+00001
+H5T_C_S1
+17
+#24
+Orbit_Cycle_Number
+01
+H5T_C_S1
+3
+#25
+SLConf
+100001
+H5T_C_S1
+7
+#26
+Nskip
+0005
+H5T_C_S1
+5
+#27
+ProcessorVersion
+1.00
+H5T_C_S1
+5
+#28
+Pixel_Size_Diagonal_AcrossTrack [192.152, 168.811, 150.542, 135.896, 123.932
+]
+H5T_C_S1
+424
+#29
+Pixel_Size_Diagonal_ALongTrack [99.328, 94.144, 89.699, 85.845, 82.473, 79.5H5T_C_S1
+409
+#30
+SCARAB_QF_Scan_Definition
+16-bits array (=0:good/=1:bad):,  #15: scan/roH5T_C_S1
+16x24
+#31
+SCARAB_QF_Pixel_Definition
+16-bits array (=0:good/=1:bad):,  #15: RadianH5T_C_S1
+16x24
+#32
+Top of atmosphere height
+[20] Km
+H5T_C_S1
+8
+#33
+Aprime Coefficient
+[0.9142]
+H5T_C_S1
+9
+#34
+Skip_StartScanNumber
+[00000064,00000165,00000266,00000367,00H5T_C_S1
+1*Nskip
+#35
+Skip_EndScanNumber
+[00000066,00000167,00000268,00000370,00H5T_C_S1
+1*Nskip
+#36
+Flip_StartScanNumber
+00000012
+H5T_C_S1
+9
+#37
+Flip_EndScanNumber
+00000042
+H5T_C_S1
+9
+#38
+Maneuver_StartScanNumber
+00000011
+H5T_C_S1
+9
+1
+#39
+Maneuver_EndScanNumber
+00000043
+H5T_C_S1
+9
+#40
+FirstScanNumber
+00000000
+H5T_C_S1
+8
+#41
+Time_Pixel_Interval
+62.5
+H5T_C_S1
+4
+#42
+Number_of_Scans
+00001020
+H5T_C_S1
+22
+#43
+Number_of_Pixels
+51
+H5T_C_S1
+8
+#44
+QF_Product_%Processed_Scans 099
+H5T_C_S1
+4
+Science data group elements
+Estimated size of
+dataset [Mb]
+Index
+Name
+Type
+Typical Value
+0.002
+#1
+SCARAB_QF_scan
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality flag applicable to the scan line
+H5T_C_S1
+41
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+scan/row quality flag validity,  #14:
+pass type,  #13: Scanning type, #12:
+Scan/Row error, #11: datation error,
+#10-8: Blank, #7 CRC Status, #6:
+Blank, #5-3: Payload Mode, #2-0:
+Satellite Mode
+H5T_C_S1
+232
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+geolocation_label
+Scan_FirstPixelAcqTime
+H5T_C_S1
+35
+0.002
+#2
+Scan_Number
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Scan Number
+H5T_C_S1
+12
+valid_range
+[0,65535]
+H5T_C_S1
+10
+min_max
+[0,65535]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+scan number from the first scan of the
+product
+H5T_C_S1
+47
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.002
+#3
+Colatitude_Nadir
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+colatitude of subsatellite point
+H5T_C_S1
+33
+standard_name
+colatitude
+H5T_C_S1
+11
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[50,130]
+H5T_C_S1
+9
+min_max
+[5000,13000]
+H5T_C_S1
+13
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+colatitude [0,180]: 0 is north, 90 is
+equator and 180 is south (accuracy
+1km)
+H5T_C_S1
+78
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.002
+#4
+Longitude_Nadir
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+longitude of subsatellite point
+H5T_C_S1
+32
+standard_name
+longitude
+H5T_C_S1
+10
+2
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0.0,360.0]
+H5T_C_S1
+12
+min_max
+[0,36000]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Longitude [0,360]: 0 is Greenwich
+meridian (accuracy 1km)
+H5T_C_S1
+59
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.016
+#5
+Scan_Gain
+H5T_IEEE_F32LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Estimated gain
+H5T_C_S1
+15
+units
+count/W.m-2.sr  -1
+H5T_C_S1
+19
+scale_factor
+1.0
+H5T_C_S1
+4
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[-300,0]
+H5T_C_S1
+21
+min_max
+[-300,0]
+H5T_C_S1
+21
+_FillValue
+3.4E38
+H5T_C_S1
+7
+comment
+Estimated gain value applied to
+radiance calculation for each channels
+in the following sequence: Visible,
+Solar, Total, Infrared
+H5T_C_S1
+124
+dimension_label
+Number_of_Scans, Number_of_Channels H5T_C_S1
+36
+0.001
+#6
+Scan_FirstPixelAcqTime
+H5T_C_S1
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+date of the first pixel
+H5T_C_S1
+45
+standard_name
+time
+H5T_C_S1
+5
+units
+UTC Time in microseconds
+H5T_C_S1
+25
+_FillValue
+yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+22
+comment
+format: yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+30
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.099
+#7
+Colatitude_surface_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+colatitude of pixels at surface
+H5T_C_S1
+79
+standard_name
+colatitude
+H5T_C_S1
+11
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[50,130]
+H5T_C_S1
+9
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+colatitude [0,180]: 0 is north, 90 is
+equator and 180 is south (accuracy
+1km)
+H5T_C_S1
+78
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[5000,13000]
+H5T_STD_U16LE
+4
+0.099
+#8
+Colatitude_TOA_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+colatitude of pixels at TOA
+H5T_C_S1
+79
+standard_name
+colatitude
+H5T_C_S1
+11
+3
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[50,130]
+H5T_C_S1
+9
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+colatitude [0,180]: 0 is north, 90 is
+equator and 180 is south (accuracy
+1km)
+H5T_C_S1
+78
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[5000,13000]
+H5T_STD_U16LE
+4
+0.099
+#9
+Latitude_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+latitude of pixels #{(level_long_name)}
+#
+H5T_C_S1
+77
+standard_name
+latitude
+H5T_C_S1
+9
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+-40.0
+H5T_C_S1
+6
+valid_range
+[-40.0,40.0]
+H5T_C_S1
+13
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+accuracy 1km
+H5T_C_S1
+13
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+59
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+0.099
+#10
+Longitude_surface_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+longitude of pixels at surface
+H5T_C_S1
+78
+standard_name
+longitude
+H5T_C_S1
+10
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,360]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Longitude [0,360]: 0 is Greenwich
+meridian (accuracy 1km)
+H5T_C_S1
+59
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,36000]
+H5T_STD_U16LE
+4
+0.099
+#11
+Longitude_TOA_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+longitude of pixels at TOA
+H5T_C_S1
+78
+standard_name
+longitude
+H5T_C_S1
+10
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,360]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+4
+comment
+Longitude [0,360]: 0 is Greenwich
+meridian (accuracy 1km)
+H5T_C_S1
+59
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,36000]
+H5T_STD_U16LE
+4
+0.099
+#12
+Viewing_azimuth_angle_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Viewing azimuth  angle at pixel centre
+H5T_C_S1
+40
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+-180
+valid_range
+[-180,+180]
+H5T_C_S1
+12
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Viewing azimuth  angle at pixel centre
+H5T_C_S1
+40
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,36000]
+H5T_STD_U16LE
+4
+0.099
+#13
+Relative_azimuth_angle_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Relative azimuth  angle at pixel centre
+H5T_C_S1
+41
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,360]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Relative azimuth  angle at pixel centre
+H5T_C_S1
+41
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,36000]
+H5T_STD_U16LE
+4
+0.099
+#14
+Viewing_zenith_angle_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Viewing zenith  angle at pixel centre
+H5T_C_S1
+42
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,90]
+H5T_C_S1
+27
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Viewing zenith angle at pixel centre
+H5T_C_S1
+41
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,9000]
+H5T_STD_U16LE
+4
+0.099
+#15
+Solar_zenith_angle_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+5
+long_name
+Solar zenith  angle at pixel centre
+H5T_C_S1
+42
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,180]
+H5T_C_S1
+27
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Solar zenith angle at pixel centre
+H5T_C_S1
+41
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,18000]
+H5T_STD_U16LE
+4
+0.099
+#16
+AlongTrack_DiagonalSize
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+along track diagonal size of pixel
+H5T_C_S1
+36
+units
+meters
+H5T_C_S1
+7
+scale_factor
+10
+H5T_C_S1
+3
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0, 500]km
+H5T_C_S1
+11
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+along track diagonal of pixel
+H5T_C_S1
+31
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,50000]
+H5T_STD_U16LE
+4
+0.099
+#17
+AcrossTrack_DiagonalSize
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+across track diagonal of size pixel
+H5T_C_S1
+37
+units
+meters
+H5T_C_S1
+8
+scale_factor
+10
+H5T_C_S1
+3
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,500]Km
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+across track diagonal of pixel
+H5T_C_S1
+32
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,50000]
+H5T_STD_U16LE
+4
+0.099
+#18
+Pixel_Orientation
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixel orientation on earth
+H5T_C_S1
+28
+units
+degres
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,360 ]
+H5T_C_S1
+9
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+pixel orientation : angle between north
+and along track diagonal- Positive
+convention North to Est
+H5T_C_S1
+100
+6
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,36000]
+H5T_STD_U16LE
+4
+0.099
+#19
+FilteredRadiance_Visible
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+filtered radiance for Visible channel
+H5T_C_S1
+41
+units
+W.m-2.sr  -1
+H5T_C_S1
+13
+scale_factor
+0.01
+H5T_C_S1
+21
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,250 ]
+H5T_C_S1
+24
+min_max
+[0,25000 ]
+H5T_C_S1
+28
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_RD_Visible
+H5T_C_S1
+17
+comment
+calibrated filtered radiance for Visible
+channel
+H5T_C_S1
+53
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,25000 ]
+H5T_STD_U16LE
+4
+0.099
+#20
+FilteredRadiance_Solar
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+filtered radiance for Solar channel
+H5T_C_S1
+41
+units
+W.m-2.sr  -1
+H5T_C_S1
+13
+scale_factor
+0.02
+H5T_C_S1
+21
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,800 ]
+H5T_C_S1
+24
+min_max
+[0,40000 ]
+H5T_C_S1
+28
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_RD_Solar
+H5T_C_S1
+17
+comment
+calibrated filtered radiance for Solar
+channel
+H5T_C_S1
+53
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000 ]
+H5T_STD_U16LE
+4
+0.099
+#21
+FilteredRadiance_Total
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+filtered radiance for Total channel
+H5T_C_S1
+41
+units
+W.m-2.sr  -1
+H5T_C_S1
+13
+scale_factor
+0.02
+H5T_C_S1
+21
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,800 ]
+H5T_C_S1
+24
+min_max
+[0,40000 ]
+H5T_C_S1
+28
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_RD_Total
+H5T_C_S1
+17
+comment
+calibrated filtered radiance for Total
+channel
+H5T_C_S1
+53
+7
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000 ]
+H5T_STD_U16LE
+4
+0.099
+#22
+FilteredRadiance_Infrared
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+filtered radiance for Infrared channel
+H5T_C_S1
+41
+units
+W.m-2.sr  -1
+H5T_C_S1
+13
+scale_factor
+0.01
+H5T_C_S1
+21
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,40 ]
+H5T_C_S1
+24
+min_max
+[0,4000 ]
+H5T_C_S1
+28
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_RD_Infrared
+H5T_C_S1
+17
+comment
+calibrated filtered radiance for Infrared
+channel
+H5T_C_S1
+53
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,4000 ]
+H5T_STD_U16LE
+4
+0.099
+#23
+FilteredRadiance_SyntheticLW
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+filtered radiance for SyntheticLW
+channel
+H5T_C_S1
+41
+units
+W.m-2.sr  -1
+H5T_C_S1
+13
+scale_factor
+0.01
+H5T_C_S1
+21
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,500 ]
+H5T_C_S1
+24
+min_max
+[0,50000 ]
+H5T_C_S1
+28
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_RD_SyntheticLW
+H5T_C_S1
+17
+comment
+calibrated filtered radiance for
+SyntheticLW channel
+H5T_C_S1
+53
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,50000 ]
+H5T_STD_U16LE
+4
+0.099
+#24
+QF_Pixels_Visible
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+quality flag for pixels radiance  of
+Visible channel
+H5T_C_S1
+68
+standard_name
+quality flag
+H5T_C_S1
+13
+8
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+Radiance validity  flag , #14:blank,
+#13:land/sea contamination, #12:
+surface type, #11:ChannelON/OFF,
+#10:Level-0 Count Saturated, #9:Level-
+0 Count poor value, #8:geolocation
+estimation, #7:Spacecount error, #6-4:
+Blank, #3: interpolation quality,  #2:
+Gainflag, #1-0: Blank
+H5T_C_S1
+17
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+0.099
+#25
+QF_Pixels_Solar
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+quality flag for pixels radiance  of Solar
+channel
+H5T_C_S1
+68
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+Radiance validity  flag , #14:blank,
+#13:land/sea contamination, #12:
+surface type, #11:ChannelON/OFF,
+#10:Level-0 Count Saturated, #9:Level-
+0 Count poor value, #8:geolocation
+estimation, #7:Spacecount error, #6-4:
+Blank, #3: interpolation quality,  #2:
+Gainflag, #1-0: Blank
+H5T_C_S1
+17
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+0.099
+#26
+QF_Pixels_Total
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+quality flag for pixels radiance  of Total
+channel
+H5T_C_S1
+68
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+Radiance validity  flag , #14:blank,
+#13:land/sea contamination, #12:
+surface type, #11:ChannelON/OFF,
+#10:Level-0 Count Saturated, #9:Level-
+0 Count poor value, #8:geolocation
+estimation, #7:Spacecount error, #6-4:
+Blank, #3: interpolation quality,  #2:
+Gainflag, #1-0: Blank
+H5T_C_S1
+17
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+0.099
+#27
+QF_Pixels_Infrared
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+9
+long_name
+quality flag for pixels radiance  of
+Infrared channel
+H5T_C_S1
+68
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+Radiance validity  flag , #14:blank,
+#13:land/sea contamination, #12:
+surface type, #11:ChannelON/OFF,
+#10:Level-0 Count Saturated, #9:Level-
+0 Count poor value, #8:geolocation
+estimation, #7:Spacecount error, #6-4:
+Blank, #3: interpolation quality,  #2:
+Gainflag, #1-0: Blank
+H5T_C_S1
+17
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+0.099
+#28
+QF_Pixels_SyntheticLW
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+quality flag for pixels radiance  of
+SyntheticLW channel
+H5T_C_S1
+68
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+Radiance validity  flag , #14:blank,
+#13:land/sea contamination, #12:
+surface type, #11:ChannelON/OFF,
+#10:Level-0 Count Saturated, #9:Level-
+0 Count poor value, #8:geolocation
+estimation, #7:Spacecount error, #6-4:
+Blank, #3: interpolation quality,  #2:
+Gainflag, #1-0: Blank
+H5T_C_S1
+17
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+10
+SCARAB
+L1A2
+Estimated Size
+for typical  [Number_of_Scans]
+2.108 Mb
+[1020]
+Science data group associated attributes
+ScienceData
+Attributes
+Index
+Name
+Value
+Type
+Size
+#1
+Product_Identification
+MT1SCASL1A2__1.00_9_01_I_2012_05_09_000 H5T_C_S1
+84
+#2
+Organization_Name
+ISRO
+H5T_C_S1
+5
+#3
+Property_of_data
+ISRO_ and_CNES
+H5T_C_S1
+15
+#4
+Satellite_Name
+MEGHA-TROPIQUES
+H5T_C_S1
+16
+#5
+Payload_Name
+SCARAB
+H5T_C_S1
+12
+#6
+Product_Name
+Level-1A2-segment wise
+H5T_C_S1
+35
+#7
+Product_Format
+NCSA-HDF
+H5T_C_S1
+9
+#8
+Product_Format_Version
+HDF5-1.6.4
+H5T_C_S1
+11
+#9
+Product_Generation_Date
+2012MAI09
+H5T_C_S1
+10
+#10
+Imaging_Date
+2012MAI09
+H5T_C_S1
+10
+#11
+Date_Format
+YYYYMMMDD
+H5T_C_S1
+10
+#12
+INS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#13
+PRO_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#14
+RAD_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#15
+GEO_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#16
+PCS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#17
+GRB_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#18
+UCS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#19
+Number_of_Channels
+4
+H5T_C_S1
+8
+#20
+Synthetic_LW_Channel
+1
+H5T_C_S1
+2
+#21
+Channel_Bandwith
+[0.5, 0.7]  [0.2, 4] [0.2, 200] [10.5, 12.5] microH5T_C_S1
+53
+#22
+Orbit_StartNumber
+00001
+H5T_C_S1
+19
+#23
+Orbit_EndNumber
+00001
+H5T_C_S1
+17
+#24
+Orbit_Cycle_Number
+01
+H5T_C_S1
+3
+#25
+SLConf
+100001
+H5T_C_S1
+7
+#26
+Nskip
+0005
+H5T_C_S1
+5
+#27
+ProcessorVersion
+1.00
+H5T_C_S1
+5
+#28
+Pixel_Size_Diagonal_AcrossTrack [192.152, 168.811, 150.542, 135.896, 123.932
+]
+H5T_C_S1
+424
+#29
+Pixel_Size_Diagonal_ALongTrack [99.328, 94.144, 89.699, 85.845, 82.473, 79.5H5T_C_S1
+409
+#30
+SCARAB_QF_Scan_Definition
+16-bits array (=0:good/=1:bad):,  #15: scan/roH5T_C_S1
+16x24
+#31
+SCARAB_QF_Pixel_Definition
+16-bits array (=0:good/=1:bad):,  #15: RadianH5T_C_S1
+16x24
+#32
+Top of atmosphere height
+[20] Km
+H5T_C_S1
+8
+#33
+Aprime Coefficient
+[0.9142]
+H5T_C_S1
+9
+#34
+Skip_StartScanNumber
+[00000064,00000165,00000266,00000367,00H5T_C_S1
+1*Nskip
+#35
+Skip_EndScanNumber
+[00000066,00000167,00000268,00000370,00H5T_C_S1
+1*Nskip
+#36
+Flip_StartScanNumber
+00000012
+H5T_C_S1
+9
+#37
+Flip_EndScanNumber
+00000042
+H5T_C_S1
+9
+#38
+Maneuver_StartScanNumber
+00000011
+H5T_C_S1
+9
+11
+#39
+Maneuver_EndScanNumber
+00000043
+H5T_C_S1
+9
+#40
+FirstScanNumber
+00000000
+H5T_C_S1
+8
+#41
+Time_Pixel_Interval
+62.5
+H5T_C_S1
+4
+#42
+Number_of_Scans
+00001020
+H5T_C_S1
+22
+#43
+Number_of_Pixels
+51
+H5T_C_S1
+8
+#44
+QF_Product_%Processed_Scans 099
+H5T_C_S1
+4
+Science data group elements
+Estimated size of
+dataset [Mb]
+Index
+Name
+Type
+Typical Value
+0.002
+#1
+SCARAB_QF_scan
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality flag applicable to the scan line
+H5T_C_S1
+41
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+scan/row quality flag validity,  #14:
+pass type,  #13: Scanning type, #12:
+Scan/Row error, #11: datation error,
+#10-8: Blank, #7 CRC Status, #6:
+Blank, #5-3: Payload Mode, #2-0:
+Satellite Mode
+H5T_C_S1
+232
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+geolocation_label
+Scan_FirstPixelAcqTime
+H5T_C_S1
+35
+0.002
+#2
+Scan_Number
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Scan Number
+H5T_C_S1
+12
+valid_range
+[0,65535]
+H5T_C_S1
+10
+min_max
+[0,65535]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+scan number from the first scan of the
+product
+H5T_C_S1
+47
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.002
+#3
+Colatitude_Nadir
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+colatitude of subsatellite point
+H5T_C_S1
+33
+standard_name
+colatitude
+H5T_C_S1
+11
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[50,130]
+H5T_C_S1
+9
+min_max
+[5000,13000]
+H5T_C_S1
+13
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+colatitude [0,180]: 0 is north, 90 is
+equator and 180 is south (accuracy
+1km)
+H5T_C_S1
+78
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.002
+#4
+Longitude_Nadir
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+longitude of subsatellite point
+H5T_C_S1
+32
+standard_name
+longitude
+H5T_C_S1
+10
+12
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0.0,360.0]
+H5T_C_S1
+12
+min_max
+[0,36000]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Longitude [0,360]: 0 is Greenwich
+meridian (accuracy 1km)
+H5T_C_S1
+59
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.016
+#5
+Scan_Gain
+H5T_IEEE_F32LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Estimated gain
+H5T_C_S1
+15
+units
+count/W.m-2.sr  -1
+H5T_C_S1
+19
+scale_factor
+1.0
+H5T_C_S1
+4
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[-300,0]
+H5T_C_S1
+21
+min_max
+[-300,0]
+H5T_C_S1
+21
+_FillValue
+3.4E38
+H5T_C_S1
+7
+comment
+Estimated gain value applied to
+radiance calculation for each channels
+in the following sequence: Visible,
+Solar, Total, Infrared
+H5T_C_S1
+124
+dimension_label
+Number_of_Scans, Number_of_Channels H5T_C_S1
+36
+0.001
+#6
+Scan_FirstPixelAcqTime
+H5T_C_S1
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+date of the first pixel
+H5T_C_S1
+45
+standard_name
+time
+H5T_C_S1
+5
+units
+UTC Time in microseconds
+H5T_C_S1
+25
+_FillValue
+yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+22
+comment
+format: yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+30
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.099
+#7
+Colatitude_surface_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+colatitude of pixels at surface
+H5T_C_S1
+79
+standard_name
+colatitude
+H5T_C_S1
+11
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[50,130]
+H5T_C_S1
+9
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+colatitude [0,180]: 0 is north, 90 is
+equator and 180 is south (accuracy
+1km)
+H5T_C_S1
+78
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[5000,13000]
+H5T_STD_U16LE
+4
+0.099
+#8
+Colatitude_TOA_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+colatitude of pixels at TOA
+H5T_C_S1
+79
+standard_name
+colatitude
+H5T_C_S1
+11
+13
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[50,130]
+H5T_C_S1
+9
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+colatitude [0,180]: 0 is north, 90 is
+equator and 180 is south (accuracy
+1km)
+H5T_C_S1
+78
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[5000,13000]
+H5T_STD_U16LE
+4
+0.099
+#9
+Longitude_surface_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+longitude of pixels at surface
+H5T_C_S1
+78
+standard_name
+longitude
+H5T_C_S1
+10
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,360]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Longitude [0,360]: 0 is Greenwich
+meridian (accuracy 1km)
+H5T_C_S1
+59
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,36000]
+H5T_STD_U16LE
+4
+0.099
+#10
+Longitude_TOA_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+longitude of pixels at TOA
+H5T_C_S1
+78
+standard_name
+longitude
+H5T_C_S1
+10
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,360]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Longitude [0,360]: 0 is Greenwich
+meridian (accuracy 1km)
+H5T_C_S1
+59
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,36000]
+H5T_STD_U16LE
+4
+0.099
+#11
+Viewing_azimuth_angle_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Viewing azimuth  angle at pixel centre
+H5T_C_S1
+40
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+-180
+valid_range
+[-180,+180]
+H5T_C_S1
+12
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Viewing azimuth  angle at pixel centre
+H5T_C_S1
+40
+14
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,36000]
+H5T_STD_U16LE
+4
+0.099
+#12
+Relative_azimuth_angle_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Relative azimuth  angle at pixel centre
+H5T_C_S1
+41
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,360]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Relative azimuth  angle at pixel centre
+H5T_C_S1
+41
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,36000]
+H5T_STD_U16LE
+4
+0.099
+#13
+Viewing_zenith_angle_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Viewing zenith  angle at pixel centre
+H5T_C_S1
+42
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,90]
+H5T_C_S1
+27
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Viewing zenith angle at pixel centre
+H5T_C_S1
+41
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,9000]
+H5T_STD_U16LE
+4
+0.099
+#14
+Solar_zenith_angle_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Solar zenith  angle at pixel centre
+H5T_C_S1
+42
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,180]
+H5T_C_S1
+27
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Solar zenith angle at pixel centre
+H5T_C_S1
+41
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,18000]
+H5T_STD_U16LE
+4
+0.099
+#15
+AlongTrack_DiagonalSize
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+along track diagonal size of pixel
+H5T_C_S1
+36
+15
+units
+meters
+H5T_C_S1
+7
+scale_factor
+10
+H5T_C_S1
+3
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0, 500]km
+H5T_C_S1
+11
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+along track diagonal of pixel
+H5T_C_S1
+31
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,50000]
+H5T_STD_U16LE
+4
+0.099
+#16
+AcrossTrack_DiagonalSize
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+across track diagonal of size pixel
+H5T_C_S1
+37
+units
+meters
+H5T_C_S1
+8
+scale_factor
+10
+H5T_C_S1
+3
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,500]Km
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+across track diagonal of pixel
+H5T_C_S1
+32
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,50000]
+H5T_STD_U16LE
+4
+0.099
+#17
+Pixel_Orientation
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Pixel orientation on earth
+H5T_C_S1
+28
+units
+degres
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,360 ]
+H5T_C_S1
+9
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+pixel orientation : angle between north
+and along track diagonal- Positive
+convention North to Est
+H5T_C_S1
+100
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,36000]
+H5T_STD_U16LE
+4
+0.099
+#18
+FilteredRadiance_Visible
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+filtered radiance for Visible channel
+H5T_C_S1
+41
+units
+W.m-2.sr  -1
+H5T_C_S1
+13
+scale_factor
+0.01
+H5T_C_S1
+21
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,250 ]
+H5T_C_S1
+24
+min_max
+[0,25000 ]
+H5T_C_S1
+28
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_RD_Visible
+H5T_C_S1
+17
+16
+comment
+calibrated filtered radiance for Visible
+channel
+H5T_C_S1
+53
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,25000 ]
+H5T_STD_U16LE
+4
+0.099
+#19
+FilteredRadiance_Solar
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+filtered radiance for Solar channel
+H5T_C_S1
+41
+units
+W.m-2.sr  -1
+H5T_C_S1
+13
+scale_factor
+0.02
+H5T_C_S1
+21
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,800 ]
+H5T_C_S1
+24
+min_max
+[0,40000 ]
+H5T_C_S1
+28
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_RD_Solar
+H5T_C_S1
+17
+comment
+calibrated filtered radiance for Solar
+channel
+H5T_C_S1
+53
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000 ]
+H5T_STD_U16LE
+4
+0.099
+#20
+FilteredRadiance_Total
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+filtered radiance for Total channel
+H5T_C_S1
+41
+units
+W.m-2.sr  -1
+H5T_C_S1
+13
+scale_factor
+0.02
+H5T_C_S1
+21
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,800 ]
+H5T_C_S1
+24
+min_max
+[0,40000 ]
+H5T_C_S1
+28
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_RD_Total
+H5T_C_S1
+17
+comment
+calibrated filtered radiance for Total
+channel
+H5T_C_S1
+53
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000 ]
+H5T_STD_U16LE
+4
+0.099
+#21
+FilteredRadiance_Infrared
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+filtered radiance for Infrared channel
+H5T_C_S1
+41
+units
+W.m-2.sr  -1
+H5T_C_S1
+13
+scale_factor
+0.01
+H5T_C_S1
+21
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,40 ]
+H5T_C_S1
+24
+min_max
+[0,4000 ]
+H5T_C_S1
+28
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_RD_Infrared
+H5T_C_S1
+17
+17
+comment
+calibrated filtered radiance for Infrared
+channel
+H5T_C_S1
+53
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,4000 ]
+H5T_STD_U16LE
+4
+0.099
+#22
+FilteredRadiance_SyntheticLW
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+filtered radiance for SyntheticLW
+channel
+H5T_C_S1
+41
+units
+W.m-2.sr  -1
+H5T_C_S1
+13
+scale_factor
+0.01
+H5T_C_S1
+21
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,500 ]
+H5T_C_S1
+24
+min_max
+[0,50000 ]
+H5T_C_S1
+28
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_RD_SyntheticLW
+H5T_C_S1
+17
+comment
+calibrated filtered radiance for
+SyntheticLW channel
+H5T_C_S1
+53
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,50000 ]
+H5T_STD_U16LE
+4
+0.099
+#23
+QF_Pixels_Visible
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+quality flag for pixels radiance  of
+Visible channel
+H5T_C_S1
+68
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+Radiance validity  flag , #14:blank,
+#13:land/sea contamination, #12:
+surface type, #11:ChannelON/OFF,
+#10:Level-0 Count Saturated, #9:Level-
+0 Count poor value, #8:geolocation
+estimation, #7:Spacecount error, #6-4:
+Blank, #3: interpolation quality,  #2:
+Gainflag, #1-0: Blank
+H5T_C_S1
+17
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+0.099
+#24
+QF_Pixels_Solar
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+quality flag for pixels radiance  of Solar
+channel
+H5T_C_S1
+68
+standard_name
+quality flag
+H5T_C_S1
+13
+18
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+Radiance validity  flag , #14:blank,
+#13:land/sea contamination, #12:
+surface type, #11:ChannelON/OFF,
+#10:Level-0 Count Saturated, #9:Level-
+0 Count poor value, #8:geolocation
+estimation, #7:Spacecount error, #6-4:
+Blank, #3: interpolation quality,  #2:
+Gainflag, #1-0: Blank
+H5T_C_S1
+17
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+0.099
+#25
+QF_Pixels_Total
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+quality flag for pixels radiance  of Total
+channel
+H5T_C_S1
+68
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+Radiance validity  flag , #14:blank,
+#13:land/sea contamination, #12:
+surface type, #11:ChannelON/OFF,
+#10:Level-0 Count Saturated, #9:Level-
+0 Count poor value, #8:geolocation
+estimation, #7:Spacecount error, #6-4:
+Blank, #3: interpolation quality,  #2:
+Gainflag, #1-0: Blank
+H5T_C_S1
+17
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+0.099
+#26
+QF_Pixels_Infrared
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+quality flag for pixels radiance  of
+Infrared channel
+H5T_C_S1
+68
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+Radiance validity  flag , #14:blank,
+#13:land/sea contamination, #12:
+surface type, #11:ChannelON/OFF,
+#10:Level-0 Count Saturated, #9:Level-
+0 Count poor value, #8:geolocation
+estimation, #7:Spacecount error, #6-4:
+Blank, #3: interpolation quality,  #2:
+Gainflag, #1-0: Blank
+H5T_C_S1
+17
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+0.099
+#27
+QF_Pixels_SyntheticLW
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+19
+long_name
+quality flag for pixels radiance  of
+SyntheticLW channel
+H5T_C_S1
+68
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+Radiance validity  flag , #14:blank,
+#13:land/sea contamination, #12:
+surface type, #11:ChannelON/OFF,
+#10:Level-0 Count Saturated, #9:Level-
+0 Count poor value, #8:geolocation
+estimation, #7:Spacecount error, #6-4:
+Blank, #3: interpolation quality,  #2:
+Gainflag, #1-0: Blank
+H5T_C_S1
+17
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+20
+SCARAB
+L1A3
+Estimated Size
+for typical  [Number_of_Scans]
+18.146 Mb
+[2467]
+Science data group associated attributes
+ScienceData
+Attributes
+Index
+Name
+Value
+Type
+Size
+#1
+Product_Identification
+MT1SCASL1A3__1.00_9_01_I_2012_05_09_000 H5T_C_S1
+84
+#2
+Organization_Name
+ISRO
+H5T_C_S1
+5
+#3
+Property_of_data
+ISRO_ and_CNES
+H5T_C_S1
+15
+#4
+Satellite_Name
+MEGHA-TROPIQUES
+H5T_C_S1
+16
+#5
+Payload_Name
+SCARAB
+H5T_C_S1
+12
+#6
+Product_Name
+Level-1A3-segment wise
+H5T_C_S1
+35
+#7
+Product_Format
+NCSA-HDF
+H5T_C_S1
+9
+#8
+Product_Format_Version
+HDF5-1.6.4
+H5T_C_S1
+11
+#9
+Product_Generation_Date
+2012MAI09
+H5T_C_S1
+10
+#10
+Imaging_Date
+2012MAI09
+H5T_C_S1
+10
+#11
+Date_Format
+YYYYMMMDD
+H5T_C_S1
+10
+#12
+INS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#13
+PRO_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#14
+RAD_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#15
+GEO_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#16
+PCS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#17
+GRB_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#18
+UCS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#19
+Number_of_Channels
+4
+H5T_C_S1
+8
+#20
+Synthetic_LW_Channel
+1
+H5T_C_S1
+2
+#21
+Channel_Bandwith
+[0.5, 0.7]  [0.2, 4] [0.2, 200] [10.5, 12.5] microH5T_C_S1
+53
+#22
+Orbit_StartNumber
+00001
+H5T_C_S1
+19
+#23
+Orbit_EndNumber
+00001
+H5T_C_S1
+17
+#24
+Orbit_Cycle_Number
+01
+H5T_C_S1
+3
+#25
+SLConf
+100001
+H5T_C_S1
+7
+#26
+Nskip
+0005
+H5T_C_S1
+5
+#27
+ProcessorVersion
+1.00
+H5T_C_S1
+5
+#28
+SCARAB_QF_Scan_Definition
+16-bits array (=0:good/=1:bad):,  #15: scan/roH5T_C_S1
+16x24
+#29
+SCARAB_QF_Pixel_Definition
+16-bits array (=0:good/=1:bad):,  #15: RadianH5T_C_S1
+16x24
+#30
+Aprime Coefficient
+[0.9142]
+H5T_C_S1
+9
+#31
+Skip_StartScanNumber
+[00000064,00000165,00000266,00000367,00H5T_C_S1
+1*Nskip
+#32
+Skip_EndScanNumber
+[00000066,00000167,00000268,00000370,00H5T_C_S1
+1*Nskip
+#33
+Flip_StartScanNumber
+00000012
+H5T_C_S1
+9
+#34
+Flip_EndScanNumber
+00000042
+H5T_C_S1
+9
+#35
+Maneuver_StartScanNumber
+00000011
+H5T_C_S1
+9
+#36
+Maneuver_EndScanNumber
+00000043
+H5T_C_S1
+9
+#37
+MADRAS_FirstScanNumber
+00000000
+H5T_C_S1
+8
+#38
+Number_of_Scans
+00002467
+H5T_C_S1
+22
+#39
+Number_of_Pixels
+214
+H5T_C_S1
+8
+21
+#40
+QF_Product_%Processed_Scans 099
+H5T_C_S1
+4
+Science data group elements
+Estimated size of
+dataset [Mb]
+Index
+Name
+Type
+Typical Value
+0.005
+#1
+SCARAB_QF_scan
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality flag applicable to the scan line
+H5T_C_S1
+41
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+scan/row quality flag validity,  #14:
+pass type,  #13: Scanning type, #12:
+Scan/Row error, #11: datation error,
+#10-8: Blank, #7 CRC Status, #6:
+Blank, #5-3: Payload Mode, #2-0:
+Satellite Mode
+H5T_C_S1
+232
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+geolocation_label
+Scan_FirstPixelAcqTime
+H5T_C_S1
+35
+0.005
+#2
+MADRAS_Scan_Number
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Scan Number
+H5T_C_S1
+12
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,65535]
+H5T_C_S1
+10
+min_max
+[0,65535]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+scan number from the first scan of the
+product
+H5T_C_S1
+47
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.005
+#3
+Latitude_Nadir
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+latitude of subsatellite point
+H5T_C_S1
+31
+standard_name
+latitude
+H5T_C_S1
+9
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+-40.0
+H5T_C_S1
+6
+valid_range
+[-40.0,40.0]
+H5T_C_S1
+13
+min_max
+[0,8000]
+H5T_C_S1
+9
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+accuracy 1km
+H5T_C_S1
+13
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.005
+#4
+Longitude_Nadir
+H5T_STD_U16LE
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+longitude of subsatellite point
+H5T_C_S1
+32
+standard_name
+longitude
+H5T_C_S1
+10
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0.0,360.0]
+H5T_C_S1
+12
+min_max
+[0,36000]
+H5T_C_S1
+10
+22
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Longitude [0,360]: 0 is Greenwich
+meridian (accuracy 1km)
+H5T_C_S1
+59
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+0.002
+#5
+Scan_FirstPixelAcqTime
+H5T_C_S1
+Number_of_Scans
+Attributes
+Name
+Value
+Type
+Size
+long_name
+date of the first pixel
+H5T_C_S1
+45
+standard_name
+time
+H5T_C_S1
+5
+units
+UTC Time in microseconds
+H5T_C_S1
+25
+_FillValue
+yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+22
+comment
+format: yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+30
+dimension_label
+Number_of_Scans
+H5T_C_S1
+16
+2.014
+#6
+Pixel_AcquisitionTime
+H5T_IEEE_F32LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Time between first pixel and current
+pixel
+H5T_C_S1
+44
+standard_name
+time
+H5T_C_S1
+5
+units
+seconds
+H5T_C_S1
+9
+_FillValue
+3.4E38
+H5T_C_S1
+7
+comment
+Average time at pixel centre from first
+pixel time
+H5T_C_S1
+52
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+56
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,3.4E38]
+H5T_IEEE_F32LE
+8
+1.007
+#7
+Latitude_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+latitude of pixels
+H5T_C_S1
+77
+standard_name
+latitude
+H5T_C_S1
+9
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+-40.0
+H5T_C_S1
+6
+valid_range
+[-40.0,40.0]
+H5T_C_S1
+13
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+accuracy 1km
+H5T_C_S1
+13
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+59
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.007
+#8
+Longitude_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+longitude of pixels
+H5T_C_S1
+78
+standard_name
+longitude
+H5T_C_S1
+10
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,360]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Longitude [0,360]: 0 is Greenwich
+meridian (accuracy 1km)
+H5T_C_S1
+59
+23
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,36000]
+H5T_STD_U16LE
+4
+1.007
+#9
+Viewing_azimuth_angle_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Viewing azimuth  angle at pixel centre
+H5T_C_S1
+40
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+-180
+valid_range
+[-180,+180]
+H5T_C_S1
+12
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Viewing azimuth  angle at pixel centre
+H5T_C_S1
+40
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,36000]
+H5T_STD_U16LE
+4
+1.007
+#10
+Relative_azimuth_angle_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Relative azimuth  angle at pixel centre
+H5T_C_S1
+41
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,360]
+H5T_C_S1
+8
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Relative azimuth  angle at pixel centre
+H5T_C_S1
+41
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,36000]
+H5T_STD_U16LE
+4
+1.007
+#11
+Viewing_zenith_angle_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Viewing zenith  angle at pixel centre
+H5T_C_S1
+42
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,90]
+H5T_C_S1
+27
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Viewing zenith angle at pixel centre
+H5T_C_S1
+41
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,9000]
+H5T_STD_U16LE
+4
+1.007
+#12
+Solar_zenith_angle_Pixels
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Solar zenith  angle at pixel centre
+H5T_C_S1
+42
+units
+degrees
+H5T_C_S1
+8
+24
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,180]
+H5T_C_S1
+27
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Solar zenith angle at pixel centre
+H5T_C_S1
+41
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,18000]
+H5T_STD_U16LE
+4
+1.007
+#13
+FilteredRadiance_Visible
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+filtered radiance for Visible channel
+H5T_C_S1
+41
+units
+W.m-2.sr  -1
+H5T_C_S1
+13
+scale_factor
+0.01
+H5T_C_S1
+21
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,250 ]
+H5T_C_S1
+24
+min_max
+[0,25000 ]
+H5T_C_S1
+28
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_RD_Visible
+H5T_C_S1
+17
+comment
+calibrated filtered radiance for Visible
+channel
+H5T_C_S1
+53
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,25000 ]
+H5T_STD_U16LE
+4
+1.007
+#14
+FilteredRadiance_Solar
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+filtered radiance for Solar channel
+H5T_C_S1
+41
+units
+W.m-2.sr  -1
+H5T_C_S1
+13
+scale_factor
+0.02
+H5T_C_S1
+21
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,800 ]
+H5T_C_S1
+24
+min_max
+[0,40000 ]
+H5T_C_S1
+28
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_RD_Solar
+H5T_C_S1
+17
+comment
+calibrated filtered radiance for Solar
+channel
+H5T_C_S1
+53
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000 ]
+H5T_STD_U16LE
+4
+1.007
+#15
+FilteredRadiance_Total
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+filtered radiance for Total channel
+H5T_C_S1
+41
+units
+W.m-2.sr  -1
+H5T_C_S1
+13
+scale_factor
+0.02
+H5T_C_S1
+21
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,800 ]
+H5T_C_S1
+24
+25
+min_max
+[0,40000 ]
+H5T_C_S1
+28
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_RD_Total
+H5T_C_S1
+17
+comment
+calibrated filtered radiance for Total
+channel
+H5T_C_S1
+53
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000 ]
+H5T_STD_U16LE
+4
+1.007
+#16
+FilteredRadiance_Infrared
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+filtered radiance for Infrared channel
+H5T_C_S1
+41
+units
+W.m-2.sr  -1
+H5T_C_S1
+13
+scale_factor
+0.01
+H5T_C_S1
+21
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,40 ]
+H5T_C_S1
+24
+min_max
+[0,4000 ]
+H5T_C_S1
+28
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_RD_Infrared
+H5T_C_S1
+17
+comment
+calibrated filtered radiance for Infrared
+channel
+H5T_C_S1
+53
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,4000 ]
+H5T_STD_U16LE
+4
+1.007
+#17
+FilteredRadiance_SyntheticLW
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+filtered radiance for SyntheticLW
+channel
+H5T_C_S1
+41
+units
+W.m-2.sr  -1
+H5T_C_S1
+13
+scale_factor
+0.01
+H5T_C_S1
+21
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,500 ]
+H5T_C_S1
+24
+min_max
+[0,50000 ]
+H5T_C_S1
+28
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_RD_SyntheticLW
+H5T_C_S1
+17
+comment
+calibrated filtered radiance for
+SyntheticLW channel
+H5T_C_S1
+53
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,50000 ]
+H5T_STD_U16LE
+4
+1.007
+#18
+QF_Pixels_Visible
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+quality flag for pixels radiance  of
+Visible channel
+H5T_C_S1
+68
+standard_name
+quality flag
+H5T_C_S1
+13
+26
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+Radiance validity  flag , #14:blank,
+#13:land/sea contamination, #12:
+surface type, #11:ChannelON/OFF,
+#10:Level-0 Count Saturated, #9:Level-
+0 Count poor value, #8:geolocation
+estimation, #7:Spacecount error, #6-4:
+Blank, #3: interpolation quality,  #2:
+Gainflag, #1-0: Blank
+H5T_C_S1
+17
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.007
+#19
+QF_Pixels_Solar
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+quality flag for pixels radiance  of Solar
+channel
+H5T_C_S1
+68
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+Radiance validity  flag , #14:blank,
+#13:land/sea contamination, #12:
+surface type, #11:ChannelON/OFF,
+#10:Level-0 Count Saturated, #9:Level-
+0 Count poor value, #8:geolocation
+estimation, #7:Spacecount error, #6-4:
+Blank, #3: interpolation quality,  #2:
+Gainflag, #1-0: Blank
+H5T_C_S1
+17
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.007
+#20
+QF_Pixels_Total
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+quality flag for pixels radiance  of Total
+channel
+H5T_C_S1
+68
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+Radiance validity  flag , #14:blank,
+#13:land/sea contamination, #12:
+surface type, #11:ChannelON/OFF,
+#10:Level-0 Count Saturated, #9:Level-
+0 Count poor value, #8:geolocation
+estimation, #7:Spacecount error, #6-4:
+Blank, #3: interpolation quality,  #2:
+Gainflag, #1-0: Blank
+H5T_C_S1
+17
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.007
+#21
+QF_Pixels_Infrared
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+27
+long_name
+quality flag for pixels radiance  of
+Infrared channel
+H5T_C_S1
+68
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+Radiance validity  flag , #14:blank,
+#13:land/sea contamination, #12:
+surface type, #11:ChannelON/OFF,
+#10:Level-0 Count Saturated, #9:Level-
+0 Count poor value, #8:geolocation
+estimation, #7:Spacecount error, #6-4:
+Blank, #3: interpolation quality,  #2:
+Gainflag, #1-0: Blank
+H5T_C_S1
+17
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+1.007
+#22
+QF_Pixels_SyntheticLW
+H5T_STD_U16LE
+Number_of_Scansx
+Attributes
+Name
+Value
+Type
+Size
+long_name
+quality flag for pixels radiance  of
+SyntheticLW channel
+H5T_C_S1
+68
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+Radiance validity  flag , #14:blank,
+#13:land/sea contamination, #12:
+surface type, #11:ChannelON/OFF,
+#10:Level-0 Count Saturated, #9:Level-
+0 Count poor value, #8:geolocation
+estimation, #7:Spacecount error, #6-4:
+Blank, #3: interpolation quality,  #2:
+Gainflag, #1-0: Blank
+H5T_C_S1
+17
+dimension_label
+Number_of_Scans, Number_of_Pixels
+H5T_C_S1
+37
+geolocation_label
+Latitude, Longitude
+H5T_C_S1
+20
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+28
+SCARAB
+L1B
+Estimated Size
+for typical  [Number_of_Rows_40km]
+2.352 Mb
+[960]
+Science data group associated attributes
+ScienceData
+Attributes
+Index
+Name
+Value
+Type
+Size
+#1
+Product_Identification
+MT1SCASL1B__1.00_9_01_I_2012_05_09_0000 H5T_C_S1
+84
+#2
+Organization_Name
+ISRO
+H5T_C_S1
+5
+#3
+Property_of_data
+ISRO_ and_CNES
+H5T_C_S1
+15
+#4
+Satellite_Name
+MEGHA-TROPIQUES
+H5T_C_S1
+16
+#5
+Payload_Name
+SCARAB
+H5T_C_S1
+12
+#6
+Product_Name
+Level-1B-segment wise
+H5T_C_S1
+35
+#7
+Product_Format
+NCSA-HDF
+H5T_C_S1
+9
+#8
+Product_Format_Version
+HDF5-1.6.4
+H5T_C_S1
+11
+#9
+Product_Generation_Date
+2012MAI09
+H5T_C_S1
+10
+#10
+Imaging_Date
+2012MAI09
+H5T_C_S1
+10
+#11
+Date_Format
+YYYYMMMDD
+H5T_C_S1
+10
+#12
+INS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#13
+PRO_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#14
+RAD_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#15
+GEO_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#16
+PCS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#17
+GRB_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#18
+UCS_AuxFile_Version
+9_01
+H5T_C_S1
+5
+#19
+Number_of_Channels
+4
+H5T_C_S1
+8
+#20
+Synthetic_LW_Channel
+1
+H5T_C_S1
+2
+#21
+Channel_Bandwith
+[0.5-0.7], [0.2-4],[0.2-200],[10.5-12.5] mm
+H5T_C_S1
+44
+#22
+Aprime Coefficient
+[0.9142]
+H5T_C_S1
+9
+#23
+Orbit_StartNumber
+00001
+H5T_C_S1
+19
+#24
+Orbit_EndNumber
+00001
+H5T_C_S1
+17
+#25
+Orbit_Cycle_Number
+01
+H5T_C_S1
+3
+#26
+SLConf
+100001
+H5T_C_S1
+7
+#27
+Nskip
+0005
+H5T_C_S1
+5
+#28
+ProcessorVersion
+1.00
+H5T_C_S1
+5
+#29
+SCARAB_QF_Row_Definition
+#{(SCARAB_QF_scan_comment)}#
+H5T_C_S1
+16x24
+#30
+SCARAB_QF_Cell_Definition
+#{(qf_comment)}#
+H5T_C_S1
+16x24
+#31
+Skip_StartScanNumber
+[00000064,00000165,00000266,00000367,00H5T_C_S1
+1*Nskip
+#32
+Skip_EndScanNumber
+[00000066,00000167,00000268,00000370,00H5T_C_S1
+1*Nskip
+#33
+Flip_StartScanNumber
+00000012
+H5T_C_S1
+9
+#34
+Flip_EndScanNumber
+00000042
+H5T_C_S1
+9
+#35
+Maneuver_StartScanNumber
+00000011
+H5T_C_S1
+9
+#36
+Maneuver_EndScanNumber
+00000043
+H5T_C_S1
+9
+#37
+Number_of_Rows_40km
+960
+H5T_C_S1
+8
+#38
+Number_of_Columns_40km
+61
+H5T_C_S1
+8
+#39
+Number_of_Processed_Rows
+950
+H5T_C_S1
+4
+29
+#40
+QF_Product_%Processed_Rows
+099
+H5T_C_S1
+4
+Science data group elements
+Estimated size of
+dataset [Mb]
+Index
+Name
+Type
+Typical Value
+0.002
+#1
+Row_SCARAB_QF_40km
+H5T_STD_U16LE
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Quality flag applicable to the scan line
+H5T_C_S1
+41
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+scan/row quality flag validity,  #14:
+pass type,  #13: Scanning type, #12:
+Scan/Row error, #11: datation error,
+#10-8: Blank, #7 CRC Status, #6:
+Blank, #5-3: Payload Mode, #2-0:
+Satellite Mode
+H5T_C_S1
+232
+dimension_label
+Number_of_Rows_40km
+H5T_C_S1
+20
+geolocation_label
+Row_StartTime_40km_LF
+H5T_C_S1
+22
+0.004
+#2
+Row_Number_40km
+H5T_STD_U32LE
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Row Number (40km grid)
+H5T_C_S1
+29
+comment
+Row Number (40km grid)
+H5T_C_S1
+29
+dimension_label
+Number_of_Rows_40km
+H5T_C_S1
+26
+0.001
+#3
+Row_FirstCellAcqTime_40km
+H5T_C_S1
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+date for the first cell of the row (40km
+grid)
+H5T_C_S1
+105
+standard_name
+time
+H5T_C_S1
+5
+units
+UTC Time in microseconds
+H5T_C_S1
+25
+_FillValue
+yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+22
+comment
+format: yyyymmdd hhmmssuuuuuu
+H5T_C_S1
+32
+dimension_label
+Number_of_Rows_40km
+H5T_C_S1
+37
+0.112
+#4
+Cell_population_Visible_40km
+H5T_STD_U16LE
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Cell population for channel Visible
+H5T_C_S1
+52
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+number of samples per Cell
+H5T_C_S1
+40
+dimension_label
+Number_of_Rows_40km,
+Number_of_Columns_40km
+H5T_C_S1
+68
+geolocation_label
+Latitude_40km, Longitude_40km
+H5T_C_S1
+54
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,65535]
+H5T_STD_U16LE
+4
+0.112
+#5
+Cell_population_Solar_40km
+H5T_STD_U16LE
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Cell population for channel Solar
+H5T_C_S1
+52
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+number of samples per Cell
+H5T_C_S1
+40
+30
+dimension_label
+Number_of_Rows_40km,
+Number_of_Columns_40km
+H5T_C_S1
+68
+geolocation_label
+Latitude_40km, Longitude_40km
+H5T_C_S1
+54
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,65535]
+H5T_STD_U16LE
+4
+0.112
+#6
+Cell_population_Total_40km
+H5T_STD_U16LE
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Cell population for channel Total
+H5T_C_S1
+52
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+number of samples per Cell
+H5T_C_S1
+40
+dimension_label
+Number_of_Rows_40km,
+Number_of_Columns_40km
+H5T_C_S1
+68
+geolocation_label
+Latitude_40km, Longitude_40km
+H5T_C_S1
+54
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,65535]
+H5T_STD_U16LE
+4
+0.112
+#7
+Cell_population_Infrared_40km
+H5T_STD_U16LE
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Cell population for channel Infrared
+H5T_C_S1
+52
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+number of samples per Cell
+H5T_C_S1
+40
+dimension_label
+Number_of_Rows_40km,
+Number_of_Columns_40km
+H5T_C_S1
+68
+geolocation_label
+Latitude_40km, Longitude_40km
+H5T_C_S1
+54
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,65535]
+H5T_STD_U16LE
+4
+0.112
+#8
+Cell_population_SyntheticLW_40km
+H5T_STD_U16LE
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Cell population for channel SyntheticLW H5T_C_S1
+52
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+number of samples per Cell
+H5T_C_S1
+40
+dimension_label
+Number_of_Rows_40km,
+Number_of_Columns_40km
+H5T_C_S1
+68
+geolocation_label
+Latitude_40km, Longitude_40km
+H5T_C_S1
+54
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,65535]
+H5T_STD_U16LE
+4
+0.112
+#9
+Latitude_Cells_40km
+H5T_STD_U16LE
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+latitude of cells (40km grid)
+H5T_C_S1
+49
+standard_name
+latitude
+H5T_C_S1
+9
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+-40
+H5T_C_S1
+4
+valid_range
+[-40,40]
+H5T_C_S1
+9
+min_max
+[0,8000]
+H5T_C_S1
+9
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+accuracy 1km
+H5T_C_S1
+13
+31
+dimension_label
+Number_of_Rows_40km,
+Number_of_Columns_40km
+H5T_C_S1
+56
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+0.112
+#10
+Longitude_Cells_40km
+H5T_STD_U16LE
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+longitude of cells (40km grid)
+H5T_C_S1
+50
+standard_name
+longitude
+H5T_C_S1
+10
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0.0
+H5T_C_S1
+4
+valid_range
+[0,360]
+H5T_C_S1
+8
+min_max
+[0,36000]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Longitude [0,360]: 0 is Greenwich
+meridian (accuracy 1km)
+H5T_C_S1
+59
+dimension_label
+Number_of_Rows_40km,
+Number_of_Columns_40km
+H5T_C_S1
+56
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,36000]
+H5T_STD_U16LE
+4
+0.112
+#11
+Viewing_azimuth_angle_Cells_40km
+H5T_STD_U16LE
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Viewing azimuth  angle at cell centre
+H5T_C_S1
+39
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+-180
+valid_range
+[-180,+180]
+H5T_C_S1
+12
+min_max
+[0,+360000]
+H5T_C_S1
+12
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Viewing azimuth  angle at cell centre
+H5T_C_S1
+39
+dimension_label
+Number_of_Rows_40km,
+Number_of_Columns_40km
+H5T_C_S1
+68
+geolocation_label
+Latitude_40km, Longitude_40km
+H5T_C_S1
+54
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,36000]
+H5T_STD_U16LE
+4
+0.112
+#12
+Relative_azimuth_angle_Cells_40km
+H5T_STD_U16LE
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Relative azimuth  angle at cell centre
+H5T_C_S1
+40
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,360]
+H5T_C_S1
+8
+min_max
+[0,36000]
+H5T_C_S1
+10
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Relative azimuth  angle at cell centre
+H5T_C_S1
+40
+dimension_label
+Number_of_Rows_40km,
+Number_of_Columns_40km
+H5T_C_S1
+68
+geolocation_label
+Latitude_40km, Longitude_40km
+H5T_C_S1
+54
+32
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,36000]
+H5T_STD_U16LE
+4
+0.112
+#13
+Viewing_zenith_angle_Cells_40km
+H5T_STD_U16LE
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Viewing zenith  angle at cell centre
+H5T_C_S1
+41
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,90]
+H5T_C_S1
+27
+min_max
+[0,9000]
+H5T_C_S1
+31
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Viewing zenith angle at cell centre
+H5T_C_S1
+40
+dimension_label
+Number_of_Rows_40km,
+Number_of_Columns_40km
+H5T_C_S1
+68
+geolocation_label
+Latitude_40km, Longitude_40km
+H5T_C_S1
+54
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,9000]
+H5T_STD_U16LE
+4
+0.112
+#14
+Solar_zenith_angle_Cells_40km
+H5T_STD_U16LE
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+Solar zenith  angle at cell centre
+H5T_C_S1
+41
+units
+degrees
+H5T_C_S1
+8
+scale_factor
+0.01
+H5T_C_S1
+5
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,180]
+H5T_C_S1
+27
+min_max
+[0,18000]
+H5T_C_S1
+31
+_FillValue
+65535
+H5T_C_S1
+6
+comment
+Solar zenith angle at cell centre
+H5T_C_S1
+40
+dimension_label
+Number_of_Rows_40km,
+Number_of_Columns_40km
+H5T_C_S1
+68
+geolocation_label
+Latitude_40km, Longitude_40km
+H5T_C_S1
+54
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,18000]
+H5T_STD_U16LE
+4
+0.112
+#15
+FilteredRadiance_Visible
+H5T_STD_U16LE
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+filtered radiance for Visible channel
+H5T_C_S1
+41
+units
+W.m-2.sr  -1
+H5T_C_S1
+13
+scale_factor
+0.01
+H5T_C_S1
+21
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,250 ]
+H5T_C_S1
+24
+min_max
+[0,25000 ]
+H5T_C_S1
+28
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_RD_
+H5T_C_S1
+7
+comment
+calibrated filtered radiance for Visible
+channel
+H5T_C_S1
+53
+dimension_label
+Number_of_Rows_40km,
+Number_of_Columns_40km
+H5T_C_S1
+68
+geolocation_label
+Latitude_40km, Longitude_40km
+H5T_C_S1
+54
+CLASS
+IMAGE
+H5T_C_S1
+6
+33
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,25000 ]
+H5T_STD_U16LE
+4
+0.112
+#16
+FilteredRadiance_Solar
+H5T_STD_U16LE
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+filtered radiance for Solar channel
+H5T_C_S1
+41
+units
+W.m-2.sr  -1
+H5T_C_S1
+13
+scale_factor
+0.02
+H5T_C_S1
+21
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,800 ]
+H5T_C_S1
+24
+min_max
+[0,40000 ]
+H5T_C_S1
+28
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_RD_
+H5T_C_S1
+7
+comment
+calibrated filtered radiance for Solar
+channel
+H5T_C_S1
+53
+dimension_label
+Number_of_Rows_40km,
+Number_of_Columns_40km
+H5T_C_S1
+68
+geolocation_label
+Latitude_40km, Longitude_40km
+H5T_C_S1
+54
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000 ]
+H5T_STD_U16LE
+4
+0.112
+#17
+FilteredRadiance_Total
+H5T_STD_U16LE
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+filtered radiance for Total channel
+H5T_C_S1
+41
+units
+W.m-2.sr  -1
+H5T_C_S1
+13
+scale_factor
+0.02
+H5T_C_S1
+21
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,800 ]
+H5T_C_S1
+24
+min_max
+[0,40000 ]
+H5T_C_S1
+28
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_RD_
+H5T_C_S1
+7
+comment
+calibrated filtered radiance for Total
+channel
+H5T_C_S1
+53
+dimension_label
+Number_of_Rows_40km,
+Number_of_Columns_40km
+H5T_C_S1
+68
+geolocation_label
+Latitude_40km, Longitude_40km
+H5T_C_S1
+54
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,40000 ]
+H5T_STD_U16LE
+4
+0.112
+#18
+FilteredRadiance_Infrared
+H5T_STD_U16LE
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+filtered radiance for Infrared channel
+H5T_C_S1
+41
+units
+W.m-2.sr  -1
+H5T_C_S1
+13
+scale_factor
+0.01
+H5T_C_S1
+21
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,40 ]
+H5T_C_S1
+24
+min_max
+[0,4000 ]
+H5T_C_S1
+28
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_RD_
+H5T_C_S1
+7
+comment
+calibrated filtered radiance for Infrared
+channel
+H5T_C_S1
+53
+34
+dimension_label
+Number_of_Rows_40km,
+Number_of_Columns_40km
+H5T_C_S1
+68
+geolocation_label
+Latitude_40km, Longitude_40km
+H5T_C_S1
+54
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,4000 ]
+H5T_STD_U16LE
+4
+0.112
+#19
+FilteredRadiance_SyntheticLW
+H5T_STD_U16LE
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+filtered radiance for SyntheticLW
+channel
+H5T_C_S1
+41
+units
+W.m-2.sr  -1
+H5T_C_S1
+13
+scale_factor
+0.01
+H5T_C_S1
+21
+add_offset
+0
+H5T_C_S1
+2
+valid_range
+[0,500 ]
+H5T_C_S1
+24
+min_max
+[0,50000 ]
+H5T_C_S1
+28
+_FillValue
+65535
+H5T_C_S1
+6
+quality_flag
+QF_RD_
+H5T_C_S1
+7
+comment
+calibrated filtered radiance for
+SyntheticLW channel
+H5T_C_S1
+53
+dimension_label
+Number_of_Rows_40km,
+Number_of_Columns_40km
+H5T_C_S1
+68
+geolocation_label
+Latitude_40km, Longitude_40km
+H5T_C_S1
+54
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,50000 ]
+H5T_STD_U16LE
+4
+0.112
+#20
+QF_Cells_Visible
+H5T_STD_U16LE
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+quality flag for cells radiance  of Visible
+channel
+H5T_C_S1
+55
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+Radiance validity  flag , #14:blank,
+#13:land/sea contamination, #12:
+surface type, #11:ChannelON/OFF,
+#10:Level-0 Count Saturated, #9:Level-
+0 Count poor value, #8:geolocation
+estimation, #7:Spacecount error, #6-4:
+Blank, #3: interpolation quality,  #2:
+Gainflag, #1-0: Blank
+H5T_C_S1
+314
+dimension_label
+Number_of_Rows_40km,
+Number_of_Columns_40km
+H5T_C_S1
+68
+geolocation_label
+Latitude_40km, Longitude_40km
+H5T_C_S1
+54
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+0.112
+#21
+QF_Cells_Solar
+H5T_STD_U16LE
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+quality flag for cells radiance  of Solar
+channel
+H5T_C_S1
+55
+standard_name
+quality flag
+H5T_C_S1
+13
+35
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+Radiance validity  flag , #14:blank,
+#13:land/sea contamination, #12:
+surface type, #11:ChannelON/OFF,
+#10:Level-0 Count Saturated, #9:Level-
+0 Count poor value, #8:geolocation
+estimation, #7:Spacecount error, #6-4:
+Blank, #3: interpolation quality,  #2:
+Gainflag, #1-0: Blank
+H5T_C_S1
+314
+dimension_label
+Number_of_Rows_40km,
+Number_of_Columns_40km
+H5T_C_S1
+68
+geolocation_label
+Latitude_40km, Longitude_40km
+H5T_C_S1
+54
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+0.112
+#22
+QF_Cells_Total
+H5T_STD_U16LE
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+quality flag for cells radiance  of Total
+channel
+H5T_C_S1
+55
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+Radiance validity  flag , #14:blank,
+#13:land/sea contamination, #12:
+surface type, #11:ChannelON/OFF,
+#10:Level-0 Count Saturated, #9:Level-
+0 Count poor value, #8:geolocation
+estimation, #7:Spacecount error, #6-4:
+Blank, #3: interpolation quality,  #2:
+Gainflag, #1-0: Blank
+H5T_C_S1
+314
+dimension_label
+Number_of_Rows_40km,
+Number_of_Columns_40km
+H5T_C_S1
+68
+geolocation_label
+Latitude_40km, Longitude_40km
+H5T_C_S1
+54
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+0.112
+#23
+QF_Cells_Infrared
+H5T_STD_U16LE
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+quality flag for cells radiance  of
+Infrared channel
+H5T_C_S1
+55
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+Radiance validity  flag , #14:blank,
+#13:land/sea contamination, #12:
+surface type, #11:ChannelON/OFF,
+#10:Level-0 Count Saturated, #9:Level-
+0 Count poor value, #8:geolocation
+estimation, #7:Spacecount error, #6-4:
+Blank, #3: interpolation quality,  #2:
+Gainflag, #1-0: Blank
+H5T_C_S1
+314
+dimension_label
+Number_of_Rows_40km,
+Number_of_Columns_40km
+H5T_C_S1
+68
+geolocation_label
+Latitude_40km, Longitude_40km
+H5T_C_S1
+54
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+36
+0.112
+#24
+QF_Cells_SyntheticLW
+H5T_STD_U16LE
+Number_of_Rows_4
+Attributes
+Name
+Value
+Type
+Size
+long_name
+quality flag for cells radiance  of
+SyntheticLW channel
+H5T_C_S1
+55
+standard_name
+quality flag
+H5T_C_S1
+13
+comment
+16-bits array (=0:good/=1:bad):,  #15:
+Radiance validity  flag , #14:blank,
+#13:land/sea contamination, #12:
+surface type, #11:ChannelON/OFF,
+#10:Level-0 Count Saturated, #9:Level-
+0 Count poor value, #8:geolocation
+estimation, #7:Spacecount error, #6-4:
+Blank, #3: interpolation quality,  #2:
+Gainflag, #1-0: Blank
+H5T_C_S1
+314
+dimension_label
+Number_of_Rows_40km,
+Number_of_Columns_40km
+H5T_C_S1
+68
+geolocation_label
+Latitude_40km, Longitude_40km
+H5T_C_S1
+54
+CLASS
+IMAGE
+H5T_C_S1
+6
+IMAGE_SUBCLASS
+IMAGE_GRAYSCALE
+H5T_C_S1
+16
+IMAGE_MINMAXRANGE
+[0,8000]
+H5T_STD_U16LE
+4
+37

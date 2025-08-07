@@ -1,0 +1,109 @@
+URL: https://www.mosdac.gov.in/oceansat-2-introduction
+
+--- EXTRACTED TEXT ---
+Skip to main Content
+Secondary menu
+SignUp
+Login
+Logout
+Home
+Missions INSAT-3DR INSAT-3D KALPANA-1 INSAT-3A MeghaTropiques SARAL-AltiKa OCEANSAT-2 OCEANSAT-3 INSAT-3DS SCATSAT-1
+INSAT-3DR
+INSAT-3D
+KALPANA-1
+INSAT-3A
+MeghaTropiques
+SARAL-AltiKa
+OCEANSAT-2
+OCEANSAT-3
+INSAT-3DS
+SCATSAT-1
+Catalog Satellite Insitu (AWS) RADAR
+Satellite
+Insitu (AWS)
+RADAR
+Galleries Satellite Products Weather Forecast Ocean Forecast RADAR (DWR) Global Ocean Current
+Satellite Products
+Weather Forecast
+Ocean Forecast
+RADAR (DWR)
+Global Ocean Current
+Data Access Order Data Open Data Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy Cal-Val Forecast RSS Feeds
+Order Data
+Open Data Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy
+Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties
+Bayesian based MT-SAPHIR rainfall
+GPS derived Integrated water vapour
+GSMap ISRO Rain
+METEOSAT8 Cloud Properties
+Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture
+3D Volumetric TERLS DWRproduct
+Inland Water Height
+River Discharge
+Soil Moisture
+Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy
+Global Ocean Surface Current
+High Resolution Sea Surface Salinity
+Indian Mainland Coastal Product
+Ocean Subsurface
+Oceanic Eddies Detection
+Sea Ice Occurrence Probability
+Wave based Renewable Energy
+Cal-Val
+Forecast
+RSS Feeds
+Reports Calibration Insitu Relative Validation Data Quality Weather
+Calibration Insitu Relative
+Insitu
+Relative
+Validation
+Data Quality
+Weather
+Atlases
+Tools
+Sitemap
+Help
+You are here
+OCEANSAT-2 Introduction
+I ndia's Polar Satellite Launch Vehicle, PSLV-C14, in its 16th Mission launched 958 kg Oceansat-2 and six nano-satellites into a 720 km. intended Sun Synchronous Polar Orbit (SSPO) on September 23, 2009.
+OCEANSAT-2 mission is an evolution of the OCEANSAT-1. IRS-P4 (OCEANSAT-I), launched in 1999, is a dedicated satellite for Ocean applications and carries two Payloads: Ocean Color Monitor (OCM) and Multi-frequency Scanning Microwave Radiometer (MSMR). Out of these two, OCM is providing valuable data which is used for various applications both within India and by International users. The most significant application areas are identification of Potential Fishery Zones (PFZ) using OCM data & prediction of Monsoon arrival using MSMR data. Experience from OCM data consisted into algorithms developed for atmospheric correction of the data and retrieval of parameters like Chlorophyll concentration, total suspended matter (TSM), estimation of primary productivity, detection of algal blooms.
+OCEANSAT-2 provides same operational services as OCEANSAT-1 while adding new ones like atmospheric vertical profiles of temperature, pressure and humidity, wind fields over ocean surface, sea state, Ocean dynamics , and bio-physical parameters.
+OCEANSAT-2 is equipped with three payloads: OCM, Scatterometer and ROSA. OCM was also present on OCEANSAT-I, Scatterometer and ROSA are new instruments. The OCEANSAT-2 data is received at the ISRO Ground Segment, located in Hyderabad, and also at the ASI Multimission National Centre (CNM) , located in Matera.
+
+Missions OCEANSAT-2 Introduction Objectives SpaceCraft Payloads Data Products Documents
+OCEANSAT-2 Introduction Objectives SpaceCraft Payloads Data Products Documents
+Introduction
+Objectives
+SpaceCraft
+Payloads
+Data Products
+Documents
+Search
+Follow Us
+
+
+
+Website owned and maintained by MOSDAC, Space Applications Centre, Indian Space Research Organisation, Govt. of INDIA.
+
+Feedback
+About Us
+Contact Us
+Copyright Policy
+Data Access Policy
+Hyperlink Policy
+Privacy Policy
+Website Policies
+Terms & Conditions
+FAQs
+
+
+
+
+
+
+"Ver 3.0; Last reviewed and updated on
+07 Aug, 2025& Served By:
+Web-Srv-Pri
+
+
+--- EXTRACTED TABLES ---

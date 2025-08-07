@@ -1,0 +1,111 @@
+URL: https://www.mosdac.gov.in/oceansat-2-objectives
+
+--- EXTRACTED TEXT ---
+Skip to main Content
+Secondary menu
+SignUp
+Login
+Logout
+Home
+Missions INSAT-3DR INSAT-3D KALPANA-1 INSAT-3A MeghaTropiques SARAL-AltiKa OCEANSAT-2 OCEANSAT-3 INSAT-3DS SCATSAT-1
+INSAT-3DR
+INSAT-3D
+KALPANA-1
+INSAT-3A
+MeghaTropiques
+SARAL-AltiKa
+OCEANSAT-2
+OCEANSAT-3
+INSAT-3DS
+SCATSAT-1
+Catalog Satellite Insitu (AWS) RADAR
+Satellite
+Insitu (AWS)
+RADAR
+Galleries Satellite Products Weather Forecast Ocean Forecast RADAR (DWR) Global Ocean Current
+Satellite Products
+Weather Forecast
+Ocean Forecast
+RADAR (DWR)
+Global Ocean Current
+Data Access Order Data Open Data Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy Cal-Val Forecast RSS Feeds
+Order Data
+Open Data Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy
+Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties
+Bayesian based MT-SAPHIR rainfall
+GPS derived Integrated water vapour
+GSMap ISRO Rain
+METEOSAT8 Cloud Properties
+Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture
+3D Volumetric TERLS DWRproduct
+Inland Water Height
+River Discharge
+Soil Moisture
+Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy
+Global Ocean Surface Current
+High Resolution Sea Surface Salinity
+Indian Mainland Coastal Product
+Ocean Subsurface
+Oceanic Eddies Detection
+Sea Ice Occurrence Probability
+Wave based Renewable Energy
+Cal-Val
+Forecast
+RSS Feeds
+Reports Calibration Insitu Relative Validation Data Quality Weather
+Calibration Insitu Relative
+Insitu
+Relative
+Validation
+Data Quality
+Weather
+Atlases
+Tools
+Sitemap
+Help
+You are here
+Oceansat-2 Objectives
+T he Indian satellite Oceansat-2 is designed to provide service continuity for operational users of the Ocean Colour Monitor (OCM)instrument on Oceansat-1. It will also enhance the potential of applications in other areas. The main objectives of OceanSat-2 are to study surface winds and ocean surface strata, observation of chlorophyll concentrations, monitoring of phytoplankton blooms, study of atmospheric aerosols and suspended sediments in the water.
+The primary mission objectives of Oceansat-2 are:
+To design, develop, launch and operate a three axis stabilized spacecraft carrying an Ocean Colour Monitor and Ku-band Scatterometer,
+To develop / implement algorithms for retrieval of geophysical parameters like wind vector on an operational basis.
+To promote new applications in the areas of ocean studies including prediction of cyclone trajectory, fisheries, coastal zone mapping etc.
+Oceansat-2 gathers systematic data for oceanographic, coastal and atmospheric applications. The main objectives of OceanSat-2 are to study surface winds and ocean surface strata, observation of chlorophyll concentrations, monitoring of phytoplankton blooms, study of atmospheric aerosols and suspended sediments in the water.
+Oceansat-2 carries two payloads for ocean related studies, namely, Ocean Colour Monitor (OCM) and Ku-band Pencil Beam Scatterometer. An additional piggy-back payload called ROSA (Radio Occultation Sounder for Atmospheric studies) developed by the Italian Space Agency (ASI) is also included. The major applications of data from Oceansat-2 are identification of potential fishing zones, sea state forecasting, coastal zone studies and inputs for weather forecasting and climatic studies.
+Missions OCEANSAT-2 Introduction Objectives SpaceCraft Payloads Data Products Documents
+OCEANSAT-2 Introduction Objectives SpaceCraft Payloads Data Products Documents
+Introduction
+Objectives
+SpaceCraft
+Payloads
+Data Products
+Documents
+Search
+Follow Us
+
+
+
+Website owned and maintained by MOSDAC, Space Applications Centre, Indian Space Research Organisation, Govt. of INDIA.
+
+Feedback
+About Us
+Contact Us
+Copyright Policy
+Data Access Policy
+Hyperlink Policy
+Privacy Policy
+Website Policies
+Terms & Conditions
+FAQs
+
+
+
+
+
+
+"Ver 3.0; Last reviewed and updated on
+07 Aug, 2025& Served By:
+Web-Srv-Pri
+
+
+--- EXTRACTED TABLES ---

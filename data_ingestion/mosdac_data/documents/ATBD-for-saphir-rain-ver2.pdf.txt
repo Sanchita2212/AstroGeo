@@ -1,0 +1,1095 @@
+SAC/EPSA/AOSG/SR/01/2015 
+ 
+ 
+ 
+Revised Algorithm Theoretical Basis Document (ATBD) for 
+ 
+Rain Detection and Measurement from Megha-Tropiques Microwave 
+Sounder – SAPHIR  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Atul Kumar Varma, D N Piyush, R M Gairola and B S Gohil  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Geophysical Parameters Retrieval Division 
+Atmospheric and Oceanic Sciences Group 
+Space Applications Centre (ISRO) 
+Ahmedabad 380015, India 
+ 
+ 
+ 
+ 
+February 2015 
+ 
+ 
+1
+Document Control and Data Sheet 
+ 
+ 
+1 
+Date 
+February 24, 2015 
+2. 
+Title: 
+Revised Algorithm Theoretical Basis Document (ATBD): Rain 
+Detection and Measurement from Megha-Tropiques Microwave 
+Sounder – SAPHIR  
+3. 
+Version 
+1.1 
+4. 
+Document No. 
+ SAC/EPSA/AOSG/SR/01/2015 
+5. 
+Type of Report: 
+scientific Note 
+6. 
+No. of Pages: 
+27 (excluding title page) 
+7. 
+Author: 
+ 
+Atul K Varma, D N Piyush. R M Gairola and B S Gohil 
+8. 
+Originating unit: 
+GRD/AOSG/EPSA/SAC, Ahmedabad. 
+9. 
+Abstract: 
+Megha-Tropiques satellite carries onboard a microwave 
+sounder, SAPHIR, and a microwave radiometer, MADRAS, 
+along with two other instruments. Due to currently non-
+functioning of MADRAS, the possibility of detection and 
+estimation of rain from SAPHIR is explored. The SAPHIR 
+operates in 6 frequencies ranging from 183.310.2 to 
+183.3111 GHz which are close to water vapor absorption line 
+at 183.31 GHz. In the first step, an examination of the rain 
+effect on SAPHIR channels is carried out, and the results 
+showed them to be sensitive to the rain. In the second step, a 
+rain identification algorithm is attempted, which is based on 
+average rain probability (PR) measured at SAPHIR channels. 
+The effect of false alarm and missing rain is examined and it is 
+found that missing rain over land and ocean is < 0.9 mm/h and 
+0.13 mm/h with standard deviation of 0.70 mm/h and 0.54 
+mm/h, respectively, and rain due to false alarm over both land 
+and oceans is < 0.9 mm/h. In the third step, a nonlinear rain 
+retrieval algorithm is proposed for rain affected pixels, which 
+explains a correlation of 0.70 and rmse of 0.81 mm/h. When 
+rain identification and retrieval algorithms are applied together, 
+it explains a correlation of 0.68 and rmse of 0.45 mm/h on 
+instantaneous basis. Comparison of rain from SAPHIR with 
+TRMM-3B42 on monthly basis indicates a correlation of 0.84 
+and rms difference of 0.09 mm/h. In this report step-by-step 
+procedure in given to make this algorithm operational.   
+10. 
+Classification: 
+Unrestricted 
+11. 
+Distribution: 
+All concerned 
+ 
+2
+Rain Detection and Measurement from Megha-Tropiques Microwave 
+Sounder – SAPHIR  
+ 
+ 
+1.  Introduction: 
+ 
+In order to study the tropical convective systems and their dominance in defining the 
+energy and water cycle in the atmosphere, several atmospheric variables like 
+precipitation, surface evaporation, net radiation at the top of the atmosphere, vertical 
+profile of temperature and humidity, etc, play a crucial role, and hence it is imperative to 
+measure these variables simultaneously. This is planned to be achieved through a joint 
+Indo-French collaborative Megha-Tropiques (MT) satellite mission. Megha-Tropiques 
+satellite was launched on 12 October 2011, and is purposely designed to study the 
+convective systems, water cycles and energy exchanges in the tropical atmosphere 
+through a host of onboard instruments such as Microwave Analysis and Detection of 
+Rain and Atmospheric Structures (MADRAS), Sondeur Atmosphérique du Profil 
+d'Humidité Intertropical par Radiométrie (SAPHIR), Scanner for Radiation Budget 
+(ScaRaB) and Radio Occultation Sensor for Atmosphere (ROSA). To facilitate frequent 
+observations over the tropics, the Megha-Tropiques is placed in a low inclination orbit 
+(20o) at 867 km altitude that provides the coverage over the global tropical region with 
+14 orbits a day and 7 days of repeat cycle.  
+ 
+The MADRAS onboard MT is a five-frequency, nine-channel, self-calibrating, microwave 
+radiometer that sweeps a swath of ~1700 km in a conical scanning with local incidence 
+angle of 53.5o on the surface of the Earth. The specifications of MADRAS are provided 
+in Table 1. MADRAS observations are used to operationally derive Total Precipitable 
+Water (TPW), Cloud Liquid Water (CLW), and Ocean Surface Wind Speed (OWS) over 
+oceans, and rain over land and oceans using radiative transfer based approach 
+developed by Varma et al. (2011) and a scattering index based approach developed by 
+Gairola et al. (2011).  The SAPHIR is a six-channel microwave sounder that carries out 
+cross track scanning within 50o on both sides of the nadir and thereby providing 
+variable incidence angle and variable pixel size over a swath of ~1700 km. The 
+specifications of SAPHIR are given in Table 2. The SAPHIR that operates at 
+frequencies around water vapor resonance line at 183.31 GHz is designed to provide 
+clear-sky profiles of atmospheric humidity. Frequencies near 183.31 GHz show very 
+high atmospheric absorption and the emitted radiations from the environment reaching 
+to the satellite are dominated by contribution from broad atmospheric layers whose 
+thickness and mean altitude vary with operating frequency as well as with humidity and 
+temperature in the atmosphere. Using observations from SAPHIR channels, algorithms 
+are developed to operationally derive the Atmospheric Humidity profiles (Gohil et al., 
+2013, Mathur et al., 2013). 
+ 
+Rain is an important atmospheric parameter and is most fundamental to achieve 
+science objectives of the Megha-Tropiques mission.  Keeping this is view, the MADRAS 
+onboard MT mission is specifically designed to measure the rain. However, after few 
+months of successful operation, some anomaly was observed in the MADRAS 
+ 
+3
+observations due to a suspected electrical interference which resulted in to random 
+channel mixing. A methodology is worked out by the CNES and ISRO Project teams for 
+realignment of the data. With this additional processing, a significant amount of data is 
+recovered. However, another serious anomaly observed in MADARS scan mechanism 
+and the MADRAS instrument is declared non-operational on 26 January 2013 (please 
+see, http://smsc.cnes.fr/MEGHAT/GP_actualites.htm). In view of these facts, we herein 
+make an attempt to measure rain from SAPHIR observations which may help fulfilling 
+science objectives of the MT mission in the absence of the MADRAS observations.  
+ 
+For rain measurement, passive microwave radiometers operating below 90 GHz 
+frequency (e.g., TMI, SSM/I, AMSR-E, MADRAS, etc.) are commonly used. 
+Frequencies above 90 GHz are available on number of sensors like SSMIS, SSM/T 2 
+(Special Sensor Microwave Temperature 2) onboard DMSP satellite, AMSU (Advance 
+Microwave Sounder Unit) onboard Aqua and NOAA 17, and MADRAS and SAPHIR 
+onboard MT. The frequencies above 90 GHz are commonly used for studying the cloud 
+properties (e.g., Liu and Curry, 1990, Weng, 2003, etc.). Hong et al. (2005) have 
+studied the sensitivity of the microwave brightness temperatures to hydrometeors at 89-
+190 GHz frequencies, and found that frequencies near water vapor absorption band at 
+183.31 GHz (e.g., AMSU-B channels) are nearly independent of surface emissivity 
+because of atmospheric opacity at these frequencies. This finding allows development 
+of retrieval algorithms for rain/cloud and other atmospheric parameters independent of 
+the underlying surface type. Several other researchers (e.g., Muller et al., 1994; Hong et 
+al., 2005) have also studied the effect of cloud ice and precipitation on AMSU-B water 
+vapor channels. A depression in the satellite measured brightness temperature at 
+frequencies near water vapor absorption line (183.31 GHz) is resulted from the 
+hydrometeors on the top of the cloud, and the depression increases for frequencies 
+away from the water vapor absorption line (Burns et al., 1997). Thus for SAPHIR, we 
+expect higher depression for 183.3111 GHz channel. Bennartz and Bauer (2003) have 
+studied the sensitivity of the frequencies near 183.31 GHz water vapor absorption line 
+to ice particle scattering in different environmental conditions, and reported little 
+sensitivity to precipitating clouds below 8 km of altitude, which they attributed to the 
+peaking of the weighting functions at higher altitudes.  The study by Bennartz and Bauer 
+(2003) was conducted for middle and higher latitude conditions and for 1837, 1833, 
+1831 GHz channels, we, however, expect a higher sensitivity of SAPHIR 18311 GHz 
+channel to precipitating clouds.  
+ 
+SAPHIR on MT collects microwave radiances from the environment at 6 channels 
+around water vapor absorption band at 183.3 GHz. These channels are referred as S1, 
+S2, S3, S4, S5 and S6 with central operating frequency of 183.31±0.2 GHz, 183.31±1.1 
+GHz, 183.31±2.8 GHz, 183.31±4.2 GHz, 183.31±6.8 GHz, and 183.31±11.0 GHz. The 
+SAPHIR sweeps a swath of ~1700 km while carrying out cross-track scanning of 50o 
+on both sides of the nadir. The SAPHIR swath dataset comprises of 182 pixels with 91 
+pixels on both sides of the nadir. It provides variable local incidence angle along the 
+swath at the surface of the Earth. The spatial resolution also varies along the swath 
+from 10 km at nadir to about 22 km at pixel locations 1 and 182.  In the present study 
+ 
+4
+we have used SAPHIR swath observations of period from March - May 2013 and also of 
+Phaillin Cyclone over the Bay of Bengal on 11 October 2013. 
+ 
+In this report, we make an attempt to detect and determine precipitation amount using 
+SAPHIR frequencies near water vapor absorption line at 183.31 GHz (Table-2).  The 
+rain measured from SAPHIR may provide an alternate and independent set of 
+measurements to fulfill the MT Science objectives, especially in view of absence of 
+MADRAS measurements.  
+ 
+2.  Rain Detection 
+ 
+Rain identification algorithm is an integral part of any satellite passive microwave based 
+rain retrieval algorithm. At microwave frequencies (say, from 6 GHz to 190 GHz) 
+variations in the surface emissivity, surface and atmospheric temperature, water vapor, 
+cloud liquid water or wind speed may produce the brightness temperature (Tb) 
+variations of the same order as that due to rain rates. Apart from that the uncertainties 
+observed in the brightness temperature versus rain rate relationship due to horizontal 
+and vertical rain variability within satellite IFOV makes it extremely difficult to 
+differentiate low rain rates from the background field (Varma et al., 2004). The rain 
+identification over the land is even more complex due to strong and highly varying 
+emissivity, especially at low microwave frequencies. Varma and Pal (2012) have 
+provided a detailed account of the problem of precipitation detection by passive 
+microwave measurements.  
+ 
+Here, we intend to develop a rain identification algorithm using SAPHIR brightness 
+temperature measurements. Because of high atmospheric opacity at frequencies near 
+the water vapor absorption line (183.31 GHz), the measurements are nearly 
+independent of the surface emissivity (Hong et al., 2005), but the cloud structure over 
+land is different than the oceans (Kawamoto and Suzuki, 2013, Varma and Liu, 2006);   
+Clouds over land usually develop much deeper than that over the oceans, and 
+therefore, they may exhibit different brightness temperature depression for a given rain 
+rate. Furthermore, unlike passive microwave radiometers with conical scan mechanism 
+that are traditionally used for rain measurement, like SSM/I, TMI, MADRAS, etc., the 
+SAPHIR incidence angle at each scan position differs and that has to be incorporated in 
+any retrieval algorithm. Ideally, the pixels that are equidistant from the nadir on a scan 
+line should have same incidence angle. But such pixels may still have asymmetry 
+resulting from radio frequency interference problem of the instrument (Buehler et al., 
+2005). Thus we have attempted the development of the algorithm by considering all 182 
+pixels independently over land and oceans.  
+ 
+In order to develop rain identification algorithm, we use concurrent observations from 
+SAPHIR and Tropical Rainfall Measuring Mission (TRMM)- Precipitation Radar PR. 
+Apart from PR, TRMM also carried onboard a microwave radiometer which is referred 
+as Microwave Radiometer (TMI). Rain rates are provided by both TMI and PR. TMI 
+operates at 10.65, 19.35, 21.3, 37.0, and 85.5 GHz with all frequencies, except 21.3 
+GHz (only V) received radiation in both vertical and horizontal polarizations.  TRMM is a 
+ 
+5
+low orbiting satellite, which provides coverage between about 36o S and 36o N latitudes. 
+The PR scans ± 17° from the nadir with 49 positions result in a 215 km swath, with a 
+spatial resolution of 4.3 km. In August 2001 the TRMM orbit was raised from 350 to 403 
+km, and that resulted to extended swath of 247 km and spatial resolution of ~5 km. In 
+the present study, we use precipitation radar measurements taken from TRMM 
+standard swath product 2A25, which contains the rainfall rates from surface to 20 km 
+altitude with 250 m vertical resolution. We have also taken surface rain rates from TMI 
+standard data product 2A12. The TRMM sensor package has been described by 
+Kummerow et al. (1998), and PR rain measurement algorithm is provided by Awaka et 
+al. (1997). The TRMM sensor package has been described by Kummerow et al. (1998), 
+and PR rain measurement algorithm is provided by Awaka et al. (1997).  
+ 
+The dataset of PR-SAPHIR concurrent observations is prepared by collocating SAPHIR 
+and PR observations over space and time. We assume a circular foot print of SAPHIR 
+of diameter 10 km at the nadir and that varies linearly to 22 km at the beginning and end 
+of a scan line (i.e., pixel # 1 and 182). We find all the PR observations that fall on a 
+SAPHIR footprint within 10 minutes of time difference and calculate the weighted 
+average surface rain rate from PR observations. The weight is varied commensurating 
+for an assumed isotropic antenna gain pattern over the footprint. This way we generate 
+a collocated SAPHIR-PR dataset for March 2013 for further analysis. We refer it as 
+training dataset in the succeeding part of this report. Given the temporal variability of the 
+precipitation (Piyush et al., 2012) and non-circular footprint of the SAPHIR away from 
+nadir, collocation of two datasets in spatial and temporal domain is not the perfact, yet 
+keeps the procedure of collocation simple while providing a large collocated dataset of 
+about 1.7 million observations over the ocean and 0.7 million over land. The rain 
+identification and retrieval scheme have been performed separately for the land and 
+oceans. We further divided dataset into rainy and non-rainy sets for 182 swath positions 
+of the SAPHIR. We examine the probability distribution (PDF) of brightness 
+temperatures measured at all 6 channels of SAPHIR for rainy and non-rainy conditions 
+for all scan locations. Figure 1 (a) to (f) show plots of PDFs of SAPHIR brightness 
+temperatures for channel S1 and S6 for a typical scan position # 45 for rainy and non-
+rainy conditions over the oceans. There do exist similar PDFs for other pixel locations 
+over the oceans and land. The PDF of the brightness temperatures for rainy cases is 
+shown as line joining open circles and that for non-rainy cases is shown as line joining 
+solid circles. It may be observed that there is large overlap of PDFs of brightness 
+temperatures from all the channels for rainy and non-rainy cases, and thus making it 
+difficult to identify a threshold value of brightness temperature for clearly demarcating 
+rainy and non-rainy conditions.  Despite of having large overlap area between PDFs of 
+rainy and non-rainy cases, the Fig. 1 shows clear and distinct peaks of PDFs for two 
+cases in all the 6 channels of SAPHIR, which suggest some tangible sensitivity of the 
+brightness temperatures to rain.  Figure 1 shows PDFs of brightness temperatures for a 
+typical scan position over the oceans, there, however, exists similar qualitative behavior 
+of PDFs of brightness temperatures for rainy and non-rainy cases at other scan 
+positions over land and oceans as well. We thus take advantage of sensitivity of all the 
+six SAPHIR channels towards rainfall as provided by the probability distribution of 
+brightness temperatures for rainy and non-rain cases, separately for all 182 pixel 
+ 
+6
+locations (please note that Fig. 1 (a) – (f) is just an example for pixel location # 45 over 
+the oceans), and calculate the average probability of a given pixel as rainy (PR) and 
+non-rainy (PNR). We normalize the PR and PNR to make their sum unity. Now, we 
+examine the PR (or PNR) by plotting distribution of PR from all pixel locations calculated 
+separately from rainy and non-rainy SAPHIR-PR collocated training datasets (Fig. 2a) 
+for ocean and Fig (2b) for the land. The distribution of PR from non-rainy dataset is 
+shown as line joining open circles and that for rainy dataset is shown as line joining 
+open triangles. We still find a large overlap between two plots in Fig.2 (a), (b). However, 
+we notice a long tail in the distribution of PR associated with non-rainy dataset and a 
+double peak in the distribution associated with rainy dataset. Thus it is possible that in 
+the SAPHIR-PR collocated dataset a large number of pixels which are considered as 
+non-raining are actually rainy and vice versa. This could be possible as collocation in 
+space and time is not perfect as discussed above. There may also be some problem in 
+the collocation due to other reasons like sensitivity of PR (~0.7 mm/h) (anonymous, 
+2011), angle of observation, etc. Thus, we do not take PR=0.5 as the threshold value to 
+identify rain/no-rain and a more appropriate value of the PR threshold is worked out. We 
+examined different threshold values of PR and tried to identify most appropriate value of 
+PR which is optimized for minimal error in the identification of rain/no-rain. This 
+procedure led us to find a PR value of 0.6 as most appropriate value for ocean and 0.63 
+for land. According to Fig. 2 (a), the PR threshold of 0.6 results in about 9% false rain 
+pixels from non-rainy pixels and 34% missing rain from rainy pixels over oceans, 
+whereas, over land with PR = 0.63 there is about 7% false rain pixels from non-rainy and 
+27% missing rain from rainy pixels. We further examine how these wrongly identified 
+pixels with PR thresholds would have likely ramification on the rain identification and 
+measurement. Figure 3 (a) and (b) shows the average rain with vertical bars of 
+Standard Deviation (SD) as a function of PR from the rainy dataset of ocean and land, 
+respectively. As expected the average rain is small in lower values of PR, and increases 
+as we go to higher values of PR. Over oceans, the average rain at PR = 0.6 is 0.13 mm/h 
+with SD of 0.54 mm/h. We follow the same procedure over land and find that average 
+rain at PR = 0.63 is 0.09 mm/h with SD of 0.70 mm/h.  Thus, the rainy points that are 
+classified as non-rainy would contribute only to very low rain regime (say, < ~0.7 mm/h). 
+We further examine the non-raining point that turn raining with the PR thresholds. Figure 
+4 shows the cumulative probability distribution of rain rates for such pixels. The rain rate 
+is calculated from an algorithm discussed in the next section. From the Fig. 4, we find 
+that for oceans (open triangles) about 80% of the non-raining pixels that give false rain 
+produce an average rain of less than 0.15 mm/h. About 95% of such pixels produce 
+average rain of less than 0.35 mm/h, whereas for land about 52 % of the non-raining 
+pixels give an average rain of 0.15 mm/h, and 95 % of such pixels produce an average 
+rain less than 0.65 mm/h and none of them yield average rain of more than 0.95 mm/h. 
+Thus, with the PR based rain/no-rain threshold, the rainy pixels that are classified as 
+producing missing-rain and the non-rainy pixels that are classified as producing false-
+rain has effect only in the low rain regime (i.e., < 1 mm/h). Given the errors in the rain 
+estimation by the microwave radiometers (Varma et al., 2010, Varma and Pal, 2012), 
+and the error involved in the spatial-temporal collocation of the SAPHIR-PR dataset, this 
+error in the rain identification can be considered as insignificant. Hence, with a PR 
+threshold of 0.6 and 0.63 as discussed above, we generate rain/no-rain map from 
+ 
+7
+SAPHIR and also from TRMM 3B42 standard dataset. Figure 5 shows rain/no-rain map 
+for a typical day of 11 May 2013. Due to rain identification problem in very low rain 
+regime, we have deliberately avoided low rain rates of < 0.25 mm/h. Again the SAPHIR 
+rain is determined using the rain retrieval algorithm discussed in the next section. The 
+Fig. 5 shows that rain area by SAPHIR matches fairly well with that from 3B42. 
+ 
+3.  Rain Retrieval 
+ 
+In the previous section, rain identification in SAPHIR observations is discussed. In this 
+section, we make an attempt to retrieve the rain. For development of the retrieval 
+algorithm, we first tried to examine the expected behavior of SAPHIR frequency 
+channels with rain. For that we use radiative transfer simulations, we simulate 
+brightness temperatures using a scattering based microwave radiative transfer model 
+(MWRT) developed by Liu (1998) for all the six channels of SAPHIR. In these model 
+simulations, we use a standard tropical atmospheric profile over calm oceans with 
+surface temperature of 300 K. Figure 6 (a) shows plot of the brightness temperature 
+versus rain rate for a typical scan position of for all the six channels of SAPHIR. Here, it 
+may be observed that channel 1 (S1) i.e., at 183.31±0.2 GHz, exhibits the minimum 
+slope and is thus least affected, and channel 6 (S6) i.e., at 183.31±11.0 GHz, exhibits 
+the maximum slope and is thus most affected by the rain This is in agreement with 
+many previous studies (e.g. Eymard et al., 2001, Bennartz and Bauer, 2003, etc.). Next, 
+we have taken the difference of these two channels and tried to analyze the behavior 
+against the rain rate. Taking this into consideration, we try to observe the relation of 
+brightness temperature difference of least and most affected channels with rain rate. Fig 
+6 (b) shows the variation of brightness temperature difference (Tb) with rain rate 
+(mm/h), which is exponential in nature. We follow the same procedure on land also, and 
+the exponential relation holds well over land too, with different pairs of coefficients. A 
+similar relationship is observed for all other scan locations over land and oceans. 
+ 
+For rain retrieval algorithm, we use the SAPHIR and PR collocated dataset as referred 
+in the previous section. First, for each of the scan positions, we separate the data over 
+land and ocean and then divided them further into two parts - rainy and no rainy. We, 
+however, use only rainy pixels and referred this dataset as a training data set. As 
+discussed above, from radiative transfer simulations, we find an exponential relationship 
+between rain rate and the difference of brightness temperatures measured at S1 and 
+S2. We thus use the following form of the equation for ocean and land and for each 
+pixel location, 
+ 
+b
+T
+*
+c
+e
+*
+b
+a
+R
+
+
+
+                                    (1) 
+ 
+Where, R is rain rate in (mm/h), a, b and c are regression coefficients. We calculate the 
+values of a, b and c for separately over land and oceans and at each of the pixel 
+locations. In order to define the accuracy of the rain estimation algorithm, we apply rain 
+identification algorithm and the eq. (1) to the training dataset of collocated SAPHIR and 
+PR observations of rainy pixels and calculate rain rate from SAPHIR observations at 
+each pixel location and compared with the PR rain rates. This provides a correlation of 
+ 
+8
+0.70, rms error of 0.81 mm/h and bias of 0.04 mm/h for total number of observations of 
+about 0.94 million. When we consider all the collocated SAPHIR and PR observations 
+from the training dataset comprising of rain as well as no rain observations, the 
+correlation still remains 0.68 with an rms error of 0.45 mm/h, and bias of 0.01 mm/h for 
+total number of 2.06 million observations. If this algorithm is used operationally, the 
+SAPHIR observations subjected to the rain retrieval algorithm would not be pre-
+classified as rainy or non-rainy and hence the statistics provided in the latter case 
+provides the algorithm accuracy.  In order to test the algorithm with independent 
+dataset, we have collocated SAPHIR and PR measurement for another one month of 
+April 2013 by following the same procedure for collocation as done for training dataset. 
+We refer this dataset as test dataset and apply the algorithm to the test dataset and 
+compare the rain from SAPHIR with that from PR. With a test dataset we find a 
+correlation of 0.58, rms error of 0.91 mm/h and bias of 0.07 mm/h for total number of 
+observations of 2.3 million. These results are very encouraging given the high temporal 
+variability of precipitation (Piyush et al., 2012) and possible imperfection in preparing 
+collocated dataset of SAPHIR and PR as discussed earlier. These results appear to be 
+more encouraging in view of similar comparison that we carried out between TMI and 
+PR for a period of 10 days from 21-30 May 2009 that shows a correlation of 0.61, rms 
+error of 2.23 mm/h, and bias of 0.1 mm/h for total number of observations of 1.88 
+million.  It may be noted that PR and TMI are on the same orbiting platform with less 
+than a minute of time difference between their observations, whereas we allowed 10 
+minutes of time difference between SAPHIR and PR observations.  
+ 
+Further, we have compared the monthly averaged rain rates from SAPHIR, TRMM-
+3B42 and SSMIS. Figure 7 (a), (b) and (c) shows the monthly gridded (0.25oX0.25o) 
+maps of precipitation for the month of May 2013 from SAPHIR, TRMM-3B42 and 
+SSMIS. Here we use SSMIS rain product (Hilburn and Wentz, 2008) which provides 
+rain only over the oceans. As it can be seen there is a good qualitative comparison 
+among three different rain products. The scatter plots of cross comparison among these 
+three monthly maps is plotted in Fig. 8, which shows comparison between SAPHIR 
+versus TRMM-3B42, SAPHIR versus SSMIS and SSMIS versus TRMM-3B42, 
+respectively. The Fig. 8 (a) (b) and (c)  shows the comparison over the land as well as 
+the oceans, whereas other two Figs. 7 (d) and (e) shows a comparison over oceans 
+only.  The comparison between SAPHIR and TRMM-3B42 is most encouraging with a 
+correlation coefficient of ~0.87 over ocean and 0.82 over land, when ocean and land 
+both considered together correlation becomes 0.84 with rmse of 0.09 mm for 327743 
+valid points. On the other hand, the comparison of SSMIS monthly rain with monthly 
+rain from SAPHIR and TRMM-3B42 shows a correlation of 0.69 and 0.65, respectively.  
+Similar comparison of daily averaged rain from SAPHIR, TRMM-3B42 and SSMIS 
+shows correlation of 0.65, 0.48 and 0.54, and rms difference of 0.31, 0.62, 0.56 mm/h, 
+respectively. We have also tried to examine the distribution of daily averaged rain rates, 
+for that we compared the Probability Distribution Function (PDF) of daily averaged rain 
+over tropics from SAPHIR with TRMM-3B42 for a typical month of May, 2013 (Fig. 9). 
+The Fig. 9 shows a good agreement of the PDF of the daily averaged rain from SAPHIR 
+and 3B42. 
+ 
+ 
+9
+In order to show a meaningful comparison of the quality of rain estimation using 
+SAPHIR with that from TMI and PR, we make monthly average comparison of rain over 
+land from SAPHIR with TMI and PR in 2.5ox2.5o, and comparison with the similar 
+statistics between PR and TMI provided by Wang et al. (2009).  They have provided 
+comparison statistics of rain derived from TMI (2A12), PR (2A25) and Global 
+Precipitation Climatology Centre (GPCC) (Rudolf, 1995). Based on 10 years of TRMM 
+observations over land they have reported a correlation of 0.78 between 2A12 and 
+2A25 monthly mean rain rates. We have also compared SAPHIR monthly rain rates with 
+TMI and PR for a typical month of November 2012 and found a correlation of 0.86 
+between SAPHIR and 2A12, and 0.68 between SAPHIR and 2A25 observations. For 
+the same month, we find a correlation of 0.71 between 2A12 and 2A25. While 
+comparing the statistics, it has to be borne in mind that TMI and PR have near 
+concurrent observations (within 1 min), whereas SAPHIR may have large time 
+differences with TMI and PR observations. Nevertheless, the SAPHIR performs very 
+well vis-à-vis TMI and PR. 
+ 
+We have further presented rain from SAPHIR associated with a tropical cyclone Phailin 
+that persisted over the Bay of Bengal from 9-12 October, 2013. This was recorded as a 
+category 5 cyclone with a maximum wind speed of about 140 knots. Phailin made its 
+landfall on 12 October 2013. A cyclonic system is an excellent atmospheric phenomena 
+to critically evaluate the performance of the retrieval algorithm as several types of 
+clouds and rain structures are present in the system. For comparison purpose, we have 
+analysed all the available rain products over that region which are coincident with the 
+SAPHIR. We use 3B42 available as 3-hourly averaged rain rate, 3B40-RT and GSMaP 
+available as hourly averaged rain rates for this comparison. 3B42 (Huffman et al., 2007) 
+is a merged product, 3B40-RT is an intermediate product of 3B42 which is derived from 
+microwave observations only, whereas GSMaP (Aonashi et al., 2009) is a 0.10X0.10 
+grided rain product which is available hourly. All the comparison performed here, are in 
+0.250X0.250 rectangular grid. We calculate the rain from SAPHIR and presented in Fig 
+10 (a). The corresponding rain from 3B42, GSMaP and 3B42-RT are shown in Fig 10 
+(b), (c) and (d), respectively. Over the study area, the Megha-Tropiques has an 
+observation time of ~2050 UTC, whereas all the other products are at 2100 UTC. From 
+these figures we can see SAPHIR picks up the intensity and pattern of rain over the 
+cyclonic area very well, as exhibited by other rain products. When rain rates are 
+compared qualitatively between SAPHIR and 3B42, and between SAPHIR and GSMaP, 
+we find correlation of 0.64 and 0.70, rmse of 1.16 and 2.24 mm/h and bias of 0.12 and 
+0.60 mm/h, respectively.  A similar comparison of rain from GSMaP and 3B42 shows a 
+correlation of 0.72, rmse of, 2.1 mm/h and bias 0.26 mm/h. Here, it may be to note that 
+the discrepancies between different products are possibly due to their different 
+observation time. Nevertheless, SAPHIR rain shows a good agreement with TRMM 
+products. 
+ 
+The study presented herein provides a detail account of rain detection and 
+measurement algorithm from SAPHIR. The algorithm is in two parts; the first part deals 
+with rain identification, and the second provides the rain amount at identified pixels. The 
+both procedures are developed separately for land and oceans and for each of the 182 
+ 
+10 
+scan positions of the SAPHIR. We have carried out extensive study to examine the 
+worthiness of the algorithm. This is carried out first by developing a probabilistic rain 
+identification algorithm for SAPHIR channels. We examined the effect of pixels with 
+false rain and missing rain on rain identification. We find that their effect is limited to 
+only very low rain regime. We further compared the rain identified by SAPHIR with 
+TRMM-3B42 and that shows a good match at rain rates > 0.25 mm/h. It may be recalled 
+that TRMM-3B42 is an IR-Microwave merged product and hence suppose to offer better 
+estimate of rainfall than either of them. In the second step, we have tried to estimate 
+rain rate at the rainy pixels. The rain measurement algorithm alone explains a 
+correlation of 0.70, rms error of 0.81 mm/h and bias of 0.04 mm/h. Together with the 
+rain identification procedure; it explains correlation of 0.68 with rms error of 0.45 mm/h, 
+and bias of 0.01 mm/h. The algorithm is applied to independent SAPHIR dataset and 
+comparison results are presented. Further, monthly rain is compared with TRMM-3B42 
+rain, which explains a correlation of 0.84 and standard deviation 0.09 mm/h.  
+Furthermore, we have compared the instantaneous rain associated with Phailin cyclone 
+from SAPHIR with other standard satellite based rain products like, GSMaP, 3B42, 
+3B40-RT and found SAPHIR is very well able to capture the intensity and features of 
+intense rain also. The comparison statistics presented in this report show that the 
+SAPHIR rain retrieval algorithm works very well for rain identification as well as for rain 
+estimation at instantaneous, daily and monthly basis. The comparison at instantaneous 
+basis with independent dataset (test dataset) gives us confidence that algorithm works 
+satisfactorily.    
+ 
+4. Operational Implementation Steps 
+ 
+(a) We have static binary files for rain/no-rain probability over land and oceans. For 
+given geolocation (land/ocean) and pixel-scan position, the probabilities of 
+rain/no-rain for brightness temperature from each of the six channels are 
+instantaneously available.  These procedures are incorporated in the Fortran 
+program. The probability values in the binary files are having 182*400*6 (are 
+arranged in following manner: 
+ 
+ 
+Record =1 – probability for pixel # 1, channel S1, Tb= 1 K 
+     
+Record =2 – probability for pixel # 1, channel S1, Tb= 2 K 
+ 
+. 
+ 
+. 
+     
+Record =400 – probability for pixel # 1, channel S1, Tb= 400 K 
+ 
+Record =401 – probability for pixel # 1, channel S2, Tb= 1 K 
+ 
+. 
+ 
+. 
+ 
+Record =400*6 – probability for pixel # 1, channel S6, Tb= 400 K 
+ 
+Record =400*6+1 – probability for pixel # 2, channel S1, Tb= 1 K 
+ 
+. 
+ 
+. 
+ 
+Record =182*400*6(436800) – probability for pixel # 182, channel S6, Tb= 400 K 
+ 
+ 
+11 
+ 
+The above arrangement of records, enable us to find the probability value 
+ 
+instantaneously for given pixel position, brightness temperature and frequency 
+ 
+channel from the input data file. This can be calculated as follows: 
+ 
+ 
+                irec=(k-1)*2400+(j-1)*400+i 
+ 
+ 
+where, irec is record number for finding the probability, k is scan position number, 
+ 
+j is channel number and I is brightness temperature in integer. The probability 
+ 
+values are available at each discreet integer values of the brightness 
+ 
+temperatures. For fractional part of the brightness temperatures, the probability is 
+ 
+calculated by linear interpolation from two adjacent integer values are performed. 
+ 
+(b) Once the step 1 is completed, based on probability associated with all 6 
+channels we find average probability of rain as PRR and probability of no-rain as 
+PNR.  We then normalize them to get probability of rain (PR) and probability of no-
+rain (PN) as follows: 
+ 
+NR
+RR
+NR
+N
+NR
+RR
+RR
+R
+P
+R
+P
+P
+P
+R
+P
+P
+
+
+
+
+ 
+ 
+ 
+A pixel is considered as rainy if PR> 0.63 over land and > 0.6 over oceans.  
+ 
+(c) Once a pixel is identified as rainy, we calculate rain from Equ. (1). The 
+coefficients a, b and c are different for each pixel locations and surface type 
+(land/ocean). The coasts are considered having maritime atmosphere. We have 
+generated a static dataset of coefficients in which each row has a set of 
+coefficients which represents the pixel location. For land a is found to be zero. 
+ 
+A flow-chart of these procedures a provided in Fig. 11. 
+ 
+5. Format of the output and the domain 
+The output is made available in the form of geolocation (latitude-longitude) and rain rate 
+in mm h-1. The domain is global tropics within SAPHIR coverage area over land and 
+oceans. 
+ 
+6. Expected Accuracy 
+ 
+The achieved accuracy of instantaneous rain retrieval with respect to TRMM-PR is 0.91 
+mm/h. 
+ 
+On monthly scale, expected rmse with respect to TRMM 3B42 V7 is ~0.1 mm/h. 
+ 
+ 
+12 
+7. Conclusion and Future Scope 
+Though SAPHIR is not specifically designed for rain estimation, yet it is shown for its 
+use for rain identification as well as for rain estimation. The best instrument on MT for 
+rain estimation is MADRAS but it has already been declared as non-operational due to 
+problem with its scanning mechanism. In the absence of MADRAS observations, 
+SAPHIR measurements can serve as supplementary to MADRAS measurements for 
+rain measurement to fulfill the science objectives of the MT mission. The SAPHIR based 
+rain identification may even help flagging off the humidity profile measurements by it. 
+The rain measurement from SAPHIR opens up opportunity for measuring rain from 
+similar channels available on other satellite missions. In future, there is also possibility 
+to combine SAPHIR measurements with thermal IR measurements from another 
+instrument, ScaRaB, on Megha-Tropiques for more accurate rain measurement.    
+ 
+8. Acknowledgement 
+ 
+Authors are thankful to NASA, USA for TRMM data and Remote Sensing Systems, USA 
+for SSM/I data. Authors are also thankful to Director SAC for his encouragement. 
+ 
+ 
+13 
+References 
+ 
+Anonymous, 2011, Tropical Rainfall Measuring Mission (TRMM) Precipitation Radar 
+Algorithm, Instruction Manual for Version 7, Published by TRMM Precipitation 
+Radar Team, Japan Aerospace Exploration Agency (JAXA), and National 
+Aeronautics 
+and 
+Space 
+Administration 
+(NASA), 
+(available 
+at: 
+http://www.eorc.jaxa.jp/TRMM/documents/PR_algorithm_product_information/pr_m
+anual/PR_Instruction_Manual_V7_L1.pdf), p 170. 
+Aonashi K., Awaka J., Hirose M., Kozu T., Liu G., Shinge S., Kida S., Seto S., 
+Takahashi N., and Takayabu Y. N., 2009, GSMaP passive microwave precipitation 
+retrieval algorithm: Algorithm description and validation. J. Metror. Soc. Japan, 87A, 
+119-136. 
+Awaka, J., T. Iguchi, H. Kumagai, and K. Okamoto, 1997, Rain type classification 
+lgorithm for TRMM precipitation radar. Proc. IEEE Int. Conf. on Geoscience and 
+Remote Sensing (IGARSS-97)—A Scientific Vision for Sustainable Development, 4, 
+IEEE, 1633–1635. 
+Bennartz, R., and P. Bauer, 2003, Sensitivity of microwave radiances at 85 –183 GHz to 
+precipitating ice particles, Radio Science, 38(4), 8075, doi:10.1029/2002RS002626. 
+Buehler, S. A., M. Kuvatov, and V. O. John, 2005, Scan asymmetries in AMSU-B 
+Data, Geophys. Res. Lett., 32, L24810, doi:10.1029/2005GL024747. 
+Burns, B. A., X. Wu, and G. R. Diak (1997), Effects of precipitation and cloud ice on 
+brightness temperatures in AMSU moisture channels, IEEE Transactions on 
+Geosciences and Remote Sensing, 35, 1429–1437. 
+Eymard, L., M. Gheudin, P. Laborie, F. Sirou, C. Le Gac, J.P. Vinson, S. Franquet, M. 
+Desbois, R. Roca, N. Scott, P. Waldteufel, 2001, The SAPHIR humidity sounder, 
+MEGHA-TROPIQUES 2nd Scientific Workshop, 2-6 July 2001, Paris, France. 
+(available at: http://meghatropiques.ipsl.polytechnique.fr/submit-a-document/2nd-
+workshop/the-saphir-instrument-on-megha-tropiques/download.html) 
+Gairola, R M, C Mahesh, and  Varma A K, 2011, Operational software for retrieval of 
+precipitation 
+from 
+Megha-Tropiques- 
+MADRAS, 
+Internal 
+report 
+No. 
+SAC/EPSA/AOSG/MT-UP/TR/64/June/2011. 
+Gohil, B S, R M Gairola, A K Mathur, A K Varma, C Mahesh, R K Gangwar and P K Pal, 
+2013, Algorithms for retrieval of Geophysical Parameters from MADRAS and 
+SAPHIR sensors of Megha-Tropiques Satellite – Indian Scenario, Quarterly Journal 
+of Royal Meteorological Society, 139, 954–963. 
+Hilburn, K. A., and F. J. Wentz, 2008, Intercalibrated passive microwave rain products 
+from the Unified Microwave Ocean Retrieval Algorithm (UMORA) Journal of Applied 
+Meteorology and Climatology, 47, 778-794. 
+Hong, G., G. Heygster, J. Miao, and K. Kunzi, 2005, Sensitivity of microwave brightness 
+temperatures to hydrometeors in a tropical deep convective cloud system at 89–190 
+GHz, Radio Science, 40, RS4003, doi:10.1029/2004RS003129. 
+Huffman, G. J., R. F. Adler, D. T. Bolvin, G. Gu, E. J. Nelkin, K. P. Bowman, Y. Hong, E. 
+F. Stocker, and D. B. Wolff, 2007, The TRMM multi-satellite precipitation analysis: 
+Quasi-global, multi-year, combined-sensor precipitation estimates at ﬁne scale, 
+Journal of Hydrometeorology, 8, 38–55, doi: http://dx.doi.org/10.1175/JHM560.1 
+ 
+14 
+Kawamoto K. and K Suzuki, 2013, Comparison of water cloud microphysics over mid-
+latitude land and ocean using CloudSat and MODIS observations Journal of 
+Quantitative Spectroscopy and Radiative Transfer, 122, pp.13-24; 2013, 
+10.1016/j.jqsrt.2012.12.013. 
+Kummerow, C., W. Barnes, T. Kozu, J. Shiue, and J. Simpson, 1998, The Tropical 
+Rainfall Measuring Mission (TRMM) sensor package, Journal of Atmospheric and 
+Oceanic Technology, 15, 809–816, doi:10.1175/1520-0426. 
+Liu, G.,1998, A fast and accurate model for microwave radiance calculations. J. Meteor. 
+Soc. Japan, 76, 335–343. 
+Liu, G., and J. A. Curry, 1999, Tropical ice water amount and its relations to other 
+atmospheric hydrological parameters as inferred from satellite data, Journal of 
+Atmospheric Sciences, 38, 1182–1194. 
+Mathur, A. K., R.K. Gangwar, B.S. Gohil, S.K. Deb, P. Kumar, M. V. Shukla, B. Simon, 
+and P. K. Pal, 2013, Current Science, 104 (12), 1650-1655. 
+Muller, B. M., H. E. Fuelberg, and X. Xiang, 1994, Simulations of the effects of water 
+vapor, cloud liquid water, and ice on AMSU moisture channel brightness 
+temperatures, Journal of Applied Meteorology, 33, 1133–1154. 
+Piyush, D N, A K Varma, P K Pal and G Liu, 2012, An Analysis of Rainfall 
+Measurements over Different Spatio-Temporal Scales and Potential Implications for 
+Uncertainty in Satellite Data Validation, Journal of Meteorological Society of Japan, 
+90 (4), doi: 10.2151/JMSJ.2012-408.  
+Rudolf, B, 1995, Global Precipitation Climatology Centre; In WMO/UNEP, The global 
+climate system review, climate system monitoring June 1991 – November 1993, 
+WMO No. 891, Genf, 37.  
+Varma, A K and P K Pal, 2012, Use of TRMM Precipitation Radar to address the 
+problem of rain detection in Passive Microwave Measurements, Indian Journal of 
+Radio and Space Physics, 41 411-420. 
+Varma, A. K. and G. Liu, 2010, On Classifying Rain Types Using Satellite Microwave 
+Observations, 
+Journal 
+of 
+Geophysical 
+Research, 
+115, 
+D07204, 
+doi:10.1029/2009JD012058. 
+Varma, A. K., and G. Liu, 2006, Small-Scale Horizontal Rainrate Variability by Satellite, 
+Monthly Weather Review, 134 (10), 2722-2733. 
+Varma, A. K., G. Liu, and Y. J., Noh, 2004, Sub-Pixel Scale Variability of Rainfall and Its 
+Application to Mitigate the Beam-Filling Problem, Journal of Geophysical Research, 
+109, D18210, doi:10.1029/2004JD004968. 
+Varma A K, R M Gairola and B S Gohil, 2011, Operational software for retrieval of cloud 
+liquid water, integrated water vapour and wind speed over global oceans from 
+Megha-Tropiques- 
+MADRAS, 
+Internal 
+report 
+No. 
+SAC/EPSA/AOSG/MT-
+UP/TR/65/June/2011. 
+ 
+ 
+ 
+ 
+ 
+15 
+  
+Table  1: Specifications of MADRAS Channels 
+ 
+Channel  
+Frequency (GHz) 
+Polarization 
+NET (K) 
+Spatial Resolution (Km) 
+M1 
+18.7 
+H+V 
+0.7 
+40 
+M2 
+23.8 
+V 
+0.7 
+40 
+M3 
+36.5 
+H + V 
+0.7 
+40 
+M4 
+89 
+H + V 
+1.0 
+10 
+M5 
+157 
+H + V 
+2.6 
+6 
+ 
+ 
+Table 2: Specifications of SAPHIR Microwave Sounder 
+ 
+Channel  
+Center  
+Frequency 
+(GHz) 
+Max. 
+Passband 
+(MHz) 
+ΔT (K) 
+Sensitivity at 
+300 K 
+Absolute 
+Calibration (K) 
+Over 180 - 300K 
+Pol. 
+S1 
+183.31 ± 0.2 
+200 
+1/2 
+± 1 
+H 
+S2 
+183.31 ± 1.1 
+350 
+0.7/1.5 
+± 1 
+H 
+S3 
+183.31 ± 2.8 
+500 
+0.7/1.5 
+± 1 
+H 
+S4 
+183.31 ± 4.2 
+700 
+0.6/1.3 
+± 1 
+H 
+S5 
+183.31 ± 6.8 
+1200 
+0.6/1.3 
+± 1 
+H 
+S6 
+183.31 ± 11.0 
+2000 
+0.5/1.0 
+± 1 
+H 
+ 
+ 
+16 
+ 
+ 
+Fig. 1: PDFs of SAPHIR brightness temperatures for a typical scan position # 45 for 
+rainy (line joining open circles) and non-rainy (line joining solid circles) conditions 
+over oceans for channel (a) S1 (b) S2 (c) S3 (d) S4 (e) S5 and (f) S6. 
+(a) 
+(b) 
+(c) 
+(d) 
+(e) 
+(f) 
+ 
+17 
+ 
+ 
+ 
+Fig. 2: Distribution of PR for rainy (line joining open triangles) and non-rainy (line joining 
+open circles) over (a) ocean and (b) land, from training datasets for all pixel 
+locations. 
+(a) 
+(b) 
+ 
+18 
+ 
+ 
+Fig. 3: Average rain rate (mm/h) with vertical bars of Standard Deviation (SD) as a 
+function of PR from the rainy dataset over (a) oceans and (b) land. 
+ 
+(a) 
+(b) 
+ 
+19 
+ 
+ 
+ 
+Fig. 4: Cumulative Probability Distribution of rain rates from the non-rainy points that 
+turn rainy with (a) PR > 0.6 for Ocean (open triangle) and (b) PR > 0.63 for Land 
+(open circle).  
+ 
+20 
+ 
+ 
+ 
+ 
+Fig. 5: Rain/No-rain map for a typical day of 11 May 2013 for (a) 3B42 and (b) SAPHIR, 
+for rain rate > 0.25 mm/h. 
+(b) 
+ (a) 
+ 
+ 
+21 
+ 
+ 
+ 
+ 
+ 
+Fig. 6: (a) Depression in brightness temperature with increasing rain rates for all the six 
+SAPHIR channels, (b) variation of brightness temperature difference from 
+SAPHIR (S1-S6) with surface rain. 
+(a) 
+(b) 
+ 
+22 
+ 
+Fig. 7: Monthly averaged gridded (0.25oX0.25o) rain rates (mm/h) from (a) SAPHIR, (b) 
+TRMM-3B42 and (c) SSMIS, for the month of May, 2013. The rain from SSMIS is 
+only over oceans. 
+ 
+ 
+ 
+ 
+ 
+(b) 
+(c) 
+(a) 
+ 
+23 
+ 
+ 
+ 
+ 
+ 
+Fig. 8:  Comparison of monthly gridded rain maps (from Fig. 6) between (a) SAPHIR 
+and 3B42 over all regions, (b)  over land, (c) over oceans, (d) SAPHIR and 
+SSMIS over oceans, and (e) SSMIS and 3B42 over oceans. 
+ 
+(a) 
+(b) 
+(c) 
+(d) 
+(e) 
+ 
+24 
+ 
+Figure 9: PDF of averaged daily rain rate (mm/h) from SAPHIR and TRMM-3B42 for 
+May 2013 
+ 
+25 
+ 
+ 
+Fig. 10: Distribution of rain rates (mm/hr) from (a) SAPHIR, (b) 3B42 (c) GSMaP (d) 
+3B40-RT , over a tropical cyclone Phailin on 11 October, 2013 arround 2100 
+UTC. 
+ 
+26 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig.11: Flow chart of rain estimation from SAPHIR. 
+Static binary file of 
+rain probability (Pr) 
+for land/ocean
+Static binary file of no-
+rain probability (Pnr) for 
+land/ocean
+Input SAPHIR data 
+with latitude, 
+longitude, Tbi and 
+scan position 
+Calculate  average Prob. 
+6
+Pr
+P
+6
+1
+i
+i
+RR
+
+
+
+       
+6
+Pnr
+P
+6
+1
+i
+i
+NR
+
+
+
+ 
+Normalize 
+       
+NR
+RR
+NR
+N
+NR
+RR
+RR
+R
+P
+R
+P
+P
+P
+R
+P
+P
+
+
+
+
+ 
+PR> 0.6 ?     
+yes 
+no 
+Rain=0 
+b
+T
+*
+c
+e
+*
+b
+a
+Rain
+
+
+
+ 
+Static file of coefficients 
+Find geolocation 
+(land/ocean/coast) 
+PR> 0.63 ?    
+Oceans 
+Land 
+b
+T
+ee
+d
+Rain
+
+
+*
+*
+ 

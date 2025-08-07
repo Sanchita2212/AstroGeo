@@ -1,0 +1,27 @@
+URL: https://www.mosdac.gov.in/internal/monsoon
+
+--- EXTRACTED TEXT ---
+{{yearObj[selectedYear].summary}}
+These are experimental predictions. NCAR NCEP are thankfully acknowledge for providing the Community Atmosphere 											Model (CAM) and global initial condition data respectively. For More Detail:- CAM_Model_Overview.pdf
+These are experimental predictions. NCAR, NCEP are thankfully acknowledge for providing the Community Atmosphere Model (CAM) and global initial condition data respectively.
+								Developed & Maintained By: DWD/SAC/ISRO.
+Data Source: NRDB Population data: Census 2011 www.censusindia.gov.in
+
+
+--- EXTRACTED TABLES ---
+Headers: []
+Data: [[''], ['{{applicationName}}{{selectedYear}}', '']]
+Headers: []
+Data: [['']]
+Headers: []
+Data: [['--Select Layer--{{layers.values_.title}}']]
+Headers: []
+Data: [['Tools', 'Analysis', 'Legends']]
+Headers: []
+Data: [['', '{{generalMessage.infoMsg.toolsNoBtn.message}}']]
+Headers: []
+Data: [['', '{{generalMessage.infoMsg.analysisNoBtn.message}}'], ['']]
+Headers: []
+Data: [['', ''], ['']]
+Headers: []
+Data: [['']]

@@ -1,0 +1,12 @@
+URL: https://www.mosdac.gov.in/internal/heat-cold-wave
+
+--- EXTRACTED TEXT ---
+
+
+--- EXTRACTED TABLES ---
+Headers: []
+Data: [['', '', '']]
+Headers: []
+Data: [['{{generalMessage.infoMsg.noLegends.message1}}', '']]
+Headers: []
+Data: [['Legends']]

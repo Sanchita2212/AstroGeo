@@ -1,0 +1,7257 @@
+ 
+ 
+ 
+ 
+ 
+ SARAL/AltiKa Products Handbook 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+References:  
+ CNES :   
+SALP-MU-M-OP-15984-CN 
+ EUMETSAT :  
+xxx 
+ ISRO:   
+xxx 
+Issue: 1 rev 2 
+Date: December 12, 2011 
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+ 
+Iss :1.2 - date : December 12, 2011 
+i.2 
+ 
+ 
+ 
+List of tables and figures 
+ 
+List of tables:  
+Table 1 : Differences between Auxiliary Data for O/I/GDR Products 
+1 
+Table 2. Preliminary AltiKa Data Products error budget 
+11 
+Table 3 : Main features of the SARAL/AltiKa satellite 
+15 
+Table 4 : Mean classical orbit elements 
+19 
+Table 5 : Orbit auxiliary data 
+19 
+Table 6 : Equator Crossing Longitudes (in order of Pass Number) 
+25 
+Table 7 : Equator Crossing Longitudes (in order of Longitude) 
+30 
+Table 8 : Models and standards 
+38 
+Table 9 : GDR-C/GDR-D orbit standard 
+40 
+Table 9 : MSS_CNES-CLS11 model characteristics 
+41 
+Table 10 : MDT_CNES-CLS09 model characteristics 
+42 
+Table 11 : Recommended editing criteria 
+46 
+Table 12 : Recommended filtering criteria 
+46 
+Table 13 : Main characteristics of (O)(I)GDR products 
+61 
+Table 14 - Dimensions used in the SARAL/AltiKa data sets 
+63 
+Table 15 - netCDF variable type 
+63 
+Table 16 - Variable’s attributes 
+64 
+ 
+List of figures:  
+Figure 1 : Altimetric distances – Altitude, Range and Height 
+5 
+Figure 2. Geometry of the sea surface height measurement by altimetry 
+13 
+Figure 3 : AltiKa & Argos-3 payloads accommodation on SSB platform : SARAL satellite. 
+14 
+Figure 4 : SARAL/AltiKa Instrument 
+15 
+Figure 5 : SARAL/AltiKa radiometer Instrument and antenna (shared with altimeter) 
+16 
+Figure 6 : SARAL/AltiKa DORIS Receiver Antenna and Instrument 
+16 
+Figure 7 : SARAL/AltiKa Laser Reflector Array 
+17 
+Figure 8 : Applications of the ARGOS system 
+17 
+Figure 9 : SARAL/AltiKa UHF antenna 
+18 
+Figure 10 : SARAL/AltiKa ARGOS-3 reception instrument 
+18 
+Figure 11 : ENVISAT and SARAL/AltiKa ground track coverage every 35 days                                 
+(ascending and descending passes) 
+19 
+Figure 12 : SARAL Mission Phases and associated responsibilities 
+31 
+Figure 13 : Mean Sea Surface MSS_CNES-CLS11. 
+41 
+Figure 14 : Mean Dynamic Topography MDT_CNES-CLS09 
+42 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+ 
+Iss :1.2 - date : December 12, 2011 
+i.3 
+ 
+ 
+Figure 15 : EGM96 geoid 
+43 
+Figure 16. Example of Global Ionosphere Maps from JPL 
+55 
+Figure 17 : Data set availability per product 
+63 
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+ 
+Iss :1.2 - date : December 12, 2011 
+i.4 
+ 
+ 
+ 
+Applicable documents / reference documents 
+ 
+AD 1 :  SARAL/AltiKa System Requirements 
+SRL-SYS-SP-010-CNES 
+AD 2 :  ISRO-CNES AltiKa Joint Science Plan 
+SRL-SYS-PL-392-CNES 
+AD 3 :  Algorithm Theoretical Baseline Definition: Altimeter Level 1b Processing 
+SALP-ST-M2-EA-15884-CN 
+AD 4 :  Algorithm Theoretical Baseline Definition: Radiometer Level 1b Processing 
+SALP-ST-M2-EA-15885-CN 
+AD 5 :  Algorithm Theoretical Baseline Definition: Altimeter Level 2 Processing 
+SALP-ST-M2-EA-15886-CN 
+ 
+RD 1 : 
+ OSTM/Jason-2 Products Handbook 
+SALP-MU-M-OP-15815-CN 
+RD 2 : 
+SARAL/AltiKa CalVal Plan  
+ALK-SY1-PL-198-CNES 
+RD 3 : 
+SALP Products Specification - Volume 20 : AltiKa / SARAL User Products 
+SALP-ST-M-EA-15839-CN  
+ 
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+ 
+Iss :1.2 - date : December 12, 2011 
+i.5 
+ 
+ 
+ 
+Contents 
+1. Introduction.................................................................................. 1 
+1.1. Overview of the SARAL/AltiKa product family .................................. 1 
+1.1.1. Product contents ...................................................................................1 
+1.1.2. Filename conventions .............................................................................2 
+1.2. Handbook Overview .................................................................. 4 
+1.3. Document reference and contributors ........................................... 4 
+1.4. Conventions ............................................................................ 5 
+1.4.1. Vocabulary ...........................................................................................5 
+1.4.1.1. Altimetric distances ...........................................................................5 
+1.4.1.2. Orbits, Revolutions, Passes, and Repeat Cycles ..........................................5 
+1.4.1.3. Reference Ellipsoid ............................................................................6 
+1.4.2. Correction Conventions ...........................................................................6 
+1.4.3. Time Convention....................................................................................6 
+1.4.4. Unit Convention.....................................................................................6 
+1.4.5. Flagging and Editing................................................................................6 
+2. SARAL/AltiKa Mission Overview.......................................................... 7 
+2.1. Altimetric background ............................................................... 7 
+2.2. Introduction to SARAL/AltiKa mission ............................................ 7 
+2.2.1. Mission overview....................................................................................7 
+2.2.2. Mission objectives ..................................................................................8 
+2.3. SARAL/AltiKa Mission ................................................................. 9 
+2.4. SARAL/AltiKa Requirements ...................................................... 10 
+2.4.1. Accuracy of Sea-level Measurements......................................................... 11 
+2.4.2. Sampling Strategy................................................................................. 11 
+2.4.3. Tidal Aliases ....................................................................................... 12 
+2.4.4. Duration and coverage .......................................................................... 12 
+2.5. Mission Description ................................................................. 12 
+2.6. Satellite Description................................................................ 13 
+2.6.1. Satellite Characteristics......................................................................... 14 
+2.6.2. Sensors.............................................................................................. 15 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+ 
+Iss :1.2 - date : December 12, 2011 
+i.6 
+ 
+ 
+2.6.2.1. AltiKa Altimeter.............................................................................. 15 
+2.6.2.2. Dual frequency microwave radiometer................................................... 15 
+2.6.2.3. DORIS System ................................................................................. 16 
+2.6.2.4. Laser Reflector Array (LRA) ................................................................ 16 
+2.6.2.5. ARGOS-3 Instrument......................................................................... 17 
+2.6.3. Orbit................................................................................................. 18 
+2.6.3.1. Equator Crossing Longitudes (in order of Pass Number) ............................... 21 
+2.6.3.2. Equator Crossing Longitudes (in order of Longitude) .................................. 26 
+2.6.4. The SARAL/AltiKa Project Phases ............................................................. 30 
+2.6.4.1. The verification phase ...................................................................... 31 
+2.6.4.2. The operational (routine and long-term CALVAL activities) .......................... 31 
+2.7. Data Processing and Distribution ................................................ 32 
+2.7.1. Access to NRT data ............................................................................... 33 
+2.7.2. Access to off-line data........................................................................... 33 
+2.7.3. Documentation and Sample Reader Software .............................................. 33 
+2.8. Access to data via ISRO ............................................................ 33 
+2.8.1. Access to NRT data ............................................................................... 33 
+2.8.2. Access to off line data ........................................................................... 33 
+2.9. Access to data via EUMETSAT .................................................... 34 
+2.9.1. NRT data access................................................................................... 34 
+2.9.2. Access to archived data ......................................................................... 35 
+2.10. CNES data distribution ........................................................... 35 
+2.10.1. Details of off line data access via CNES .................................................... 35 
+3. Product evolution history ............................................................... 36 
+3.1. Models and Standards History .................................................... 36 
+3.2. Models and Editing on Version "d" Products................................... 38 
+3.2.1. Orbit models ....................................................................................... 38 
+3.2.2. Mean Sea Surface ................................................................................. 41 
+3.2.3. Mean Dynamic Topography ..................................................................... 42 
+3.2.4. Geoid ................................................................................................ 42 
+3.2.5. Bathymetry ........................................................................................ 43 
+3.2.6. Ocean Tides........................................................................................ 43 
+3.2.6.1. GOT4.8 Ocean Tide Model.................................................................. 44 
+3.2.6.2. FES2004 Ocean Tide Model ................................................................. 45 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+ 
+Iss :1.2 - date : December 12, 2011 
+i.7 
+ 
+ 
+3.2.7. Sea Surface Height Bias Recommendation .................................................. 45 
+3.2.8. Data Editing Criteria ............................................................................. 46 
+4. Using the (O)(I)GDR data ................................................................ 47 
+4.1. Overview.............................................................................. 47 
+4.2. Typical computation from altimetry data...................................... 47 
+4.2.1. Corrected Altimeter Range ..................................................................... 47 
+4.2.2. Sea Surface Height and Sea Level Anomaly ................................................. 48 
+4.2.2.1. Tide Effects................................................................................... 49 
+4.2.2.2. Geophysical Surface - Mean Sea Surface or Geoid...................................... 49 
+4.2.3. Mean Sea Surface and Adjustment of the Cross Track Gradient........................ 50 
+4.2.4. Range Compression............................................................................... 51 
+5. Altimetric data ............................................................................ 52 
+5.1. Precise Orbits........................................................................ 52 
+5.2. Altimeter Range ..................................................................... 52 
+5.3. Geoid .................................................................................. 52 
+5.4. Mean Sea Surface ................................................................... 53 
+5.5. Mean Dynamic Topography ....................................................... 53 
+5.6. Geophysical Corrections........................................................... 53 
+5.6.1. Dry Troposphere .................................................................................. 53 
+5.6.2. Wet Troposphere ................................................................................. 54 
+5.6.3. Ionosphere ......................................................................................... 54 
+5.6.4. Ocean Waves (sea state bias) .................................................................. 55 
+5.7. Trailing edge variation flag ....................................................... 56 
+5.7.1. Introduction : Rain & Cloud effect on SARAL/Altika....................................... 56 
+5.7.2. SARAL/AltiKa Trailing edge variation flag.................................................... 56 
+5.7.3. Limitations ......................................................................................... 56 
+5.8. Ice Flag................................................................................ 56 
+5.9. Tides................................................................................... 57 
+5.9.1. Geocentric Ocean Tide .......................................................................... 57 
+5.9.2. Long period Ocean Tide ......................................................................... 57 
+5.9.3. Solid Earth Tide ................................................................................... 58 
+5.9.4. Pole Tide ........................................................................................... 58 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+ 
+Iss :1.2 - date : December 12, 2011 
+i.8 
+ 
+ 
+5.10. Inverse Barometer Effect........................................................ 58 
+5.10.1. Inverted Barometer Correction .............................................................. 58 
+5.10.2. Barotropic/Baroclinic Response to Atmospheric Forcing ............................... 59 
+5.11. Sigma 0 .............................................................................. 59 
+5.12. Wind Speed ......................................................................... 59 
+5.13. Bathymetry Information ......................................................... 60 
+6. Data description........................................................................... 61 
+6.1. Data format .......................................................................... 62 
+6.1.1. NetCdf format and CF convention............................................................. 63 
+6.1.2. The NetCDF Data Model ......................................................................... 63 
+6.1.2.1. Dimensions.................................................................................... 63 
+6.1.2.2. Variables ...................................................................................... 63 
+6.1.2.3. Coordinate variables and auxiliary coordinate variables .............................. 64 
+6.1.2.4. Attributes ..................................................................................... 64 
+6.1.3. The Common Data Language ................................................................... 64 
+6.2. Global attributes .................................................................... 67 
+6.3. Data Sets.............................................................................. 69 
+6.4. Software .............................................................................. 70 
+6.4.1. Software provided with netCDF : “ncdump” ............................................... 70 
+6.4.2. Additional general software .................................................................... 70 
+6.4.2.1. ncbrowse ...................................................................................... 70 
+6.4.2.2. netCDF Operator (NCO)..................................................................... 70 
+6.4.3. Additional specific software : “BRAT” ....................................................... 70 
+Annexe A - References...................................................................... 71 
+Annexe B - List of acronyms ............................................................... 73 
+Annexe C - Contacts ......................................................................... 74 
+ 
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+1 
+ 
+ 
+ 
+ 
+1. Introduction 
+SARAL/AltiKa is a follow-on mission to ENVISAT ESA’s mission and will have the same ground track. 
+The satellite name SARAL stands for SAtellite for ARgos and ALtiKa. This mission continues the 
+series of successful altimetric missions such as TOPEX/Poseidon and Jason missions. While they 
+were conducted under a cooperation between the French Space Agency, "Centre National d'Etudes 
+Spatiales" (CNES), the United States National Aeronautics and Space Administration (NASA), the 
+European Organization for the Exploitation of Meteorological Satellites (EUMETSAT) and the 
+National Oceanic and Atmospheric Administration (NOAA), SARAL/AltiKa is a new collaboration 
+between CNES and ISRO (Indian Space Research Organization). 
+1.1. Overview of the SARAL/AltiKa product family 
+The purpose of this document is to assist users of the SARAL/AltiKa products (Operational 
+Geophysical Data Record : OGDR, Interim Geophysical Data Record : IGDR, and Geophysical Data 
+Record : GDR) by providing a comprehensive description of product content and format. We will so 
+refer to (O)(I)GDR in this document when the information is relevant for all the products.  
+(O)(I)GDR products are identical except for the following differences regarding the auxiliary data 
+used in the processing: 
+ 
+Auxiliary Data 
+Impacted Parameter 
+OGDR 
+IGDR 
+GDR 
+Orbit 
+Satellite altitude, 
+Doppler correction, … 
+DORIS 
+Navigator 
+Preliminary 
+(DORIS MOE) 
+Precise 
+(DORIS+Laser 
+POE) 
+Platform 
+Mispointing angle 
+Not available 
+Restituted 
+(MOE) 
+Restituted 
+(POE) 
+Meteo Fields 
+Dry/wet tropospheric corrections, 
+U/V wind vector, 
+Surface pressure, 
+Inverted barometer correction, … 
+Predicted 
+Restituted 
+Pole Location 
+Pole tide height 
+Predicted 
+Restituted 
+Mog2D 
+HF ocean dealiasing correction 
+Not available 
+Preliminary 
+Precise 
+GIM 
+Ionosphere correction 
+Available 
+Radiometer antenna 
+temperatures coeff. 
+Wet tropospheric correction, 
+Sigma0 rain attenuation, … 
+Preliminary 
+Precise 
+(accounting for 
+radiometer 
+calibration) 
+Table 1 : Differences between Auxiliary Data for O/I/GDR Products 
+GDR products, unlike OGDR and IGDR products, are fully validated products. 
+1.1.1. Product contents 
+The Level-2 products from this mission comprise a family of nine different types of geophysical data 
+records (GDRs). As illustrated in Table 1 below, there are three families of GDRs, distinguished by 
+increasing latency and accuracy, going from the Operational GDR (OGDR), to the Interim GDR 
+(IGDR), to the final GDR. Within each of these three families there are up to three types of files in 
+NetCDF format, with increasing size and complexity:  
+1. a reduced 1 Hz subset of the full dataset in NetCDF format (O/I/GDR-SSHA); 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+2 
+ 
+ 
+ 
+ 
+2. the native NetCDF formatted datasets (O/I/GDRs) which contain 1Hz records as well as 20 
+Hz high-rate values; 
+ 
+3. an expert sensor product containing the full radar-echo waveforms in NetCDF format (S-
+IGDR/S-GDR, not applicable to the OGDR).  
+ 
+ 
+ 
+Table 1. Summary of operational, interim, and final geophysical data record 
+products (O/I/GDR) from the SARAL/AltiKa mission. 
+ 
+All nine files contain sea surface height, ocean surface wind speed, significant wave height 
+information and all required corrections. The NetCDF files differ in the amount and type of auxiliary 
+data included but the product format is the same.  
+1.1.2. Filename conventions 
+The product names are based on the following convention: 
+      
+With :   <O/I/G> : product family (O : OGDR, I : IGDR, G: GDR) 
+ 
+<N/R/S> : product type (N : native, R: reduced, S : sensor) 
+<v> : product version (set to ‘T’ during CalVal phases, then set to the current altimetric 
+version from data standards) 
+ 
+<S/P> : product duration (S : segment for OGDR, P : pass for I/GDR) 
+ 
+<ccc>: cycle number of 1st product record 
+ 
+<pppp> : pass number of 1st product record (1-1002) 
+ 
+<yyyymmdd_hhnnss> : date of 1st product record 
+ 
+<yyyymmdd_hhnnss> : date of last product record 
+<aaaa> : Name of the agency producing the data (EUM/CNES/ISRO) 
+ 
+SRL_<O/I/G>P<N/R/S>_2P<v><S/P><ccc>_<pppp>_<yyyymmdd_hhnnss>_<yyyymmdd_hhnnss>.aaaa.nc
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+3 
+ 
+ 
+ 
+ 
+So for the OGDR we have:  
+ 
+ 
+OGDR:  SRL_OPN_2PvSccc_pppp_yyyymmdd_hhnnss_yyyymmdd_hhnnss.aaaa.nc 
+ 
+OGDR-SSHA:  SRL_OPR_2PvSccc_pppp_yyyymmdd_hhnnss_yyyymmdd_hhnnss.aaaa.nc 
+ 
+ 
+for the IGDR:  
+ 
+ 
+IGDR:  SRL_IPN_2PvPccc_pppp_yyyymmdd_hhnnss_yyyymmdd_hhnnss.aaaa.nc 
+ 
+IGDR-SSHA:  SRL_IPR_2PvPccc_pppp_yyyymmdd_hhnnss_yyyymmdd_hhnnss.aaaa.nc 
+ 
+S-IGDR: 
+SRL_IPS_2PvPccc_pppp_yyyymmdd_hhnnss_yyyymmdd_hhnnss.aaaa.nc 
+ 
+and for the GDR: 
+ 
+ 
+GDR:  SRL_GPN_2PvPccc_pppp_yyyymmdd_hhnnss_yyyymmdd_hhnnss.aaaa.nc 
+ 
+GDR-SSHA:  SRL_GPR_2PvPccc_pppp_yyyymmdd_hhnnss_yyyymmdd_hhnnss.aaaa.nc 
+ 
+S-GDR: 
+SRL_GPS_2PvPccc_pppp_yyyymmdd_hhnnss_yyyymmdd_hhnnss.aaaa.nc 
+ 
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+4 
+ 
+ 
+ 
+ 
+1.2. Handbook Overview 
+This is a combination of a guide to data use and a reference handbook, so not all sections will be 
+needed by all readers. 
+Section 1 provides information on product evolution history 
+Section 2 provides background information about the (O)(I)GDR and this document 
+Section 3 is an overview of the SARAL/AltiKa mission 
+Section 4 is an introduction to using the SARAL/AltiKa data 
+Section 5 is an introduction to the SARAL/AltiKa altimeter algorithms 
+Section 6 provides a description of the content and format of the SARAL/AltiKa (O)(I)GDRs 
+Appendix A contains references 
+Appendix B contains acronyms 
+Appendix C describes how to order information or data from CNES, EUMETSAT and ISRO, and lists 
+related Web sites. 
+1.3. Document reference and contributors 
+When referencing this document, please use the following citation : 
+“SARAL/AltiKa Products Handbook”,  
+ 
+CNES :  
+ 
+SALP-MU-M-OP-15984-CN 
+ 
+EUMETSAT :   
+EUM/OPS-JAS/MAN/08/0041 
+ 
+ISRO :   
+ 
+XXX 
+ 
+ 
+Main authors of this document are: E. BRONNER and A. LOMBARD from CNES.  
+As parts of this handbook are heritage from Jason-1/2 handbook and SARAL/AltiKa Calval Plan, 
+other contributors include : 
+• 
+Ashok K. SHUKLA from ISRO, 
+• 
+N. PICOT from CNES,  
+• 
+J.P. DUMONT and V. ROSMORDUC from CLS, 
+• 
+J. LILLIBRIDGE from NOAA,  
+• 
+R. SCHARROO from ALTIMETRICS, 
+• 
+S. DESAI from NASA/JPL, 
+• 
+H. BONEKAMP and J. FIGA from EUMETSAT. 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+5 
+ 
+ 
+ 
+1.4. Conventions 
+1.4.1. Vocabulary 
+1.4.1.1. Altimetric distances 
+In order to reduce confusion in discussing altimeter measurements and corrections, the following 
+terms are used in this document as defined below:  
+· 
+Distance and Length are general terms with no special meaning in this document 
+· 
+Range is the distance from the satellite to the surface of the Earth, as measured by the 
+altimeter. Thus, the altimeter measurement is referred to as "range" or "altimeter range," 
+not height 
+· 
+Altitude is the distance of the satellite or altimeter above a reference point. The reference 
+point used is the reference ellipsoid. This distance is computed from the satellite 
+ephemeris data 
+· 
+Height is the distance of the sea surface above the reference ellipsoid. The sea surface 
+height is the difference of the altimeter range from the satellite altitude above the 
+reference ellipsoid 
+ 
+Reference Ellipsoid
+Ocean Bottom
+Ocean Surface
+Orbit
+Range
+Altitude
+Height
+Reference Ellipsoid
+Ocean Bottom
+Ocean Surface
+Orbit
+Range
+Altitude
+Height
+ 
+Figure 1 : Altimetric distances – Altitude, Range and Height 
+1.4.1.2. Orbits, Revolutions, Passes, and Repeat Cycles 
+An Orbit is one circuit of the earth by the satellite as measured from one ascending node crossing 
+to the next. An ascending node occurs when the sub satellite point crosses the earth's equator going 
+from south to north. A Revolution (REV) is synonymous with orbit.  
+The OGDR data is organized into files (“segments”) which corresponds to the amount of data 
+dumped over an Earth terminal (typically 2 hour-data sets). 
+The (I)GDR data is organized into pass files in order to avoid having data boundaries in the middle 
+of the oceans, as would happen if the data were organized by orbit. A Pass is half a revolution of 
+the earth by the satellite from extreme latitude to the opposite extreme latitude. 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+6 
+ 
+ 
+ 
+For SARAL/AltiKa, an Ascending Pass begins at the latitude -81.49 deg and ends at +81.49 deg. A 
+Descending Pass is the opposite (+81.49 deg to -81.49 deg). The passes are numbered from 1 to 501 
+representing a full repeat cycle of the SARAL/AltiKa ground track. Ascending passes are odd 
+numbered and descending passes are even numbered.  
+After one repeat cycle of 501 passes, SARAL/AltiKa revisits the same ground-track within a margin 
+of ±1 km. That means that every location along the SARAL/AltiKa ground-track is measured every 
+approximately 35 days.  
+1.4.1.3. Reference Ellipsoid 
+The Reference Ellipsoid is the first-order definition of the non-spherical shape of the Earth as an 
+ellipsoid of revolution with equatorial radius of 6378.1363 kilometers and a flattening coefficient of 
+1/298.257 (same reference ellipsoid as used by the Jason-1, SARAL/AltiKa and the T/P missions). 
+1.4.2. Correction Conventions 
+All environmental and instrument corrections are computed so that they should be added to the 
+quantity which they correct. That is, a correction is applied to a measured value by  
+ 
+Corrected Quantity = Measured Value + Correction 
+This means that a correction to the altimeter range for an effect that lengthens the apparent signal 
+path (e.g., wet troposphere correction) is computed as a negative number. Adding this negative 
+number to the uncorrected (measured) range reduces the range from its original value toward the 
+correct value. Example: Corrected Range = Measured Range + Range Correction. 
+1.4.3. Time Convention 
+Times are UTC and referenced to January 1, 2000 00:00:00.00.  
+A UTC leap second can occur on June 30 or December 31 of any year. The leap second is a sixty-first 
+second introduced in the last minute of the day. Thus the UTC values (minutes:seconds) appear as: 
+59:58 ; 59:59 ; 59:60 ; 00:00 ; 00:01.  
+1.4.4. Unit Convention 
+All distances and distance corrections are reported in tenths of millimeters (10-1 mm).  
+1.4.5. Flagging and Editing 
+In general, flagging consists of three parts: instrument flags (on/off), telemetry flags (preliminary 
+flagging and editing) and data quality flags (geophysical processing flags).  
+Instrument flags provide information about the state of the various instruments on the satellite.  
+Telemetry flags are first based on instrument modes and checking of telemetry data quality. Only 
+severely corrupted data are not processed (i.e. data that cannot be correctly read on ground). Flag 
+setting is designed to get a maximum amount of data into the “Sensor Data Records” (part of the 
+SGDR data sets). Science data are processed only when the altimeter is in tracking mode. 
+Quality flags are determined from various statistical checks on the residuals after smoothing or 
+fitting through the data themselves. These flags are set if gaps in the data are detected, or 
+residuals have exceeded predetermined thresholds, or if the gradients of the data exceed 
+predetermined thresholds. 
+ 
+ 
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+7 
+ 
+ 
+ 
+2. SARAL/AltiKa Mission Overview 
+2.1. Altimetric background 
+Three previous high-accuracy altimetric missions, TOPEX/POSEIDON (T/P, launched in August 1992 
+and which last until October 2005), Jason-1 (launched in December 2001) and Jason-2 (launched in 
+June 2008) have been the key elements of a major turning point in physical oceanography, in terms 
+of both scientific research and applications. Exceeding most initial specifications in terms of 
+accuracy, T/P quickly became a unique tool to make significant progress in the understanding and 
+modeling of ocean circulation and consequently on its climatic impact. The success of the T/P 
+mission was mainly due to an appropriate optimization of the system: instruments, satellite, and 
+orbit parameters were all specifically designed to fulfill the objectives of the mission. The T/P 
+follow-on mission, Jason-1, was engaged soon after with the aim to provide the same level of 
+performance, but with a significant decrease in weight and power needs, hence a much lower 
+mission cost. In addition, near-real time applications were included in the main objectives of the 
+mission. Jason-2 presents better tracking performance and continue the success story of altimetric 
+missions.  
+These missions, individually as well as combined have made essential contributions in other 
+domains, like mean sea level surveys, tides, marine meteorology, geophysics and geodesy. Most 
+notably the tandem mission phase, where Jason-1 and T/P or Jason-1 and Jason-2 were flying on 
+the same orbit separated by only 70 s or 1 min, provided a unique opportunity for intercalibration 
+of both systems, hence improving further the scientific data quality. High accuracy radar altimeter 
+missions are uniquely capable to globally and continuously observe the ocean and to better 
+understand the short to long term changes of ocean circulation. They are now considered as 
+essential components of global ocean observation systems. These systems integrate altimetric and 
+other satellite and in-situ data into models and require the continuity and permanence of ocean 
+measurements to produce time series over several decades.  
+The near-real time and short term capability of Jason-1, Jason-2 as well as ENVISAT (from ESA, 
+launched in March 2002) have fed several pilot experiments that demonstrated the growing 
+importance of operational ocean observation products and short-range ocean prediction for a 
+variety of applications (ship routing, environmental hazards, support to maritime industries).  
+Also worth mentioning is the importance of wave and wind data provided by altimeter systems over 
+oceans. This information is routinely used in meteorological and research entities, either for 
+calibration of other data sets, assimilation in weather and wave models, or for statistical analysis. 
+2.2. Introduction to SARAL/AltiKa mission 
+2.2.1. Mission overview 
+The SARAL mission results from the common interest of both CNES and ISRO in studying ocean from 
+space using altimetry system and in promoting maximum use of the ARGOS Data Collecting System. 
+In the present document, we focus on the AltiKa part of the overall SARAL mission. 
+Radar altimetry by satellite is a technique used in oceanography to measure, globally over the 
+oceans, the sea level needed to understand ocean circulation and its variability. The importance of 
+altimetry data to better understand the ocean circulation and its impact on the climate of the 
+Earth led to the TOPEX/Poseidon and Jason series of satellites complemented by ERS1-2, GFO and 
+ENVISAT. With the launch of these missions began a data collection that must continue well into the 
+century in order to monitor the inter-annual evolution and separate transient phenomena from 
+secular variations. 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+8 
+ 
+ 
+ 
+SARAL/AltiKa mission belongs to the global altimetry system and then participates to the precise 
+and accurate observations of ocean circulation and sea surface elevation for its life time. 
+Thus it is the aim of AltiKa part of the SARAL mission to provide altimetric measurements designed 
+to study ocean circulation and sea surface elevation with the same accuracy as the one provided by 
+ENVISAT mission and complementary to Jasons mission. 
+The AltiKa project developed by CNES is based on a large Ka-band altimeter (35.75 GHz, 500MHz), 
+1st oceanographic altimeter using such a high frequency. The use of the Ka-band frequency will 
+supply more accurate measurements (improvement of the spatial and vertical resolution) enabling a 
+better observation of ices, coastal areas, continental water bodies as well as the waves height. The 
+drawback of this Ka-band frequency is its sensitivity to rain that can lead to signal attenuation. 
+The SARAL/AltiKa mission is part of the operational satellite altimetry system, jointly with Jason-2, 
+and enables to ensure the service continuity which is nowadays provided by ENVISAT altimeter 
+jointly with Jason-2 and Jason-1.  
+By ensuring the observations continuity and widening the observation areas, CNES answers the wish 
+of the oceanography community by bringing a description: 
+• 
+for the meso-scale in open ocean, 
+• 
+in coastal areas, 
+• 
+for the seasonal forecast, 
+• 
+for the hydrology, 
+• 
+for the climate studies. 
+AltiKa data will thus contribute, along with data from others altimetry missions, to the 
+development of operational oceanography, to our climate understanding and to the development of 
+forecasting capabilities through data assimilation methods improvement in coupled ocean-
+atmosphere coupling models, bio-chemistry models, etc. 
+2.2.2. Mission objectives 
+SARAL/AltiKa main scientific objective is to provide data products to oceanographic research user 
+community in studies leading to improve our knowledge of the ocean meso-scale variability, 
+thanks to the improvement in spatial and vertical resolution brought by SARAL/AltiKa. 
+Ocean meso-scale variability is defined as a class of high-energy processes, with wave lengths 
+within a 50km to 500km range, and with periods of a few days to one year. Kinetic energy of meso-
+scale variability is one order of magnitude more than mean circulation’s one. Description of meso-
+scale is thus essential for understanding ocean dynamics, including mean circulation and its climatic 
+effects (through interactions of meso-scale turbulence with the mean flow). 
+SARAL/AltiKa main scientific objective is divided in sub-themes including: 
+• 
+intrinsic scientific studies of ocean at meso-scale dynamics: observations, theoretical 
+analyses,  modelling, data assimilation, parameterization, ... 
+• 
+improvement of our understanding of the oceanic component in the climate system: 
+investigation of local processes at small or medium scale poorly known and understood 
+at present, but which have an impact on the modelling of climate variability at large 
+spatial and temporal scales. 
+• 
+contribution to the study of coastal dynamic processes, especially small or medium 
+scale phenomena, whose retrieval will enable to anticipate many downstream 
+applications. 
+• 
+contribution to operational oceanography which is seeking large amounts of in situ and 
+space observation data. 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+9 
+ 
+ 
+ 
+SARAL/AltiKa secondary objectives are notably the monitoring of the main continental waters level 
+(lakes, rivers, closed seas), the monitoring of mean sea level variations, the observation of polar 
+oceans, the analysis and forecast of wave and wind fields, the study of continental ices (thanks to 
+improved performances of Ka-band) and sea ices, the access to low rains climatology (enabled in 
+counterpart to the sensitivity of Ka-band to clouds and low rains) and the marine biogeochemistry 
+(notably through the role of the meso and sub-meso-scale physics). 
+Further details on science and applications of SARAL/AltiKa data products can be found in the ISRO-
+CNES SARAL/AltiKa Joint Science Plan document [AD2]. 
+2.3. SARAL/AltiKa Mission 
+The SARAL/AltiKa mission is built on the heritage of T/P and Jason-1/2, with two driving ambitions: 
+• 
+Ensuring continuity of high quality measurements for ocean science  
+• 
+Providing operational products for assimilation and forecasting applications 
+The SARAL mission has been set forth as a cooperation between CNES and ISRO. The sharing of 
+responsibilities between CNES and ISRO, as defined in the SARAL MoU, is as follow : 
+→ CNES responsibilities : 
+• 
+Project Management: responsibility shared with ISRO 
+• 
+Overall SARAL system engineering 
+• 
+Integrated Payload Module (PIM), including 
+o 
+AltiKa mission payload 
+o 
+ARGOS-3 mission payload 
+• 
+Support for SARAL Payload Module integration and test 
+• 
+Ground System & Operations 
+o 
+Polar X-band network stations 
+o 
+Compatibility of L-band stations network required for the ARGOS-3/SARAL 
+mission 
+o 
+Data communication network 
+o 
+AltiKa Mission Centre 
+o 
+NRT and OFL product processing software development, installation, training 
+and support to operations (ISRO and EUMETSAT) 
+o 
+NRT product processing, archiving, distribution to users outside India, with the 
+support of EUMETSAT 
+o 
+OFL product processing and distribution to users outside India 
+o 
+DORIS product processing and distribution 
+o 
+Data providing to the ARGOS Global Processing Centers 
+o 
+Archiving of all telemetry and products, and auxiliary data 
+• 
+User services 
+• 
+AltiKa System Coordination with other altimetry missions in the frame of the SALP service ; 
+expertise and long term CALVAL 
+→ ISRO responsibilities : 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+10 
+ 
+ 
+ 
+• 
+Project Management : responsibility shared with CNES 
+• 
+SARAL satellite engineering 
+• 
+SSB Platform 
+• 
+PSLV Launch vehicle and services 
+• 
+SSB Platform 
+• 
+SARAL Satellite integration and test 
+• 
+Ground System & Operations 
+o 
+Satellite Control Centre 
+o 
+S-band network stations 
+o 
+X-band Hyderabad Shadnagar station (TBCnot necessarily on an operational 
+basis) 
+o 
+Data communication network 
+o 
+NRT and OFL products processing and distribution to users within India 
+o 
+Archiving of all telemetry and products, and auxiliary data 
+• 
+User services 
+ 
+The SARAL satellite is planned to operate for a nominal period of five (5) years, with an objective 
+at 7 years. However, the operations will be conducted throughout the whole SARAL satellite 
+lifetime. 
+SARAL/AltiKa was launched on X X 2012 at 0:00 GMT by a PSLV vehicle supplied by ISRO, from the 
+main ISRO launch base, the Satish Dhawan Space Centre, SHAR SRIHARIKOTA, 100 km North from 
+Chennai. It reached it’s nominal repetitive orbit on X X 2012. The start of cycle 1 occurred on X X 
+2012 at 00:00:00 GMT.  
+2.4. SARAL/AltiKa Requirements 
+The major elements of the mission include: 
+• 
+An Earth orbiting satellite carrying an altimetric system for measuring the height of the 
+satellite above the sea surface 
+• 
+A precision orbit determination system for referring the altimetric measurements to 
+geodetic coordinates 
+• 
+A data analysis and distribution system for processing the satellite data, verifying their 
+accuracy, and making them available to the scientific community 
+• 
+A Principal Investigator program for feedback from operational applications and scientific 
+studies based on the satellite observations  
+The sea-surface height measurement must be made with an accuracy of 3.4 cm or better (at 1 Hz) 
+in order to meet the mission objectives. The SARAL/AltiKa satellite is specified and designed to 
+fulfill the mission objectives (see AD 6) and to take over from the Jason-1/2 mission. As for Jason-
+1/2, distribution of altimetric products (non-validated) in near real time is planned. The interim 
+(IGDR) and definitive (GDR) science products are delivered later (within 1.5 days for IGDR and 
+within 40 days for GDR), following the model used for Jason-1 and Jason-2. 
+To ensure that science and mission goals are accomplished by the SARAL/AltiKa mission, the 
+following requirements were established.  
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+11 
+ 
+ 
+ 
+2.4.1. Accuracy of Sea-level Measurements 
+Generally speaking SARAL/AltiKa has been specified based on the Jason-2 state of the art, including 
+improvements in payload technology, data processing and algorithms or ancillary data (e.g: precise 
+orbit determination and meteorological model accuracy). The sea-surface height shall be provided 
+with a globally averaged RMS accuracy of 4.6 cm (1 sigma), or better, assuming 1 second averages.  
+The instrumental and environmental corrections are provided with the appropriate accuracy to 
+meet this requirement. In addition to these requirements, a set of measurement-system goals was 
+established based on the anticipated impact of off-line ground processing improvements. These 
+improvements are expected to enable reduction of sea-surface height errors to 2.8 cm RMS. 
+Knowledge of the stability of the system is especially important to the goal of monitoring the 
+change in the global mean sea level, hence a specification on the system drift with a 1 mm/year 
+goal. 
+The following table provides a summary of specifications and error budget at the end of the 
+verification phase. 
+ 
+( for 1s average, 2m 
+SWH, 1dB σ0) 
+OGDR 
+3 Hours 
+IGDR 
+1.5 days 
+GDR 
+40 days 
+GOALS 
+Altimeter noise 
+1.5 
+1.5 
+1.5 
+1 
+Ionosphere 
+0.6 
+0.3 
+0.3 
+0.3 
+Sea state bias 
+2 
+2 
+2 
+2 
+Dry troposphere 
+1.5 
+0.7 
+0.7 
+0.7 
+Wet Troposphere 
+1.2 
+1.2 
+1.2 
+1 
+Altimeter range 
+after corrections 
+(RSS) 
+4.5 
+3.5 
+3.5 
+2 
+Orbit (Radial 
+component) (RMS) 
+Req : 30 
+Goal : 10 
+Req : 4 
+Goal : 2.5 
+Req : 3 
+Goal : 2 
+2 
+Total RSS Sea 
+Surface Height 
+Req : 30.5 
+Req : 5.3 
+Req : 4.6 
+2.8 
+Significant Wave 
+Height  (H1/3) 
+10 % or 0.5m 
+10% or 0.4 m 
+10% or 0.4 m 
+5% or 0.25m 
+Wind speed 
+2 m/s 
+1.7 m/s 
+1.7 m/s 
+1 m/s 
+Table 2. Preliminary AltiKa Data Products error budget 
+2.4.2. Sampling Strategy 
+As for Jason-1 and Jason-2, sea level shall be measured along a fixed grid of subsatellite tracks such 
+that it is possible to investigate and minimize the spatial and temporal aliases of surface 
+geostrophic currents and to minimize the influence of the geoid on measurements of the time-
+varying topography.  
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+12 
+ 
+ 
+ 
+2.4.3. Tidal Aliases 
+As for Jason-1 and Jason-2, sea level shall be measured such that tidal signals are not aliased into 
+semiannual, annual, or zero frequencies (which influences the calculation of the permanent 
+circulation) or frequencies close to these.  
+2.4.4. Duration and coverage 
+Sea level shall be measured for a minimum of five years, with the potential to extend this period 
+for an additional two years.  
+The SARAL/AltiKa satellite shall overfly the reference ENVISAT ground tracks.  
+2.5. Mission Description 
+SARAL/AltiKa will use an Earth orbiting satellite equipped with a radar altimeter and other 
+instruments to directly measure sea-surface elevation along the fixed grid of sub-satellite ground 
+tracks traced out by the ERS1/2 and ENVISAT satellites. In so doing, SARAL/AltiKa will continue the 
+data collection started with ERS1/2 and followed by ENVISAT. The sea-surface height measurement 
+must be made with an accuracy of 4.6 cm or better (at 1 Hz) in order to meet the mission 
+objectives. The SARAL/AltiKa satellite is specified and designed to fulfill the mission objectives and 
+will be launched in 2012 to take over for ENVISAT mission.  
+The ocean topography is obtained through three basic measurements:  
+1) the satellite range above the sea surface derived from the altimeter,  
+2) the tropospheric range delay measured by the radiometer to correct the altimeter range,  
+3) the altitude of the satellite above the reference ellipsoid derived from precise orbit 
+determination.  
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+13 
+ 
+ 
+ 
+ 
+Figure 2. Geometry of the sea surface height measurement by altimetry 
+The altimeter uses radar pulses to determine precisely the distance between the satellite and the 
+ocean surface by measuring the time taken by the emitted pulse to return. The shape and the 
+amplitude of the echo enable the estimation of wave height and wind speed respectively. 
+Geophysical corrections are then applied to compensate for the measurement errors introduced by 
+propagation through the troposphere and ionosphere and errors induced by sea state. 
+Further information and details about radar altimetry principles and processing can be found on the 
+following link : http://www.altimetry.info/html/alti/welcome_en.html  
+ 
+2.6. Satellite Description 
+The 450 kg satellite consists of a SSB/ IMS-2 platform and a SARAL/AltiKa specific payload module. 
+The platform provides all housekeeping functions including propulsion, electrical power, command 
+and data handling, telecommunications, and attitude control. The payload module provides 
+mechanical, electrical, thermal, and dynamical support to the SARAL/AltiKa instruments.  
+The SARAL satellite is mainly composed of: 
+• 
+a spacecraft bus IMS-2 (Small Satellite Bus). This platform, developed by ISRO, is designed for 
+satellites in the range of about 500 kg at launch. 
+• 
+a payload developed by CNES.  
+ 
+The SARAL payload (see Figure 3) includes the following components: 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+14 
+ 
+ 
+ 
+• 
+An Altimeter, provided by CNES – the main mission instrument and a dual frequency microwave 
+radiometer, provided by CNES – to correct the altimeter measurement for atmospheric range 
+delays induced by water vapor.  
+ The AltiKa instrument consists of a Ka-band altimeter and an embedded dual frequency  
+radiometer. 
+• 
+The radio positioning DORIS system, provided by CNES – for precision orbit determination using 
+dedicated ground stations 
+• 
+A Laser Reflector Array (LRA), provided by CNES – to calibrate the orbit determination system. 
+ 
+And the ARGOS-3 instrument (and associated components) that has its own mission on-board the 
+SARAL satellite as part of the ARGOS system. 
+Details about the satellite description can be found at: http://smsc.cnes.fr/SARAL/index.htm.  
+ 
+Figure 3 : AltiKa & Argos-3 payloads accommodation on SSB platform : SARAL satellite.  
+2.6.1. Satellite Characteristics 
+The main features of the SARAL/AltiKa satellite are summed up in the following table. 
+  
+Satellite mass  
+415 kg  
+Satellite power  
+570 W  
+Platform mass  
+250 kg  
+Platform power  
+205 W  
+Payload mass  
+160 kg  
+Payload power  
+250 W  
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+15 
+ 
+ 
+ 
+Altimeter mass  
+55 kg  
+Altimeter power  
+78 W  
+Launch Vehicle  
+PSLV 
+Launch Site  
+Satish Dhawan Space Center, SHAR SRIHARIKOTA  
+Table 3 : Main features of the SARAL/AltiKa satellite 
+2.6.2. Sensors 
+2.6.2.1. AltiKa Altimeter 
+The mono-frequency Ka-band (35.75 GHz) radar altimeter is the main part of AltiKa instrument. Its 
+functions are based on proven concepts and already developed sub-systems, as it inherits from Siral 
+(CRYOSAT mission) and Poseidon3 (Jason-2 mission). 
+The use of a single frequency is possible because ionosphere effects are negligible at such high 
+frequencies (proportionality to the inverse of the squared frequency).  
+The main advantage of this higher frequency (Ka versus classical Ku/C altimeters) is the reduced 
+altimeter footprint that leads to a better spatial resolution. The added advantage of AltiKa is due 
+to its enhanced bandwidth (500 MHz), which leads to higher vertical resolution. Thus, globally, an 
+error budget improvement is expected. 
+However, Ka-band has also drawbacks, mainly linked to its higher sensitivity to rainy and cloudy 
+conditions. 
+The altimeter antenna is a fixed offset paraboloid (1 meter diameter) and directed toward nadir of 
+the satellite. It will be located on the top of the satellite. 
+ 
+ 
+Figure 4 : SARAL/AltiKa Instrument 
+2.6.2.2.  Dual frequency microwave radiometer 
+The bi-frequency (23.8 GHz / 37 GHz) radiometer is used to correct altimetry measurements from 
+wet troposphere crossing effects. The 23.8 GHz channel is the primary water vapor sensing channel, 
+meaning higher water vapor concentrations will lead to larger 23.8 GHz brightness temperature 
+values. The addition of the 37 GHz channel, which has less sensitivity to water vapor, facilitate the 
+removal of the contributions from cloud liquid water, which also act to increase the 23.8 GHz 
+brightness temperature. 
+The antenna, shared with the altimeter, is fed by a two frequency coaxial corrugated horn feed. 
+A corrugated cold sky horn is used for the gain calibration of the 2 radiometer channels. 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+16 
+ 
+ 
+ 
+     
+ 
+Figure 5 : SARAL/AltiKa radiometer Instrument and antenna (shared with altimeter) 
+2.6.2.3. DORIS System 
+The complete DORIS system includes the DORIS on board package, a network of approximately 60 
+beacons located around the world and a ground system. 
+The on board package includes the electronic box hosting the receiver itself and the ultra stable 
+oscillator and an omnidirectional antenna. 
+The DORIS on board package is of the same version than the one embarked on SARAL/ALTIKA. It 
+includes a 7-beacon receiving capability and an on-board real time function (DIODE for « 
+Détermination Immédiate d’Orbite par DORIS Embarqué ») to compute the orbit ephemeris in real 
+time. 
+The DORIS on board package is dual string (in cold redundancy), each DORIS chain is automatically 
+connected to the single antenna through a switching box inside the DORIS unit . Each receiver is 
+connected to its own ultra-stable oscillator. 
+The DORIS antenna is located on the Earth panel of the satellite. 
+    
+ 
+Figure 6 : SARAL/AltiKa DORIS Receiver Antenna and Instrument 
+2.6.2.4. Laser Reflector Array (LRA) 
+It is used for precise calibration of other POD instruments, through analysis of laser shots from the 
+ground then reflected by the LRA mirrors. 
+The laser reflector array is placed on the nadir face of the satellite. It consists of several quartz 
+corner cubes arrayed as a truncated cone with one in the center and the others distributed 
+azimuthally around the cone. 
+The LRA is provided by CNES.  
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+17 
+ 
+ 
+ 
+    
+Figure 7 : SARAL/AltiKa Laser Reflector Array 
+2.6.2.5. ARGOS-3 Instrument 
+ARGOS is a Data Collection and Localization System dedicated to environmental applications 
+(more than 18000 active platforms). This is a CNES / EUMETSAT / NOAA cooperation and ISRO will 
+join the ARGOS Program with SARAL. Now in its 3rd generation of instruments embarked on 
+EUMETSAT/Metop and NOAA/POES (NOAA-N’), ARGOS-3 on SARAL will fill the 3rd orbit (@ 18h00) of 
+ARGOS-3 system.  
+ 
+Figure 8 : Applications of the ARGOS system 
+ARGOS-3 UHF and L band antennas are located on the Earth face of the satellite. 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+18 
+ 
+ 
+ 
+ 
+Figure 9 : SARAL/AltiKa UHF antenna 
+ 
+ 
+Figure 10 : SARAL/AltiKa ARGOS-3 reception instrument 
+ 
+2.6.3. Orbit 
+The SARAL/AltiKa satellite flies on the same ground-track as ENVISAT with a 501 pass, 35-day exact 
+repeat cycle. Orbital characteristics and the equator crossing longitudes for SARAL/AltiKa are given 
+in Tables 10 and 11.  
+To locate a pass on the Earth, Google Earth can be used. More information are given on the AVISO 
+Website about the pass locator:  
+http://www.aviso.oceanobs.com/en/data/tools/pass-locator/index.html. 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+19 
+ 
+ 
+ 
+Figure below is a plot of the ground track on a world map (as there are 501 ground tracks, they are 
+represented as ascending and descending passes). 
+ 
+Figure 11 : ENVISAT and SARAL/AltiKa ground track coverage every 35 days                                 
+(ascending and descending passes) 
+The main characteristics of SARAL Sun-Synchronous Orbit are : 
+→ The mean classical orbit elements are given in the table below. 
+ 
+Orbit element 
+Value 
+Repeat period 
+35 days  
+Number of revolution within a cycle 
+501 
+Apogee altitude 
+814 km  
+Perigee altitude 
+786 km  
+Inclination 
+98.55 deg  
+Argument of perigee 
+90.0 deg  
+Local time at ascending node 
+06:00 
+Earth Longitude of equator ascending crossing of pass1 
+0.1335 deg 
+Ground track control band 
++/- 1 km 
+Table 4 : Mean classical orbit elements 
+→ The orbit auxiliary data are given in the table below. 
+ 
+Auxiliary Data 
+Values 
+Semi major axis 
+7159.496 km  
+Eccentricity 
+1.165 10-3 
+Nodal period 
+100.59 mn  
+Number of orbits per day 
+14+11/35 
+Equatorial cross track separation 
+75 km  
+Inertial nodal rate 
+0.9856 deg/day  
+Mean Orbital speed 
+7.47 km/s  
+Table 5 : Orbit auxiliary data 
+ 
+This orbit overflies two verification sites funded by CNES and ISRO. The prime CNES verification site 
+is located at Cape Senetosa on the island of Corsica (8º48' E, 41º34' N, ascending pass 85).  
+A satellite orbit slowly decays due to air drag, and has long-period variability because of the 
+inhomogeneous gravity field of Earth, solar radiation pressure, and smaller forces. Periodic 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+20 
+ 
+ 
+ 
+maneuvers are required to keep the satellite in its orbit. The frequency of maneuvers depends 
+primarily on the solar flux as it affects the Earth's atmosphere, and there are expected to be one 
+maneuver (or series of maneuvers) every 15 to 30 days.  
+Each orbit maintenance maneuver is performed using only one thrust to minimize impacts on the 
+ground orbit solution. Orbit computation is optimized to minimize the orbit error during such 
+periods. Science data are taken during orbit maintenance maneuvers and are distributed (an orbit 
+state flag is provided in the products). 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+21 
+ 
+ 
+ 
+2.6.3.1. Equator Crossing Longitudes (in order of Pass Number) 
+ 
+Pass Long (°) Pass Long (°) Pass Long (°)
+Pass Long (°)
+Pass Long (°) Pass Long (°)
+1 
+0.13 
+40 
+49.73 
+80 
+266.74 
+120
+123.74 
+160
+340.75 
+200 
+197.75 
+2 
+167.58 
+41 
+217.14 
+81 
+74.14 
+121
+291.15 
+161
+148.16 
+201 
+5.16 
+3 
+334.98 
+42 
+24.58 
+82 
+241.59 
+122
+98.59 
+162
+315.60 
+202 
+172.61 
+4 
+142.43 
+43 
+191.99 
+83 
+48.99 
+123
+266.00 
+163
+123.01 
+203 
+340.01 
+5 
+309.83 
+44 
+359.43 
+84 
+216.44 
+124
+73.45 
+164
+290.45 
+204 
+147.46 
+6 
+117.28 
+45 
+166.84 
+85 
+23.84 
+125
+240.85 
+165
+97.86 
+205 
+314.86 
+7 
+284.68 
+46 
+334.28 
+86 
+191.29 
+126
+48.30 
+166
+265.30 
+206 
+122.31 
+8 
+92.13 
+47 
+141.69 
+87 
+358.70 
+127
+215.70 
+167
+72.71 
+207 
+289.71 
+9 
+259.54 
+48 
+309.13 
+88 
+166.14 
+128
+23.15 
+168
+240.15 
+208 
+97.16 
+10 
+66.98 
+49 
+116.54 
+89 
+333.55 
+129
+190.55 
+169
+47.56 
+209 
+264.56 
+11 
+234.39 
+50 
+283.98 
+90 
+140.99 
+130
+358.00 
+170
+215.00 
+210 
+72.01 
+12 
+41.83 
+51 
+91.39 
+91 
+308.40 
+131
+165.40 
+171
+22.41 
+211 
+239.41 
+13 
+209.24 
+52 
+258.83 
+92 
+115.84 
+132
+332.85 
+172
+189.85 
+212 
+46.86 
+14 
+16.68 
+53 
+66.24 
+93 
+283.25 
+133
+140.25 
+173
+357.26 
+213 
+214.26 
+15 
+184.09 
+54 
+233.68 
+94 
+90.69 
+134
+307.70 
+174
+164.70 
+214 
+21.71 
+16 
+351.53 
+55 
+41.09 
+95 
+258.10 
+135
+115.10 
+175
+332.11 
+215 
+189.11 
+17 
+158.94 
+56 
+208.53 
+96 
+65.54 
+136
+282.55 
+176
+139.55 
+216 
+356.56 
+18 
+326.38 
+57 
+15.94 
+97 
+232.95 
+137
+89.95 
+177
+306.96 
+217 
+163.96 
+19 
+133.79 
+58 
+183.38 
+98 
+40.39 
+138
+257.40 
+178
+114.40 
+218 
+331.41 
+20 
+301.23 
+59 
+350.79 
+99 
+207.80 
+139
+64.80 
+179
+281.81 
+219 
+138.81 
+21 
+108.64 
+60 
+158.24 
+100 
+15.24 
+140
+232.25 
+180
+89.25 
+220 
+306.26 
+22 
+276.08 
+61 
+325.64 
+101 
+182.65 
+141
+39.65 
+181
+256.66 
+221 
+113.67 
+23 
+83.49 
+62 
+133.09 
+102 
+350.09 
+142
+207.10 
+182
+64.10 
+222 
+281.11 
+24 
+250.93 
+63 
+300.49 
+103 
+157.50 
+143
+14.50 
+183
+231.51 
+223 
+88.51 
+25 
+58.34 
+64 
+107.94 
+104 
+324.94 
+144
+181.95 
+184
+38.95 
+224 
+255.96 
+26 
+225.78 
+65 
+275.34 
+105 
+132.35 
+145
+349.35 
+185
+206.36 
+225 
+63.36 
+27 
+33.19 
+66 
+82.79 
+106 
+299.79 
+146
+156.80 
+186
+13.80 
+226 
+230.81 
+28 
+200.63 
+67 
+250.19 
+107 
+107.20 
+147
+324.20 
+187
+181.21 
+227 
+38.21 
+29 
+8.04 
+68 
+57.64 
+108 
+274.64 
+148
+131.65 
+188
+348.65 
+228 
+205.66 
+30 
+175.48 
+69 
+225.04 
+109 
+82.05 
+149
+299.05 
+189
+156.06 
+229 
+13.07 
+31 
+342.89 
+70 
+32.49 
+110 
+249.49 
+150
+106.50 
+190
+323.50 
+230 
+180.51 
+32 
+150.33 
+71 
+199.89 
+111 
+56.90 
+151
+273.91 
+191
+130.91 
+231 
+347.92 
+33 
+317.74 
+72 
+7.34 
+112 
+224.34 
+152
+81.35 
+192
+298.35 
+232 
+155.36 
+34 
+125.18 
+73 
+174.74 
+113 
+31.75 
+153
+248.76 
+193
+105.76 
+233 
+322.77 
+35 
+292.59 
+74 
+342.19 
+114 
+199.19 
+154
+56.20 
+194
+273.20 
+234 
+130.21 
+36 
+100.03 
+75 
+149.59 
+115 
+6.60 
+155
+223.61 
+195
+80.61 
+235 
+297.62 
+37 
+267.44 
+76 
+317.04 
+116 
+174.04 
+156
+31.05 
+196
+248.05 
+236 
+105.06 
+38 
+74.88 
+77 
+124.44 
+117 
+341.45 
+157
+198.46 
+197
+55.46 
+237 
+272.47 
+39 
+242.29 
+78 
+291.89 
+118 
+148.89 
+158
+5.90 
+198
+222.90 
+238 
+79.91 
+40 
+49.73 
+79 
+99.29 
+119 
+316.30 
+159
+173.31 
+199
+30.31 
+239 
+247.32 
+ 
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+22 
+ 
+ 
+ 
+ 
+ 
+ 
+Pass Long (°) Pass Long (°) Pass Long (°)
+Pass
+Long (°)
+Pass
+Long (°)
+Pass Long (°) 
+240 
+54.76 
+280 271.77 320 128.77 360
+345.78 400
+202.78 440 
+59.79 
+241 222.17 281 
+79.17 
+321 296.18 361
+153.19 401
+10.19 
+441 227.20 
+242 
+29.61 
+282 246.62 322 103.62 362
+320.63 402
+177.64 442 
+34.64 
+243 197.02 283 
+54.02 
+323 271.03 363
+128.04 403
+345.04 443 202.05 
+244 
+4.46 
+284 221.47 324 
+78.47 
+364
+295.48 404
+152.49 444 
+9.49 
+245 171.87 285 
+28.87 
+325 245.88 365
+102.89 405
+319.89 445 176.90 
+246 339.31 286 196.32 326 
+53.33 
+366
+270.33 406
+127.34 446 344.34 
+247 146.72 287 
+3.72 
+327 220.73 367
+77.74 
+407
+294.74 447 151.75 
+248 314.16 288 171.17 328 
+28.18 
+368
+245.18 408
+102.19 448 319.19 
+249 121.57 289 338.58 329 195.58 369
+52.59 
+409
+269.59 449 126.60 
+250 289.01 290 146.02 330 
+3.02 
+370
+220.03 410
+77.04 
+450 294.04 
+251 
+96.42 
+291 313.43 331 170.43 371
+27.44 
+411
+244.45 451 101.45 
+252 263.86 292 120.87 332 337.88 372
+194.88 412
+51.89 
+452 268.89 
+253 
+71.27 
+293 288.28 333 145.28 373
+2.29 
+413
+219.30 453 
+76.30 
+254 238.71 294 
+95.72 
+334 312.73 374
+169.73 414
+26.74 
+454 243.74 
+255 
+46.12 
+295 263.13 335 120.13 375
+337.14 415
+194.15 455 
+51.15 
+256 213.56 296 
+70.57 
+336 287.58 376
+144.58 416
+1.59 
+456 218.59 
+257 
+20.97 
+297 237.98 337 
+94.98 
+377
+311.99 417
+169.00 457 
+26.00 
+258 188.41 298 
+45.42 
+338 262.43 378
+119.43 418
+336.44 458 193.44 
+259 355.82 299 212.83 339 
+69.83 
+379
+286.84 419
+143.85 459 
+0.85 
+260 163.26 300 
+20.27 
+340 237.28 380
+94.28 
+420
+311.29 460 168.29 
+261 330.67 301 187.68 341 
+44.68 
+381
+261.69 421
+118.70 461 335.70 
+262 138.11 302 355.12 342 212.13 382
+69.13 
+422
+286.14 462 143.14 
+263 305.52 303 162.53 343 
+19.53 
+383
+236.54 423
+93.55 
+463 310.55 
+264 112.96 304 329.97 344 186.98 384
+43.98 
+424
+260.99 464 117.99 
+265 280.37 305 137.38 345 354.38 385
+211.39 425
+68.39 
+465 285.40 
+266 
+87.82 
+306 304.82 346 161.83 386
+18.83 
+426
+235.84 466 
+92.85 
+267 255.22 307 112.23 347 329.23 387
+186.24 427
+43.24 
+467 260.25 
+268 
+62.67 
+308 279.67 348 136.68 388
+353.68 428
+210.69 468 
+67.70 
+269 230.07 309 
+87.08 
+349 304.08 389
+161.09 429
+18.10 
+469 235.10 
+270 
+37.52 
+310 254.52 350 111.53 390
+328.53 430
+185.54 470 
+42.55 
+271 204.92 311 
+61.93 
+351 278.94 391
+135.94 431
+352.95 471 209.95 
+272 
+12.37 
+312 229.37 352 
+86.38 
+392
+303.38 432
+160.39 472 
+17.40 
+273 179.77 313 
+36.78 
+353 253.79 393
+110.79 433
+327.80 473 184.80 
+274 347.22 314 204.22 354 
+61.23 
+394
+278.23 434
+135.24 474 352.25 
+275 154.62 315 
+11.63 
+355 228.64 395
+85.64 
+435
+302.65 475 159.65 
+276 322.07 316 179.07 356 
+36.08 
+396
+253.08 436
+110.09 476 327.10 
+277 129.47 317 346.48 357 203.49 397
+60.49 
+437
+277.50 477 134.50 
+278 296.92 318 153.92 358 
+10.93 
+398
+227.93 438
+84.94 
+478 301.95 
+279 104.32 319 321.33 359 178.34 399
+35.34 
+439
+252.35 479 109.35 
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+23 
+ 
+ 
+ 
+ 
+ 
+Pass Long (°) Pass Long (°) Pass Long (°)
+Pass Long (°)
+Pass Long (°) Pass Long (°)
+480 
+276.80 
+520 
+133.80 
+560 
+350.81 
+600
+207.82 
+640
+64.82 
+680 
+281.83 
+481 
+84.20 
+521 
+301.21 
+561 
+158.22 
+601
+15.22 
+641
+232.23 
+681 
+89.23 
+482 
+251.65 
+522 
+108.65 
+562 
+325.66 
+602
+182.67 
+642
+39.67 
+682 
+256.68 
+483 
+59.05 
+523 
+276.06 
+563 
+133.07 
+603
+350.07 
+643
+207.08 
+683 
+64.08 
+484 
+226.50 
+524 
+83.51 
+564 
+300.51 
+604
+157.52 
+644
+14.52 
+684 
+231.53 
+485 
+33.90 
+525 
+250.91 
+565 
+107.92 
+605
+324.92 
+645
+181.93 
+685 
+38.93 
+486 
+201.35 
+526 
+58.36 
+566 
+275.36 
+606
+132.37 
+646
+349.37 
+686 
+206.38 
+487 
+8.76 
+527 
+225.76 
+567 
+82.77 
+607
+299.77 
+647
+156.78 
+687 
+13.79 
+488 
+176.20 
+528 
+33.21 
+568 
+250.21 
+608
+107.22 
+648
+324.22 
+688 
+181.23 
+489 
+343.61 
+529 
+200.61 
+569 
+57.62 
+609
+274.63 
+649
+131.63 
+689 
+348.64 
+490 
+151.05 
+530 
+8.06 
+570 
+225.06 
+610
+82.07 
+650
+299.07 
+690 
+156.08 
+491 
+318.46 
+531 
+175.46 
+571 
+32.47 
+611
+249.48 
+651
+106.48 
+691 
+323.49 
+492 
+125.90 
+532 
+342.91 
+572 
+199.91 
+612
+56.92 
+652
+273.92 
+692 
+130.93 
+493 
+293.31 
+533 
+150.31 
+573 
+7.32 
+613
+224.33 
+653
+81.33 
+693 
+298.34 
+494 
+100.75 
+534 
+317.76 
+574 
+174.76 
+614
+31.77 
+654
+248.77 
+694 
+105.78 
+495 
+268.16 
+535 
+125.16 
+575 
+342.17 
+615
+199.18 
+655
+56.18 
+695 
+273.19 
+496 
+75.60 
+536 
+292.61 
+576 
+149.61 
+616
+6.62 
+656
+223.62 
+696 
+80.63 
+497 
+243.01 
+537 
+100.01 
+577 
+317.02 
+617
+174.03 
+657
+31.03 
+697 
+248.04 
+498 
+50.45 
+538 
+267.46 
+578 
+124.46 
+618
+341.47 
+658
+198.47 
+698 
+55.48 
+499 
+217.86 
+539 
+74.86 
+579 
+291.87 
+619
+148.88 
+659
+5.88 
+699 
+222.89 
+500 
+25.30 
+540 
+242.31 
+580 
+99.31 
+620
+316.32 
+660
+173.33 
+700 
+30.33 
+501 
+192.71 
+541 
+49.71 
+581 
+266.72 
+621
+123.73 
+661
+340.73 
+701 
+197.74 
+502 
+0.15 
+542 
+217.16 
+582 
+74.16 
+622
+291.17 
+662
+148.18 
+702 
+5.18 
+503 
+167.56 
+543 
+24.56 
+583 
+241.57 
+623
+98.58 
+663
+315.58 
+703 
+172.59 
+504 
+335.00 
+544 
+192.01 
+584 
+49.01 
+624
+266.02 
+664
+123.03 
+704 
+340.03 
+505 
+142.41 
+545 
+359.41 
+585 
+216.42 
+625
+73.43 
+665
+290.43 
+705 
+147.44 
+506 
+309.85 
+546 
+166.86 
+586 
+23.86 
+626
+240.87 
+666
+97.88 
+706 
+314.88 
+507 
+117.26 
+547 
+334.27 
+587 
+191.27 
+627
+48.28 
+667
+265.28 
+707 
+122.29 
+508 
+284.70 
+548 
+141.71 
+588 
+358.71 
+628
+215.72 
+668
+72.73 
+708 
+289.73 
+509 
+92.11 
+549 
+309.12 
+589 
+166.12 
+629
+23.13 
+669
+240.14 
+709 
+97.14 
+510 
+259.55 
+550 
+116.56 
+590 
+333.57 
+630
+190.57 
+670
+47.58 
+710 
+264.58 
+511 
+66.96 
+551 
+283.97 
+591 
+140.97 
+631
+357.98 
+671
+214.98 
+711 
+71.99 
+512 
+234.40 
+552 
+91.41 
+592 
+308.42 
+632
+165.42 
+672
+22.43 
+712 
+239.43 
+513 
+41.81 
+553 
+258.82 
+593 
+115.82 
+633
+332.83 
+673
+189.83 
+713 
+46.84 
+514 
+209.25 
+554 
+66.26 
+594 
+283.27 
+634
+140.27 
+674
+357.28 
+714 
+214.28 
+515 
+16.66 
+555 
+233.67 
+595 
+90.67 
+635
+307.68 
+675
+164.68 
+715 
+21.69 
+516 
+184.10 
+556 
+41.11 
+596 
+258.12 
+636
+115.12 
+676
+332.13 
+716 
+189.13 
+517 
+351.51 
+557 
+208.52 
+597 
+65.52 
+637
+282.53 
+677
+139.54 
+717 
+356.54 
+518 
+158.95 
+558 
+15.96 
+598 
+232.96 
+638
+89.97 
+678
+306.98 
+718 
+163.98 
+519 
+326.36 
+559 
+183.37 
+599 
+40.37 
+639
+257.38 
+679
+114.39 
+719 
+331.39 
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+24 
+ 
+ 
+ 
+ 
+Pass Long (°) Pass Long (°) Pass Long (°)
+Pass
+Long (°)
+Pass
+Long (°)
+Pass Long (°) 
+720 138.83 760 355.84 800 212.85 840
+69.85 
+880
+286.86 920 143.86 
+721 306.24 761 163.25 801 
+20.25 
+841
+237.26 881
+94.26 
+921 311.27 
+722 113.68 762 330.69 802 187.70 842
+44.70 
+882
+261.71 922 118.71 
+723 281.09 763 138.10 803 355.10 843
+212.11 883
+69.11 
+923 286.12 
+724 
+88.54 
+764 305.54 804 162.55 844
+19.55 
+884
+236.56 924 
+93.56 
+725 255.94 765 112.95 805 329.95 845
+186.96 885
+43.96 
+925 260.97 
+726 
+63.39 
+766 280.39 806 137.40 846
+354.40 886
+211.41 926 
+68.42 
+727 230.79 767 
+87.80 
+807 304.80 847
+161.81 887
+18.81 
+927 235.82 
+728 
+38.24 
+768 255.24 808 112.25 848
+329.25 888
+186.26 928 
+43.27 
+729 205.64 769 
+62.65 
+809 279.65 849
+136.66 889
+353.67 929 210.67 
+730 
+13.09 
+770 230.09 810 
+87.10 
+850
+304.10 890
+161.11 930 
+18.12 
+731 180.49 771 
+37.50 
+811 254.51 851
+111.51 891
+328.52 931 185.52 
+732 347.94 772 204.94 812 
+61.95 
+852
+278.95 892
+135.96 932 352.97 
+733 155.34 773 
+12.35 
+813 229.36 853
+86.36 
+893
+303.37 933 160.37 
+734 322.79 774 179.79 814 
+36.80 
+854
+253.80 894
+110.81 934 327.82 
+735 130.19 775 347.20 815 204.21 855
+61.21 
+895
+278.22 935 135.22 
+736 297.64 776 154.64 816 
+11.65 
+856
+228.65 896
+85.66 
+936 302.67 
+737 105.04 777 322.05 817 179.06 857
+36.06 
+897
+253.07 937 110.07 
+738 272.49 778 129.49 818 346.50 858
+203.50 898
+60.51 
+938 277.52 
+739 
+79.89 
+779 296.90 819 153.91 859
+10.91 
+899
+227.92 939 
+84.92 
+740 247.34 780 104.34 820 321.35 860
+178.35 900
+35.36 
+940 252.37 
+741 
+54.74 
+781 271.75 821 128.76 861
+345.76 901
+202.77 941 
+59.77 
+742 222.19 782 
+79.19 
+822 296.20 862
+153.21 902
+10.21 
+942 227.22 
+743 
+29.59 
+783 246.60 823 103.61 863
+320.61 903
+177.62 943 
+34.62 
+744 197.04 784 
+54.05 
+824 271.05 864
+128.06 904
+345.06 944 202.07 
+745 
+4.44 
+785 221.45 825 
+78.46 
+865
+295.46 905
+152.47 945 
+9.47 
+746 171.89 786 
+28.90 
+826 245.90 866
+102.91 906
+319.91 946 176.92 
+747 339.30 787 196.30 827 
+53.31 
+867
+270.31 907
+127.32 947 344.32 
+748 146.74 788 
+3.74 
+828 220.75 868
+77.76 
+908
+294.76 948 151.77 
+749 314.15 789 171.15 829 
+28.16 
+869
+245.16 909
+102.17 949 319.17 
+750 121.59 790 338.60 830 195.60 870
+52.61 
+910
+269.61 950 126.62 
+751 289.00 791 146.00 831 
+3.01 
+871
+220.01 911
+77.02 
+951 294.02 
+752 
+96.44 
+792 313.45 832 170.45 872
+27.46 
+912
+244.46 952 101.47 
+753 263.85 793 120.85 833 337.86 873
+194.86 913
+51.87 
+953 268.88 
+754 
+71.29 
+794 288.30 834 145.30 874
+2.31 
+914
+219.31 954 
+76.32 
+755 238.70 795 
+95.70 
+835 312.71 875
+169.71 915
+26.72 
+955 243.73 
+756 
+46.14 
+796 263.15 836 120.15 876
+337.16 916
+194.16 956 
+51.17 
+757 213.55 797 
+70.55 
+837 287.56 877
+144.56 917
+1.57 
+957 218.58 
+758 
+20.99 
+798 238.00 838 
+95.00 
+878
+312.01 918
+169.01 958 
+26.02 
+759 188.40 799 
+45.40 
+839 262.41 879
+119.42 919
+336.42 959 193.43 
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+25 
+ 
+ 
+ 
+ 
+Pass 
+Long (°)
+Pass 
+Long (°)
+960 
+0.87 
+1000
+217.87 
+961 
+168.28 1001
+25.28 
+962 
+335.72 1002
+192.72 
+963 
+143.13 
+  
+  
+964 
+310.57 
+  
+  
+965 
+117.98 
+  
+  
+966 
+285.42 
+  
+  
+967 
+92.83 
+  
+  
+968 
+260.27 
+  
+  
+969 
+67.68 
+  
+  
+970 
+235.12 
+  
+  
+971 
+42.53 
+  
+  
+972 
+209.97 
+  
+  
+973 
+17.38 
+  
+  
+974 
+184.82 
+  
+  
+975 
+352.23 
+  
+  
+976 
+159.67 
+  
+  
+977 
+327.08 
+  
+  
+978 
+134.52 
+  
+  
+979 
+301.93 
+  
+  
+980 
+109.37 
+  
+  
+981 
+276.78 
+  
+  
+982 
+84.22 
+  
+  
+983 
+251.63 
+  
+  
+984 
+59.07 
+  
+  
+985 
+226.48 
+  
+  
+986 
+33.92 
+  
+  
+987 
+201.33 
+  
+  
+988 
+8.77 
+  
+  
+989 
+176.18 
+  
+  
+990 
+343.62 
+  
+  
+991 
+151.03 
+  
+  
+992 
+318.47 
+  
+  
+993 
+125.88 
+  
+  
+994 
+293.33 
+  
+  
+995 
+100.73 
+  
+  
+996 
+268.17 
+  
+  
+997 
+75.58 
+  
+  
+998 
+243.02 
+  
+  
+999 
+50.43 
+  
+  
+Table 6 : Equator Crossing Longitudes (in order of Pass Number) 
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+26 
+ 
+ 
+ 
+2.6.3.2. Equator Crossing Longitudes (in order of Longitude) 
+ 
+Pass 
+Long(°) Pass 
+Long(°) Pass 
+Long(°) Pass 
+Long(°) Pass 
+Long(°) Pass 
+Long(°) 
+1 
+0.13 
+186 
+13.8 328 
+28.18
+470
+42.55
+612
+56.92
+754 
+71.29 
+502 
+0.15 
+143 
+14.5 285 
+28.87
+427
+43.24
+569
+57.62
+711 
+71.99 
+459 
+0.85 
+644 
+14.52 786 
+28.9
+928
+43.27
+68
+57.64
+210 
+72.01 
+960 
+0.87 
+601 
+15.22 743 
+29.59
+885
+43.96
+25
+58.34
+167 
+72.71 
+917 
+1.57 
+100 
+15.24 242 
+29.61
+384
+43.98
+526
+58.36
+668 
+72.73 
+416 
+1.59 
+57 
+15.94 199 
+30.31
+341
+44.68
+483
+59.05
+625 
+73.43 
+373 
+2.29 
+558 
+15.96 700 
+30.33
+842
+44.7
+984
+59.07
+124 
+73.45 
+874 
+2.31 
+515 
+16.66 657 
+31.03
+799
+45.4
+941
+59.77
+81 
+74.14 
+831 
+3.01 
+14 
+16.68 156 
+31.05
+298
+45.42
+440
+59.79
+582 
+74.16 
+330 
+3.02 
+973 
+17.38 113 
+31.75
+255
+46.12
+397
+60.49
+539 
+74.86 
+287 
+3.72 
+472 
+17.4 614 
+31.77
+756
+46.14
+898
+60.51
+38 
+74.88 
+788 
+3.74 
+429 
+18.1 571 
+32.47
+713
+46.84
+855
+61.21
+997 
+75.58 
+745 
+4.44 
+930 
+18.12 
+70 
+32.49
+212
+46.86
+354
+61.23
+496 
+75.6 
+244 
+4.46 
+887 
+18.81 
+27 
+33.19
+169
+47.56
+311
+61.93
+453 
+76.3 
+201 
+5.16 
+386 
+18.83 528 
+33.21
+670
+47.58
+812
+61.95
+954 
+76.32 
+702 
+5.18 
+343 
+19.53 485 
+33.9
+627
+48.28
+769
+62.65
+911 
+77.02 
+659 
+5.88 
+844 
+19.55 986 
+33.92
+126
+48.3
+268
+62.67
+410 
+77.04 
+158 
+5.9 
+801 
+20.25 943 
+34.62
+83
+48.99
+225
+63.36
+367 
+77.74 
+115 
+6.6 
+300 
+20.27 442 
+34.64
+584
+49.01
+726
+63.39
+868 
+77.76 
+616 
+6.62 
+257 
+20.97 399 
+35.34
+541
+49.71
+683
+64.08
+825 
+78.46 
+573 
+7.32 
+758 
+20.99 900 
+35.36
+40
+49.73
+182
+64.1
+324 
+78.47 
+72 
+7.34 
+715 
+21.69 857 
+36.06
+999
+50.43
+139
+64.8
+281 
+79.17 
+29 
+8.04 
+214 
+21.71 356 
+36.08
+498
+50.45
+640
+64.82
+782 
+79.19 
+530 
+8.06 
+171 
+22.41 313 
+36.78
+455
+51.15
+597
+65.52
+739 
+79.89 
+487 
+8.76 
+672 
+22.43 814 
+36.8
+956
+51.17
+96
+65.54
+238 
+79.91 
+988 
+8.77 
+629 
+23.13 771 
+37.5
+913
+51.87
+53
+66.24
+195 
+80.61 
+945 
+9.47 
+128 
+23.15 270 
+37.52
+412
+51.89
+554
+66.26
+696 
+80.63 
+444 
+9.49 
+85 
+23.84 227 
+38.21
+369
+52.59
+511
+66.96
+653 
+81.33 
+401 
+10.19 
+586 
+23.86 728 
+38.24
+870
+52.61
+10
+66.98
+152 
+81.35 
+902 
+10.21 
+543 
+24.56 685 
+38.93
+827
+53.31
+969
+67.68
+109 
+82.05 
+859 
+10.91 
+42 
+24.58 184 
+38.95
+326
+53.33
+468
+67.7
+610 
+82.07 
+358 
+10.93 1001 
+25.28 141 
+39.65
+283
+54.02
+425
+68.39
+567 
+82.77 
+315 
+11.63 
+500 
+25.3 642 
+39.67
+784
+54.05
+926
+68.42
+66 
+82.79 
+816 
+11.65 
+457 
+26 599 
+40.37
+741
+54.74
+883
+69.11
+23 
+83.49 
+773 
+12.35 
+958 
+26.02 
+98 
+40.39
+240
+54.76
+382
+69.13
+524 
+83.51 
+272 
+12.37 
+915 
+26.72 
+55 
+41.09
+197
+55.46
+339
+69.83
+481 
+84.2 
+229 
+13.07 
+414 
+26.74 556 
+41.11
+698
+55.48
+840
+69.85
+982 
+84.22 
+730 
+13.09 
+371 
+27.44 513 
+41.81
+655
+56.18
+797
+70.55
+939 
+84.92 
+687 
+13.79 
+872 
+27.46 
+12 
+41.83
+154
+56.2
+296
+70.57
+438 
+84.94 
+186 
+13.8 
+829 
+28.16 971 
+42.53
+111
+56.9
+253
+71.27
+395 
+85.64 
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+27 
+ 
+ 
+ 
+ 
+ 
+Pass 
+Long(°) Pass 
+Long(°) Pass 
+Long(°) Pass 
+Long(°) Pass 
+Long(°) Pass 
+Long(°) 
+896 
+85.66 
+36 100.03 178 
+114.4
+320
+128.77
+462
+143.14
+604 157.52 
+853 
+86.36 995 100.73 135 
+115.1
+277
+129.47
+419
+143.85
+561 158.22 
+352 
+86.38 494 100.75 636 115.12
+778
+129.49
+920
+143.86
+60 158.24 
+309 
+87.08 451 101.45 593 115.82
+735
+130.19
+877
+144.56
+17 158.94 
+810 
+87.1 952 101.47 
+92 115.84
+234
+130.21
+376
+144.58
+518 158.95 
+767 
+87.8 909 102.17 
+49 116.54
+191
+130.91
+333
+145.28
+475 159.65 
+266 
+87.82 408 102.19 550 116.56
+692
+130.93
+834
+145.3
+976 159.67 
+223 
+88.51 365 102.89 507 117.26
+649
+131.63
+791
+146
+933 160.37 
+724 
+88.54 866 102.91 
+6 117.28
+148
+131.65
+290
+146.02
+432 160.39 
+681 
+89.23 823 103.61 965 117.98
+105
+132.35
+247
+146.72
+389 161.09 
+180 
+89.25 322 103.62 464 117.99
+606
+132.37
+748
+146.74
+890 161.11 
+137 
+89.95 279 104.32 421 
+118.7
+563
+133.07
+705
+147.44
+847 161.81 
+638 
+89.97 780 104.34 922 118.71
+62
+133.09
+204
+147.46
+346 161.83 
+595 
+90.67 737 105.04 879 119.42
+19
+133.79
+161
+148.16
+303 162.53 
+94 
+90.69 236 105.06 378 119.43
+520
+133.8
+662
+148.18
+804 162.55 
+51 
+91.39 193 105.76 335 120.13
+477
+134.5
+619
+148.88
+761 163.25 
+552 
+91.41 694 105.78 836 120.15
+978
+134.52
+118
+148.89
+260 163.26 
+509 
+92.11 651 106.48 793 120.85
+935
+135.22
+75
+149.59
+217 163.96 
+8 
+92.13 150 
+106.5 292 120.87
+434
+135.24
+576
+149.61
+718 163.98 
+967 
+92.83 107 
+107.2 249 121.57
+391
+135.94
+533
+150.31
+675 164.68 
+466 
+92.85 608 107.22 750 121.59
+892
+135.96
+32
+150.33
+174 
+164.7 
+423 
+93.55 565 107.92 707 122.29
+849
+136.66
+991
+151.03
+131 
+165.4 
+924 
+93.56 
+64 107.94 206 122.31
+348
+136.68
+490
+151.05
+632 165.42 
+881 
+94.26 
+21 108.64 163 123.01
+305
+137.38
+447
+151.75
+589 166.12 
+380 
+94.28 522 108.65 664 123.03
+806
+137.4
+948
+151.77
+88 166.14 
+337 
+94.98 479 109.35 621 123.73
+763
+138.1
+905
+152.47
+45 166.84 
+838 
+95 980 109.37 120 123.74
+262
+138.11
+404
+152.49
+546 166.86 
+795 
+95.7 937 110.07 
+77 124.44
+219
+138.81
+361
+153.19
+503 167.56 
+294 
+95.72 436 110.09 578 124.46
+720
+138.83
+862
+153.21
+2 167.58 
+251 
+96.42 393 110.79 535 125.16
+677
+139.54
+819
+153.91
+961 168.28 
+752 
+96.44 894 110.81 
+34 125.18
+176
+139.55
+318
+153.92
+460 168.29 
+709 
+97.14 851 111.51 993 125.88
+133
+140.25
+275
+154.62
+417 
+169 
+208 
+97.16 350 111.53 492 
+125.9
+634
+140.27
+776
+154.64
+918 169.01 
+165 
+97.86 307 112.23 449 
+126.6
+591
+140.97
+733
+155.34
+875 169.71 
+666 
+97.88 808 112.25 950 126.62
+90
+140.99
+232
+155.36
+374 169.73 
+623 
+98.58 765 112.95 907 127.32
+47
+141.69
+189
+156.06
+331 170.43 
+122 
+98.59 264 112.96 406 127.34
+548
+141.71
+690
+156.08
+832 170.45 
+79 
+99.29 221 113.67 363 128.04
+505
+142.41
+647
+156.78
+789 171.15 
+580 
+99.31 722 113.68 864 128.06
+4
+142.43
+146
+156.8
+288 171.17 
+537 100.01 679 114.39 821 128.76
+963
+143.13
+103
+157.5
+245 171.87 
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+28 
+ 
+ 
+ 
+ 
+Pass 
+Long(°) Pass 
+Long(°) Pass 
+Long(°) Pass 
+Long(°) Pass 
+Long(°) Pass 
+Long(°) 
+746 171.89 
+888 186.26 
+28 200.63
+170
+215
+312
+229.37
+454 243.74 
+703 172.59 
+845 186.96 987 201.33
+127
+215.7
+269
+230.07
+411 244.45 
+202 172.61 
+344 186.98 486 201.35
+628
+215.72
+770
+230.09
+912 244.46 
+159 173.31 
+301 187.68 443 202.05
+585
+216.42
+727
+230.79
+869 245.16 
+660 173.33 
+802 
+187.7 944 202.07
+84
+216.44
+226
+230.81
+368 245.18 
+617 174.03 
+759 
+188.4 901 202.77
+41
+217.14
+183
+231.51
+325 245.88 
+116 174.04 
+258 188.41 400 202.78
+542
+217.16
+684
+231.53
+826 
+245.9 
+73 174.74 
+215 189.11 357 203.49
+499
+217.86
+641
+232.23
+783 
+246.6 
+574 174.76 
+716 189.13 858 
+203.5 1000
+217.87
+140
+232.25
+282 246.62 
+531 175.46 
+673 189.83 815 204.21
+957
+218.58
+97
+232.95
+239 247.32 
+30 175.48 
+172 189.85 314 204.22
+456
+218.59
+598
+232.96
+740 247.34 
+989 176.18 
+129 190.55 271 204.92
+413
+219.3
+555
+233.67
+697 248.04 
+488 
+176.2 
+630 190.57 772 204.94
+914
+219.31
+54
+233.68
+196 248.05 
+445 
+176.9 
+587 191.27 729 205.64
+871
+220.01
+11
+234.39
+153 248.76 
+946 176.92 
+86 191.29 228 205.66
+370
+220.03
+512
+234.4
+654 248.77 
+903 177.62 
+43 191.99 185 206.36
+327
+220.73
+469
+235.1
+611 249.48 
+402 177.64 
+544 192.01 686 206.38
+828
+220.75
+970
+235.12
+110 249.49 
+359 178.34 
+501 192.71 643 207.08
+785
+221.45
+927
+235.82
+67 250.19 
+860 178.35 1002 192.72 142 
+207.1
+284
+221.47
+426
+235.84
+568 250.21 
+817 179.06 
+959 193.43 
+99 
+207.8
+241
+222.17
+383
+236.54
+525 250.91 
+316 179.07 
+458 193.44 600 207.82
+742
+222.19
+884
+236.56
+24 250.93 
+273 179.77 
+415 194.15 557 208.52
+699
+222.89
+841
+237.26
+983 251.63 
+774 179.79 
+916 194.16 
+56 208.53
+198
+222.9
+340
+237.28
+482 251.65 
+731 180.49 
+873 194.86 
+13 209.24
+155
+223.61
+297
+237.98
+439 252.35 
+230 180.51 
+372 194.88 514 209.25
+656
+223.62
+798
+238
+940 252.37 
+187 181.21 
+329 195.58 471 209.95
+613
+224.33
+755
+238.7
+897 253.07 
+688 181.23 
+830 
+195.6 972 209.97
+112
+224.34
+254
+238.71
+396 253.08 
+645 181.93 
+787 
+196.3 929 210.67
+69
+225.04
+211
+239.41
+353 253.79 
+144 181.95 
+286 196.32 428 210.69
+570
+225.06
+712
+239.43
+854 
+253.8 
+101 182.65 
+243 197.02 385 211.39
+527
+225.76
+669
+240.14
+811 254.51 
+602 182.67 
+744 197.04 886 211.41
+26
+225.78
+168
+240.15
+310 254.52 
+559 183.37 
+701 197.74 843 212.11
+985
+226.48
+125
+240.85
+267 255.22 
+58 183.38 
+200 197.75 342 212.13
+484
+226.5
+626
+240.87
+768 255.24 
+15 184.09 
+157 198.46 299 212.83
+441
+227.2
+583
+241.57
+725 255.94 
+516 
+184.1 
+658 198.47 800 212.85
+942
+227.22
+82
+241.59
+224 255.96 
+473 
+184.8 
+615 199.18 757 213.55
+899
+227.92
+39
+242.29
+181 256.66 
+974 184.82 
+114 199.19 256 213.56
+398
+227.93
+540
+242.31
+682 256.68 
+931 185.52 
+71 199.89 213 214.26
+355
+228.64
+497
+243.01
+639 257.38 
+430 185.54 
+572 199.91 714 214.28
+856
+228.65
+998
+243.02
+138 
+257.4 
+387 186.24 
+529 200.61 671 214.98
+813
+229.36
+955
+243.73
+95 
+258.1 
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+29 
+ 
+ 
+ 
+ 
+Pass 
+Long(°) Pass 
+Long(°) Pass 
+Long(°) Pass 
+Long(°) Pass 
+Long(°) Pass 
+Long(°) 
+596 258.12 738 272.49 880 286.86
+20
+301.23
+162
+315.6
+304 329.97 
+553 258.82 695 273.19 837 287.56
+979
+301.93
+119
+316.3
+261 330.67 
+52 258.83 194 
+273.2 336 287.58
+478
+301.95
+620
+316.32
+762 330.69 
+9 259.54 151 273.91 293 288.28
+435
+302.65
+577
+317.02
+719 331.39 
+510 259.55 652 273.92 794 
+288.3
+936
+302.67
+76
+317.04
+218 331.41 
+467 260.25 609 274.63 751 
+289
+893
+303.37
+33
+317.74
+175 332.11 
+968 260.27 108 274.64 250 289.01
+392
+303.38
+534
+317.76
+676 332.13 
+925 260.97 
+65 275.34 207 289.71
+349
+304.08
+491
+318.46
+633 332.83 
+424 260.99 566 275.36 708 289.73
+850
+304.1
+992
+318.47
+132 332.85 
+381 261.69 523 276.06 665 290.43
+807
+304.8
+949
+319.17
+89 333.55 
+882 261.71 
+22 276.08 164 290.45
+306
+304.82
+448
+319.19
+590 333.57 
+839 262.41 981 276.78 121 291.15
+263
+305.52
+405
+319.89
+547 334.27 
+338 262.43 480 
+276.8 622 291.17
+764
+305.54
+906
+319.91
+46 334.28 
+295 263.13 437 
+277.5 579 291.87
+721
+306.24
+863
+320.61
+3 334.98 
+796 263.15 938 277.52 
+78 291.89
+220
+306.26
+362
+320.63
+504 
+335 
+753 263.85 895 278.22 
+35 292.59
+177
+306.96
+319
+321.33
+461 
+335.7 
+252 263.86 394 278.23 536 292.61
+678
+306.98
+820
+321.35
+962 335.72 
+209 264.56 351 278.94 493 293.31
+635
+307.68
+777
+322.05
+919 336.42 
+710 264.58 852 278.95 994 293.33
+134
+307.7
+276
+322.07
+418 336.44 
+667 265.28 809 279.65 951 294.02
+91
+308.4
+233
+322.77
+375 337.14 
+166 
+265.3 308 279.67 450 294.04
+592
+308.42
+734
+322.79
+876 337.16 
+123 
+266 265 280.37 407 294.74
+549
+309.12
+691
+323.49
+833 337.86 
+624 266.02 766 280.39 908 294.76
+48
+309.13
+190
+323.5
+332 337.88 
+581 266.72 723 281.09 865 295.46
+5
+309.83
+147
+324.2
+289 338.58 
+80 266.74 222 281.11 364 295.48
+506
+309.85
+648
+324.22
+790 
+338.6 
+37 267.44 179 281.81 321 296.18
+463
+310.55
+605
+324.92
+747 
+339.3 
+538 267.46 680 281.83 822 
+296.2
+964
+310.57
+104
+324.94
+246 339.31 
+495 268.16 637 282.53 779 
+296.9
+921
+311.27
+61
+325.64
+203 340.01 
+996 268.17 136 282.55 278 296.92
+420
+311.29
+562
+325.66
+704 340.03 
+953 268.88 
+93 283.25 235 297.62
+377
+311.99
+519
+326.36
+661 340.73 
+452 268.89 594 283.27 736 297.64
+878
+312.01
+18
+326.38
+160 340.75 
+409 269.59 551 283.97 693 298.34
+835
+312.71
+977
+327.08
+117 341.45 
+910 269.61 
+50 283.98 192 298.35
+334
+312.73
+476
+327.1
+618 341.47 
+867 270.31 
+7 284.68 149 299.05
+291
+313.43
+433
+327.8
+575 342.17 
+366 270.33 508 
+284.7 650 299.07
+792
+313.45
+934
+327.82
+74 342.19 
+323 271.03 465 
+285.4 607 299.77
+749
+314.15
+891
+328.52
+31 342.89 
+824 271.05 966 285.42 106 299.79
+248
+314.16
+390
+328.53
+532 342.91 
+781 271.75 923 286.12 
+63 300.49
+205
+314.86
+347
+329.23
+489 343.61 
+280 271.77 422 286.14 564 300.51
+706
+314.88
+848
+329.25
+990 343.62 
+237 272.47 379 286.84 521 301.21
+663
+315.58
+805
+329.95
+947 344.32 
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+30 
+ 
+ 
+ 
+ 
+Pass Long (°) Pass Long(°) 
+446
+344.34
+588
+358.71
+403
+345.04
+545
+359.41
+904
+345.06
+44
+359.43
+861
+345.76   
+  
+360
+345.78   
+  
+317
+346.48   
+  
+818
+346.5   
+  
+775
+347.2   
+  
+274
+347.22   
+  
+231
+347.92   
+  
+732
+347.94   
+  
+689
+348.64   
+  
+188
+348.65   
+  
+145
+349.35   
+  
+646
+349.37   
+  
+603
+350.07   
+  
+102
+350.09   
+  
+59
+350.79   
+  
+560
+350.81   
+  
+517
+351.51   
+  
+16
+351.53   
+  
+975
+352.23   
+  
+474
+352.25   
+  
+431
+352.95   
+  
+932
+352.97   
+  
+889
+353.67   
+  
+388
+353.68   
+  
+345
+354.38   
+  
+846
+354.4   
+  
+803
+355.1   
+  
+302
+355.12   
+  
+259
+355.82   
+  
+760
+355.84   
+  
+717
+356.54   
+  
+216
+356.56   
+  
+173
+357.26   
+  
+674
+357.28   
+  
+631
+357.98   
+  
+130
+358   
+  
+87
+358.7   
+  
+Table 7 : Equator Crossing Longitudes (in order of Longitude) 
+2.6.4. The SARAL/AltiKa Project Phases 
+The satellite mission has two main phases (verification and operational).   
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+31 
+ 
+ 
+ 
+ 
+Figure 12 : SARAL Mission Phases and associated responsibilities 
+2.6.4.1. The verification phase 
+The verification phase (9 -10 months since beginning of cycle 1) began shortly after launch, when 
+the satellite reached the operational (nominal repetitive) orbit and the satellite and sensor systems 
+were functioning normally. This phase continued until the data received from the sensors were 
+satisfactorily calibrated and verified.  
+During this calibration/validation phase, the quality control will be achieved through many steps as 
+a series of quality controls designed to ensure a continuous supply of data : regular cyclic data 
+product analysis (complete parameter analysis and diagnostics, missions/edited measurements, 
+crossovers and along-track analysis, orbit analysis, …), cross-calibration with other altimeters 
+(SARAL/AltiKa,…), instrumental expertise for altimeter and radiometer monitoring, and by 
+performing absolute calibration at dedicated in situ calibration sites. 
+This verification phase is divided in 2 phases which overlap:  
+1. One dedicated to the validation of the near real time products (OGDRs).  
+2. The second phase dedicated to the validation of the off-line products (IGDR and GDR).  
+2.6.4.2. The operational (routine and long-term CALVAL activities) 
+The operational phase begins after the successful validation of each product type, and when all 
+necessary algorithm and processing changes are implemented to have SARAL/AltiKa performances 
+at the same level as other altimetric satellites. Beyond the CALVAL phase, it is necessary to 
+perform regular long-term CALVAL in order to monitor biases and drifts of AltiKa overall system: in 
+addition to previously mentioned analysis, comparison of SARAL/AltiKa data with global and 
+regional networks of in situ data (tide gauges, T/S profiles, …) will be performed as soon as enough 
+in situ data are available (~1 year after launch). These different analysis will also be implemented  
+in order to calibrate and validate new ground processing algorithms that could be proposed and 
+implemented during the CALVAL phase.  
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+32 
+ 
+ 
+ 
+Considering the specificities of SARAL/AltiKa mission, particular attention will be given to evaluate 
+and monitor the mission performances over coastal and inland water areas, over polar oceans and 
+ice surfaces, as well as under rainy/cloudy conditions, with respect to previous and other in-flight 
+altimetry missions. 
+2.7. Data Processing and Distribution 
+Processing centers perform functions such as science data processing, data verification and orbit 
+determination. 
+There are three levels of processed data: 
+• 
+Telemetry data (raw data or level0) 
+• 
+Sensor Data Records (engineering units or level1) 
+• 
+Geophysical Data Records (geophysical units or level2) 
+There are two kinds of data processing and distribution: 
+• 
+Real-time processing and distribution (EUMETSAT and ISRO/NRSC) 
+The operational geophysical data record (OGDR) is available with a latency of 3-5 hours. Note 
+that this is a non-validated product that uses orbits computed by the on-board DORIS Navigator 
+(DIODE) and that does not contain all the environmental/geophysical corrections.  
+• 
+Delayed-mode processing and distribution (CNES and ISRO/SAC) 
+The interim geophysical data record (IGDR) is available per pass with a latency of less than 1.5 
+days. Note that this is not a fully validated product, although it uses a preliminary orbit and 
+includes all the environmental/geophysical corrections (preliminary for some of them). This 
+product is generated by CNES only. 
+The geophysical data record (GDR) is a fully validated product that uses a precise orbit and the 
+best environmental/geophysical corrections. This product is available per repeat cycle with a 
+latency of 40 days. Validation is performed by CNES teams to ensure in depth validation. GDR 
+products are generated both by CNES and ISRO/SAC. 
+Geophysical data records are disseminated to users as they become available, as well as ingested in 
+two main archives (at CNES and ISRO), where they are made available to the scientific community, 
+ISRO being in charge of data dissemination to Indian community and CNES to the rest of the 
+scientific community. 
+The NRT and offline data are provided through different sources and means as discussed below. 
+Note that the telemetry acquisition strategy, designed to minimize the risk of science data loss, 
+sometimes results in files containing data which overlaps in time. The NRT ground processing does 
+not remove these overlaps, so it is possible to encounter two or more OGDR products which have 
+overlapping start and stop sensing times. CNES-EUMETSAT-ISRO centers are disseminating 
+SARAL/AltiKa products according to the interagency agreement.  
+• 
+CNES via AVISO data service: http://www.aviso.oceanobs.com 
+“Archiving, Validation and Interpretation of Satellite Oceanographic data” is the French multi-
+satellite data distribution center dedicated to space oceanography, developed by CNES. 
+ 
+AVISO distributes and archives SARAL/AltiKa delayed-time data (IGDR, GDR). 
+• 
+EUMETSAT: http://www.eumetsat.int 
+EUMETSAT is the European Organisation for the Exploitation of Meteorological Satellites. Its role 
+is to deliver weather and climate-related satellite data, images and products– 24 hours a day, 
+365 days a year. 
+ 
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+33 
+ 
+ 
+ 
+EUMETSAT distributes operational data (OGDR). 
+• 
+ISRO: http://www.isro.org/  
+The objective of ISRO is to develop space technology and its application to various national 
+tasks.  
+ 
+ 
+ISRO distributes (at national level) operational data (OGDR) and archives delayed-time data 
+(GDR). 
+2.7.1. Access to NRT data 
+The OGDR and OGDR-SSHA files are produced at ISRO and EUMETSAT.  
+Telemetry data downlinked to CNES’s polar X-band ground stations at Kiruna (Sweden) and Inuvik 
+(Canada) are used to produce OGDR products.  
+In near real time, ISRO disseminates the complete set of OGDR files via ftp and EUMETSAT 
+disseminates the complete set of OGDR files on EUMETCast. The complete set of OGDR files consists 
+of OGDR and OGDR-SSHA. 
+Details on data dissemination services from ISRO and EUMETSAT agencies are described below. 
+2.7.2. Access to off-line data 
+The IGDR families are produced solely by CNES while GDR families are produced by CNES and ISRO. 
+They 
+are 
+available 
+for 
+French 
+and 
+foreign 
+users 
+on 
+the 
+AVISO 
+ftp 
+server 
+(http://www.aviso.oceanobs.com). For Indian users, off line GDR products are available on MOSDAC 
+(http://www.mosdac.gov.in/login.jsp).  Both of these archival facilities also provide a variety of 
+auxiliary files used to produce the O/I/GDR datasets, and ISRO also provides the OGDR family of 
+datasets. 
+Data dissemination services from ISRO and CNES agencies are described below. 
+2.7.3. Documentation and Sample Reader Software 
+This SARAL/AltiKa User’s Handbook document describes only the native product format. A 
+description of the O/I/GDR product format and contents is provided in the CNES document “SALP-
+ST-M-EA-15839-CN: SALP Products Specification - Volume 20 : AltiKa / SARAL User Products” (see RD 
+4). All documents are available through the data dissemination services. 
+Tools such as sample reading routines in Fortran-90, C, and IDL are also available through the data 
+dissemination services on the AVISO website and on the ISRO website (TBC by ISRO). The toolbox 
+BRAT is also recommended to read and study AltiKa data (see 6.4.3).  
+2.8. Access to data via ISRO 
+2.8.1. Access to NRT data 
+TBD by ISRO 
+2.8.2. Access to off line data 
+TBD by ISRO 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+34 
+ 
+ 
+ 
+2.9. Access to data via EUMETSAT 
+2.9.1. NRT data access  
+Operational users requiring near real-time access (within a few hours of acquisition) can receive 
+data via EUMETCast, which is the prime dissemination mechanism for EUMETSAT satellite data and 
+meteorological products. EUMETCast is also used to deliver data supplied by several external data 
+providers. 
+EUMETCast is an environmental data and product dissemination system based on standard Digital 
+Video Broadcast (DVB) technology. It uses commercial telecommunication geostationary satellites 
+to broadcast data and products to a wide user community. EUMETSAT operates three EUMETCast 
+broadcasts: EUMETCast Europe in Ku-band via Hotbird-6 EUMETCast Africa in C-band via 
+AtlanticBird-3 and EUMETCast South America in C-band via NewSkies-806. The coverage zones of 
+these broadcasts are shown in Figure below. The SARAL/AltiKa products are currently disseminated 
+over all beams. 
+ 
+ 
+ 
+Figure 11 : GEONETCast Coverage Zones 
+ 
+EUMETCast is part of a wider data dissemination cooperation network known as GEONETCast, 
+defined as a global network of satellite based data dissemination systems providing environmental 
+data to a world-wide user community. The current partners within the GEONETCast initiative 
+include the National Oceanic and Atmospheric Administration (NOAA), the World Meteorological 
+Organization (WMO) and EUMETSAT, as well as many prospective data provider partners.  
+EUMETCast is a multi-service dissemination mechanism and other environmental data streams and 
+products are also delivered via EUMETCast : 
+• 
+Space-based observations from the Meteosat, Metop, GOES, MT-SAT and FY2 satellites – at 
+their most frequent, these data are delivered to Users within 5-minutes of processing 
+• 
+MODIS level 1and 2 products covering selective geographical regions 
+• 
+Numerical Weather Forecasts 
+• 
+In-situ observational data 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+35 
+ 
+ 
+ 
+• 
+Land application products covering Europe, Africa and South America 
+• 
+Marine meteorological and ocean surface products covering the Atlantic, Mediterranean Sea 
+and Yellow Sea 
+• 
+Atmospheric chemistry products 
+EUMETCast has an installed user base of over 2500 stations worldwide. 
+A typical EUMETCast reception station comprises a standard PC with DVB card inserted and a 
+satellite off-set antenna fitted with a digital universal V/H LNB. All components of the reception 
+station are commercially available. The hardware costs for a single PC station for EUMETCast 
+Europe (Ku-band) reception start at around €1,500. In addition, EUMETCast Client Software package 
+is required for handling the incoming DVB and storing it as data files. This package is available 
+directly from EUMETSAT at a one of fee of €100and forms part of any registration process. 
+Further information on EUMETCast can be found on the EUMETSAT Web site at: 
+http://www.eumetsat.int/Home/Main/What_We_Do/EUMETCast/index.htm?l=en  or alternatively 
+follow the links to ‘What We Do’-‘EUMETCast’. Note that the coverage of EUMETCast is achieved 
+through different beams, and the user location will determine the technical requirements of the 
+EUMETCast reception station equipment. 
+The SARAL/AltiKa products available via EUMETCast are the EUMETSAT and ISRO injected OGDR and 
+OGDR-SSHA. To access these on EUMETCast, users are requested to register online via the 
+EUMETSAT Web site, or to contact the EUMETSAT User Service Helpdesk. As for Jason-2 near real-
+time products, already disseminated by EUMETSAT via EUMETCast, the SARAL/AltiKa products will 
+be disseminated on all EUMETCast channels (Europe, Americas and Africa). 
+All enquiries related to EUMETCast can be addressed to the EUMETSAT User Helpdesk, email 
+ops@eumetsat.int, who will be happy to assist with information on reception station manufacturers, 
+reception station setup and data access registration to the SARAL/AltiKa service, or indeed to other 
+near real-time EUMETSAT data services. 
+2.9.2. Access to archived data  
+The SARAL/AltiKa products generated and distributed by EUMETSAT in near real-time (i.e., OGDR 
+and OGDR-SSHA) are also archived in the multi-mission EUMETSAT Archive. Any user can access 
+SARAL/AltiKa data from the EUMETSAT archive upon registration. Information on registration, the 
+archive itself and how to use it can be found at http://archive.eumetsat.org/umarf  or follow the 
+links to ‘Access to Data’ and then ‘Archive Service’. Data delivery media include, among others, 
+direct ftp push to a provided IP address, including the possibility of establishing standing orders, or 
+download by the user from an html page. Note however that this is not a near real-time data 
+access, but that it can take up to several hours and occasionally even days to get the data. 
+2.10. CNES data distribution 
+2.10.1. Details of off line data access via CNES 
+Users have access to SARAL/AltiKa public data through a dedicated AVISO ftp server with an 
+anonymous account (nevertheless, please note that users shall be registered before downloading 
+products in order to be identified by AVISO helpdesk and to receive altimetric news. Registration 
+form is available at : http://www.aviso.oceanobs.com/en/data/registration-form/).  
+Off line IGDR and GDR products are available on the following server: 
+• 
+IP address / server name : avisoftp.cnes.fr 
+• 
+User account : anonymous 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+36 
+ 
+ 
+ 
+• 
+Home directory : /Niveau0/AVISO/pub/saral 
+With the following ftp server directory tree:  
+ documentation  
+Æ  
+directory containing product spec, product handbook, 
+ 
+reading tools, … 
+ 
+igdr_t or igdr  
+Æ  
+directory containing IGDR native products   
+ 
+ 
+ 
+(with a sub directory for each cycle and sub directory  
+ 
+ 
+ 
+containing the latest data) 
+ 
+sigdr_t or sigdr 
+Æ  
+directory containing S-IGDR  
+ 
+ 
+ 
+(with a unique sub directory containing the latest data) 
+ 
+ssha_igdr_t or ssha_igdr 
+Æ  
+directory containing IGDR reduced products  
+ 
+ 
+ 
+ 
+(with a sub directory for each cycle and a sub directory  
+ 
+ 
+ 
+containing the latest data) 
+ 
+gdr_t or gdr 
+Æ  
+directory containing GDR native products   
+ 
+ 
+ 
+(with a sub directory for each cycle) 
+ 
+sgdr_t or sgdr  
+Æ  
+directory containing S-GDR  
+ 
+ 
+ 
+(with a sub directory for each cycle) 
+ 
+ssha_gdr_t or ssha_gdr 
+Æ  
+directory containing GDR reduced products   
+ 
+ 
+ 
+(with a sub directory for each cycle) 
+ 
+gdr_t_validation_report 
+Æ  
+directory containing GDR validation reports 
+     or gdr_validation_report 
+ 
+For any questions on SARAL/AltiKa data dissemination on AVISO servers please contact the user 
+helpdesk: aviso@oceanobs.com.   
+ 
+3. Product evolution history 
+3.1. Models and Standards History 
+The version of the data produced during the Cal/Val phase of the mission is identified by the 
+version letter “T” in the name of the data products. This “T” calibration/validation version will be 
+extensively validated by PIs during the verification phase. 
+The current product version adopts models and standards that are consistent with version “d” of 
+the Jason-1 and Jason-2 (I)GDR products (see RD 1).  
+The table below summarizes the models and standards that are adopted in this version of the 
+SARAL/AltiKa (O)(I)GDRs.  
+ 
+Model 
+Product Version "T” and “d” 
+Orbit 
+Based on Doris on-board navigator solution for OGDRS.  
+DORIS tracking data for IGDRs 
+DORIS+SLR tracking data for GDRs.  
+ 
+Altimeter Retracking 
+“Ocean” retracking 
+MLE4 fit from 2nd order Brown analytical model : MLE4 simultaneously 
+retrieves the 4 parameters that can be inverted from the altimeter 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+37 
+ 
+ 
+ 
+Model 
+Product Version "T” and “d” 
+waveforms: 
+- 
+Epoch (tracker range offset) ⇒ altimeter range 
+- 
+Composite Sigma ⇒ SWH 
+- 
+Amplitude ⇒ Sigma0 
+- 
+Square of mispointing angle 
+ 
+“Ice 1” retracking 
+Geometrical analysis of the altimeter waveforms, which retrieves the 
+following parameters: 
+- 
+Epoch (tracker range offset) ⇒ altimeter range 
+- 
+Amplitude ⇒ Sigma0 
+ 
+“Ice 2” retracking 
+The aim of the ice2 retracking algorithm is to make the measured 
+waveform coincide with a return power model, according to Least 
+Square estimators. Retrieval of the following parameters: 
+- 
+Epoch ⇒ altimeter range 
+- 
+Width of the leading edge 
+- 
+Amplitude ⇒ Sigma0 
+- 
+Slope of the logarithm of the waveform at the trailing edge ⇒ 
+Mispointing angle 
+- 
+the thermal noise level (to be removed from the waveform 
+samples) 
+ 
+“Sea Ice” retracking 
+In this algorithm, waveform parameterisation based on peak threshold 
+retracking is applied to the Ka-band waveform. From this 
+parameterisation, a tracking offset and backscatter estimate are 
+determined. Tests are made on the extent of the tracking offset, and 
+extreme values are flagged as retracking failures. The sea-ice 
+waveform amplitude is determined by finding the maximum value of 
+the waveform samples and the tracking offset is determined by 
+finding the point on the waveform (by interpolation) where the 
+waveform amplitude exceeds a threshold determined from the above 
+sea-ice amplitude. A tracking offset is determined. The Centre Of 
+Gravity offset correction must be included in the range measurement 
+as the correction is not available separately in the L2 product. 
+- 
+Amplitude ⇒ Sigma0 
+- 
+Tracking offset ⇒ altimeter range 
+- 
+Centre Of Gravity offset correction ⇒ correction to altimeter 
+range measurement 
+ 
+Altimeter Instrument 
+Corrections 
+Consistent with MLE4 retracking algorithm 
+SARAL/AltiKa Radiometer 
+Parameters 
+Using on-board calibration  
+Dry Troposphere Range 
+Correction 
+From ECMWF atmospheric pressures and model for S1 and S2 
+atmospheric tides 
+Wet Troposphere Range 
+Correction from Model 
+From ECMWF model 
+Ionosphere correction 
+Based on Global Ionosphere TEC Maps from JPL 
+Sea State Bias 
+3.5% of SWH values 
+Mean Sea Surface 
+MSS_CNES-CLS11 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+38 
+ 
+ 
+ 
+Model 
+Product Version "T” and “d” 
+Mean Dynamic Topography 
+MDT_CNES-CLS09 
+Geoid 
+EGM96 
+Bathymetry Model 
+DTM2000.1 
+Inverse Barometer Correction 
+Computed from ECMWF atmospheric pressures after removing S1 and 
+S2 atmospheric tides 
+Non-tidal High-frequency 
+Dealiasing Correction 
+Mog2D High Resolution ocean model on (I)GDRs. None for OGDRs. 
+Ocean model forced by ECMWF atmospheric pressures after removing 
+S1 and S2 atmospheric tides 
+Tide Solution 1 
+GOT4.8 + S1 ocean tide. S1 load tide ignored 
+Tide Solution 2 
+FES2004 + S1 and M4 ocean tides. S1 and M4 load tides ignored 
+Equilibrium long-period 
+ocean tide model 
+From Cartwright and Taylor tidal potential 
+Non-equilibrium 
+long-period 
+ocean tide model 
+Mm, Mf, Mtm, and Msqm from FES2004 
+Solid Earth Tide Model 
+From Cartwright and Taylor tidal potential 
+Pole Tide Model 
+Equilibrium model 
+Wind Speed from Model 
+ECMWF model 
+Altimeter Wind Speed Model 
+Derived from Jason-1 data 
+Trailing edge variation Flag 
+Derived from Matching Pursuit algorithm (from J. Tournadre, IFREMER) 
+Ice Flag 
+Derived from comparison of the model wet tropospheric correction to 
+a dual-frequency wet tropospheric correction retrieved from 
+radiometer brightness temperatures, with a default value issued from 
+a climatology table 
+Table 8 : Models and standards 
+3.2. Models and Editing on Version "d" Products 
+3.2.1. Orbit models 
+SARAL/AltiKa orbit standards are based on Jason-2 GDR-D standards.  
+Those are summarized below, the previous standard used on Jason-1/Jason-2 and ENVISAT missions 
+(GDR_C) is also recalled  : 
+ 
+ 
+GDR-C 
+GDR-D 
+Gravity model 
+EIGEN-GL04S-ANNUAL (2008) 
+Non-tidal TVG : drifts in degree 2,3,4 zonal 
+coeffs, C21/S21; Annual and semi-annual 
+terms up to deg/ord 50 
+Solid 
+Earth 
+Tides: 
+from 
+IERS2003 
+conventions 
+Ocean tides FES2004 
+Atmospheric gravity : 6hr NCEP pressure 
+fields + tides from Horwitz-Cowley model 
+Pole Tide: solid Earth and ocean from 
+IERS2003 conventions 
+Third bodies: Sun, Moon, Venus, Mars and 
+EIGEN-GRGS_RL02bis_MEAN-FIELD (2011) 
+Non-tidal TVG : Annual, Semi-annual, and  
+drifts up to deg/ord 50 
+Solid 
+Earth 
+Tides: 
+from 
+IERS2003 
+conventions 
+Ocean tides FES2004 
+Atmospheric gravity : 6hr NCEP pressure 
+fields + tides from Biancale-Bode model 
+Pole Tide: solid Earth and ocean from 
+IERS2010 conventions 
+Third bodies: Sun, Moon, Venus, Mars and 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+39 
+ 
+ 
+ 
+ 
+GDR-C 
+GDR-D 
+Jupiter 
+Jupiter 
+Surface forces 
+Radiation Pressure model: thermo-optical 
+coefficient from pre-launch box and wing 
+model, with smoothed Earth shadow model 
+Earth Radiation : Knocke-Ries albedo and 
+IR satellite model 
+Atmospheric density model : DTM-94 for 
+Jason, and MSIS-86 for Envisat 
+Unchanged 
+Estimated 
+dynamical 
+parameters 
+Drag coefficient every 2 or 3 revolutions 
+Along-track and Cross-track 1/rev per day 
+or every 12 hours  
+Unchanged 
+Satellite 
+reference 
+Mass and Center of gravity: Post-Launch 
+values + variations generated by Control 
+Center 
+Attitude Model :  
+For Jason-1 and Jason-2 : Quaternions and 
+Solar 
+Panel 
+orientation 
+from 
+control 
+center, 
+completed 
+by 
+nominal 
+yaw 
+steering law when necessary  
+For Envisat: nominal attitude law 
+Unchanged  
+Displacement 
+of 
+reference points 
+Earth tides: IERS2003 conventions 
+Ocean Loading: FES2004 
+Pole tide : solid earth pole tides 
+(Pole tide and ocean loading applied to 
+both SLR stations and DORIS beacons) 
+Reference GPS constellation: JPL solution 
+at IGS (orbits and clocks) , consistent with 
+IGS05; before GPS week 1400, JPL solution 
+has been aligned with IGS05; IGS00 clocks 
+are unchanged 
+ 
+Earth tides: IERS2003 conventions 
+Ocean Loading: FES2004 
+Pole tide : solid earth pole tides 
+(Pole tide and ocean loading applied to 
+both SLR stations and DORIS beacons) 
+Reference GPS constellation: JPL solution 
+at IGS (orbits and clocks) – fully consistent 
+with IGS08 
+Terrestrial 
+Reference Frame 
+Extended 
+ITRF2005 
+(SLRF/LPOD2005, 
+DPOD2005, IGS05) 
+Extended 
+ITRF2008 
+(SLRF/ITRF2008, 
+DPOD2008, IGS08) 
+Earth orientation 
+Consistent with IERS2003 conventions and 
+ITRF2005 
+Consistent with IERS2010 conventions 
+and ITRF2008 
+Propagations 
+delays 
+SLR Troposphere correction: Mendes-Pavlis 
+SLR range correction: constant 5.0 cm 
+range correction for Envisat, elevation 
+dependent range correction for Jason 
+DORIS 
+Troposphere 
+correction : 
+CNET 
+model                             
+GPS PCO/PCV (Emitter and Receiver) 
+consistent with constellation orbits and 
+SLR Troposphere correction: Mendes-Pavlis 
+SLR range correction: constant 5.0 cm 
+range correction for Envisat, elevation 
+dependent range correction for Jason 
+DORIS Troposphere correction : GPT/GMF 
+model 
+GPS PCO/PCV (Emitter and Receiver) 
+consistent with constellation orbits and 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+40 
+ 
+ 
+ 
+ 
+GDR-C 
+GDR-D 
+clocks (IGS05 Antex after GPS week 1400) 
+GPS : Phase wind-up correction 
+clocks (IGS08 Antex) 
+GPS : Phase wind-up correction 
+Estimated 
+measurement 
+parameters 
+DORIS: 1 Frequency bias per pass, 1 
+troposphere zenith bias per pass 
+SLR : bias per arc solved for a few stations, 
+bias per pass for a few stations 
+GPS: Floating ambiguity per pass, receiver 
+clock adjusted per epoch 
+Unchanged 
+Tracking 
+Data 
+corrections 
+Jason-1 Doris data: South Atlantic Anomaly 
+Model (JM Lemoine et al.) applied before 
+and after DORIS instrument change 
+DORIS datation bias for Envisat and Jason 
+aligned 
+with 
+SLR 
+before 
+and 
+after 
+instrument change  
+Unchanged 
+Doris Weight 
+1.5 mm/s (1.5 cm over 10 sec) 
+For Jason-1 , Doris Weight is reduced by a 
+factor 10 before Doris instrument change 
+Unchanged  
+SLR Weight 
+10 cm 
+15 cm 
+GPS Weight 
+10 cm (phase) / 10 m (code) 
+2 cm (phase) / 2 m (code) 
+Table 9 : GDR-C/GDR-D orbit standard 
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+41 
+ 
+ 
+ 
+ 
+3.2.2. Mean Sea Surface 
+The MSS_CNES-CLS11 model is computed from 16 years of satellite altimetry data from a variety of 
+missions. Its main characteristics are the following :  
+ 
+Name 
+MSS_CNES-CLS11 
+Reference ellipsoid 
+T/P 
+Referencing time period 
+1993-2009 (16 years) 
+Spatial coverage 
+Global (80°S to 84°N) - Oceanwide where altimetric data are 
+available. EIGEN_GRACE_5C geoid elsewhere and on continents. 
+Spatial resolution 
+Regular grid with a 1/30° (2 minutes) spacing (i.e. ~4 km) 
+Grid 
+10801 points in longitude / 4921 points in latitude  
+MSS determination technique 
+Local least square collocation method on a 6' grid where 
+altimetric data in a 200-km radius are selected. Estimation on a 
+2' grid based on SSH-geoid values (remove/restore technique to 
+recover the full signal). The inverse method uses local 
+anisotropic 
+covariance 
+functions 
+that 
+witness 
+the 
+MSS 
+wavelength content. 
+Estimation error level 
+YES (in cm) - The Optimal Interpolation method provides a 
+calibrated formal error  
+Altimetric dataset 
+T/P 10 years mean profile (first orbit), T/P tandem 3 years 
+profile 
+ERS-2 8 years mean profile, 1 year ERS-1 (geodetic phase) 
+GFO, 7 years mean profile 
+Jason-1, 7 years mean profile  
+Envisat, 7 years mean profile 
+Table 10 : MSS_CNES-CLS11 model characteristics 
+ 
+Figure 13 : Mean Sea Surface MSS_CNES-CLS11. 
+Refer to http://www.aviso.oceanobs.com/en/data/products/auxiliary-products/mss/index.html for more details on this 
+model. 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+42 
+ 
+ 
+ 
+3.2.3. Mean Dynamic Topography 
+The MDT_CNES-CLS09 model is computed from satellite altimetry data from a variety of missions. 
+Its main characteristics are the following :  
+ 
+Name 
+MDT_CNES-CLS09   
+Referencing time period 
+1993-1999 (7 years) 
+Domain 
+Global (78.25°S to 81.25°N) 
+Spatial resolution 
+Regular grid with a 1/4° (15 minutes) spacing (i.e. ~30 km) 
+Grid 
+720 points in longitudes / 320 points in latitude 
+MDT determination technique 
+Reference of the altimeter Sea Level Anomalies, computed 
+relative to a 7 years (1993-1999) mean profile, in order to obtain 
+absolute measurements of the ocean dynamic topography. 
+Combined product based on 4.5 years of GRACE data, 15 years of 
+altimetry and in situ data (hydrologic and drifters data)  
+Table 11 : MDT_CNES-CLS09 model characteristics 
+This sea surface height (mean sea surface height above geoid) corresponds to mean geostrophic 
+currents and its changes. 
+ 
+Figure 14 : Mean Dynamic Topography MDT_CNES-CLS09  
+Refer to http://www.aviso.oceanobs.com/en/data/products/auxiliary-products/mdt/index.html for more details on this 
+model. 
+ 
+3.2.4. Geoid 
+SARAL/AltiKa (O)(I)GDRs use the EGM96 geopotential to compute the geoid [Lemoine et al., 1998]. 
+The EGM96 geopotential model has been used to calculate point values of geoid undulation on a 
+0.25 x 0.25 degree grid that spans the latitude range +85.0 deg. to -85.0 deg. The EGM96 model is 
+complete to spherical harmonic degree and order 360, and has been corrected appropriately so as 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+43 
+ 
+ 
+ 
+to refer to the mean tide system as far as the permanent tide is concerned [Rapp et al., 1991]. The 
+k2 Love number used in this conversion was 0.3. The geoid undulations are given with respect to an 
+ideal geocentric mean Earth ellipsoid, whose semi-major axis remains undefined (i.e., there is no 
+zero-degree term in the spherical harmonic series of these geoid undulations). The flattening of this 
+reference ellipsoid is f=1/298.257 so that values are consistent with constants adopted for T/P. 
+Since the geoid undulations have been computed from an expansion to degree 360, the resolution of 
+the undulations will be on the order of 50km. Data used to derived the EGM96 model include 
+surface gravity data from different regions of the globe, altimeter derived gravity anomalies from 
+the GEOSAT Geodetic Mission, altimeter derived anomalies from ERS-1, direct satellite altimetry 
+from T/P, ERS-1 and GEOSAT, and satellite tracking to over 20 satellites using satellite laser 
+ranging, GPS, DORIS, the Tracking and Data Relay Satellite System (TDRSS), and TRANET. 
+ 
+Figure 15 : EGM96 geoid 
+More information on EGM96 can be found at http://cddisa.gsfc.nasa.gov/926/egm96/egm96.html 
+3.2.5. Bathymetry 
+The value of this parameter is determined from the DTM2000.1 model from N. Pavlis and J. Saleh 
+[personal communication, 2000] of the Raytheon ITSS/Goddard Space Flight Center. The model is 
+provided globally with a 2' resolution. The heritage of DTM2000.1 goes back to the OSUJAN98 
+database [Pavlis and Rapp, 1990] and the JGP95E database [Chapter 2 of Lemoine et al., 1998]. The 
+bathymetric information in DTM2000.1 (originating from Smith and Sandwell's [1994] global sea 
+floor topography) has significant differences with the ETOPO5 bathymetric model. The mean and 
+standard deviation of these differences is 10 m and 270 m, respectively. 
+ 
+3.2.6. Ocean Tides 
+The two geocentric tide values provided on the SARAL/AltiKa (O)(I)GDR, ocean_tide_sol1 and 
+ocean_tide_sol2, are computed with diurnal and semidiurnal ocean and load tide values predicted 
+by the GOT4.8 and FES2004 models, respectively.  
+Both geocentric ocean tide fields (ocean_tide_sol1 and ocean_tide_sol2) also include the load tides 
+from the respective models (load_tide_sol1 and load_tide_sol2), and the equilibrium long-period 
+ocean tide (ocean_tide_equil). These two fields (ocean_tide_sol1 and ocean_tide_sol2) also include 
+the S1 oceanic response to atmospheric pressure based on the model from Ray and Egbert (2004). 
+The FES2004 model also includes the M4 ocean tide. Note that the load tide fields (load_tide_sol1 
+and load_tide_sol2) only include the load tides from the GOT4.8 and FES2004 models, and do not 
+contain the load tides from the S1, M4, or equilibrium long-period ocean tides. 
+Both models are interpolated to provide the geocentric ocean and load tides at the location of the 
+altimeter measurement, and an interpolation quality flag is provided on the (O)(I)GDRs to indicate 
+the quality of this interpolation (see interp_flag_ocean_tide_sol1 and interp_flag_ocean_tide_sol2).  
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+44 
+ 
+ 
+ 
+3.2.6.1. GOT4.8 Ocean Tide Model  
+Solution GOT4.8 [Ray 1999; Ray, personnal communication], is the last version of GOT models 
+developped by R. Ray. 
+This model is identical to 4.7 in all constituents save S2. 
+GOT4.7 used the following data: 
+• 
+364 cycles of T/P 
+• 
+114 cycles of T/P on the interlaced orbit 
+• 
+117 cycles of ERS1 and ERS2 
+• 
+126 cycles of GFO 
+None Jason data has been used in this solution. 
+ 
+The solution consists of independent near-global estimates of 10 constituents (K1, K2, M2, M4, N2, 
+O1, P1, Q1, S1, S2) . An a priori model was used that consisted of the hydrodynamic model FES 2004 
+[Lyard et al. 2006], and several other local hydrodynamic models, GOT4.8 implement the fixed-up 
+dry troposphere correction for TP where the air tide wasn't being handled correctly (whereas it is in 
+Jason GDRs), and this affects S2 mostly.  
+Another difference between GOT4.7 and GOT4.8 is that 4.7 had not applied the TP Cg correction, 
+while 4.8 did use the Cg. 
+  
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+45 
+ 
+ 
+ 
+3.2.6.2. FES2004 Ocean Tide Model  
+The FES2004 model is a finite-element hydrodynamic model, constrained with tide gage and past 
+altimeter data [Le Provost, 2001] (see ocean_tide_sol2). 
+It is based on the resolution of the tidal barotropic equations on a global finite element grid 
+without any open boundary condition, which leads to solutions independent of in situ data (no open 
+boundary conditions and no data assimilation). FES2004 is the last update of the FES solution. Tide 
+gages and reprocessed TP and ERS crossover data are assimilated in the FES2002 hydrodynamical 
+solution. The altimeter data reprocessing consists in a new atmospherical forcing response 
+correction (Mog2D-G) applied to the data before the harmonic analysis. FES2004 includes the M2, 
+S2, N2, K2, 2N2, K1, O1, P1, Q1 tides. Four hydrodynamical long period tides and the non-linear M4 
+tide are also included in the distribution package. A new prediction algorithm is associated with 
+FES2004. This algorithm use an admittance method to extends the prediction spectrum up to 36 
+tidal constituents. The FES2004 model also provides non-equilibrium models for the Mm, Mf, Mtm, 
+and Msqm tidal components, which are provided by parameter ocean_tide_non_equil. 
+See http://www.legos.obs-mip.fr/en/soa/cgi/getarc/v0.0/index.pl.cgi?donnees=maregraphie&produit=modele_fes 
+3.2.7. Sea Surface Height Bias Recommendation  
+The estimate of the absolute bias in the SARAL/AltiKa sea-surface height measurements (SSH) is one 
+of the goals of the Cal/Val phase and is therefore not fully consolidated at this time.  
+The Sea State Bias (SSB) can be defined as the difference between the apparent sea level as “seen” 
+by the altimeter and the actual mean sea level. It is composed of : the Electromagnetic bias (EMB), 
+and skewness and tracker biases that affect the accuracy of altimeter measurements and are all 
+dependent on SWH. The EMB (main contributor) results from the fact that the radar senses an 
+average sea surface lower than the true average sea surface, due to amplification from wave 
+troughs. This bias can be expressed as a percentage of SWH, with the percentage being a complex 
+function of the sea-surface slope and elevation statistical distribution.  
+As a first guess, we assume that the SSB value is 3.5% of SWH. A consolidated SSB solution will be 
+computed about one year after launch, to interpolate the SSB value bilinearly from a table 
+(empirical model derived from analyses of the altimeter data) as a function of SWH and wind speed.  
+It should be noted that the bias reflects the combination of the mean errors from all of the 
+corrections that are used to compute sea surface height. 
+We expect very good SARAL/AltiKa data quality. However, some particular contributors have 
+unknown or hard to estimate error contributions, simply because SARAL/AltiKa mission is so 
+innovative (Ka-band altimeter) that a lack of information and experience prevents us to get a 
+precise pre-launch error estimation: this is the case for “sea state bias correction”, “ionosphere 
+correction for OGDR”, and “wind speed” error estimations. 
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+46 
+ 
+ 
+ 
+3.2.8. Data Editing Criteria 
+The following editing criteria are a recommended guideline for finding good records from the 
+(O)(I)GDR version “d” to calculate the sea level anomaly from the Ku band range. The user should 
+review these criteria before using them and may wish to modify them! 
+First, check the following conditions to retain only ocean data and remove any bad, missing, or 
+flagged data: 
+Parameter 
+Value 
+Meaning 
+surface_type 
+0 
+Open oceans or semi-enclosed seas 
+ice_flag 
+0 
+No ice 
+ 
+ 
+Table 12 : Recommended editing criteria 
+Then, filter the data as follows to retain only the most valid data : 
+ 
+Parameter 
+Validity conditions 
+range_numval 
+10 ≤  x 
+range_rms 
+0 ≤ x (mm) ≤ 200 
+altitude – range 
+-130 000 ≤ x (mm)  ≤ 100 000 
+model_dry_tropo_corr 
+-2 500 ≤ x (mm) ≤ - 1 900 
+rad_wet_tropo_corr 
+-500 ≤ x (mm) ≤ - 1 
+iono_corr_alt 
+-400 ≤ x (mm) ≤ 40 
+sea_state_bias 
+-500 ≤ x (mm) ≤ 0 
+ocean_tide_sol1 
+-5 000 ≤ x (mm) ≤ 5 000 
+solid_earth_tide 
+-1 000 ≤ x (mm) ≤ 1 000 
+pole_tide 
+-150 ≤ x (mm) ≤ 150 
+swh 
+0 ≤ x (mm) ≤ 11 000 
+sig0 
+7 ≤ x (dB) ≤ 30 
+wind_speed_alt 
+-0 ≤ x (m/s) ≤ 30 
+off_nadir_angle_wf 
+-0.2 ≤ x (deg2) ≤ 0.64 
+sig0_rms 
+x (dB) ≤ 1 
+sig0_numval 
+10 < x 
+Table 13 : Recommended filtering criteria 
+To restrict studies to deep water, apply a limit, e.g., water depth of 1000m or greater, using the 
+bathymetry parameter (ocean depth in meters.) 
+These data editing criteria are valid for open ocean studies only and will be confirmed during 
+commissioning phase. Recommendations for the use of SARAL/AltiKa data in coastal and 
+hydrological areas may be provided to users later. 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+47 
+ 
+ 
+ 
+4. Using the (O)(I)GDR data 
+4.1. Overview 
+This section gives the reader a guide to the use of the SARAL/AltiKa (O)(I)GDR data. While this 
+handbook tries to be correct and complete, note that nothing can replace the information to be 
+gained at conferences and other meetings from those using these data. The reader must proceed 
+with caution and at his or her own risk. Further information is also available on the web servers 
+provided in Annex C, please direct questions and comments to the contacts given there.  
+The instruments on SARAL/AltiKa make direct observations of the following quantities: altimeter 
+range, ocean significant wave height, ocean radar backscatter cross-section (a measure of wind 
+speed) and tropospheric water content. Ground based laser station and DORIS station 
+measurements of the satellite location and speeds are used in precision orbit determination (POD). 
+The DORIS stations also measure the ionospheric electron content along the line of sight to the 
+satellite. All of these measurements are useful in themselves, but they are made primarily to derive 
+the sea surface height with the highest possible accuracy. Such a computation also needs external 
+data (not collected aboard SARAL/AltiKa), e.g., atmospheric pressure, etc. In addition, instrument 
+health and calibration data are collected onboard and used to make corrections to the main 
+measurements and to monitor the instrument stability in the long term.  
+This (O)(I)GDR contains all relevant corrections needed to calculate the sea surface height. For the 
+other "geophysical variables" in the (O)(I)GDR: ocean significant wave height, tropospheric water 
+content and wind speed, the needed instrument and atmospheric corrections have already been 
+applied.  
+The following sections explain the rationale for how the corrections should be applied.  
+4.2. Typical computation from altimetry data 
+In this section references are made to specific (O)(I)GDR parameters by name using the name of the 
+variable as described in the NetCDF data sets.  
+WARNING 
+Default values are given to data when computed values are not available (See section 6.1.2.4) 
+so you must screen parameters to avoid using those with default values. Also you must check 
+flag values. The related flags are given in the description of each variable (See section 6.1.2.4) 
+although some discussion of flags appears in this section.  
+4.2.1. Corrected Altimeter Range 
+The main data of the (O)(I)GDR are the altimeter ranges. The (O)(I)GDR provides ranges measured 
+at Ka band. The given range is corrected for instrumental effects (net_instr_corr_range_ka). The 
+given range must be corrected for path delay in the atmosphere through which the radar pulse 
+passes and the nature of the reflecting sea surface. All range corrections are defined and they 
+should be ADDED to the range. The corrected (Ka band) range is given by : 
+Corrected Range = Range  + Wet Troposphere Correction  
+ 
++ Dry Troposphere Correction  
+ 
++ Ionosphere Correction  
+ 
++ Sea State Bias Correction 
+Wet Troposphere Correction :  
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+48 
+ 
+ 
+ 
+Use radiometer correction (rad_wet_tropo_corr). 
+Dry Troposphere Correction :  
+Use model correction (model_dry_tropo_corr).  
+Ionosphere Correction :  
+Use model ionosphere correction (iono_corr_gim). 
+Sea State Bias Correction : 
+Use sea state bias correction (sea_state_bias). 
+4.2.2. Sea Surface Height and Sea Level Anomaly 
+Sea surface height (SSH) is the height of the sea surface above the reference ellipsoid. It is 
+calculated by subtracting the corrected range from the Altitude:  
+Sea Surface Height = Altitude - Corrected Range 
+ 
+The sea level anomaly (SLA), also referred to as Residual Sea Surface, is defined here as the sea 
+surface height minus the mean sea surface and minus known geophysical effects, namely tidal and 
+inverse barometer. It is given by:  
+Sea Level Anomaly = Sea Surface Height  
+ 
+- Mean Sea Surface 
+ 
+- Solid Earth Tide Height  
+ 
+- Geocentric Ocean Tide Height  
+ 
+- Pole Tide Height  
+ 
+- Inverted Barometer Height Correction  
+ 
+- HF Fluctuations of the Sea Surface Topography 
+ 
+The SLA contains information about: 
+· 
+Real changes in ocean topography related to ocean currents  
+· 
+Dynamic response to atmospheric pressure 
+· 
+Differences between tides and the tide models  
+· 
+Differences between the mean sea surface model and the true mean sea surface at the 
+SARAL/AltiKa location  
+· 
+Unmodeled or mismodeled measurement effects (skewness, sea state bias, altimeter errors, 
+tropospheric corrections, ionospheric correction, etc.)  
+· 
+Orbit errors  
+There is naturally also random measurement noise. Understanding the first four items as a function 
+of space and time is the purpose of SARAL/AltiKa.  
+Altitude : 
+Orbit altitude (see parameter altitude)  
+Corrected Range : 
+See section 4.2.1.  
+Tide effects (solid earth tide height, geocentric ocean tide height, pole tide height) : 
+See sections 4.2.2.1 and 5.9. 
+Inverted Barometer Height Correction : 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+49 
+ 
+ 
+ 
+Use inv_bar_corr (see also section 5.10). 
+HF Fluctuations of the Sea Surface Topography : 
+Use hf_fluctuations_corr (see also section 5.10). 
+Mean Sea Surface : 
+See sections 4.2.2.2 and 5.4.  
+4.2.2.1. Tide Effects 
+The total tide effect on the sea surface height is the sum of three values from the (O)(I)GDR:  
+Tide Effect = Geocentric Ocean Tide + Solid Earth Tide + Pole Tide  
+(See also section 5.9 and subsections)  
+Geocentric Ocean Tide : 
+The geocentric ocean tide provided on the (O)(I)GDR is actually the sum total of the ocean tide 
+with respect to the ocean bottom, and the loading tide height of the ocean bottom.  
+Geocentric Ocean Tide = Ocean Tide + Load Tide 
+The (O)(I)GDR provides a choice of two geocentric ocean tide values, ocean_tide_sol1 and 
+ocean_tide_sol2. Each uses a different model for the sum total of the ocean tide and loading tide 
+heights from the diurnal and semidiurnal tides, but both include an equilibrium representation of 
+the long-period ocean tides at all periods except for the zero frequency (permanent tide) term. 
+Note that the (O)(I)GDR also explicitly provides the loading tide height from each of the two models 
+that are used to determine the two geocentric ocean tide values, load_tide_sol1, load_tide_sol2. 
+Obviously, the geocentric ocean tide values and loading tide values should not be used 
+simultaneously, since the loading tide height would be modeled twice. 
+Solid Earth Tide : 
+Use solid_earth_tide 
+NOTE: Zero frequency (permanent tide) term also not included in this parameter. 
+Pole Tide : 
+Use pole_tide  
+The tide values all have the same sign/sense in that positive numbers indicate that the surface is 
+farther from the center of the Earth.  
+4.2.2.2. Geophysical Surface - Mean Sea Surface or Geoid 
+The geophysical fields Geoid (geoid) - actually geoid undulation, but called simply geoid - and Mean 
+Sea Surface (mean_sea_surface) are distances above the reference ellipsoid, as is the Sea Surface 
+Height. These values are for the location indicated by latitude and longitude. If the values of these 
+fields are needed at a different location within the current frame, along-track interpolation may be 
+done using the high rate (40/second) range and altitude values.  
+As the geoid is derived from the mean sea surface, the latter is the better-known quantity. The 
+residual surface with respect to the geoid is sometimes called the "dynamic topography" of the 
+ocean surface.  
+See also discussions of mean sea surface and geoid in sections 5.3 and 5.4.  
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+50 
+ 
+ 
+ 
+4.2.3. Mean Sea Surface and Adjustment of the Cross Track Gradient 
+In order to study sea level changes between two dates, it is necessary to difference sea surface 
+heights from different cycles at the exact same latitude-longitude, so that the not well-known 
+time-invariant geoid cancels out. However, the (O)(I)GDR samples are not given at the same 
+latitude-longitude on different cycles. They are given approximately every 1 sec along the pass 
+(about 6 km, the time difference and distance vary slightly with satellite height above the surface), 
+and the satellite ground track is allowed to drift by +1 km. This introduces a problem: on different 
+cycles the satellite will sample a different geoid profile. This effect is the so-called cross-track 
+geoid gradient, and Brenner and Koblinsky [1990] estimated it at about 2 cm/km over most of the 
+ocean, larger over continental slopes, reaching 20 cm/km at trenches. Even if the passes repeated 
+exactly, one would have to interpolate along the pass (say, to a fixed set of latitudes) because a 3 
+km mismatch in along pass position would cause approximately a 6 cm difference in the geoid, 
+which would mistakenly be interpreted as a change in oceanographic conditions.  
+Both problems are simultaneously solved if the quantity one interpolates along a given pass is the 
+difference : 
+Residual Height – Mean Sea Surface  
+Then the real geoid changes across the track are automatically accounted for (to the extent the 
+MSS model is close to the true geoid) because the MSS is spatially interpolated to the actual 
+satellite latitude-longitude in the (O)(I)GDR. The residual height term above is the residual sea 
+surface height after applying all the tidal, atmospheric and ionospheric corrections, etc. Otherwise, 
+those need to be interpolated separately.  
+One possible approach is to interpolate along track to a set of common points, a "reference" track. 
+The reference could be: 
+· 
+An actual pass with maximum data and/or minimum gaps, or  
+· 
+A specially constructed fixed track (see below).  
+The procedure is the following: 
+· 
+For each common point, find neighboring points in the pass of interest (POI).  
+· 
+In the POI, interpolate along track to the common point, using longitude as the independent 
+variable, for each quantity of interest - sea surface height (see above), mean sea surface, 
+geoid, tides, etc.  
+· 
+As stated above, the quantity to compare at each common point is :  
+ΔSSH = Interpolated POI SSH - Interpolated POI MSS  
+· 
+Other geophysical corrections must be applied to ΔSSH, depending on the type of 
+investigation  
+The geoid model in the (O)(I)GDR could substitute the MSS model, but its use will result in reduced 
+accuracy in the interpolation because the resolution of the geoid undulation is lower than that of 
+the MSS.  
+Desirable features of a fixed reference track include:  
+· 
+Equal spacing of points (good for FFT)  
+· 
+Independent variable = (point longitude - pass equator crossing longitude)  
+· 
+Equator is a point (simplifies calculation)  
+· 
+Point density similar to original data density 
+With these specifications, it is possible to make only two fixed tracks, one ascending and one 
+descending, which will serve for all passes. The template pass is then shifted by the equator 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+51 
+ 
+ 
+ 
+crossing longitude (global attribute of the product, see 6.2) of each pass. Recall that the equator 
+longitude is from a predicted orbit (not updated during GDR processing). Improved accuracy can be 
+obtained by interpolating in the latitude, longitude values. When one interpolates to the reference 
+track, it is good practice to check that the interpolated latitude from the data records used is close 
+to the latitude on the reference track.  
+4.2.4. Range Compression 
+Each 1Hz frame of the AltiKa Ka band range measurement (see range parameter) is derived from 
+the linear regression of the respective valid 40 Hz range measurements (see range_40hz 
+parameter).  
+An iterative outlier detection scheme is adopted in this linear regression and the resulting 40 Hz 
+measurements are identified by setting the corresponding bit in the parameters (range_used_40hz) 
+to 1. Measurements not considered as outliers have the parameters (range_used_40hz) set to 0. 
+The number of valid 40 Hz measurements that are used to derive each of the 1 Hz measurements is 
+provided on the (O)(I)GDRs (see range_numval parameter), as are the root-mean-square of the 
+differences between the valid 40 Hz measurements and the derived 1 Hz measurement (see 
+range_rms parameter). 
+Specialized applications, such as over land, ice, lakes or rivers, may require that the users perform 
+their own compression algorithm on the 40 Hz measurements.  
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+52 
+ 
+ 
+ 
+5. Altimetric data 
+This section presents a short discussion of the main quantities on the (O)(I)GDR.  
+An excellent overview of the theoretical and practical effects of radar altimetry is the “Satellite 
+Altimetry” Chapter by Chelton et al [2001].  
+5.1. Precise Orbits 
+CNES has the responsibility for producing the orbit ephemeris for the SARAL/AltiKa data products. 
+The SARAL/AltiKa OGDRs provide a navigator orbit that has radial accuracies better than 30 cm 
+(rms), the IGDRs provide a preliminary orbit that has radial accuracies better than 4 cm (rms), 
+while the GDRs provide a precise orbit that has radial accuracies better than 3 cm (rms). 
+5.2. Altimeter Range 
+An altimeter operates by sending out a short pulse of radiation and measuring the time required for 
+the pulse to return from the sea surface. This measurement, called the altimeter range, gives the 
+distance between the instrument and the sea surface, provided that the velocity of the propagation 
+of the pulse and the precise arrival time are known. The mono frequency altimeter on SARAL/AltiKa 
+performs only range measurements at Ka band frequencies (see range parameter).  
+The range reported on the SARAL/AltiKa (O)(I)GDR has already been corrected for a variety of 
+calibration and instrument effects, including calibration errors, pointing angle errors, center of 
+gravity motion, and terms related to the altimeter acceleration such as Doppler shift and oscillator 
+drift. The sum total of these corrections also appears on the (O)(I)GDR for Ka band range (see 
+net_instr_corr_range parameter).  
+5.3. Geoid 
+The geoid is an equipotential surface of the Earth's gravity field that is closely associated with the 
+location of the mean sea surface. The reference ellipsoid is a bi-axial ellipsoid of revolution. The 
+center of the ellipsoid is ideally at the center of mass of the Earth although the center is usually 
+placed at the origin of the reference frame in which a satellite orbit is calculated and tracking 
+station positions given. The separation between the geoid and the reference ellipsoid is the geoid 
+undulation (see geoid parameter).  
+The geoid undulation, over the entire Earth, has a root mean square value of 30.6 m with extreme 
+values of approximately 83 m and -106 m. Although the geoid undulations are primarily long 
+wavelength phenomena, short wavelength changes in the geoid undulation are seen over 
+seamounts, trenches, ridges, etc., in the oceans. The calculation of a high resolution geoid requires 
+high resolution surface gravity data in the region of interest as well as a potential coefficient model 
+that can be used to define the long and medium wavelengths of the Earth's gravitational field. 
+Surface gravity data are generally only available in certain regions of the Earth and spherical 
+harmonic expansions of the Earth's gravitational potential are usually used to define the geoid 
+globally. Currently, such expansions are available to degree 360 and in some cases higher.  
+For ocean circulation studies, it is important that the long wavelength part of the geoid be 
+accurately determined.  
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+53 
+ 
+ 
+ 
+5.4. Mean Sea Surface 
+A Mean Sea Surface (MSS) represents the position of the ocean surface averaged over an appropriate 
+time period to remove annual, semi-annual, seasonal, and spurious sea surface height signals. A MSS 
+is given as a grid with spacing consistent with the altimeter and other data used in the generation 
+of the grid values. The MSS grid can be useful for data editing purposes, for the calculation of along 
+track and cross track geoid gradients, for the calculation of gridded gravity anomalies, for 
+geophysical studies, for a reference surface to which sea surface height data from different 
+altimeter missions can be reduced, etc. The SARAL/AltiKa (O)(I)GDR provides a global MSS model 
+that is generated from multiple satellite altimetry missions (see mean_sea_surface parameter). 
+Longer time spans of data that become available in the future, along with improved data handling 
+techniques will improve the current MSS models. Care must be given to the retention of high 
+frequency signal and the reduction of high frequency noise.  
+5.5. Mean Dynamic Topography 
+A Mean Dynamic Topography (MDT) represents the Mean Sea Surface referenced to a geoid and 
+corrected from geophysical effects. A MDT is given as a grid with spacing consistent with the 
+altimeter and other data used in the generation of the grid values. The MDT provides the absolute 
+reference surface for the ocean circulation. The SARAL/AltiKa (O)(I)GDR provides a global MDT 
+model (see mean_topography parameter) that is a combined product recovering several years based 
+on GRACE mission, altimetry and in situ data (hydrologic and drifters data). 
+5.6. Geophysical Corrections 
+The atmosphere and ionosphere slow the velocity of radio pulses at a rate proportional to the total 
+mass of the atmosphere, the mass of water vapor in the atmosphere, and the number of free 
+electrons in the ionosphere. In addition, radio pulses do not reflect from the mean sea level but 
+from a level that depends on wave height and wind speed. The errors due to these processes cannot 
+be ignored and must be removed. Discussions of these effects are given in Chelton et al. [2001].  
+5.6.1. Dry Troposphere  
+The propagation velocity of a radio pulse is slowed by the "dry" gases and the quantity of water 
+vapor in the Earth's troposphere. The "dry" gas contribution is nearly constant and produces height 
+errors of approximately -2.3 m. The water vapor in the troposphere is quite variable and 
+unpredictable and produces a height calculation error of -6 cm to -40 cm. However, these effects 
+can be measured or modeled as discussed below.  
+The gases in the troposphere contribute to the index of refraction. In detail, the refractive index 
+depends on pressure and temperature. When hydrostatic equilibrium and the ideal gas law are 
+assumed, the vertically integrated range delay is a function only of the surface pressure, see 
+Chelton et al. [2001]. The dry meteorological tropospheric range correction is principally equal to 
+the surface pressure multiplied by -2.277mm/mbar, with a small adjustment also necessary to 
+reflect a small latitude dependence (see model_dry_tropo_corr parameter).  
+model_dry_tropo_corr = 
+[
+]
+phi)
+cos(2
+ 
+ 
+0.0026
+ 
+ 1
+P
+-2.277
+atm
+∗
+∗
++
+∗
+∗
+ 
+where Patm is surface atmospheric pressure in mbar, phi is latitude, and model_dry_tropo_corr is 
+the dry troposphere correction in mm. There is no straightforward way of measuring the nadir 
+surface pressure from a satellite, so it is determined from the European Center for Medium Range 
+Weather Forecasting (ECMWF) numerical weather prediction model using the surface pressure 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+54 
+ 
+ 
+ 
+fields. For OGDR processing, predicted ECMWF Psurf fields are used and for (I)GDR processing 
+analyzed fields are used.  
+5.6.2. Wet Troposphere 
+The amount of water vapor present along the path length contributes to the index of refraction of 
+the Earth's atmosphere. Its contribution to the delay of the radio pulse, the wet tropospheric delay, 
+can be estimated by measuring the atmospheric brightness near the water vapor line at 22.2356 
+GHz and providing suitable removal of the background. The SARAL/AltiKa dual frequency 
+radiometer measures the brightness temperatures in the nadir path at 23.8 and 37.0 GHz: the water 
+vapor signal is sensed by the 23.8 GHz channel, while the 37 GHz channel removes other 
+atmospheric contributions (surface emission, cloud cover influence) [Keihm et al., 1995]. 
+Measurements are combined to obtain the path delay in the satellite range measurement due to the 
+water vapor content (see rad_wet_tropo_corr parameter).  
+The ECMWF numerical weather prediction model provides also a value for the wet tropospheric 
+delay. An interpolated value from this model is included in the (O)(I)GDR, as a backup to the 
+measurement from the radiometer (see model_wet_tropo_corr parameter). This backup will prove 
+useful when sun glint, land contamination, or anomalous sensor behavior makes the radiometer 
+measurement of the wet tropospheric delay unusable. 
+The ECMWF meteorological fields are interpolated to provide the model dry and wet tropospheric 
+corrections at the time and location of the altimeter measurement (see model_dry_tropo_corr and 
+model_wet_tropo_corr) and an interpolation quality flag is provided on the (O)(I)GDR to indicate 
+the quality of this interpolation (see interp_flag_meteo).  
+5.6.3. Ionosphere 
+The group velocity of the altimeter radar pulses is slowed by the presence of free electrons in the 
+Earth’s ionospheric layer. As the Total Electronic Content (TEC) is highly variable in time (diurnal, 
+seasonal, solar cycle variations) and in space (latitude dependent), accurate measurement of the 
+resulting delay requires generally fine sampling coincident with the radar measurements. The 
+ionospheric dispersion being linear, the delay is usually computed by combining the dual-frequency 
+measurements of the radar altimeter (e.g. for T/P, Jason-1 and 2 : Ku and C bands).  
+In the case of AltiKa, only one frequency is available (Ka), which prevents from using such a 
+classical dual frequency approach. However, it is shown that ionosphere correction (= 40300 x TEC / 
+frequency²) is an order of magnitude smaller in Ka-band than in Ku-band (actually divided by 7). For 
+amplitudes of the ionosphere correction in Ku-band in the range 2-25 cm, equivalent effect in Ka-
+band is only 0.3-3.6 cm.  
+Thus, for AltiKa, external ancillary data are used to compute ionosphere correction, in the form of 
+TEC grids computed from GPS-based observations and ionosphere model (the JPL Global Ionosphere 
+Maps – GIM – model). Other auxiliary data such as solar activity coefficients (within IRI95) are used 
+to correct the satellite altitude. 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+55 
+ 
+ 
+ 
+ 
+Figure 16. Example of Global Ionosphere Maps from JPL 
+GIM model has been validated through comparisons with T/P, Jason-1, Jason-2 and ENVISAT dual 
+frequency ionosphere corrections.  
+As GIM fields are distributed with a 24 hours latency, the correct fields will not be available on time 
+for OGDR processing. In that case, the last GIM field available will be used, as well as an 
+extrapolated MOE orbit, in order to compute in advance the ionosphere correction for OGDR. 
+The ionospheric GIM correction solution may be used over non ocean surfaces (ice, land, etc.). 
+5.6.4. Ocean Waves (sea state bias) 
+Unlike the preceding effects, sea-state effects are an intrinsic property of the large footprint radar 
+measurements. The surface scattering elements do not contribute equally to the radar return; 
+troughs of waves tend to reflect altimeter pulses better than do crests. Thus the centroid of the 
+mean reflecting surface is shifted away from mean sea level towards the troughs of the waves. The 
+shift, referred to as the electromagnetic (EM) bias, causes the altimeter to overestimate the range 
+(see Rodriguez et al., [1992]). In addition, a skewness bias also exists from the assumption in the 
+onboard algorithms that the probability density function of heights is symmetric, while in reality it 
+is skewed. Finally, there is a tracker bias, which is a purely instrumental effect. The sum of EM 
+bias, skewness bias, and tracker bias is called 'sea state bias' (see sea_state_bias parameter). 
+The accuracy of sea state bias models remains limited and continues to be a topic of research. The 
+current most accurate estimates are obtained using empirical models derived from analyses of the 
+altimeter data. The sea state bias is computed from a bilinear interpolation of a table of sea state 
+biases versus significant wave height and wind speed, based on empirical fits (Labroue [2004]). 
+ 
+Nevertheless all these works are done for Ku and C band so at the beginning of the mission, the SSB 
+will be estimated at 3.5% of SWH and an empirical model will be computed using at least one year 
+of SARAL/AltiKa data.  
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+56 
+ 
+ 
+ 
+5.7. Trailing edge variation flag 
+5.7.1. Introduction : Rain & Cloud effect on SARAL/Altika 
+Ka-band is highly sensitive to rainy and cloudy conditions. It means that an overall assessment of 
+rain effect on SARAL/AltiKa data availability and quality should be performed during the 
+verification phase in order to monitor global percentage and spatio-temporal evolution of lost data 
+due to rain and cloud effect, and thus give a consolidated budget for data loss due to rain 
+attenuation and waveform distortion.  
+Attenuation by rain is expected to be much more significant at Ka-band than Ku-band, although 
+even in the tropics, actual data loss is only expected to be 5-10% (Tournadre et al., 2009). 
+However, the reliable detection and flagging of rain-contaminated data is important for the quality 
+of the overall altimeter product. 
+5.7.2. SARAL/AltiKa Trailing edge variation flag 
+Due to the mono-frequency characteristic of the SARAL/AltiKa altimeter, the rain flags used for T/P 
+and Jason-1&2 altimeters can not be used as they rely on the differential attenuation by rain of the 
+signal at Ku and C band. Furthermore, the use of Ka band implies that not only rain can significantly 
+alter the altimeter measurement but also dense cloud, that is why we prefer using “trailing edge 
+variation effect” instead of “rain effect”.  
+A new “trailing edge variation flag” based on the analysis of the along-track variation of the off-
+nadir angle estimate (the so-called “Matching Pursuit” algorithm) has been defined and tested using 
+Jason-1 data (Tournadre et al., 2009) and will be used operationally to detect the data potentially 
+affected by atmospheric liquid water. This new approach to altimeter data rain flagging has to be 
+validated and calibrated during the commissioning phase. 
+5.7.3. Limitations 
+Please note that the trailing_edge_variation_flag parameter should be used carefully. In fact, as 
+mentioned above, this flag detects surfaces changes caused by rain, sigma-blooms, cloud, etc. The 
+meaning of the flag is: non short scale variation/short scale variation. To be considered only as a 
+rain flag users should correlate this flag with water vapor content or liquid water content (see 
+rad_water_vapor and rad_liquid_water parameter). These auxiliary information come from the 
+radiometer measurements. Thresholds for these auxiliary parameters should be defined and 
+provided during commissioning phase. 
+5.8. Ice Flag 
+The range measurement from the altimeter is likely to have larger errors when the pulse is 
+reflected off ice surfaces. The ice surface is not at sea level, but at some unknown distance above 
+it. For this reason the SARAL/ALTIKA (O)(I)GDR provides an ice flag (see ice_flag parameter) to 
+indicate when the data point is likely to be over ice. 
+The ice flag is set if the absolute value of the difference between the model wet tropospheric 
+correction and the dual frequency wet tropospheric correction retrieved from 23.8 GHz and 37.0 
+GHz brightness temperatures exceeds a specified threshold, OR if the number of valid 40-Hz 
+altimeter range of the processed measurement is smaller than a specified threshold. If the 
+corresponding computations cannot be performed, then the ice flag is set if a climatological map 
+predicts ice at the given location, and if the wind speed derived from the altimeter measurement is 
+less than 1 m/s, i.e., the backscatter is larger than normally expected from the ocean.  
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+57 
+ 
+ 
+ 
+Disclaimer: Users are advised to use this flag carefully because it is linked to conditions relative 
+to altimeter wind speed (derived from sigma naught values). As it was not possible to assess 
+precisely the sigma naught before launch, all derived parameters may not be representative 
+and are subject to tuning at the beginning of the mission.   
+5.9. Tides 
+Tides are a significant contributor to the observed sea surface height [LeProvost, 2001]. While they 
+are of interest in themselves, they have more variation than all other time-varying ocean signals. 
+Since they are highly predictable, they are removed from the data in order to study ocean 
+circulation.  
+There are several contributions to the tidal effect: the ocean tide, the load tide, the solid earth 
+tide and the pole tide. The ocean tide, load tide and solid earth tide are all related to luni-solar 
+forcing of the earth, either directly as is the case of the ocean and solid earth tide, or indirectly as 
+is the case with the load tide since it is forced by the ocean tide. The pole tide is due to variations 
+in the earth’s rotation and is unrelated to luni-solar forcing.  
+SARAL/AltiKa (O)(I)GDRs do not explicitly provide values for the pure ocean tide, but instead 
+provide values for a quantity referred to as the geocentric ocean tide, which is the sum total of the 
+ocean tide and the load tide. Values of the load tide that were used to compute the geocentric 
+ocean tide are also explicitly provided, so the pure ocean tide can be determined by subtracting 
+the load tide value from the geocentric ocean tide value. Note that the permanent tide is not 
+included in either the geocentric ocean tide or solid earth tide corrections that are provided on the 
+SARAL/AltiKa (O)(I)GDRs. 
+5.9.1. Geocentric Ocean Tide 
+As mentioned above, the geocentric ocean tide is a quantity sometimes used to refer to the sum 
+total of the ocean tide and the load tide. The SARAL/AltiKa (O)(I)GDR provides two choices for the 
+geocentric ocean tide, ocean_tide_sol1 and ocean_tide_sol2, each of which is computed as the sum 
+total of the diurnal and semidiurnal ocean and load tides as predicted by a particular model, and an 
+equilibrium representation of the long-period ocean tides at all periods except for the zero 
+frequency (constant) term. The two load tide values provided on the GDR, load_tide_sol1 and 
+load_tide_sol2, provide the respective load tide values that were used to compute ocean_tide_sol1 
+and ocean_tide_sol2. 
+5.9.2. Long period Ocean Tide 
+The long-period ocean tides are a subject of continuing investigation. To first order, they can be 
+approximated by an equilibrium representation. However, the true long-period ocean tide response 
+is thought to have departures from an equilibrium response that increase with decreasing period. 
+The two principal long-period ocean tide components, Mf and Mm, with fortnightly and monthly 
+periods respectively, are known to have departures from an equilibrium response with magnitudes 
+less than 1-2 cm. 
+The SARAL/AltiKa (O)(I)GDR explicitly provides a value for an equilibrium representation of the 
+long-period ocean tide that includes all long-period tidal components excluding the permanent tide 
+(zero frequency) component (see parameter ocean_tide_equil). Note that both geocentric ocean 
+tide values on the (O)(I)GDR (ocean_tide_sol1 and ocean_tide_sol2) already include the equilibrium 
+long-period ocean tide and should therefore not be used simultaneously. 
+ 
+The SARAL/AltiKa (O)(I)GDR provides a parameter for a non-equilibrium representation of the long-
+period ocean tides (see parameter ocean_tide_non_equil). This parameter is provided as a 
+correction to the equilibrium long-period ocean tide model so that the total non-equilibrium long 
+period ocean tide is formed as a sum of ocean_tide_equil and ocean_tide_non_equil. 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+58 
+ 
+ 
+ 
+5.9.3. Solid Earth Tide 
+The solid Earth responds to external gravitational forces similarly to the oceans. The response of 
+the Earth is fast enough that it can be considered to be in equilibrium with the tide generating 
+forces. Then, the surface is parallel with the equipotential surface, and the tide height is 
+proportional to the potential. The two proportionality constants are the so-called Love numbers. It 
+should be noted that the Love numbers are largely frequency independent, an exception occurs 
+near a frequency corresponding to the K1 tide constituents due to a resonance in the liquid core 
+[Wahr, 1985 and Stacey, 1977].  
+The SARAL/AltiKa (O)(I)GDR computes the solid earth tide, or body tide, as a purely radial elastic 
+response of the solid Earth to the tidal potential (see parameter solid_earth_tide.) The adopted 
+tidal potential is the Cartwright and Tayler [1971] and Cartwright and Edden [1973] tidal potential 
+extrapolated to the 2000 era, and includes degree 2 and 3 coefficients of the tidal potential. The 
+permanent tide (zero frequency) term is excluded from the tidal potential that is used to compute 
+the solid earth tide parameter for the SARAL/AltiKa (O)(I)GDR. The elastic response is modeled 
+using frequency independent Love numbers. The effects of the resonance in the core are accounted 
+for by scaling the tide potential amplitude of the K1 tidal coefficient and some neighboring nodal 
+terms by an appropriate scale factor.  
+5.9.4. Pole Tide 
+The pole tide is a tide-like motion of the ocean surface that is a response of both the solid Earth 
+and the oceans to the centrifugal potential that is generated by small perturbations to the Earth's 
+rotation axis. These perturbations primarily occur at periods of 433 days (called the Chandler 
+wobble) and annual. These periods are long enough for the pole tide displacement to be considered 
+to be in equilibrium with the forcing centrifugal potential. The SARAL/AltiKa (O)(I)GDR provides a 
+single field for the radial geocentric pole tide displacement of the ocean surface (see pole_tide 
+parameter), and includes the radial pole tide displacement of the solid Earth and the oceans.  
+The pole tide is easily computed as described in Wahr [1985]. Modeling the pole tide requires 
+knowledge of proportionality constants, the so-called Love numbers, and a time series of 
+perturbations to the Earth's rotation axis, a quantity that is now measured routinely with space 
+techniques. Note that the pole tide on the IGDR and GDR may differ, since the pole tide on the GDR 
+is computed with a more accurate time series of the Earth's rotation axis. 
+5.10. Inverse Barometer Effect 
+5.10.1. Inverted Barometer Correction 
+As atmospheric pressure increases and decreases, the sea surface tends to respond hydrostatically, 
+falling or rising respectively. Generally, a 1-mbar increase in atmospheric pressure depresses the 
+sea surface by about 1 cm. This effect is referred to as the inverse barometer (IB) effect. 
+The instantaneous IB effect on sea surface height in millimeters (see parameter inv_bar_corr) is 
+computed from the surface atmospheric pressure, Patm in mbar:  
+inv_bar_corr = 
+P)
+ - 
+(P
+-9.948
+atm
+∗
+ 
+where P is the time varying mean of the global surface atmospheric pressure over the oceans.  
+The scale factor 9.948 is based on the empirical value [Wunsch, 1972] of the IB response at mid 
+latitudes. Some researchers use other values. Note that the surface atmospheric pressure is also 
+proportional to the dry tropospheric correction, and so the parameter inv_bar_corr approximately 
+changes by 4 to 5 mm as model_dry_tropo_corr changes by 1 mm (assuming a constant mean global 
+surface pressure). The uncertainty of the ECMWF atmospheric pressure products is somewhat 
+dependent on location. Typical errors vary from 1 mbar in the northern Atlantic Ocean to a few 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+59 
+ 
+ 
+ 
+mbars in the southern Pacific Ocean. A 1-mbar error in pressure translates into a 10 mm error in the 
+computation of the IB effect. 
+Note that the time varying mean global pressure over the oceans, P, during the first eight years of 
+the T/P mission had a mean value of approximately 1010.9 mbar, with an annual variation around 
+this mean of approximately 0.6 mbar. However, the T/P data products provided a static inverse 
+barometer correction referenced to a constant mean pressure of 1013.3 mbar. 
+IB(T/P) = 
+1013.3)
+ - 
+(P
+-9.948
+atm
+∗
+ 
+Sea surface heights that are generated after applying an inverse barometer correction referenced 
+to a mean pressure of 1013.3 mbar are therefore approximately -9.948*(1010.9-1013.3) = 23.9 mm 
+lower than those that are generated after applying an inverse barometer correction referenced to a 
+time varying global mean pressure, and the difference between the two sea surface heights has an 
+annual variation of approximately 9.948*0.6 = 6 mm.  
+5.10.2. Barotropic/Baroclinic Response to Atmospheric Forcing 
+The High Frequency Wind and Pressure Response correction, hf_fluctuations_corr, complements the 
+Inverted Barometer (IB) correction. Like both tides and IB, the ocean response to wind and pressure 
+(after removing the IB part) has energy at periods higher than the 20 day implied by the 35-day 
+repeat cycle of SARAL/AltiKa. This correction can be thought of as a departure from the IB response 
+to pressure, although strictly it is the difference between the response to wind and pressure minus 
+the IB. Ali and Zlotnicki [2000] compute this response with a barotropic model that is forced by 
+NCEP operational wind and pressure. The model output is filtered in time to pass frequencies 
+shorter than 20 days. See also Stammer et al. [1999] and Tierney et al. [2000]. 
+The parameter hf_fluctuations_corr is provided in the (I)GDR products as a correction to the inverse 
+barometer correction inv_bar_corr. 
+5.11. Sigma 0 
+The backscatter coefficient, sigma0 Ka values (see parameters sig0), reported on the (O)(I)GDR are 
+corrected for atmospheric attenuation using atmos_corr_sig0. Note that "unbiased" sigma0 values 
+are recorded on the SARAL/AltiKa data products. For some geophysical algorithms, an appropriate 
+bias is applied to the provided sigma. These biases have been determined from comparisons to 
+Jason-1 or Jason-2 sigma0. 
+Disclaimer : the SARAL altimeter use a Ka band which is new for nadir altimeter. It is worth 
+recalling that Ka band is highly sensitive to the rain and cloud attenuation. It was  not possible 
+to assess precisely the impact on the sigma naught before launch. User are so advised to use 
+this parameter with care.  
+ 
+5.12. Wind Speed 
+The model functions developed to date for altimeter wind speed have all been purely empirical. 
+The model function establishes a relation between the wind speed, and the sea surface backscatter 
+coefficient and significant wave height. A wind speed is calculated through a mathematical 
+relationship with the Ka-band backscatter coefficient and the significant wave height (see 
+wind_speed_alt) using the Gourrion algorithm. The wind speed model function is evaluated for 10 
+meter above the sea surface, and is considered to be accurate to 2 m/s. 
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+60 
+ 
+ 
+ 
+Disclaimer : Users should use this parameter carefully because the altimeter wind speed 
+algorithm has been tuned on Jason-1 data and should be recalculated with at least one year of 
+SARAL/Altika data. 
+ 
+A 10-meter (above surface) wind vector (in east-west and north-south directions) is also provided on 
+the SARAL/AltiKa (O)(I)GDR (see parameters wind_speed_model_u and wind_speed_model_v). This 
+wind speed vector is determined from an interpolation of the ECMWF model. The best accuracy for 
+the wind vector varies from about 2 m/s in magnitude and 20 degrees in direction in the northern 
+Atlantic Ocean, to more then 5 m/s and 40 degrees in the southern Pacific Ocean. 
+5.13. Bathymetry Information 
+The SARAL/AltiKa (O)(I)GDR provides a parameter bathymetry that gives the ocean depth or land 
+elevation of the data point. Ocean depths have negative values, and land elevations have positive 
+values. This parameter is given to allow users to make their own "cut" for ocean depth.  
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+61 
+ 
+ 
+ 
+6. Data description 
+The main characteristics of (O)(I)GDR products are summarized in the following table. 
+ 
+Features 
+OGDR 
+IGDR 
+GDR 
+Primary Goal 
+To provide wind/wave 
+data to meteorological 
+users. Also designed to 
+provide altimeter range, 
+environmental and 
+geophysical corrections 
+together with a real-time 
+orbit in order to make 
+NRT SSHA available to 
+ocean users 
+To provide sea surface 
+height data to 
+operational 
+oceanography users (with 
+a more accurate orbit 
+and additional 
+environmental / 
+geophysical corrections  
+w.r.t. OGDR)  
+To fulfill the project 
+science objectives (AD 2) 
+Geophysical level 2 product (Altimeter/radiometer), including waveforms 
+retracking  
+Content 
+ 
++ available 
+environmental and 
+geophysical corrections  
++ all the environmental 
+and geophysical 
+corrections (preliminary 
+for some of them)  
++ all the environmental 
+and geophysical 
+corrections (precise)  
+Orbit 
+30 cm DORIS navigator 
+4 cm MOE 
+(processed DORIS data) 
+3 cm POE 
+(processed DORIS  and 
+laser data) 
+Near-Real Time 
+Off-Line 
+Off-Line 
+Delivery delay 
+(after data acquisition) 
+3-5 hours 
+1.5 calendar days 
+40 days 
+Validation 
+Not fully validated 
+(elementary and automatic controls only) 
+Fully validated 
+(in depth validation 
+performed on a cycle 
+basis before delivery) 
+Validation by Experts 
+No 
+Yes (CNES/SALP) 
+Structure 
+Segment  
+Pole to pole pass 
+Ground Processing 
+Centre 
+EUMETSAT and ISRO 
+CNES and ISRO 
+Table 14 : Main characteristics of (O)(I)GDR products 
+ 
+The differences between Auxiliary Data used for OGDR, IGDR and GDR products is given in section 
+1.1. The main fields recomputed for GDR with respect to IGDR are the following: 
+• 
+Due to the update of orbit data: 
+Latitude (“latitude”) 
+Longitude (“longitude”) 
+Altitude (“alt”,”orb_state_flag_rest”, “alt_40hz”) 
+Orbital altitude rate (“orb_alt_rate”) 
+Sum of the instrumental corrections (“net_instr_corr_range”) 
+Corrected ground retracked altimeter ranges (“range) 
+Ionospheric correction (“iono_corr_gim”) 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+62 
+ 
+ 
+ 
+• 
+Due to the update of platform data: 
+Distance antenna-COG correction (“cog_corr”) 
+Sum of the instrumental corrections (“net_instr_corr_range”) 
+Corrected ground retracked altimeter ranges (“range”) 
+Ionospheric correction (“iono_corr_gim”) 
+• 
+Due to the update of pole locations: 
+Pole tide height (“pole_tide”) 
+• 
+Due to the update of Mog2D data: 
+High frequency dealiasing correction (“hf_fluctuations_corr”) 
+• 
+Due to the update of radiometer calibration coefficients: 
+All the radiometer-derived parameters, and mainly as far as altimeter parameters are 
+concerned: 
+Radiometer wet tropospheric correction (“rad_wet_tropo_corr”) 
+Atmospheric attenuation (“atmos_corr_sig0”) 
+Backscatter coefficient (“sig0”) 
+Altimeter wind speed (“wind_speed_alt”) 
+Sea State Bias (“sea_state_bias”) 
+Rain flag (“rain_flag”) 
+Ice flag (“ice_flag”) 
+6.1. Data format 
+SARAL/AltiKa OGDR, IGDR and GDR products have the same information and format. The only 
+difference is related to the auxiliary data used (orbit, meteo files, calibrations, … ). 
+Accounting for Jason-2 heritage, products are split into three data sets : 
+• 
+“SSHA” data set : One file close to Jason-2 NRT-SSHA, limited to 1Hz sampling values 
+• 
+“GDR” data set : One file close to Jason-2 IGDR, containing 1Hz and 40Hz values  
+• 
+“SGDR” data set : One file close to Jason-2 SGDR, containing 1Hz, 40hz and waveforms 
+values 
+The following figure shows the data sets available for each kind of product.  
+OGDR Product
+“SSHA”
+DataSet
+“GDR”
+DataSet
+“SGDR”
+DataSet
+IGDR and GDR Products
+OGDR Product
+“SSHA”
+DataSet
+“GDR”
+DataSet
+“SGDR”
+DataSet
+IGDR and GDR Products
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+63 
+ 
+ 
+ 
+Figure 17 : Data set availability per product 
+ 
+ 
+6.1.1. NetCdf format and CF convention 
+ 
+The netCDF data format has been chosen to store the different data sets (one file per data set). 
+This format is extremely flexible, self describing and has been adopted as a de-facto standard for 
+many operational oceanography systems. What’s more, the files follow the Climate and Forecast 
+NetCDF conventions CF-1.1 because these conventions provide a practical standard for storing. 
+6.1.2. The NetCDF Data Model 
+A netCDF file contains dimensions, variables, and attributes, which all have both a name by which 
+they are identified. These components can be used together to capture the meaning of data and 
+relations among data fields in an array-oriented data set. 
+6.1.2.1. Dimensions 
+A dimension may be used to represent a real physical dimension, for example, time, latitude, 
+longitude, or height. A dimension might also be used to index other quantities (waveforms index for 
+example). The following dimensions are used in the SARAL/AltiKa product files: 
+ 
+Dimension 
+Name 
+Value 
+SSHA 
+Data Set 
+GDR 
+Data Set 
+SGDR 
+Data Set 
+time 
+Number of measurements in the file 
+X 
+X 
+X 
+meas_ind 
+40 (number of elementary measurements) 
+ 
+X 
+X 
+wvf_ind 
+128 (number of waveform samples) 
+ 
+ 
+X 
+Table 15 - Dimensions used in the SARAL/AltiKa data sets 
+6.1.2.2. Variables 
+Variables are used to store the bulk of the data in a netCDF file. A variable represents an array of 
+values of the same type. A scalar value is treated as a 0-dimensional array. A variable has a name, a 
+data type, and a shape described by its list of dimensions specified when the variable is created. A 
+variable may also have associated attributes, which may be added, deleted or changed after the 
+variable is created. 
+A variable data type is one of a small set of netCDF types. In this document the variable types will 
+be represent as follows: 
+ 
+Variable type 
+Description 
+char 
+characters 
+byte 
+8-bit data signed 
+short 
+16-bit signed integer 
+int 
+32-bit signed integer 
+float 
+IEEE single precision floating point (32 bits) 
+double 
+IEEE double precision floating point (64 bits) 
+Table 16 - netCDF variable type 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+64 
+ 
+ 
+ 
+6.1.2.3. Coordinate variables and auxiliary coordinate variables 
+A variable with the same name as a dimension is called a coordinate variable. It typically defines a 
+physical coordinate corresponding to that dimension. In accordance with the Climate and Forecast 
+conventions, we must declare a coordinate variable for each dimension. What’s more, missing 
+values are not allowed in coordinate variables and they must be strictly monotonic. 
+An auxiliary coordinate variable is a netCDF variable that contains coordinates data but is not a 
+coordinate variable as defined above. Unlike coordinate variables, there is no relationship between 
+the name of an auxiliary coordinate variable and the name(s) of its dimension(s). 
+6.1.2.4. Attributes 
+NetCDF attributes are used to store data about the data (ancillary data or metadata), similar in 
+many ways to the information stored in data dictionaries and schema in conventional database 
+systems. Most attributes provide information about a specific variable. These are identified by the 
+name of that variable, together with the name of the attribute. 
+Some attributes provide information about the data set as a whole. They are called global 
+attributes - similar to the header of the Jason-1 products. 
+The following table shows the variable attributes used in the SARAL/AltiKa product. There are no 
+mandatory attributes. 
+ 
+Attribute 
+Description 
+_FillValue 
+A default value used to represent missing or undefined data 
+add_offset 
+If present, this number is to be added to the data after it is read by an application. If 
+both scale_factor and add_offset attributes are present, the data are first scaled 
+before the offset is added 
+calendar 
+Reference time calendar 
+comment 
+Miscellaneous information about the data or the methods used to produce it 
+coordinates 
+Identified auxiliary coordinates variables 
+flag_meanings 
+Use in conjunction with flag_values to provide descriptive words or phrase for each 
+flag value 
+flag_values 
+Provide a list of the flag values. Use in conjunction with flag_meanings 
+institution 
+Institution which provides the data 
+leap_second 
+UTC time at which a leap second occurs 
+long_name 
+A descriptive name that indicates a variable’s content. This name is not standardized 
+quality_flag 
+Name of the variable(s) (quality flag) representing the quality of the current variable 
+scale_factor 
+If present, the data are to be multiplied by this factor after the data are read by an 
+application. See also add_offset attribute 
+source 
+Data source (model features, or observation) 
+standard_name 
+A standard name that references a description of a variables content in the standard 
+name table 
+tai_tuc_difference 
+Difference between TAI and UTC reference time 
+units 
+Unit of a variable’s content. The value of this attribute must be a string that can be 
+recognized by the UNIDATA’s Udunits package 
+valid_max 
+Largest theoretical valid value of a variable (this is not the maximum of actual data) 
+valid_min 
+Smallest theoretical valid value of a variable (this is not the minimum of actual data) 
+Table 17 - Variable’s attributes 
+6.1.3. The Common Data Language 
+The Common Data Language (CDL) is used to describe the content of a data set. 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+65 
+ 
+ 
+ 
+The CDL is textual notation that described the netCDF object and it is human readable. The netCDF 
+utility ncdump converts netCDF objects binary to CDL text. The netCDF utility ncgen creates 
+netCDF binary file from CDL text file. 
+A CDL description of a netCDF data set takes the form: 
+netCDF name { 
+ dimension: … 
+ variables: … 
+ data: … 
+} 
+ 
+where the name is used only as a default in constructing file names by the ncgen utility. The CDL 
+description consists of three optional parts, introduced by the keywords dimensions variables and 
+data. NetCDF dimension declarations appear after the dimensions keyword, netCDF variables and 
+attributes are defined after the variables keyword and variable data assignments appears after the 
+data keyword. CDL statement are terminated by a semicolon. Spaces, tabs and newlines can be 
+used freely for readability. Comments in CDL follow the characters ‘//’ on any line. 
+Example  
+ 
+netcdf example { 
+dimensions: 
+ 
+time = 3213 ; 
+ 
+ 
+//  dimensions name are declared first 
+ 
+meas_ind = 40 ; 
+variables: 
+ 
+double time(time) ; 
+ 
+ 
+// variable <type> <name>(<dimension>) 
+ 
+ 
+time:long_name = "time (sec. since 2000-01-01)" ; // variable attributes 
+ 
+ 
+time:standard_name = "time" ; 
+ 
+ 
+time:calendar = "gregorian" ; 
+ 
+ 
+time:tai_utc_difference = -34. ; 
+ 
+ 
+time:leap_second = "0000-00-00 00:00:00" ; 
+ 
+ 
+time:units = "seconds since 2000-01-01 00:00:00.0" ; 
+ 
+ 
+time:comment = "[tai_utc_difference] is the difference between TAI and UTC reference 
+time (seconds) for the first measurement of the data set. [leap_second] is the UTC time at which a leap 
+second occurs in the data set, if any. After this UTC time, the tai_utc_difference is increased by 1 
+second." ; 
+ 
+byte meas_ind(meas_ind) ; 
+ 
+ 
+meas_ind:long_name = "elementary measurement index" ; 
+ 
+ 
+meas_ind:units = "count" ; 
+ 
+ 
+meas_ind:comment = "Set to be compliant with the CF-1.1 convention" ; 
+ 
+double time_40hz(time, meas_ind) ; 
+ 
+ 
+time_40hz:_FillValue = 1.84467440737096e+19 ; 
+ 
+ 
+time_40hz:long_name = "time 40 Hz (sec. since 2000-01-01)" ; 
+ 
+ 
+time_40hz:standard_name = "time" ; 
+ 
+ 
+time_40hz:calendar = "gregorian" ; 
+ 
+ 
+time_40hz:tai_utc_difference = -34. ; 
+ 
+ 
+time_40hz:leap_second = "0000-00-00 00:00:00" ; 
+ 
+ 
+time_40hz:units = "seconds since 2000-01-01 00:00:00.0" ; 
+ 
+ 
+time_40hz:comment = "[tai_utc_difference] is the difference between TAI and UTC 
+reference time (seconds) for the first measurement of the data set. [leap_second] is the UTC time at 
+which a leap second occurs in the data set, if any. After this UTC time, the tai_utc_difference is 
+increased by 1 second." ; 
+ 
+int lat(time) ; 
+ 
+ 
+lat:long_name = "latitude" ; 
+ 
+ 
+lat:standard_name = "latitude" ; 
+ 
+ 
+lat:units = "degrees_north" ; 
+ 
+ 
+lat:quality_flag = "orb_state_flag_rest" ; 
+ 
+ 
+lat:scale_factor = 1.e-06 ; 
+ 
+ 
+lat:comment = "Positive latitude is North latitude, negative latitude is South latitude. See 
+SARAL User Handbook" ; 
+ 
+int lon(time) ; 
+ 
+ 
+lon:long_name = "longitude" ; 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+66 
+ 
+ 
+ 
+ 
+ 
+lon:standard_name = "longitude" ; 
+ 
+ 
+lon:units = "degrees_east" ; 
+ 
+ 
+lon:quality_flag = "orb_state_flag_rest" ; 
+ 
+ 
+lon:scale_factor = 1.e-06 ; 
+ 
+ 
+lon:comment = "East longitude relative to Greenwich meridian. See SARAL User 
+Handbook" ; 
+ 
+byte surface_type(time); 
+ 
+surface_type:long_name = "surface type"; 
+ 
+surface_type:_FillValue = 127b; 
+ 
+surface_type:flag_values = 0b, 1b, 2b, 3b ; 
+ 
+surface_type:flag_meanings = "ocean lake_enclosed_sea ice land"; 
+ 
+surface_type:coordinates = "lon lat"; 
+ 
+surface_type:comment = "Computed using a DTM2000 file: 0 = open oceans or semi-enclosed seas; 1 
+= enclosed seas or lakes; 2 = continental ice; 3 = land. See Altika User Handbook"; 
+ 
+int alt(time) ; 
+ 
+ 
+alt:_FillValue = 2147483647 ; 
+ 
+ 
+alt:long_name = "1 Hz altitude of satellite" ; 
+ 
+ 
+alt:standard_name = "height_above_reference_ellipsoid" ; 
+ 
+ 
+alt:units = "m" ; 
+ 
+ 
+alt:quality_flag = "orb_state_flag_rest" ; 
+ 
+ 
+alt:add_offset = 800000. ; 
+ 
+ 
+alt:scale_factor = 0.0001 ; 
+ 
+ 
+alt:coordinates = "lon lat" ; 
+ 
+ 
+alt:comment = "Altitude of satellite above the reference ellipsoid" ; 
+ 
+· 
+time is a coordinate variable 
+· 
+surface_type is a flag fully described by the flag_meanings and flag_values attributes: 
+surface_type  
+= 0 
+-> ocean  
+surface_type 
+= 1 
+-> lake or enclosed sea 
+surface_type 
+= 2 
+-> ice 
+surface_type 
+= 3  
+-> land 
+ 
+If surface_type is not computed, it will take the value 127 (_FillValue attribute). 
+ 
+· 
+alt_time is packed. The data are stored in 32-bit integers (long). The value of the altitude 
+of the satellite can be recovered using: 
+alt = (altlong * scale_factor) + add_offset 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+67 
+ 
+ 
+ 
+6.2. Global attributes 
+Global attributes (the equivalent of header parameters for Jason-2 products) may be displayed from 
+a SSHA/GDR/SGDR data set file using “ncdump –h” command. 
+A list (not necessarily exhaustive) of the global attributes available in these data sets is given below 
+(attribute name and description). 
+ 
+ 
+ 
+Attributes 
+Description 
+Example 
+convention 
+netCDF convention followed 
+CF-1.1 
+title_reduced 
+A descriptive title for the data set 
+Reduced dataset 
+title_standard 
+A descriptive title for the data set 
+Standard 
+title_expertise 
+A descriptive title for the data set 
+Expertise dataset 
+contact 
+ 
+CNES aviso@oceanobs.com, ISRO TBC 
+reference_document 
+ 
+SARAL/ALTIKA Products Handbook,           
+SALP-MU-M-OP-15984-CN 
+mission_name 
+ 
+SARAL 
+altimeter_sensor_name 
+ 
+ALTIKA 
+altimeter_sensor_institution 
+ 
+CNES 
+radiometer_sensor_name 
+ 
+ALTIKA_RAD 
+radiometer_sensor_institution 
+ 
+CNES 
+doris_sensor_name 
+ 
+DGXX 
+mto_fields_source 
+ 
+European Center for Medium Range Weather 
+Forecasting (ECMWF) 
+mto_fields_institution 
+ 
+ECMWF 
+altimeter_ssb_source 
+ 
+3.5% SWH 
+altimeter_ssb_institution 
+ 
+CNES 
+ocean_tide_sol1_source 
+ 
+GOT4.8 
+ocean_tide_sol1_institution 
+ 
+GSFC 
+ocean_tide_sol2_source 
+ 
+FES2004 
+ocean_tide_sol2_institution 
+ 
+LEGOS/CNES 
+ocean_tide_eq_source 
+ 
+Cartwright and Taylor tidal potential 
+ocean_tide_eq_institution 
+ 
+TBD 
+ocean_tide_neq_source 
+ 
+FES2004 
+ocean_tide_neq_institution 
+ 
+LEGOS/CNES 
+tidal_loading_sol1_source 
+ 
+GOT4.8 
+tidal_loading_sol1_institution 
+ 
+GSFC 
+tidal_loading_sol2_source 
+ 
+FES2004 
+tidal_loading_sol2_institution 
+ 
+LEGOS/CNES 
+solid_earth_tide_source 
+ 
+Cartwright and Taylor tidal potential 
+solid_earth_tide_institution 
+ 
+TBD 
+geoid_source 
+ 
+EGM96 
+geoid_institution 
+ 
+GSFC 
+mean_sea_surface_source 
+ 
+MSS-CNES-CLS-2011 
+mean_sea_surface_institution 
+ 
+CNES/CLS 
+bathy_topo_source 
+ 
+DTM2000.1 
+bathy_topo_institution 
+ 
+GSFC 
+mdt_source 
+ 
+MDT-CNES-CLS-2009 
+mdt_institution 
+ 
+CNES 
+pole_tide_source 
+ 
+Wahr [1985] 
+pole_tide_institution 
+ 
+TBD 
+mog2D_institution 
+ 
+LEGOS/CLS/CNES 
+GIM_institution 
+ 
+NASA/JPL 
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+68 
+ 
+ 
+ 
+Conventions 
+ 
+ 
+title 
+A descriptive title for the data set 
+institution 
+The name of the data producer 
+source 
+The method of production of original data 
+history 
+Date and  Product Create Time 
+contact 
+A text giving the primary contact for information about the data set 
+references 
+The version of the altimetric library used to produce the data set 
+processing_center 
+Name of the processing center 
+reference_document 
+Name of the reference document describing the products 
+ 
+mission_name 
+Name of the mission 
+altimeter_sensor_name 
+Name of the altimeter sensor 
+radiometer_sensor_name 
+Name of the radiometer sensor 
+doris_sensor_name 
+Name of the DORIS sensor 
+ 
+acq_station_name 
+Identification of the acquisition station 
+cycle_number 
+Cycle number 
+absolute_rev_number 
+Absolute number of revolution 
+pass_number 
+Pass number in the cycle (relative pass number) 
+absolute_pass_number 
+Absolute pass number (since the beginning of the mission) 
+equator_time 
+UTC time of equator crossing 
+equator_longitude 
+Longitude of equator crossing 
+ 
+altimeter_level1 
+Name of the altimeter level 1.0 product 
+radiometer_level1 
+Name of the radiometer level 1.0 product 
+ 
+altimeter_chacterisation 
+Name of the altimeter characterization data file 
+altimeter_ltm 
+Name of the altimeter Long Term Monitoring data file 
+radiometer_temp 
+Name of the file containing the antenna temperature coefficients 
+doris_uso 
+Name of the file containing the DORIS-derived USO frequency 
+orbit_data 
+Name of the file containing the orbit ephemeris 
+pf_data 
+Name of the file containing the platform data 
+pole_location 
+Name of the file containing the pole location data 
+orf_data 
+Name of the Orbit Revolution File used to create the pass file 
+ 
+altimeter_instr_corr 
+Generic name of the altimeter instrumental corrections files 
+radiometer_mbt_coeff 
+Name of the radiometer main beam brightness temperature coefficients file 
+radiometer_ave_coeff 
+Name of the radiometer along track averaging coefficients file 
+radiometer_surf_coeff 
+Name of the radiometer surface type coefficients file 
+radiometer_level2_coeff 
+Name of the radiometer level 2 coefficients file 
+land_sea_mask_map 
+Name of the land / sea mask map 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+69 
+ 
+ 
+ 
+6.3. Data Sets 
+Variables attributes are identified in section 6.1.2.4 they may be displayed from a SSHA/GDR/SGDR 
+data set file using “ncdump –h” command. 
+Some examples (not necessarily fully up to date) are given below: 
+double time(time) ; 
+ 
+ 
+ 
+ 
+ 
+time:long_name = "time (sec. since 2000-01-01)" ; 
+ 
+ 
+time:standard_name = "time" ; 
+ 
+ 
+time:calendar = "gregorian" ; 
+ 
+ 
+time:tai_utc_difference = -34. ; 
+ 
+ 
+time:leap_second = "0000-00-00 00:00:00" ; 
+ 
+ 
+time:units = "seconds since 2000-01-01 00:00:00.0" ; 
+ 
+ 
+time:comment = "[tai_utc_difference] is the difference between TAI and UTC reference 
+time (seconds) for the first measurement of the data set. [leap_second] is the UTC time at which a leap 
+second occurs in the data set, if any. After this UTC time, the tai_utc_difference is increased by 1 
+second." ; 
+ 
+byte meas_ind(meas_ind) ; 
+ 
+ 
+meas_ind:long_name = "elementary measurement index" ; 
+ 
+ 
+meas_ind:units = "count" ; 
+ 
+ 
+meas_ind:comment = "Set to be compliant with the CF-1.1 convention" ; 
+ 
+double time_40hz(time, meas_ind) ; 
+ 
+ 
+time_40hz:_FillValue = 1.84467440737096e+19 ; 
+ 
+ 
+time_40hz:long_name = "time 40 Hz (sec. since 2000-01-01)" ; 
+ 
+ 
+time_40hz:standard_name = "time" ; 
+ 
+ 
+time_40hz:calendar = "gregorian" ; 
+ 
+ 
+time_40hz:tai_utc_difference = -34. ; 
+ 
+ 
+time_40hz:leap_second = "0000-00-00 00:00:00" ; 
+ 
+ 
+time_40hz:units = "seconds since 2000-01-01 00:00:00.0" ; 
+ 
+ 
+time_40hz:comment = "[tai_utc_difference] is the difference between TAI and UTC 
+reference time (seconds) for the first measurement of the data set. [leap_second] is the UTC time at 
+which a leap second occurs in the data set, if any. After this UTC time, the tai_utc_difference is 
+increased by 1 second." ; 
+ 
+short ssha(time); 
+ 
+ssha:long_name = "sea surface height anomaly"; 
+ 
+ssha:standard_name = "sea_surface_height_above_sea_level"; 
+ 
+ssha:source = [altimeter_sensor_name]; 
+ 
+ssha:institution = [altimeter_sensor_institution]; 
+ 
+ssha:_FillValue = 32767s; 
+ 
+ssha:units = "m"; 
+ 
+ssha:scale_factor = 1.00e-03; 
+ 
+ssha:coordinates = "lon lat"; 
+ 
+ssha:comment = "= altitude of satellite (alt) - corrected altimeter range (range) - gim ionospheric 
+correction (iono_cor_gim) - model dry tropospheric correction (model_dry_tropo_corr) - model wet 
+tropospheric correction (model_wet_tropo_corr) - sea state bias correction (sea_state_bias) - solid earth 
+tide height (solid_earth_tide) - geocentric ocean tide height solution 1 (ocean_tide_sol1) - geocentric 
+pole tide height (pole_tide) - inverted barometer height correction (inv_bar_corr) - high frequency 
+fluctuations of the sea surface topography (hf_fluctuations_corr for I/GDR off line products only) - mean 
+sea surface (mean_sea_surface). Calculated even if iono_corr_gim  is at default value"; 
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+70 
+ 
+ 
+ 
+6.4. Software 
+This section lists some software that may be used to browse and use data from SSHA, GDR and SGDR 
+data sets. 
+6.4.1. Software provided with netCDF : “ncdump” 
+ « ncdump » converts netCDF files to ASCII form (CDL) 
+See http://www.unidata.ucar.edu/software/netcdf/docs/ncdump-man-1.html 
+The main options are the following : 
+-h  
+Show only the header information in the output, that is the declarations of 
+dimensions, variables, and attributes but no data values for any variables 
+-c  
+Show the values of coordinate variables (variables that are also dimensions) as 
+well as the declarations of all dimensions, variables, and attribute values 
+-v var1,...,varn  The output will include data values for the specified variables, in addition to 
+the declarations of all dimensions, variables, and attributes 
+-x var1,...,varn  Output XML (NcML) instead of CDL. The NcML does not include data values 
+6.4.2. Additional general software 
+6.4.2.1. ncbrowse 
+“ncBrowse” is a Java application that provides flexible, interactive graphical displays of data and 
+attributes from a wide range of netCDF data file conventions. 
+See http://www.epic.noaa.gov/java/ncBrowse/ 
+6.4.2.2. netCDF Operator (NCO) 
+The netCDF Operators, or “NCO”, are a suite of programs known as operators. Each operator is a 
+standalone, command line program which is executed at the UNIX shell-level, like, e.g., ls or 
+mkdir. The operators take netCDF files as input, then perform a set of operations (e.g., deriving 
+new data, averaging, hyperslabbing, or metadata manipulation) and produce a netCDF file as 
+output. The operators are primarily designed to aid manipulation and analysis of gridded scientific 
+data. The single command style of NCO allows users to manipulate and analyze files interactively 
+and with simple scripts, avoiding the overhead (and some of the power) of a higher level 
+programming environment. 
+See http://nco.sourceforge.net/ 
+6.4.3.  Additional specific software : “BRAT” 
+The “Basic Radar Altimetry Toolbox” is a collection of tools and tutorial documents designed to 
+facilitate the use of radar altimetry data. It is able to read most distributed radar altimetry data 
+from all the satellites, to do some processing, data editing and statistic over them, and to visualise 
+the results. The Basic Radar Altimetry Toolbox is able to read ERS-1 and 2, TOPEX/Poseidon, 
+GEOSAT Follow-on, Jason-1, Jason-2, ENVISAT, SARAL/AltiKa and CRYOSAT-2 missions altimetry 
+data from official data centers (ESA, NASA/JPL, CNES/AVISO, NOAA, ISRO), and this for different 
+processing levels, from level 1B (Sensor Geophysical Data Record) to level 3/4 (gridded merged 
+data).  
+See http://www.altimetry.info/html/data/toolbox_en.html.  
+ 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+71 
+ 
+ 
+ 
+Annexe A -  References 
+Benada, J. R., 1997, “PO.DAAC Merged GDR (TOPEX/POSEIDON) Generation B User's Handbook”, 
+Version 2.0, JPL D-11007. 
+Bonnefond, P., P. Exertier, O. Laurain, Y. Menard, A. Orsoni, E. Jeansou and G. Jan, 2002, 
+"Absolute calibration of Jason-1 and TOPEX/POSEIDON altimeters in Corsica (abstract)", Jason-
+1/TOPEX/POSEIDON Science Working Team, New Orleans, LA, USA.  
+Brenner, A. C., C. J. Koblinsky, and B. D. Beckley, 1990, A Preliminary Estimate of Geoid-Induced 
+Variations in Repeat Orbit Satellite Altimeter Observations, J. Geophys. Res., 95(c3), 3033-3040.  
+Callahan, P. S., 1984, Ionospheric Variations affecting Altimeter Measurements: A brief synopsis 
+Marine Geodesy, 8, 249-263.  
+Cartwright, D. E. and R. J. Tayler, 1971, New computations of the tide-generating potential, 
+Geophys. J. R. Astr. Soc., 23, 45-74.  
+Cartwright, D. E. and A. C. Edden, 1973, Corrected tables of tidal harmonics, Geophys. J. R. Astr. 
+Soc., 33, 253-264.  
+Chambers et al., 1998, Reduction of geoid gradient error in ocean variability from satellite 
+altimetry, Marine Geodesy, 21, 25-40. 
+Chelton, D. B., J. C. Ries, B. J. Haines, L. L. Fu, and P. S. Callahan, 2001, “Satellite Altimetry”, 
+Satellite Altimetry and Earth Sciences, ed. L.L. Fu and A. Cazenave, pp. 1-131.  
+Cruz Pol, S. L., C. S. Ruf, and S. J. Keihm, 1998, Improved 20-32 GHz atmospheric absorption 
+model, Radio Science.  
+Gaspar, P., F. Ogor, P. Y. Le Traon and O. Z. Zanife, 1994, Estimating the sea state of the TOPEX 
+and POSEIDON altimeters from crossover differences, J. Geophys. Res., 99, 24981-24994.  
+Gaspar, P., F. Ogor and C. Escoubes, 1996, Nouvelles calibration et analyse du biais d’etat de mer 
+des altimetres TOPEX et POSEIDON, Technical note 96/018 of CNES Contract 95/1523. 
+Haines, B., D. Kubitschek, G. Born and S. Gill, 2002, "Monitoring Jason-1 and TOPEX/POSEIDON 
+from an offshore platform: The Harvest experiment (abstract)", Jason-1/TOPEX/POSEIDON Science 
+Working Team, New Orleans, LA, USA.  
+Imel, D., 1994, Evaluation of the TOPEX dual-frequency Ionosphere correction, J. Geophys. Res., 
+99 (c12), pp 24895-24906.  
+Keihm, S. J., M. A. Janssen, and C. S. Ruf, 1995, TOPEX/POSEIDON microwave radiometer (TMR): 
+III. Wet troposphere range correction algorithm and pre-launch error budget, IEEE Trans. Geosci. 
+Remote Sensing, 33, 147-161. 
+Labroue S., P. Gaspar, J. Dorandeu, O.Z. Zanife, F. Mertz, P. Vincent and D. Choquet, 2004: 
+Non parametric estimates of the sea state bias for the Jason-1 radar altimeter. Marine Geodesy 27 
+(3-4), 453-481. 
+Le Provost, C., 2001, “Ocean Tides”, Satellite Altimetry and Earth Sciences, ed. L.L. Fu and A. 
+Cazenave, pp. 267-303.  
+Le Provost, C., F. Lyard, M. L. Genco, F. Lyard, P. Vincent, and P. Canceil, 1995, Spectroscopy 
+of the world ocean tides from a finite element hydrodynamic model, J. Geophys. Res., 99, 24777-
+24797. 
+Lefèvre F., F. Lyard, C. Le Provost and E.J.O Shrama, Fes99 : a global tide finite element 
+solution assimilating tide gauge and altimetric information, J. Atm. Oceano. Tech., submitted, 
+2001. 
+Lemoine, F. G. et al., 1998, The Development of the joint NASA GSFC and NIMA Geopotential 
+Model EGM96, NASA/TP-1998-206861, 575 pp. 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+72 
+ 
+ 
+ 
+Pavlis, N. and R. H. Rapp, 1990, The development of an isostatic gravitational model to degree 
+360 and its use in global gravity modeling, Geophys. J. Int., 100, 369-378. 
+Rapp, R. H. et al., 1991, Consideration of Permanent Tidal Deformation in the Orbit Determination 
+and Data Analysis for the TOPEX/POSEIDON Mission, NASA Tech. Memorandum 100775, Goddard 
+Space Flight Center, Greenbelt, MD. 
+Rapp, R. H., Y. M. Wang, and N. K. Pavlis, 1991, The Ohio State 1991 geopotential and Sea 
+Surface Topography Harmonic Coefficient Models, Rpt. 410, Dept. of Geodetic Science and 
+Surveying, The Ohio State University, Columbus, OH.  
+Ray, R. D., 1999, A global ocean tide model from TOPEX/POSEIDON altimetry: GOT99.2, NASA 
+Tech. Memorandum 1999-209478, Goddard Space Flight Center, Greenbelt, MD. 
+Rio M.-H., F. Hernandez, 2004, A mean dynamic topography computed over the world ocean from 
+altimetry, in situ measurements, and a geoid model, J. Geophys. Res., 109, C12032.  
+Rio, M.-H., Schaeffer, P., Lemoine, J.-M., Hernandez, F. (2005). "Estimation of the ocean Mean 
+Dynamic Topography through the combination of altimetric data, in-situ measurements and GRACE 
+geoid: From global to regional studies." Proceedings of the GOCINA international workshop, 
+Luxembourg. 
+Rodriguez, E., Y. Kim, and J. M. Martin, 1992, The effect of small-wave modulation on the 
+electromagnetic bias, J. Geophys. Res., 97(C2), 2379-2389.  
+Ruf, C., S. Keihm, B. Subramanya, and M. Janssen, 1994, TOPEX/POSEIDON microwave 
+radiometer performance and in-flight calibration, J. Geophys. Res., 99, 24915-24926.  
+Smith, W. H. F. and D. T. Sandwell, 1994, Bathymetric prediction from dense satellite altimetry 
+and spare shipboard bathymetry, J. Geophys. Res., 99, 21803-21824. 
+Stacey, F. D., 1977, Physics of the Earth, second ed. J. Wiley, 414 pp.  
+Stammer, D., C. Wunsch, and R. M. Ponte, 2000, De-aliasing of global high frequency barotropic 
+motions in altimeter observations, Geophys. Res. Lett., 27, 1175-1178. 
+Tapley, B. D. et al., 1994, Accuracy Assessment of the Large Scale Dynamic Ocean Topography 
+from TOPEX/POSEIDON Altimetry, J. Geophys. Res., 99 (C12), 24, 605-24, 618.  
+Tierney, C., J. Wahr, F. Bryan, and V. Zlotnicki, 2000, Short-period oceanic circulation: 
+implications for satellite altimetry, Geophys. Res. Lett., 27, 1255-1258. 
+Tournadre, J., and J. C. Morland, 1998, The effects of rain on TOPEX/POSEIDON altimeter data, 
+IEEE Trans. Geosci. Remote Sensing, 35, 1117-1135. 
+Watson, C., R. Coleman, N. White, J. Church and R. Govind, 2002, "In-situ calibration activities 
+in Bass Strait, Auatralia (abstract)", Jason-1/TOPEX/POSEIDON Science Working Team, New Orleans, 
+LA, USA.  
+Witter, D. L., and D. B. Chelton, 1991, A Geosat altimeter wind speed algorithm and a method for 
+altimeter wind speed algorithm development, J. Geophys. Res., 96, 8853-8860. 
+Wunsch, C., 1972, Bermuda sea level in relation to tides, weather and baroclinic fluctuations, Rev. 
+Geophys. Space Phys., 10, 1-49.  
+Yi, Y., 1995, Determination of Gridded Mean Sea Surface from TOPEX, ERS-1 and GEOSAT Altimeter 
+Data, Rpt. 434, Dept. of Geodetic Science and Surveying, The Ohio State University, Columbus, 
+9363-9368.  
+Zlotnicki, V., 1994, Correlated environmental corrections in TOPEX/POSEIDON, with a note on 
+ionospheric accuracy, J. Geophys. Res., 99, 24907-24914.  
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+73 
+ 
+ 
+ 
+Annexe B -  List of acronyms 
+AD 
+Applicable Document 
+AGC 
+Automatic Gain Control 
+AMR 
+Advanced Microwave Radiometer 
+AVISO 
+Archivage, Validation et Interprétation des données des Satellites Océanographiques 
+BRAT 
+Basic Radar Altimetry Toolbox 
+CLIVAR 
+Climate Variability and Predictability program 
+CLS 
+Collecte Localisation Satellites 
+CNES 
+Centre National d’Etudes Spatiales 
+DIODE 
+Détermination Immédiate d'Orbite par Doris Embarque 
+DORIS 
+Détermination d'Orbite et Radiopositionnement Intégrés par Satellite 
+DTM 
+Digital Terrain Model 
+ECMWF 
+European Center for Medium range Weather Forecasting 
+EGM 
+Earth Gravity Model 
+EM 
+ElectroMagnetic 
+EUMETSAT 
+European Organisation for the Exploitation of Meteorological Satellites 
+FES 
+Finite Element Solution 
+FFT 
+Fast Fourier Transform 
+GDR 
+Geophysical Data Records 
+GIM 
+Global Ionosphere Maps 
+GODAE 
+Global Ocean Data Assimilation Experiment 
+GPS 
+Global Positioning System 
+GTS 
+Global Telecommunications System 
+HF 
+High Frequency 
+IB 
+Inverse Barometer 
+IGDR 
+Interim Geophysical Data Records 
+JGM 
+Joint Gravity Model 
+JPL 
+Jet Propulsion Laboratory 
+LPT 
+Light Particle Telescope 
+MDT 
+Mean Dynamic Topography 
+MLE 
+Maximum Likelihood Estimator 
+MSS 
+Mean Sea Surface 
+NASA 
+National Aeronautics and Space Administration 
+NetCDF 
+Network Common Data Form 
+NOAA 
+National Oceanic and Atmospheric Administration 
+NRT 
+Near Real Time 
+NWP 
+Numerical Weather Prediction 
+OGDR 
+Operational Geophysical Data Records  
+OSTM 
+Ocean Surface Topography Mission 
+OSU 
+Ohio State University 
+POD 
+Precision Orbit Determination 
+POE 
+Precision Orbit Ephemerides 
+RD 
+Reference Document 
+RMS 
+Root Mean Square 
+RSS 
+Root Sum Square 
+SLA 
+Sea Level Anomaly 
+SLR 
+Satellite Laser Ranging 
+SSALTO 
+Segment Sol multimissions d'ALTimétrie, d'Orbitographie et de localisation précise 
+SSB 
+Sea State Bias 
+SSH 
+Sea Surface Height 
+SSHA 
+Sea Surface Height Anomaly 
+SWH 
+Significant Wave Height 
+T/P 
+Topex/Poseidon 
+TBC 
+To be confirmed 
+TBD 
+To be defined 
+TEC 
+Total Electron Content 
+UTC 
+Universal Time Coordinated 
+WMO 
+World Meteorological Organisation 
+ 
+SARAL/AltiKa Products Handbook  
+ 
+Iss :1.2 - date : December 12, 2011 
+74 
+ 
+ 
+ 
+Annexe C - Contacts 
+CNES  
+ 
+AVISO Altimetry 
+User Service Helpdesk: 
+8-10 rue Hermès  
+F-31520 Ramonville StAgne, France 
+Fax 
+: +33 (0) 561 393 782 
+Web 
+: www.aviso.oceanobs.com 
+e-mail : aviso@oceanobs.com  
+ 
+EUMETSAT 
+Am Kavalleriesand 31 
+D-64295 Darmstadt, Germany 
+Web 
+: www.eumetsat.int 
+ 
+User Service Helpdesk: 
+Tel 
+: +49 6151 807 366/377 
+Fax 
+: +49 6151 807 379 
+e-mail : ops@eumetsat.int 
+ 
+ISRO 
+User Service Helpdesk: 
+TBD by ISRO 
+ 

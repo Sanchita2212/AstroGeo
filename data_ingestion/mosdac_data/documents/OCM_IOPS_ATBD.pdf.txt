@@ -1,0 +1,622 @@
+SAC/EPSA/AOSG/BOD 
+ 
+ 
+Algorithm Theoretical Basis Document 
+ 
+Inherent optical properties derived using Ocean colour monitor 
+onboard EOS-06 
+ 
+S. No. 
+Product Name 
+Spatial 
+Resolution (m) 
+Temporal 
+Resolution 
+1 
+IOP_YYYYMMDD_D.nc 
+𝟑𝟔𝟎𝐗𝟑𝟔𝟎 
+Alternate 
+day 
+ 
+ 
+Anurag Gupta, Debojyoti Ganguly, Syed Moosa Ali, and K. N. Babu 
+Biological Oceanographic Division 
+Atmospheric and Oceanic Sciences Group 
+Space Applications Centre, ISRO 
+Ahmedabad 380015, India 
+ 
+ 
+ 
+ 
+ 
+ 
+December 2024 
+1. 
+Algorithm Configuration Information  
+1.1 Algorithm Name 
+Analytical bio-optical model (ABOM). 
+1.2 Algorithm Identifier 
+IOP_YYYYMMDD_D.nc 
+1.3 Algorithm Specification 
+Version 
+Date 
+Prepared by 
+Description 
+1.0.0 
+03/08/2024 
+Anurag 
+Gupta, 
+Debojyoti 
+Ganguly, 
+Syed 
+Moosa Ali and 
+K.N. Babu 
+Derivation of Inherent optical 
+properties 
+like 
+chl-a, 
+phytoplankton 
+absorption 
+coefficient 
+at 
+443nm, 
+back 
+scattering coefficient, CDOM and 
+detritus absorption coefficients at 
+443nm 
+in 
+optically 
+complex 
+waters 
+ 
+2.1 Introduction 
+ALGORITHMS for the retrieval of chlorophyll-a (chl-a) from ocean color sensors have evolved to a great 
+extent over past few decades. Simplest form of the algorithm is based on empirical regression, in which 
+chl-a concentration is correlated with the reflectance ratio at blue and green wavelength bands (O’ 
+Reilly et al., 1998 & 2000). Empirical-based methods have been used operationally to generate global 
+chl-a products from satellites such as Coastal Zone Color Scanner (CZCS), SeaViewing Wide Field-of-
+View Sensor (SeaWifs), Moderate Resolution Imaging Spetroradiometer (MODIS), Visible Infrared 
+Imaging Radiometer Suite (VIIRS), and so on. Constant improvement has been made in such algorithms 
+to increase their accuracy even in low chlorophyll oligotrophic waters [3]. Although reliable and easy 
+to implement, retrieval from these global algorithms may not be accurate in all parts of the ocean. 
+Empirical algorithms for chl-a retrieval work on the assumption that the remote-sensing reflectance 
+(Rrs) is mainly influenced by phytoplankton and its degraded products. However, this assumption does 
+not hold for Case-2 waters where the optically active constituents do not covary (Dierssen 2010). Due 
+to overlapping nature of absorption spectra of various independently varying constituents, relative 
+change in reflectance value at blue and green bands cannot be linked directly to chl-a and therefore, 
+results in the failure of empirical methods. Also, during phytoplankton blooms of a particular species, 
+the empirical based method fails to accurately retrieve chla. This is because most empirical 
+relationships are derived from Case-1 waters constituting a large number of other phytoplankton 
+species.  
+Another set of algorithms are based on semi analytical (SA) inversions of optical closure relationship 
+derived from radiative-transfer theory (Gordon et al., 1988; Carder et al., 1999; Maritorenna et al., 
+2002; Lee et al., 2004). The model relates Rrs spectra to the inherent optical properties (IOPs) of a 
+water column. The IOPs include (A) total absorption coefficient, which is the sum of absorption by 
+seawater (aw), phytoplankton (aph), colored dissolved organic matter (CDOM) + detritus (acdm); and 
+(B) total backscattering coefficient, which includes backscattering by seawater (bbw) and suspended 
+particles (bbp). Proper inversion of such model allows accurate retrieval of bio-optical parameters 
+including chl-a concentration and various IOPs.  
+ 
+ 
+Fig. 1. Map of Chilika with station locations (The numbers indicate station locations where repeated 
+observations were taken in years 2014 and 2015, N = 64 points). 
+ 
+Advantage here is that several parameters can be retrieved simultaneously. To mathematically solve 
+SA equation, spectral models for the three IOPs (i.e., aph(λ), acdm(λ), and bbp(λ)) must be known. To 
+define spectral absorption of CDOM+detritus (CDM), exponential decay function is used which 
+depends on spectral slope “S” whereas, particle backscattering is defined in terms of a power-law 
+function of wavelength that depends on exponent “η.” On the other hand, phytoplankton absorption 
+is spectrally defined in terms of its specific absorption coefficient, which may vary based on community 
+structure and pigment composition. Therefore, complete formulation of a SA algorithm requires 
+certain model parameters to be hardcoded. However, these parameters show a nonlinear behavior 
+and vary on a global scale. Accuracy of the algorithm, therefore, depends on the accuracy with which 
+parameters such as specific absorption coefficient of phytoplankton (a∗ph(λ)), spectral slope “S” and 
+exponent “η” are defined. If the model parameters are accurate, SA algorithm performs well even in 
+Case-2 waters, where optically active constituents modify the light field independently.  
+To use the model for any set of wavelengths, major difficulty arises in parametrization of a∗ph(λ) 
+(Maritorena et al., 2002). Many researchers have expressed a∗ph(λ) as a representative spectrum for 
+doing the inversion„ whereas the coefficient is widely known for its variability. A general 
+representation of a∗ ph(λ) should account for its variations due to community structure shifts, pigment 
+composition, package effect, and irradiance level (Bricaud et al., 1995; Fujiki et al., 2002). Therefore, 
+there is a need to fine-tune the existing SA algorithms in order to account for the variations in specific 
+absorption coefficient, which would allow the retrieval of bio-optical parameters (e.g., Chl-a) 
+simultaneously in both Case-1 and Case-2 waters. One of the important parameters that affects the 
+retrieval of bio-optical constituents, in optically complex waters, is the slope S of acdm(λ). Meler et al. 
+2016 explained the distribution of the CDM slope (S) as a function of acdm(440). It is was shown to be 
+nonlinearly related to CDM absorption coefficient (Meler et al. 2016; Kowalczuk et al., 2006) and 
+governs the spectral shape of acdm(λ). The CDM-absorption affects the attenuation of light in ultraviolet 
+(UV) and blue wavelengths thereby shielding the aquatic life from harmful UV radiation (Wei et al., 
+2016). In this study, we propose a SA approach with improved CDOM slope estimate for calculating 
+bio-optical parameters with good accuracy in optically complex waters. 
+3. 
+Datasets 
+3.1 NASA Bio-optical marine algorithm datasets (NOMAD) 
+The relationship between CDOM slope “S” (1/nm) and CDOM absorption coefficient ag at 443 nm 
+was established based on the combined data set of NOMAD and Indian coastal data as shown in Fig-
+3 & 4. 
+3.2  Validation data set 
+Chilika Lagoon is a good site to study optically complex waters. Chilika lagoon on the east coast of 
+India (19028’ N – 190 54’ N; 850 06’ E−850 35’ E) is one of the important wetlands in the country and 
+is the largest brackish water lagoon in Asia. In the northern side of the lagoon, tributaries of the 
+Mahanadi River such as Daya, Nuna, and Bhargavi bring a lot of sediment and freshwater influx with 
+terrestrial inputs into the lagoon.  
+ 
+Fig. 2. Remote-sensing reflectance spectra (Rrs(λ)) measured during field data collection. 
+ 
+A mouth open in the northern side of the Fig. 2. Remote-sensing reflectance spectra (Rrs(λ)) 
+measured during field data collection. Lake exchanges seawater with Lagoon making it optically 
+complex system. Fig. 1 shows the map of study area with station locations used for collecting in situ 
+data. Corresponding reflectance spectra is shown in Fig. 2.  
+4. 
+Background and Methodology 
+4.1 Bio-Optical Inversion Model  
+Gordon developed the first simplified analytical model in 1973 for ocean color applications. The 
+model was based on the assumption that most of the scattering takes place in forward direction, 
+and the color and shape of the upwelling light field are the consequences of absorption and single 
+scattering at large angles (Gordon and Evans, 1993). Based on this assumption number of analytical 
+models have been developed. The Rrs in water column is the function of total absorption coefficient 
+and backscattering coefficients (Gordon et al., 1988; Morel 1988; Morel and Prieur 1977). The SA 
+ocean color models by Gordon et al. 1988, Maritorena et al. 2002, and Garver and Siegel 1997 are 
+described below through the following equations: 
+𝑅𝑟𝑠(𝜆, 𝜃, 𝜓) =
+𝑡2
+𝑛𝜔
+2 ∑
+𝑔𝑖
+2
+𝑖=1
+(
+𝑏𝑏(𝜆)
+𝑏𝑏(𝜆)+𝑎(𝜆))𝑖 
+ 
+ 
+ 
+ 
+(1) 
+𝑎(𝜆) = 𝑎𝜔(𝜆) + 𝑎𝑝ℎ(𝜆) + 𝑎𝑐𝑑𝑚(𝜆) 
+ 
+ 
+ 
+ 
+(2) 
+bb(λ) = bbw(λ) + bbp(λ)  
+ 
+ 
+ 
+ 
+ 
+ 
+(3) 
+𝑎𝑝ℎ(𝜆) = 𝐶ℎ𝑙 𝑎𝑝ℎ
+∗(𝜆) 
+ 
+ 
+ 
+ 
+ 
+ 
+(4) 
+𝑎𝑐𝑑𝑚(𝜆) = 𝑎𝑐𝑑𝑚(𝜆0)exp (−𝑆(𝜆−𝜆0)) 
+ 
+ 
+ 
+ 
+(5) 
+𝑏𝑏𝑝(𝜆) = 𝑏𝑏𝑝(𝜆0) [
+𝜆0
+𝜆]
+𝜂
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(6) 
+4.2 Solving the Model 
+The above set of equations show that the Rrs is a function of six unknowns S, η, a∗ph(λ), chl, aCDM(λ0), 
+and bbp(λ0). The vector θ = [chl, acdm(λ), bbp(λ)] represents variables to be retrieved, whereas φ = 
+[a∗ph(λ1)..a∗ph(λN ), S, η] is the vector of modeled parameters. Maritorena et al. 2002 solved the bio-
+optical model [known as Garver–Seigel–Maritorena (GSM) algorithm] by minimizing the cost 
+function described in (7). The model parameter vector (φ) was optimized from global data set using 
+simulated annealing technique. The value of vector φ in the GSM algorithm is kept constant 
+throughout the scene which may create a strong bias while solving for the unknown vector (θ), 
+especially in optically complex waters. Likewise, Lee et al. [18] proposed quasi-analytical algorithm 
+(QAA) for deriving IOPs from Rrs in which he used empirical relations for estimating the parameters 
+S and η [see (8) and (9). Limitation of QAA algorithm is with the parameterization of CDM slope S 
+[see (8)]. The equation for S makes sense as it exploits the Rrs explicitly, but is not sufficient to deal 
+with all kinds of waters, thus affecting the retrieval outcome. In case of optically complex waters, S 
+takes much lower value for waters with high CDOM absorption at 443 nm. In addition, the presence 
+of other constituents may change the slope value significantly 
+ 
+𝑐𝑜𝑠𝑡=
+1
+(𝑁𝜆−1) ∑
+[𝑅𝑟𝑠(𝜆𝑖, 𝜃, 𝜓) −𝑅𝑟𝑠(𝜆𝑖)]2
+𝑁𝜆
+𝑖=1
+ 
+ 
+ 
+ 
+(7) 
+𝑆= 0.015 +
+0.002
+0.6+rrs(443)
+rrs(555)
+  
+ 
+ 
+ 
+ 
+ 
+ 
+(8) 
+ƞ = 2.2 * (1.0 - 1.2 * exp(-0.9 * (rrs[440] / rrs[555])))                                      
+(9) 
+where rrs is the remote sensing reflectance just below the water surface and is related to Rrs by the 
+following equation: 
+rrs() =
+Rrs() 
+0.52+1.7∗Rrs()                   
+ 
+ 
+ 
+ 
+(10) 
+Both GSM and QAA uses SA model described in (1), with the two coefficient g1 and g2 fixed for nadir 
+viewing geometry. Many ocean color sensors are looking at the ocean away from nadir to avoid 
+sunglint making Rrs to be anisotropic in nature, having an angular distribution (Lee et al., 2004). 
+Therefore, an inversion of satellite-derived reflectance with good accuracy using (1), specially for 
+coastal waters, have always been a challenging task. 
+4.3 ABOM/ABOM2 Model Description 
+The basic formalism of QAA (quasi-analytical model) by Lee et al. 2004 has been adopted in analytical 
+bio optical model (ABOM) model which accounts for the cumulative response of angular distribution 
+of light field and multiple scattering within the water column (due to molecular or particle 
+scattering) on the Rrs. The semi-ABOM, similar to GSM, solves the closure relationship between Rrs 
+and IOPs using Levenberg–Marquardt technique in a least square sense. Remote-sensing reflectance 
+(Rrs), as mentioned earlier, is the function of two vectors θ and φ. The unknown vector θ = [chl, 
+acdm(λ), bbp(λ)] is simultaneously derived after modification in known vector φ = [a∗ ph(λ1)..a∗ 
+ph(λN ), S, η] parameterization. Set of equations used in ABOM model is summarized in equation 11 
+to 15. We have assumed that the absorption due to CDOM dominates over detritus absorption. We 
+also corrected for the CDOM slope bias by introducing empirically derived expression for S (Fig. 3), 
+details are presented in Section II-D. We also accounted for the variability in a∗ph using its 
+dependence on chlorophyll (Bricaud et al., 1995). This whole formulation led to a significant 
+improvement in the retrieval outcome. 
+ 
+Fig. 3. Relation between CDOM slope “S” (1/nm) and CDOM absorption coefficient ag at 443 nm was 
+established based on the combined data set of NOMAD and Indian coastal data. 
+rrs() = C1 [𝑏𝑤(𝜆)/ (a+𝑏𝑏)] + C2 [𝑏𝑏𝑝(𝜆)/ (a+𝑏𝑏)]                              
+ 
+ 
+C1=0.l13     
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+C2 = 0.197 [1 - 0.636 * exp(-2.552 (𝑏𝑏𝑝(𝜆) / (a+𝑏𝑏)))]    
+ 
+(11) 
+𝑎(𝜆) = 𝑎𝑤(𝜆) + 𝑎𝑝ℎ(𝜆) + 𝑎𝑔(𝜆) 
+ 
+ 
+ 
+ 
+(12) 
+𝑎𝑔(𝜆) = 𝑎𝑔(𝜆0)exp (−𝑆(𝜆−𝜆0)) 
+ 
+ 
+ 
+ 
+(13) 
+Sg = 0.0099ag-0.226                          
+ 
+ 
+ 
+ 
+(14) 
+𝑎𝑝ℎ
+∗(𝜆) = 𝐴(𝜆)𝑐ℎ𝑙−𝐵(𝜆) 
+ 
+  
+ 
+ 
+ 
+(15) 
+In ABOM, if a few changes in parameterizations are carried out then the same becomes ABOM2 as  
+A relationship between the integrated response of the coloured dissolved organic matter(CDOM) and 
+detritus i.e. ag+ad and ad for global dataset was carried out as shown in the following plot: 
+ 
+ag+ad = 2.2389ad0.7555                           
+ 
+ 
+ 
+(16) 
+The integrated slope of cdom and detritus for global waters was observed as 0.016±0.0025. [23] 
+S = 0.016  
+ 
+ 
+ 
+ 
+ 
+ 
+(17) 
+4.3.1 Model for the Slope of CDOM Absorption 
+The empirical relation for CDOM slope was estimated using the extensively calibrated and enhanced 
+in situ bio-optical NOMAD (NASA Bio-optical Marine algorithm data version 2.0 ALPHA) data set. 
+Based on bathymetric information, all optical data corresponding to locations falling within 50-m 
+depth zone, classically defined as case-2 waters, were extracted from NOMAD. The data points from 
+NOMAD were filtered on the basis of finite values of available optical parameters like water leaving 
+radiance (Lw), surface solar irradiance (Es) etc., with ag available at minimum five wavelengths. Two 
+channels for ag are sufficient to estimate CDOM slope S using [20, eq. (13)]; however, more optical 
+bands were added to make the filtration process robust in order to reduce the data redundancy 
+while retaining its variability. Bio-optical data corresponding to Indian coastal waters collected under 
+various in situ campaigns were also merged with NOMAD and the combined data set with 161 
+measurements were utilized for model development. Fig. 4 shows the approximate locations of 
+these data points. Slope of CDOM (S) was found to be highly variable ranging from 0.007 to 0.05 
+nm−1 for the values of reference absorption ag (443) ranging from 0.015 to 0.6 m−1. To account for 
+this variability, a power fit was performed as shown in equation (14). 
+ 
+Fig. 4. Set of data points taken from NOMAD and Indian coastal waters. 
+4.4 Discussion and Validation on ABOM 
+Water samples from 64 stations were collected during 2014 and 2015 in Chilika lagoon (sampling 
+locations shown in Fig. 1) and in situ chl-a were estimated using spectrophotometer. Comparison of 
+chlorophyll–a concentration derived using Lee–Morel [8], [21], GSM [7], and ABOM model (this letter) 
+in optically complex waters of Chilika Lagoon (see Fig. 5) indicate significant differences among the SA 
+models when compared with in situ measurements. The mean absolute percentage difference (MAPD) 
+of pooled data set for Lee–Morel and GSM was above 150% while ABOM showed significant 
+improvement in reducing the MAPD to 58%. From Table I, it is clear that mean chl-a (10.2 mg/m3) for 
+ABOM model is very close to mean in situ chl-a (11.05 mg/m3) unlike to Lee–Morel (27.7 mg/m3) and 
+GSM (33.1 mg/m3). In addition to that, a significant improvement in the ABOM model in terms of 
+relative bias (6.92%) was observed over Lee–Morel (188.2%) and GSM (167.8%). Slope S of CDM 
+(colored dissolved and detrital matter combined) used in Lee–Morel is determined dynamically based 
+on an empirical relationship with blue–green ratio.  
+Table-I Validation statistics 
+Bio-
+optical 
+model 
+Relative 
+bias(%) 
+Bias at 
+log scale 
+RMSE at 
+log scale 
+Mean 
+chl-
+a(mg/m3) 
+Mean insitu 
+chl-a 
+MAPD(%) 
+Lee-
+Morel 
+188.2 
+0.38 
+0.45 
+27.7 
+ 
+11.05(mg/m3) 
+189 
+GSM 
+167.8 
+0.27 
+0.42 
+33.1 
+175 
+ABOM 
+6.92 
+-0.1 
+0.4 
+10.2 
+58 
+ 
+ 
+ 
+Fig. 5. Validation of chl-a derived from ABOM (this study), GSM and Lee–Morel models with in situ data 
+set. 
+However, the parametrization causes the slope to be always greater than 0.015 (1/nm). In optically 
+complex waters, the contribution of CDOM and detrital matter to absorption in blue wavelengths is 
+significant and independent. Higher absorption in reference wavelength due to CDOM significantly 
+decreases the slope value (less than 0.01, this study). Therefore, Lee–Morel does not accurately 
+estimate chlorophyll concentration when CDOM is high. In GSM model, the slope value of CDOM 
+absorption is kept constant and high (0.02 nm−1) which also creates a strong bias resulting in 
+overestimation of chlorophyll concentration. The ABOM model accounts for the low magnitude in 
+slope values for higher CDOM absorption in optically complex waters. Although the power function for 
+CDOM slope is able to explain only 24%–25% variability in the data set, incorporation of this equation 
+in ABOM is able to significantly reduce the uncertainty in the estimation of chlorophyll concentration 
+when combined with the model for phytoplankton specific absorption [9]. The model can be further 
+improved by incorporating the contribution by detrital absorption at reference wavelength. 
+4.5 Discussion and Validation on ABOM2 
+The performance of the global models was illustrated in Table 2 for deriving absorption coefficients 
+due to coloured dissolved organic matter, detritus and their integrated response at 443nm. The 
+limitation of the Lee-Morel-Bricaud model and GSM model is to derive the integrated response of 
+CDOM and detritus only with 33% and 30% uncertainty respectively. However, the above limitation 
+was partially solved using [22] i.e. the model is capable to derive the absorption coefficient due to 
+coloured dissolved organic matter at 443nm with 36% uncertainty in optically complex waters. While 
+the new parameterized model is able to address the above described limitations of deriving 
+absorption coefficients due to coloured dissolved organic matter, detritus and their integrated 
+response at 443nm with 30%, 40% and 29% uncertainties respectively. 
+In addition to that, Statistics of the performance of the global models for deriving CDOM (ag), 
+detritus (ad) absorption coefficients and their integrated response at 443nm, have been illustrated 
+in Table 3. The important point here is to note that the mean values of NASA bio optical marine 
+algorithm datasets [NOMAD] for absorption due to CDOM, detritus and their integrated response 
+are 0.18 (m−1), 0.06 (m−1) and 0.24 (m−1) respectively. LMB and GSM derived integrated responses 
+are 0.21 (m−1) as compared to NOMAD i.e. 0.24 (m−1) while New model derived response is very 
+close to NOMAD i.e. 0.23 (m−1). Further, new model derived individual response i.e. absorption due 
+to CDOM and detritus 0.17 (m−1) and 0.06 (m−1) respectively are very close to the mean values of 
+NOMAD. Similarly, Gupta et al (2020) also works very well for CDOM showing close proximity to NO- 
+MAD mean CDOM at 443nm. 
+The integrated response ad+ag at 443nm is slightly underestimated with respect to NOMAD in-situ 
+data while other two models like GSM and Lee-Morel-Bricaud are overestimated with respect to 
+NOMAD in-situ data as shown in Figure (6). Also, bio-optical model [22] derived only cdom (ag) at 
+443nm with slope tending to unity and R-square and RMSE, 0.82 and 0.10, respectively. Whereas, 
+the new parameterized model derived cdom and detritus coefficients at 443nm, are much 
+underestimated with respect to NOMAD ag and ad at 443nm while their integrated response at 
+443nm is slightly better than their individual ones. The approach adopted in the current model for 
+the isolation of detritus and CDOM absorption coefficient from remote sensing reflectance is novel 
+and can be used globally. Still, there is even much more scope for their further improvements as 
+well. 
+Table-2 Performance of the global models for deriving CDOM (ag) and detritus (ad) absorption 
+coefficients at 443nm with their uncertainties 
+ 
+Models 
+Detritus (ad) at 
+443nm(%) 
+CDOM(ag) at 
+443nm(%) 
+(ad+ag) (%) 
+Lee-Morel-
+Bricaud(LMB) 
+N/A 
+N/A 
+33 
+GSM 
+N/A 
+N/A 
+30 
+Gupta model 2020 
+N/A 
+36 
+N/A 
+New 
+40 
+30 
+29 
+ 
+Table-3 Statistics of the performance of the global models for deriving CDOM (ag), detritus (ad) 
+absorption coefficients and their integrated response at 443nm 
+Models 
+R-Square 
+RMSE 
+Slope 
+Intercept 
+Mean(ad, ag, 
+ad+ag) 
+LMB[ad+ag] 
+0.74 
+0.16 
+1.03 
+-0.007 
+0.21 
+GSM[ad+ag] 
+0.84 
+0.14 
+1.22 
+-0.023 
+0.21 
+Gupta model 
+2020 [ag] 
+0.82 
+0.1 
+1.09 
+-0.003 
+0.17 
+New[ad, ag, 
+ad+ag] 
+0.71,0.72,0.7 
+0.07,0.11,0.16 
+0.64,0.74,0.82 
+0.004,0.023,0.028 
+0.06,0.17,0.23 
+ 
+ 
+ 
+Fig-6 A) GSM derived (ad+ag ) at 443 nm versus NOMAD (ad+ag ) at 443nm, B) Lee derived (ad+ag) at 
+443 nm versus NOMAD (ad+ag ) at 443nm, C) Gupta et al, 2020 derived ag at 443 nm versus NOMAD ag 
+at 443nm, D), E) and F) new parameterized based model derived ad, ag and (ad+ag ) at 443 nm versus 
+NOMAD ad, ag and (ad+ag ) at 443nm respectively. 
+ 
+Conclusion 
+In this study, ABOM with suitable parameterization has been presented to derive chl-a in optically 
+complex waters. In addition, an attempt was made to correct for the CDOM slope bias by introducing 
+empirically derived expression in Fig. 3, using NOMAD data for global waters. This study concludes that 
+ABOM-derived chl-a (mg/m3) improves significantly with an uncertainty of 58% as compared to GSM 
+(175%) and Lee–Bio (189%) algorithms. Further the study reveals the bio-optical models developed for 
+global oceans needs to be regionally parameterized for optical components in complex waters bodies 
+to accurately estimate the magnitudes of optical constituents.  
+Similarly, in ABOM2, the study attempted to bring about improvement in the parameterization of Lee 
+inversion model using the global NOMAD in-situ dataset. The parameterization to inversion model 
+successfully estimated detritus and CDOM absorption coefficients with uncertainty of 40% and 30%, 
+respectively. Also, the integrated response of CDOM and detritus after parameterization, had a lesser 
+uncertainty of 29% as compared to GSM and Lee-Morel-Bricaud (LMB) model whose uncertainties 
+were 30% and 33%, respectively. Similar results can be obtained globally by introducing a new 
+parameterization to inversion model for deriving detritus absorption. This might be quite significant in 
+deriving the sub components of inherent optical properties (IOPs) within the acceptable uncertainty. 
+Acknowledgment  
+We acknowledge Director, Space Applications Centre (ISRO), Ahmedabad for his continuous support 
+for pursuing this study. We are thankful to Deputy Director, Earth, Ocean, Atmosphere, Planetary 
+Sciences and Applications Area (EPSA), ISRO for his continuous encouragement for the present work. 
+Thanks and acknowledgments are due to all those who contributed for NOMAD/SeaBASS in situ data, 
+which formed a valuable pooled data set. The authors are also thankful to Wetland Research and 
+Training Centre, Chilika Development Authority (Department of Forest and Environment, Government 
+of Odisha, Balugaon, India) for their support in data collection campaigns in Chilika Lake during 2014 
+and 2015. Thanks are also due to all those who supported directly or indirectly for this work. 
+ 
+References 
+[1] J. E. O’Reilly et al., “Ocean color chlorophyll algorithms for seawifs,” J. Geophys. Res., 
+Oceans, vol. 103, no. 11, pp. 24937–24953, 1998. 
+[2] J. E. O’Reilly et al., “Ocean color chlorophyll a algorithms for seawifs, OC2, and OC4: 
+Version 4,” SeaWiFS Postlaunch Calibration Validation Anal., vol. 3, pp. 9–23, Oct. 2000. 
+[3] C. Hu, Z. Lee, and B. Franz, “Chlorophyll a algorithms for oligotrophic oceans: A novel 
+approach based on three-band reflectance difference,” J. Geophys. Res., Oceans, vol. 117, no. 
+C1, Jan. 2012. 
+[4] H. M. Dierssen, “Perspectives on empirical approaches for ocean color remote sensing of 
+chlorophyll in a changing climate,” Proc. Nat. Acad. Sci. USA, vol. 107, no. 40, pp. 17073–
+17078, 2010. 
+[5] H. R. Gordon et al., “A semianalytic radiance model of ocean color,” J. Geophys. Res., 
+Atmos., vol. 93, no. 9, pp. 10909–10924, 1988. 
+[6] K. L. Carder, F. R. Chen, Z. P. Lee, S. K. Hawes, and D. Kamykowski, “Semianalytic 
+moderate-resolution imaging spectrometer algorithms for chlorophylla and absorption with bio-
+optical domains based on nitratedepletion temperatures,” J. Geophys. Res., Oceans, vol. 104, 
+no. 3, pp. 5403–5421, Mar. 1999. 
+[7] S. Maritorena, D. A. Siegel, and A. R. Peterson, “Optimization of a semianalytical ocean 
+color model for global-scale applications,” Appl. Opt., vol. 41, no. 15, pp. 2705–2714, May 
+2002, doi: 10.1364/AO.41.002705. 
+[8] Z. P. Lee, K. L. Carder, and K. P. Du, “Effects of molecular and particle scatterings on the 
+model parameter for remote-sensing reflectance,” Appl. Opt., vol. 43, pp. 4957–4964, Sep. 
+2004. 
+[9] A. Bricaud, M. Babin, A. Morel, and H. Claustre, “Variability in the chlorophyll-specific 
+absorption coefficients of natural phytoplankton: Analysis and parameterization,” J. Geophys. 
+Res., Oceans, vol. 100, no. C7, pp. 13321–13332, 1995. 
+[10] T. Fujiki, “Variability in chlorophyll a specific absorption coefficient in marine 
+phytoplankton as a function of cell size and irradiance,” J. Plankton Res., vol. 24, no. 9, pp. 
+859–874, Sep. 2002. 
+[11] J. Meler, P. Kowalczuk, M. Ostrowska, D. Ficek, M. Zabáocka, and A. Zdun, 
+“Parameterization of the light absorption properties of chromophoric dissolved organic matter 
+in the baltic sea and Pomeranian lakes,” Ocean Sci., vol. 12, no. 4, pp. 1013–1032, Aug. 2016. 
+[12] P. Kowalczuk, C. A. Stedmon, and S. Markager, “Modeling absorption by CDOM in the 
+baltic sea from season, salinity and chlorophyll,” Mar. Chem., vol. 101, nos. 1–2, pp. 1–11, 
+Sep. 2006. 
+[13] J. Wei, Z. Lee, M. Ondrusek, A. Mannino, M. Tzortziou, and R. Armstrong, “Spectral 
+slopes of the absorption coefficient of colored dissolved and detrital material inverted from UV-
+visible remote sensing reflectance,” J. Geophys. Res., Oceans, vol. 121, no. 3, pp. 1953–1969, 
+Mar. 2016. 
+[14] H. Gordon and R. Evans, “Comment on ’aerosol and Rayleigh radiance contributions to 
+coastal zone colour scanner images’ by Eckstein and Simpson,” Int. J. Remote Sens., vol. 14, 
+no. 3, pp. 537–540, 1993. 
+[15] A. Morel, “Optical modeling of the upper ocean in relation to its biogenous matter 
+content,” J. Geophys. Res., Oceans, vol. 93, no. 9, pp. 10749–10768, 1988. 
+[16] A. Morel and L. Prieur, “Analysis of variations in ocean color,” Limnol. Oceanogr., vol. 
+22, no. 4, pp. 709–722, 1977. 
+[17] S. A. Garver and D. A. Siegel, “Inherent optical property inversion of ocean color spectra 
+and its biogeochemical interpretation: 1. time series from the sargasso sea,” J. Geophys. Res., 
+Oceans, vol. 102, no. C8, pp. 18607–18625, 1997. 
+[18] Z. Lee, K. Carder, and R. A. Arnone, “Deriving inherent optical properties from water 
+color: A multiband quasi-analytical algorithm for optically deep waters,” Appl. Opt., vol. 41, 
+no. 27, pp. 5755–5772, 2002. 
+[19] H. R. Gordon and A. Y. Morel, Remote Assessment of Ocean Color for Interpretation of 
+Satellite Visible Imagery: A Review, vol. 4. Springer, 2012. 
+[20] A. Bricaud, A. Morel, and L. Prieur, “Absorption by dissolved organic matter of the sea 
+(yellow substance) in the UV and visible domains1,” Limnol. Oceanogr., vol. 26, no. 1, pp. 43–
+53, Jan. 1981. 
+[21] H. Loisel and A. Morel, “Light scattering and chlorophyll concentration in case 1 waters: 
+A re-examination,” Limnol. Oceanogr., vol. 43, no. 5, pp. 847–858, Jul. 1998. 
+[22] Anurag Gupta, Syed Moosa Ali, Aswathy Vijaya Krishna, Arvind Sahay, and Mini 
+Raman, “Role of visible spectroscopy in bio-optical characterization of coastal waters,” IEEE 
+Geoscience and Remote Sensing Letters, vol. 18, no. 8, pp. 1327–1331, 2020. 
+[23] P Jeremy Werdell and Sean W Bailey, “An improved in-situ bio-optical data set for ocean 
+color algorithm development and satellite data product validation,” Remote sensing of 
+environment, vol. 98, no. 1, pp. 122–140, 2005. 

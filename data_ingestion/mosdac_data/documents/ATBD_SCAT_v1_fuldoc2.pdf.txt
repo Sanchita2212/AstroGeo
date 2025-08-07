@@ -1,0 +1,1853 @@
+OCEANSAT-II-UP/SCATT-1/SAC-2007 
+ 
+ALGORITHM THEORETICAL BASIS DOCUMENT 
+ 
+ 
+WIND VECTOR RETRIEVAL ALGORITHMS FOR 
+OCEANSAT-2 SCATTEROMETER 
+ 
+ 
+ 
+ 
+Space Applications Centre 
+Indian Space Research Organisation 
+Ahmedabad- 380015 
+ 
+June 2007 
+ 
+GOVERNMENT OF INDIA 
+INDIAN SPACE RESEARCH ORGANISATION 
+SPACE APPLICATIONS CENTRE 
+AHMEDABAD -- 380 015 
+ 
+DOCUMENT CONTROL AND DATA SHEET 
+1 
+Date 
+June 15, 2007 
+2 
+Title 
+Algorithm Theoretical Basis Document (ATBD): Wind 
+vector retrieval algorithms for Oceansat-2 Scatterometer 
+3 
+Version 
+1.0 
+4 
+Document No. 
+OCEANSAT-II-UP/SCATT-1/SAC-2007 
+5 
+Type of Report Scientific 
+6 
+No. of pages 
+38 
+7 
+Authors 
+B.S. Gohil, K. Satheesan and A.K. Varma 
+8 
+Originating 
+Unit 
+OSD/MOG/RESIPA, 
+Space 
+Applications 
+Centre, 
+Ahmedabad 
+9 
+Abstract 
+Oceansat-II, the second in the series of IRS satellites for 
+oceanographic applications will carry a microwave 
+Scatterometer (SCAT) and an advanced Ocean Colour 
+Monitor (OCM). This document describes the various 
+algorithms to be used for the retrieval of ocean surface 
+wind 
+vector 
+from 
+the 
+OCEANSAT-II 
+satellite 
+scatterometer data.  
+ 
+The document contains details of algorithms for 
+extraction of wind vector solutions, wind directional 
+ambiguity removal and flagging of rain and sea-ice. It 
+also 
+describes 
+the 
+procedures 
+for 
+post-launch 
+development of geophysical model function (GMF) and 
+rain impact model necessary for operational wind 
+retrieval and rain flagging. 
+ 
+Also described here are the simulation based studies 
+using Quikscat GMF and rain impact models for wind 
+vector retrieval, noise impact on retrieval and rain 
+flagging. 
+10
+Classification 
+General 
+11
+Circulation 
+All concerned 
+ 
+ 
+ 
+Sr. 
+No. 
+CONTENTS 
+Page 
+No. 
+ 
+Summary 
+ 
+1.0 
+Introduction 
+1 
+2.0 
+Scatterometer measurements 
+1 
+3.0 
+Oceansat-2 scatterometer system 
+2 
+3.1 
+Oceansat-2 scatterometer data swath 
+3 
+3.2 
+Geophysical products specifications 
+4 
+3.3 
+Oceansat-2 scatterometer data processing flow 
+5 
+4.0 
+Geophysical model function 
+5 
+4.1 
+Prevailing GMF 
+6 
+4.2 
+GMF development procedures 
+7 
+4.2.1
+Post-launch ancillary data requirements for GMF development 
+11 
+5.0 
+Wind vector retrieval and the state of art 
+12 
+5.1 
+Algorithm for retrieval of wind vector solutions 
+13 
+5.1.1
+Implementation of retrieval algorithms 
+16 
+5.1.2
+Characteristics of wind retrieval across the inner beam swath  
+20 
+5.1.3
+Comparison of retrieval algorithms and the noise sensitivity 
+21 
+5.2 
+Algorithm for directional ambiguity removal 
+23 
+5.2.1
+Algorithm for localized directional ambiguity removal 
+24 
+5.2.2
+Directional ambiguity removal over inner beam swath 
+24 
+5.2.3
+Directional ambiguity removal over exclusive outer beam 
+swath 
+25 
+5.2.4
+Testing of algorithms with Quikscat data 
+26 
+6.0 
+Flagging 
+27 
+6.1 
+Rain impact model and its development 
+28 
+6.2 
+Impact of rain on wind vector retrieval 
+29 
+6.3 
+Rain flagging 
+30 
+6.4 
+Sea-ice flagging (Brief introduction) 
+32 
+7.0 
+Initial phase validation 
+34 
+8.0 
+Limitations 
+34 
+9.0 
+Acknowledgements 
+34 
+10.0 
+References 
+35 
+SUMMARY 
+ 
+This Algorithm Theoretical Basis Document (ATBD) describes algorithms for 
+retrieval of ocean surface wind vector from Oceansat-2 Scatterometer data. The ATBD 
+contains three major algorithms for derivation of wind vector solutions, directional 
+ambiguity removal and rain flagging. It also describes two crucial aspects specific to 
+Oceansat-2, firstly, the development of Geophysical Model Functions (GMF) needed for 
+wind vector retrieval and secondly, the development of rain impact model necessary for 
+rain flagging. In order to realize retrieval as well as flagging, requirements of different 
+types of global data sets are also specified along with its utilization procedures. 
+For deriving wind vector solutions, a new and efficient algorithm has been 
+developed which is as good as Maximum Likelihood Estimator (MLE) algorithm being 
+used operationally for the earlier and ongoing global scatterometer missions. The 
+algorithm developed for directional ambiguity removal is based on median filter and it 
+operates in two stages considering observational data at different spatial coverage in order 
+to tackle the localized ambiguities also. The rain flagging algorithm makes use of the cost 
+function developed for wind solution extraction which gets modified under rain free and 
+rainy situations. The sea-ice flagging approach is adopted from the literature which is 
+used for sea-ice detection from Quikscat data. The present ATBD describes the 
+procedures for developing GMF specific to Oceansat-2 scatterometer by using 
+simultaneous observations of radar backscatter from Oceansat-2 and reanalysis wind 
+vector fields from AGCM (atmospheric general circulation model - ECMWF)  for rain 
+free conditions using rain information from TRMM or DMSP-SSM/I. Like-wise, 
+procedures for rain impact model development are also described in ATBD based on 
+atmospheric attenuation and rain fall to be available from TRMM-PR along with 
+Oceansat-2 scatterometer radar backscatter and model analysis wind data.  
+Analysis of limited data of Quikscat scatterometer, sensitivity studies related to 
+wind vector retrieval using both the algorithms (MLE and in-house), rain and sea ice 
+flagging, assumptions made in algorithms and various procedures, and overall limitations 
+of retrievals are also presented. 
+ 
+  
+ 
+1
+1.0 Introduction: 
+ 
+  
+The ocean surface wind is the main driving force for ocean circulation and for 
+generation of surface waves and currents. It plays an important role in air-sea interaction, 
+upwelling, biogeochemical transport in the ocean and several other processes.  The ocean 
+surface wind vector is an essential input parameter for prediction models of ocean 
+circulation and waves, which are used for oceanographic applications and climate related 
+studies.  It is also an indispensable parameter along with a few others, for the prediction 
+of storm surges caused by storms formed in the oceans, which hit the coasts causing 
+disaster in the coastal regions. Besides meteorological applications, ocean surface wind 
+provides forcing parameters for studying the ocean general circulation. Scatterometer data 
+can also be useful for ocean wave mapping and wave forecasting, offshore activities, ship 
+routing, fisheries etc.  Besides, wind vectors from scatterometer, when properly 
+assimilated in an appropriate numerical model, helps improving weather forecast. 
+Repetitive measurements of surface wind field over global oceans are thus necessary for 
+the above studies and applications. 
+Wind vectors are usually obtained from microwave scatterometers operating at 
+microwave frequencies in 5-14 GHz range.  This part of the spectrum is useful for 
+measurements under all weather conditions except heavy precipitation.  However, the 
+wind speeds can also be obtained from space-borne microwave radiometers and 
+altimeters. Moreover, the upcoming microwave polarimetry is being considered for vector 
+wind measurements. 
+ 
+2.0 Scatterometer measurements: 
+ 
+Active microwave remote sensing of ocean surface winds has started since the 
+launch of SEASAT in 1978.  This was the first satellite dedicated to the ocean research 
+and was an experimental satellite, which demonstrated the retrieval of wind to an 
+accuracy of 2 m/s, from wide swath scatterometer. ERS-1 & 2 satellites were launched 
+with C-band microwave scatterometers. Japanese satellite ADEOS-1 carried a Ku-band 
+scatterometer. Pencil-beam scatterometers operating at Ku-band were launched onboard 
+ADEOS-2 and Quikscat satellites. Quikscat scatterometer is currently in orbit. A similar 
+pencil-beam scatterometer operating at Ku band is due for launch onboard Indian satellite 
+Oceansat-2 satellite. 
+  
+ 
+2
+Scatterometer is an active microwave instrument (radar), which measures the 
+microwave energy backscattered from an area over the earth’s surface illuminated by it. 
+From the known transmitted and backscattered energy along with measurement geometry 
+and other sensor related parameters, the radar backscatter coefficient or the normalized 
+radar cross section (NRCS) symbolized as σ0 (sigma naught) is derived. The σ0 
+measurements over the ocean are used for wind vector determination. The philosophy of 
+wind retrieval is discussed later, however, multiple measurements of backscatter are 
+required for this purpose and scatterometers are designed to realize the same with 
+multiple beams (antennae) in configurations like fan-beam or pencil-beam. 
+The fan-beam type employs two or more single or dual polarization antennae and 
+has maximum azimuth separation of 90 degrees like those launched onboard Seasat, ERS-
+1/2 and ADEOS-1 satellites. The pencil beam type scatterometers observe radar 
+backscatter at different azimuth separation angles like those launched onboard ADEOS-2 
+and Quikscat satellites. Retrieval of the surface wind vector in terms of speed and 
+direction takes place using these so called 'triplets', 'quadruplets' or multiple of radar 
+backscatter through a model known as Geophysical Model Function (GMF) which relates 
+polarized backscatter with wind speed, wind direction and observational geometry. 
+ 
+3.0 Oceansat-2 scatterometer system: 
+ 
+Oceansat-2 satellite in sun-synchronous orbit at 720 km altitude will carry a Ku-
+band microwave scatterometer (SCAT) and an Ocean Colour Monitor (OCM). The 
+satellite will have two days repeat cycle with equator descending time around noon.  
+The scatterometer system has a 1-m parabolic dish antenna and a dual feed 
+assembly to generate the two beams and is scanned at a rate of 20.5 rpm to cover the 
+entire swath. The inner beam makes an incidence angle of ~ 49° and the outer beam 
+makes an incidence angle of ~ 57° on the ground. It covers a continuous swath of 1400 
+Km for inner beam and 1840 Km for outer beam respectively. The inner beam is 
+configured in horizontal polarization and the outer beam is configured to vertical 
+polarization for both transmit and receive modes. The horizontal polarization is chosen 
+for inner beam in order to alleviate the low backscatter value problem of horizontal 
+polarization at lower wind speeds. This would ensure the reduction in the path loss due to 
+the slant range and hence maintains an almost the same SNR for both the inner and outer 
+  
+ 
+3
+beams. Brief specifications of the scatterometer view geometry are provided in Table (1). 
+Figure (1a) shows the viewing geometry of the scatterometer (SAC, 2005). 
+ 
+Table 1: Technical characteristics of Oceansat-2 Scatterometer 
+ 
+ 
+Figure 1a: Viewing geometry of Oceansat-2 Scatterometer 
+ 
+3.1 Oceansat-2 scatterometer data swath: 
+ 
+Various types of the wind vector cells available from a pencil-beam scatterometer 
+are depicted in figure (1b). Due to circular scanning of two beams at fixed incidence 
+angles, areas of a particular size cut across the swath contain variable number of 
+backscatter measurements impacting the wind retrieval. The entire swath can be divided 
+Parameters 
+Inner Beam 
+Outer Beam 
+Altitude 
+720 Km 
+Look Angle 
+42.62° 
+49.38° 
+Incidence Angle 
+48.9° 
+57.6° 
+Swath 
+1400 Km 
+1840 Km 
+One way 3-dB Beam Width 
+1.47° x 1.67° 
+1.47° x 1.67° 
+One way 3-dB foot Print 
+26 Km X 46 Km 
+31 Km X 65 Km 
+Nominal Slice Width (Across Scan) 
+8Km 
+8Km 
+Inter center spacing along Track 
+19 Km 
+19 Km 
+Inter center spacing along scan  
+15 Km 
+19 Km 
+  
+ 
+4
+into three zones namely exclusive outer beam zone referred as outer zone, sweet zone and 
+nadir zone. 
+Sweet 
+Zone -L
+Nadir Zone
+Sweet 
+Zone-R
+Outer 
+Swath-L
+Sub-sat Track
+Outer 
+Beam
+Scatterometer Full Swath 1800 km
+Inner 
+Beam
+2
+2
+3
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+3
+2
+2
+2
+2
+3
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+3
+2
+2
+Wind 
+Vector 
+Cells
+2σ0
+4σ0
+2σ0
+Dual Beam Inner Swath 1400 km
+Outer 
+Swath-R
+ 
+Figure 1b: Definition of wind vector cells and retrieval zones 
+ 
+Over outer zone, where no measurements from inner beam are available and the 
+derived wind solutions do not posses any ranking, the wind retrieval needs external data 
+like model winds. Over sweet zone, measurements available from both the beams with 
+dual look directions also having good optimal azimuth diversity are very much suitable 
+for better wind vector retrieval. Over nadir zone, measurements available from both the 
+beams with dual look directions but with non-optimal azimuth diversity lead to more 
+erroneous wind vectors. Wind direction ambiguity removal processes for outer and nadir 
+zones are different and require special efforts mentioned briefly later. 
+  
+3.2 Geophysical products specifications: 
+Given below are specifications as per the existing satellite mission, however, 
+based on Oceansat-2 design, post-launch performance and GMF characteristics, these 
+specifications may slightly deviate. 
+ 
+ Table 2: Geophysical product requirements: 
+Geophysical Parameter
+*Range 
+*Accuracy (rms) 
+Wind Speed 
+3 – 20 m/s 
+20 – 30 m/s 
+2 m/s 
+10 % 
+Wind Direction 
+0 – 360 Deg.
+20 
+*At 25 km wind vector cell (NASA, 2006),  
+Minor deviation anticipated for Oceansat-2 
+  
+ 
+5
+ 
+3.3 Oceansat-2 scatterometer data processing flow: 
+ 
+Figure (2) depicts the process flow from Level 2A scatterometer data product to 
+the Level 2B wind vector data product including flags. It consists of two primary inputs 
+namely radar backscatter with ancillary information and the model wind forecast. The use 
+of retrieval module with its various components and other modules are depicted. 
+ 
+Oceansat-2 Scatterometer 
+Level 2A Data
+Geophysical 
+Model 
+Function
+Rain flagging sub-module
+Sub-module for wind 
+vector solutions retrieval
+Sub-module for wind direction 
+ambiguity removal
+Sea-ice flagging
+Model wind forecast data 
+(ECMWF) 
+Level 2B wind vector product
+Retrieval Module
+Model wind data 
+preparation module
+Rain Impact 
+Model
+ 
+Figure 2: Process flow for various types of data products 
+ 
+4.0 Geophysical model functions: 
+ 
+The magnitude of radar backscatter depends upon the sea surface roughness 
+generated by the action of winds.  The wind forcing generates a spectrum of surface 
+waves in which growth of capillary waves is directly influenced by wind intensity.  The 
+basic mechanism at work is the Bragg Resonance, in which the waves satisfying Bragg’s 
+condition produce strong radar backscatter energy.  The backscatter signal also depends 
+upon the incidence angle of radar beam.  The directional anisotropy of the radar signal, 
+caused by the azimuth symmetry of sea surface roughness, yields multiple solutions of 
+derived wind vectors (especially direction). Among these, only one solution is “true” and 
+remaining solutions are known as directional “ambiguities”.  Multi-beam scatterometer is 
+used to overcome this problem of ambiguities to a certain extent. The radar backscatter 
+shows a harmonic nature as expressed by (Ulaby et al, 1981, Wentz and Smith, 1999 and 
+others)  
+  
+ 
+6
+ 
+0(W, ϕ, p, θ) =  Σ
+Nh 
+i=0Bi.cos (i.ϕ)           with     Bi=  Pi(p,θ).WQ
+i
+(p,θ) 
+1 
+ 
+where,  ϕ is relative wind direction (ϕ = χ- φ), an angle between radar azimuth φ and 
+wind direction χ both measured in meteorological convention (clockwise from local 
+North direction with a zero degree wind direction representing a wind blowing from 
+North to the point of observation). Here, the ocean surface wind speed W is at neutral 
+stability height of 10 m. The coefficients Bi are harmonic components with Pi and Qi 
+coefficients expressed as functions of polarization p and LQFLGHQFH DQJOH  DW D JLYHQ
+radar operating frequency and Nh is the number of harmonics considered. As, so far, the 
+observed dependency of radar backscatter on wind conditions has not been well-
+explained theoretically, the empirical relationships are established using simultaneous 
+measurements of radar backscatter and ocean surface wind vector obtained through model 
+analysis as well as insitu measurements. The Geophysical Model Function (GMF) is an 
+empirical relationship between radar backscatter and wind vector.  
+In equation (1), the non harmonic component (or the constant term) signifies the 
+base value of variation of radar backscatter for a given wind speed, incidence angle and 
+polarization, the first harmonic represents the upwind-downwind ratio of backscatter 
+while second harmonic which is dominant among all other harmonics signifies the 
+upwind-crosswind ratio. Though the third harmonic representing the skewness around 
+cross wind direction is very small in value but along with the first harmonic, it is very 
+important for the wind direction retrieval. 
+ 
+4.1 Prevailing GMF: 
+ 
+There are various GMFs available for Ku-band known as SASS-1, SASS-2, 
+NSCAT-1, NSCAT-2, and QSCAT-1. The functional forms of these GMFs are given by 
+Schroeder et al, (1982); Wentz, (1994); Wentz and Smith (1999) and Dunbar (1999). As 
+an example of the difference among GMFs, the variation of horizontal polarization radar 
+backscatter from NSCAT-1 and QSCAT-1 GMFs at different wind speeds is depicted in 
+figure (3). 
+ 
+  
+ 
+7
+(a)
+ 
+0
+30
+60
+90
+120 150 180 210 240 270 300 330 360
+Relative wind direction (degree)
+-45
+-40
+-35
+-30
+-25
+-20
+-15
+-10
+-5
+Sigma-0 (dB) 
+WS=2 m/s
+WS=8 m/s
+WS=14 m/s
+WS=20 m/s
+   (b) 
+0
+30
+60
+90
+120 150 180 210 240 270 300 330 360
+Relative wind direction (degree)
+-45
+-40
+-35
+-30
+-25
+-20
+-15
+-10
+-5
+Sigma-0 (dB) 
+WS=2 m/s
+WS=8 m/s
+WS=14 m/s
+WS=20 m/s
+ 
+Figure 3: Variation of horizontally polarized σ0 with relative wind direction at incidence 
+angle of 46 degree using different GMFs, (a) NSCAT-1, (b) QSCAT-1 
+ 
+It is important to note that these GMFs are system specific and vary from system 
+to system. Hence, these GMFs are required to be redeveloped or refined for an 
+independently designed scatterometer system. 
+ 
+4.2 GMF development procedures: 
+ 
+After normalization with the constant term, the equation (1), considering 
+variations in radar backscatter up to third harmonic of wind direction, is rewritten as  
+ 
+0 = A0[1+A1.cos (ϕ)+ A2.cos (2ϕ)+ A3.cos (3ϕ)] 
+1a 
+ 
+where, the coefficients Ai are functions of wind speed, incidence angle and polarization. 
+In order to determine the coefficient A0 at desired incidence angle, wind speed and 
+polarization, the σ0 values for all relative wind direction ϕ varying from 0 to 2π are 
+averaged yielding A0 coefficient as the summation of Cos(ϕ), Cos(2ϕ) and Cos(3ϕ) 
+vanishes 
+A0 = <σ0> 
+2 
+ 
+Dividing equation (1a) by A0 on both sides and rearranging the terms we get 
+ 
+  
+ 
+8
+Y = A1 Cos(ϕ) + A2 Cos(2ϕ)+ A3 Cos(3ϕ)          where Y = (σ0/A0)–1 
+3 
+ 
+  
+At desired incidence angle, polarization and wind speed, by determining Y at each 
+ϕ value, the harmonic coefficients Ai are established through statistical analysis.  This 
+procedure yields the GMF coefficients as well as an idea about the scatterometer data 
+quality. 
+It is important that for each bin of wind speed the wind direction corresponding to 
+radar backscatter should have uniform distribution with statistical significance while for 
+any bin of relative wind direction the wind speed should have Rayleigh distribution 
+(Wentz et al, 1984). Thus, it requires a large database of simultaneous backscatter and 
+wind vector measurements in order to meet this requirement for GMF development. 
+Moreover, the data should also be for rain free situations requiring simultaneous 
+observations of rain. 
+As a prelude to GMF development, analysis of Quikscat data (MGDR NRT 
+Version in BUFR format at 25 km spatial resolution) for orbit #29820 on March 11, 2005 
+at 12.00 GMT is performed. Figure (4) shows the scatter plot of Quikscat radar 
+backscatter with relative wind direction obtained making use of NCEP model winds 
+provided along with the data. 
+ 
+(a)
+ (b)
+ 
+  
+ 
+9
+(c)
+ (d)
+ 
+ 
+Figure 4: Distribution of horizontal and vertical polarization radar backscatter with 
+relative direction for one orbit of Quikcat scatterometer for various wind speed 
+bins at, (a) 4-6 m/s, (b) 10-11 m/s, (c) 17-18 m/s and (d) 19-20 m/s. 
+ 
+The A0 coefficients for selected wind speed values are derived from the above 
+Quikscat data as depicted in figure (5). A comparison of derived A0 from the data set and 
+from the Quikscat GMF QSCAT-1 is also depicted. The observed difference between 
+GMF and data derived A0 coefficient is quite evident due to incompleteness of the 
+observation set. 
+ 
+ 
+Figure 5: Comparison of A0 coefficients derived from Quikscat data and the QSCAT-1 
+GMF. 
+ 
+  
+ 
+10
+Due to the non-availability of large data sets of radar backscatter, the above 
+exercise with radar backscatter simulated using NSCAT-1 and QSCAT-1 GMFs has been 
+performed for wind speed only up to 20 m/s which is the specified range for NSCAT-1. 
+The comparison of harmonic coefficients (proxy GMF) established using these two 
+GMFs has been performed (Tiwari and Gohil, 2005) as shown in figure (6). The 
+difference in two GMFs in terms of harmonic coefficients is quite evident. Moreover, the 
+NSCAT-1 and QSCAT-1 GMFs were developed considering two and three harmonics, 
+respectively. The comparison reveals the fact that the GMFs are sensor specific. 
+  
+(a)
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+Wind speed (m/s)
+-50
+-40
+-30
+-20
+-10
+A0H (dB) at 46 deg for H-pol
+NSCAT-1
+QSCAT-1
+ (b)
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+Wind speed (m/s)
+-50
+-40
+-30
+-20
+-10
+A0V (dB) at 54 deg for V-pol
+NSCAT-1
+QSCAT-1
+ 
+ 
+(c)
+     (d)
+ 
+ 
+  
+ 
+11
+(e)
+       (f)
+ 
+ 
+(g)
+    (h)
+ 
+ 
+Figure 6: Comparison of harmonic coefficients established using NSCAT-1 and QSCAT-
+1 GMFs 
+ 
+4.2.1 Post-launch ancillary data requirements for GMF development: 
+ 
+The basic data sets needed are the global observations of radar backscatter from 
+Oceansat-2 scatterometer and near concurrent model analysis wind vector data. In order 
+to develop GMF for rain free conditions, near concurrent observations of rain is also 
+required from other satellites like TRMM-PR/TMI and DMSP-SSM-I. The collection of 
+these data sets is planned for about six months from the launch of Oceansat-2 satellite. 
+The justification for six month period is that a sufficient data base is required to be 
+prepared to cover the widest range of wind speed as well as the entire range of wind 
+direction for all wind speed preferably the low and high speed ranges also pertaining to 
+rain free situations. The data required for GMF development is reflected in Table (3). 
+  
+ 
+12
+ 
+ 
+Table 3: Ancillary data for Oceansat-2 scatterometer GMF development: 
+Source 
+Sensor 
+Parameter 
+Oceansat-2/ Scatterometer 
+Backscatter & ancil. data 
+Satellite 
+TRMM-PR/TMI and SSM-I 
+Rain rate 
+Global 
+Models 
+ECMWF/ NCEP/ NCMRWF 
+Model analysis 
+Wind speed and dir, 
+SST, surface air temp. 
+and humidity 
+Insitu 
+NIOT/ NIO/ -ICOADS /TRITON 
+buoys, AWS and ship cruise data 
+Wind speed and dir 
+ 
+ 
+5.0 Wind vector retrieval and the state of art: 
+ 
+The radar backscatter having harmonic dependence on wind direction yields 
+multiple solutions of wind vector from a given set of radar backscatter measurements. As 
+the radar backscatter is a function of wind speed and direction, two measurements of 
+radar backscatter are essentially required to determine wind vector. However, unique 
+solutions are not possible due to the harmonic nature of backscatter on wind direction and 
+the presence of noise in radar data. Among these multiple wind vector solutions, only one 
+solution corresponds to true wind vector while others are ambiguities also known as 
+“ aliases”. Although, the wind speed solutions are very close to each other, the direction 
+solutions are quite apart. The solutions are prioritized (or ranked) based on certain 
+criterion used in algorithm. The performance of the algorithm is evaluated in terms of 
+percentage of highest priority (rank-1) solutions correctly identifying the true directions 
+out of the total number of data cases processed. 
+Under noise-free conditions, the rank-1 solution always represents the true wind 
+vector but for noisy or real data, it is always not so.  However, the first two highest 
+ranked solutions contain the true direction most of the times.  The selection of vector 
+solution nearest to the true wind vector is performed through the directional ambiguity 
+removal algorithm. An overall scheme for retrieval of wind vector field is depicted in 
+figure (7). 
+  
+ 
+13
+ 
+WIND VECTOR SOLUTIONS 
+RETRIEVAL ALGORITHM
+GEOPHYSICAL 
+MODEL 
+FUNCTIONS
+DIRECTIONAL AMBIGUITY 
+REMOVAL ALGORITHM
+FILTERED WIND 
+VECTOR FIELD
+LOCALIZED AMBIGUITY 
+REMOVAL ALGORITHM
+RAIN 
+IMPACT 
+MODEL
+RAIN FLAGGING ALGORITHM 
+PRIORITIZED WIND 
+VECTOR SOLNS 
+(RAIN-FREE)
+FINAL WIND 
+VECTOR FIELD
+OCEANIC RADAR 
+BACKSCATTER 
+DATA
+ 
+Figure 7: An overall scheme for retrieval of wind vector field 
+ 
+5.1 Algorithm for retrieval of wind vector solutions: 
+ 
+The maximum likelihood estimator (MLE) algorithm developed based on 
+Bayesian approach is the best algorithm (Chi and Li, 1988), which is widely and 
+operationally used for the scatterometer missions launched so far. More so, variants of 
+MLE algorithm have also been developed (Stoffelen and Anderson, 1997; Stoffelen and 
+Portabella, 2006) with difference in its implementation. In some of the variants of MLE, a 
+transformed MLE has also been developed. The algorithm developed recently is based on 
+transformed MLE, which is as good as MLE but is computationally efficient. This 
+recently developed algorithm is described here. The cost function used in MLE algorithm 
+(Pierson, 1989), is given as 
+ 
+MLCF(Wk, χk) = Σ
+M 
+i=1{(σ0M(φi, θi, pi) - σ0G(Wj, ϕki, θi, pi)) / Kpij.σ0G(Wj, ϕki, θi, pi)}2
+4 
+ 
+Where, σ0M is backscatter measured by ith scatterometer antenna beam at incidence angle 
+θi, polarization pi with azimuth direction φi, σ0G is backscatter calculated from GMF for a 
+trial wind speed Wj and trial kth wind direction χk, ϕki is relative wind direction taken as 
+ϕki = χk- φi and φi is antenna azimuth direction from North direction. 
+For an assumed wind direction, the cost function MLCF is minimized by using 
+simulated backscatter for varying wind speed Wj with a suitable increment and the 
+  
+ 
+14
+nonlinear interpolation. The minimum of MLCF is dependent on the wind speed search 
+interval.  As smallest is the interval (more computations) precise is the minimum. This 
+process can also be realized using individual minimization for which the MLCF is 
+transformed from backscatter space to the wind speed space and is referred here as 
+normalized variance (NV) given by 
+ 
+NVk = Σ
+M 
+i=1{(Wki  - Wk) / Kpi Wk}2 
+5 
+ 
+Where Wki is a wind speed derived from ith measurement σ0M(φi, θi, pi) while Wk is a best 
+(but with errors) wind speed to which all measurements are associated with.  
+ 
+In this recent approach, a given backscatter observation σ0M(φi, θi, pi) is converted 
+into wind speed Wki for an assumed wind direction through GMF as 
+ 
+Wki = Wj   such that  σ0M(φi, θi, pi) = σ0G(Wj, ϕki, θi, pi) 
+6 
+ 
+ 
+Here, Wj is varied over the range specified by GMF being used and Wki is obtained 
+numerically through linear interpolation of σ0G and Wj (due to its closure form and hence 
+efficient). 
+The derived wind speed Wki is a sum of true speed WTk and an error WEki which is 
+a manifestation of errors in backscatter. The true error in σ0M is unknown but is 
+represented by variance of σ0M (communication noise) defined in terms of Kp value 
+which can be calculated using model backscatter (GMF) and the sensor parameters α, β 
+and γ (Fischer, 1972; Long and Mendel, 1991; Oliphant and Long, 1999) as 
+ 
+Kpi = √((γi / σ0G
+i 
+2) + (βi / σ0G
+i) +α i } 
+7 
+ 
+Thus assuming WEki = Kpi.WTk, the Wki can be redefined considering the 
+backscatter variance as 
+ 
+Wki = WTk(1+ Kpi) 
+8 
+  
+ 
+15
+ 
+Using M number of σ0M measurements, the backscatter variance-weighted mean 
+of derived wind speed for trial wind direction χK is defined as 
+ 
+Wk = Σ
+M 
+i=1{Wki /(1+Kpi)} / Σ
+M 
+i=1{1 /(1+Kpi)} 
+9 
+ 
+Since Wki is calculated assuming σ0G
+ = σ0M, the Kpi value cannot be calculated 
+from σ0M. For this reason, all Kpi values are first initialized to zero, and then Wki and 
+corresponding Kpi are calculated through GMF using equations (4) and (2), respectively. 
+The Wk is recalculated using the updated values of Kpi, and the procedure is repeated till 
+Wk is converged yielding final Kpi and Wk.  
+Since Kp value is already used in Wk, ignoring Kp in equation (5) yields NV as  
+ 
+NVk = Σ
+M 
+i=1{(Wki  - Wk) / Wk}2 
+10 
+ 
+The above term can also be expressed as normalized standard deviation (NSD) 
+and standard deviation (SD) of wind speed derived from backscatter measurements as 
+given below 
+ 
+NSDk = (1/Wk)√[(1/M) Σ
+M 
+i=1(Wki  - Wk)2] 
+11 
+ 
+SDk = √[(1/M) Σ
+M 
+i=1(Wki  - Wk)2] 
+12 
+ 
+The present algorithm referred as NSDA makes use of parameter NSD for 
+deriving as well as for ranking the wind vector solutions. As NSD or SD are obtained 
+from Wki values which are derivable due to their closure form for a given trial direction, 
+this approach becomes very efficient (Chi and Li, 1988). Based on SD without 
+considering the measurement variance, an algorithm developed in-house was used for 
+  
+ 
+16
+SEASAT-A and ERS-1 scatterometers (Gohil and Pandey, 1985; Gohil, 1992; Gohil and 
+Pandey, 1995). Retrieval algorithm using NSD ignoring Kp value was developed and 
+tested with Quikscat data (Gohil et al, 2006). In the present study, NSD considering the 
+Kp value is used for ranking the solutions. The parameter SD is used for rain flagging 
+discussed later. A block diagram of algorithm for retrieving wind vector solutions is given 
+in figure (8). 
+ 
+ARBITRARY WIND
+SPEED & DIRECTION 
+SCATTEROMETER  MEASUREMENTS
+BACKSCATTER, BEAM INC, AZIM ANG
+GEOPHYSICAL
+MODEL FUNCTIONS
+MINIMIZATION OF OBSERVED. &
+SIMULATED BACKSCATER DIFFERENCE 
+FIND (MEAN & NORM STD DEV OF WS) OR 
+(WS & MLE) FOR ARB. DIRECTION
+SEARCH & PRIORITIZE 
+WIND VECTOR SOLUTIONS
+PRIORITIZATION CRITERION: 
+NSD OR MLE
+PRIORITIZED WIND VECTOR SOLUTIONS
+SIMULATED
+BACKSCATTER 
+ 
+Figure 8: Block diagram of algorithm for retrieving wind vector solutions 
+ 
+5.1.1 Implementation of retrieval algorithms: 
+ 
+The NSDA is implemented in following steps: 
+ 
+1) First, assume δχ as 2°. For χ=0°, calculate wind speed WS1i using equation (6) 
+for the “ ith” backscatter measurement by varying wind speed over full GMF range with 
+interval δWS1 (1.0 m/s). Using all WS1i, also find the weighted mean Wm and the 
+normalized standard deviation NSD values from equations (9) and (11), respectively,  
+2) Truncating WS1i with 1.0 m/s precision denoted by WStrnci, evaluate wind 
+speed regimes ∆WS1i separately for all the beams using the following equation  
+ 
+∆WS1i = WStrnci ± δWS1.δχ 
+13 
+ 
+  
+ 
+17
+3) Repeat steps (1 and 2) using ∆WS1i for the remaining trial directions 
+4) Find vector solutions by searching minima of NSD along χ yielding NS 
+solutions with Wn
+m wind speed and χn direction and the corresponding NSDn values 
+5) Find precision direction solution χn
+prcn through calculating minimum of 
+quadratic fit of NSDn values obtained for χ varied between χn±δχ with 1° trial direction 
+interval starting with wind speed search regime ∆WS1i at χn-δχ trial direction 
+6) At precision direction solutions χn
+prcn, find Wn
+m and NSDn through step 2 
+exploiting ∆WS1i values at χn-δχ trial direction. The derived precision solutions of wind 
+speed, direction and corresponding NSD are denoted by Wn
+mprcn, χn
+prcn and NSDn
+prcn, 
+respectively 
+7) Rank the wind vector solutions on the basis of NSD values. The wind vector 
+solution having minimum NSD is ranked as rank-1 solution and so on. 
+ 
+For comparison purpose, the MLE algorithm is also implemented in following 
+steps: 
+1) First, assume a trial wind direction interval of 2°, denoted by δχ. For χ=0°, find 
+wind speed denoted by WS1 corresponding to minimum MLCF determined as per 
+equation (4) using wind speed varied over full GMF range with 1.0 m/s interval denoted 
+by δWS1. 
+2) Evaluate wind speed regime ∆WS1 from WS1 using the following equation.  
+ 
+∆WS1 = WS1 ± 2δWS1. δχ 
+14 
+ 
+3) Find wind speed denoted by WS2 through searching MLCF minimum using 
+wind speed regime ∆WS1with 0.2 m/s wind speed interval termed as δWS2. 
+4) Find precision wind speed WS2prcn through minimum of quadratic fit of MLCF 
+around WS2 with winds between WS2 ± δWS2 and recalculate MLCF2prcn for WS2prcn at 
+χ=0°. 
+5) Truncate WS2prcn with 0.2 m/s precision denoted by WStrnc and find the wind 
+speed regime for the next trial direction χ is given as 
+ 
+∆WS2 = WStrnc ± 2δWS2. δχ 
+15 
+  
+ 
+18
+ 
+6) Repeat steps (3 through 5) for the remaining trial directions varied with an 
+interval δχ with wind corresponding to wind speed regimes given by equation (14). 
+7) Find vector solutions by searching minima of MLCF2prcn along trial direction. 
+Denote number of solutions as NS and their serial numbers as n. The solutions of wind 
+speed, direction and the corresponding MLCF thus obtained are denoted by WSn, χn and 
+MLCFn, respectively, where n varies from 1 to NS. 
+8) Find precision direction solution χn
+prcn around χn by finding minimum of 
+MLCF2prcn through quadratic fit of MLCF2prcn values calculated for χ varied between χn 
+and χn ±3δχ with 1° direction interval. 
+9) Find WSn
+prcn and MLCFn
+prcn at the precision direction solution χn
+prcn following 
+steps (3 through 5) exploiting the wind speed regime of (χn - δχ)th trial direction. 
+10) Repeat step 9 for all NS solutions. 
+11) Rank wind vector solutions on the basis of MLCF values. The wind vector 
+solution having minimum MLCF is ranked as rank-1 solution and so on. 
+In step 8 for MLE and steps 5 and 6 for NSD implementations, the continuity of 
+the trial direction (circular data) and associated parameters around upwind direction is 
+maintained. The above schemes are found to be effective in finding precise solutions not 
+only for maintaining the direction retrieval skill of the algorithm under varying δχ (finer 
+to coarser) and for minimizing the artifacts of search intervals and quadratic fitting but 
+also for enhancing the computational efficiency. The typical values of search intervals 
+mentioned above are optimized based on the noise free cases considering the entire inner 
+beam swath including nadir region. The litmus test for proper implementation of the 
+algorithm is that the retrieval skill for the noise free cases must be 100%. The condition 
+shown by expression (13) is effective in the situations when coarser search intervals of 
+trial direction are used. However, the coarser δχ should be avoided due to possibility of 
+missing proper solutions specifically over the nadir region and the retrieval becomes less 
+computationally efficient. Moreover, δWS2 also cannot be increased in order to retain the 
+accuracy of quadratic interpolation. The optimization of search interval, to some extent, 
+also depends upon the intervals of wind speed and direction specified in GMF. The values 
+of search intervals δχ and δWS1 mentioned above are optimized based on the QSCAT-1 
+GMF. 
+  
+ 
+19
+Based on simulations, primarily the evaluation of performances of the proposed 
+algorithm in successfully retrieving the wind direction under varying noise conditions has 
+been carried out for the inner beam data swath region including nadir region. In order to 
+carry out simulation studies, radar backscatter data for Quikscat scatterometer 
+observational geometry is simulated with orbital altitude of 803 km and local incidence 
+angles of 46° and 54° at the earth’s surface with horizontal and vertical polarization, 
+respectively. The outer beam swath is divided in a number of wind vector cells (WVC), 
+and for each cell, azimuth angle with respect to sub-satellite track is calculated for each of 
+the antenna beams pointing to the cell. The cells with only four beams are used for the 
+simulation studies. At these WVC, radar backscatter data are simulated using QSCAT-1 
+geophysical model function (rsd@zephyr2.jpl.nasa.gov) for simulated wind vector with 
+wind speed and direction values varied within the specifications of QSCAT-1 GMF. The 
+details of QSCAT-1 GMF are available online (Dunbar, 1999). The GMF backscatter 
+value for any relative wind vector and incidence angle within GMF specifications can be 
+obtained through bi-linear interpolation. The modification of simulated backscatter due to 
+rain is realized through the rain model (Draper and Long, 2004) yielding the path 
+integrated attenuation PIA and the lump rain backscatter contribution σ0
+rw as functions of 
+integrated rain rate R expressed in  km.mm/hr as 
+ 
+ 
+σ0
+r  = e-PIA.σ0
+g  + σ0
+rw 
+16 
+ 
+Based on Quikscat data (25 km BUFR Format) for one orbit, the most prevalent 
+values of α, β and γ with their respective standard deviations are used for simulating 
+noisy backscatter data for testing the algorithms. These parameters, in general, are 
+expressed here as  
+ 
+Y(j) = Ym + V(j) 
+17 
+ 
+where Y may be α, β or γ, with Ym as respective mean representative value. The Gausian 
+random variable V(j) has zero mean and standard deviation as observed in Quikscat data 
+given in table (4).  
+ 
+ 
+  
+ 
+20
+ 
+ 
+Table 4: Kp parameters of Quikscat data 
+Kp Parameter (Y) 
+Ym 
+V 
+D (kp_alpha-1) 
+1.0.10-2 
+0.3.10-2 
+E 
+1.0.10-5 
+0.3.10-5 
+J 
+1.0.10-7 
+0.3.10-7 
+ 
+For each case of wind vector cell, wind vector and antenna beam, the values of α, 
+β and γ are generated to simulate the noisy backscatter (Oliphant and Long, 1999) as  
+ 
+σ0Mi = σ0G
+i (1+Kpi.Xi) 
+18 
+ 
+where Xi is another independent Gausian random number with zero mean and the 
+standard deviation K. The value of standard deviation K is normally unity, however, it 
+can be varied for controlling the noise in simulation experiment. For noise free case, the 
+value of K is zero and for noisy cases, it is varied from 1.0 to 2.0. The Kp is given by 
+equation (7). While studying the impact of rain on wind vector retrieval, the rain model is 
+used only for simulating the noisy backscatter data but not for the retrieval purpose.  
+ 
+5.1.2 Characteristics of wind retrieval across the inner beam swath: 
+ 
+The simulation experiment carried out for noise free cases provides an insight into 
+the characteristics of wind solutions at different locations of the swath. Over the sweet 
+zone (Figure 9a) due to the optimum azimuth separation the sensitivity of cost function 
+(NSD) with respect to aspect direction is higher. This leads to the retrieval skill relatively 
+higher as compared to the other regions due to optimum azimuth separation as well as 
+dual polarized multi-look measurements. Over near nadir region, despite dual polarization 
+multi-look measurements, the azimuth separation is non-optimal leading to lower 
+sensitivity of cost functions as seen in figure (9b) leading to reduced retrieval skill and 
+higher errors. At the sub-satellite track, the retrieval skill is approximately halved due to 
+  
+ 
+21
+pairing of solutions in terms of ranking criterion as seen in figure (9c). The retrieval 
+errors are also more due to non-optimal azimuth separation.  
+ 
+(a)
+0
+45
+90
+135
+180
+225
+270
+315
+360
+ASPECT DIRECTION (DEG)
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+DERIVED WIND SPEED (m/s)
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+NORMALISED WIND SPEED VARIABILITY
+NWV
+MEAN
+Noise-free Case, WVC # = 7/37
+True Wind Speed = 10 m/s
+True Wind Direction = 30 Deg
+(b)
+0
+45
+90
+135
+180
+225
+270
+315
+360
+ASPECT DIRECTION (DEG)
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+DERIVED WIND SPEED (m/s)
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+NORMALISED WIND SPEED VARIABILITY
+NWV
+MEAN
+Noise-free Case, WVC # = 16/37
+True Wind Speed = 10 m/s
+True Wind Direction = 30 Deg
+ 
+ 
+(c)
+0
+45
+90
+135
+180
+225
+270
+315
+360
+ASPECT DIRECTION (DEG)
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+DERIVED WIND SPEED (m/s)
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+NORMALISED WIND SPEED VARIABILITY
+NWV
+MEAN
+Noise-free Case, WVC # = 19/37
+True Wind Speed = 10 m/s
+True Wind Direction = 30 Deg
+ 
+Figure 9: Characteristics of wind solutions across the inner beam swath over, (a) Sweet 
+zone, (b) near nadir zone, (c) sub-satellite location 
+ 
+5.1.3 Comparison of retrieval algorithms and the noise sensitivity: 
+ 
+The retrieval performance (or skill) of an algorithm for a particularly ranked (first, 
+second, etc) solution is defined in terms of percentage of total number of simulated wind 
+vectors bearing that particular rank are closest to the wind directions used in simulating 
+the radar backscatter data through GMF. Algorithm implementation is verified by 
+observing 100 percent skill of top ranked solutions for noise-free condition (K=0) also 
+with even and odd intervals of trial direction for retrievals as well as for simulating 
+backscatter data. For MLE algorithm a small GMF modeling error (1.0e-14) is used to 
+avoid division by zero in MLCF calculations. For the swath location exactly at the sub-
+satellite track where azimuth separation is 180, the skill is 50% irrespective of the 
+algorithm as pairing of solutions takes place with the same ranking.  
+  
+ 
+22
+The performances of MLE and NSD algorithms are evaluated for K=1.5 as 
+depicted in figure (10a). The skill is evaluated separately for each wind vector cell 
+(WVC) location numbered from 1 to 37 across the swath. The WVC numbered 19 
+corresponds to the sub-satellite track position. The algorithm skill for each WVC is 
+evaluated using wind vector cases with wind speed varying from 1 to 25 m/s with 2 m/s 
+interval and wind direction varying from 0° to 354° with 6° interval yielding total 780 
+data points. The backscatter data are perturbed with noise controlled by parameter K with 
+GMF modeling error of 1.0e-14. It is also observed from figure (10a) for K=1.5 that MLE 
+and NSD algorithms have almost equal performances. The retrieval errors in wind speed 
+and direction of both the algorithms as shown are found to be almost comparable. Apart 
+from this, comparison of distribution of directions retrieved using these algorithms is also 
+performed as shown in figure (10b) and is also found to be mostly similar.  
+                         
+ 
+ 
+Figure 10: Characteristics of MLE and NSD algorithms, a) Comparison of direction 
+retrieval skills and wind vector errors, b) Distribution of derived wind direction 
+solution closest to the true direction, (c) Comparison of algorithms’ performances 
+and errors under varying noise conditions 
+  
+ 
+23
+ 
+Apart from comparison of performance of NSDA and MLE algorithms across the 
+inner beam swath, impact of noise on retrieval performance has also been studied. Figure 
+(10c) depicts the comparison of performances and errors of NSD and MLE algorithms 
+under varying noise conditions for all the WVC indicating similarity of these algorithms.  
+Thus, NSD algorithm is found be as good as MLE algorithm in respect of 
+direction retrieval skill, wind vector errors and distribution of retrieved directions thus 
+providing an alternative to MLE but with better computational efficiency. However, the 
+errors in nadir regions are required to be improved using DIRTH algorithm developed by 
+Stiles et al (2002). 
+ 
+5.2 Algorithm for directional ambiguity removal: 
+ 
+A block diagram of directional ambiguity removal algorithm is depicted in figure 
+(11). The ambiguity removal algorithm utilizes all the vector solutions available from 
+retrieval algorithm over the data locations within the swath and the ambiguity is removed 
+based on the trend or the consensus of the rank-1 wind directions solutions over that area. 
+In most of the cases, about over half of the rank-1 wind directions are found to be aligned 
+in the true wind directional pattern under normal noise conditions while the remaining 
+rank-1 directions are mostly in the opposite direction. A median filtering approach is used 
+to remove directional ambiguities.  
+ 
+OPTIMUM MEDIAN
+FILTER WINDOW 
+HIGHEST RANK WIND 
+VECTOR SOLUTION FIELD
+RESOLVE HIGHEST RANK VECTOR 
+SOLNS FIELD INTO SCALAR FIELD
+CHOOSE SOLN CLOSEST TO MEDIAN 
+VECTOR & SWAP SOLNS IF REQUIRED 
+MEDIAN WIND 
+VECTOR FIELD 
+YES
+CHECK FOR CONVERGENCE OF
+HIGHEST RANK SOLNS FIELD
+AMBIGUITY FILTERED WIND VECTOR FIELD
+MEDIAN SCALAR 
+WIND FIELDS 
+ITERATE PROCESS
+NO
+ 
+Figure 11: Block diagram of directional ambiguity removal algorithm 
+ 
+  
+ 
+24
+For this purpose, the rank-1 vectors over an area are first resolved into scalar 
+components.  With a moving window of optimized size, medians of both the scalars at 
+each data location are determined using all the points falling within the window.  The 
+medians of respective scalars are used to find the median wind direction at each data 
+location. Making use of median direction, all the direction solutions at that point are 
+examined and the direction solution closest to median direction is identified and that 
+vector is assigned as rank-1 solution swapping with its original ranking (Gohil, 1992). 
+The procedure is followed for all the points in a scene cut out of the satellite pass and 
+likewise the entire pass is processed. The filtering process for a scene is repeated in the 
+above-mentioned manner till the entire processed wind field of that scene is converged.  
+At this stage, the resulting wind field mostly resembles the true wind field in that scene.  
+It is important to note that the retrieval of ambiguity filtered wind vector field is 
+mainly dependent on the amount of noise present in radar backscatter data as well as on 
+its spatial distribution.  
+ 
+5.2.1 Algorithm for localized directional ambiguity removal: 
+ 
+In case when the scatterometer data is highly noisy over certain parts of the swath, 
+the resulting wind field still may have localized ambiguities, which may not always be 
+possible to be removed by the filtering process alone. Highly localized ambiguities may 
+still be removed using a filtering process over coarser spatial resolution data prepared 
+from the given data. In this method, the filtered wind field with localized ambiguities is 
+further divided into small segments. Medians of the same ranking solutions for these 
+coarser resolution data are obtained. The median solutions for these segments are further 
+processed for ambiguity filtering as mentioned above. Based on filtered median wind 
+field, the original ambiguity filtered wind field with localized ambiguity is corrected to 
+yield final filtered wind field (Gohil and Pandey, 1994).  
+ 
+5.2.2 Directional ambiguity removal over inner beam swath: 
+ 
+The directional ambiguity removal over the inner beam swath may be performed 
+in a usual manner as described above by first ignoring the wind solutions exactly over the 
+sub-satellite track. Wind solutions over a very narrow region around sub-satellite track 
+being very erroneous are firstly required to be ignored because of the retrieval skill halved 
+  
+ 
+25
+due to the symmetry of the measurement geometry and the pairing of solutions as 
+mentioned in earlier sections. Subsequent to the ambiguity filtering in rest of the inner 
+beam swath, wind solutions over the sub-satellite track should then be considered and the 
+ambiguity filtering process should be repeated. This approach is crude. However, the 
+DIRTH algorithm (Stiles et al, 2002) must be used for the purpose and its implementation 
+is being worked out. 
+It is important to note that while using pencil-beam scatterometer, a narrow 
+region of data swath centered at the sub-satellite track may have many data points with 
+wind vector solutions not corresponding to the correct wind direction. This needs special 
+processing and also requires external data like model surface analysis/forecast on 
+operational basis. More so, in the outer region of the data swath where only two radar 
+backscatter observations are available, the ranking of wind vector solutions becomes 
+irrelevant while one of the solutions represents true wind direction. This also needs 
+external data like numerical weather prediction model winds for ranking the solutions. 
+ 
+5.2.3 Directional ambiguity removal over exclusive outer beam swath: 
+ 
+Over the exclusive outer beam swath region where the backscatter measurements 
+from only one beam but in two azimuth directions are available, the wind vector solutions 
+do not have any meaningful ranking. Due to this reason, the derived solutions at all data 
+locations are assigned rank-1 priority based on the model wind direction and are used 
+along with inner beam solutions for ambiguity filtering through normal filter process as 
+shown in block diagram of figure (12).  
+Sweet Zone
+Model 
+Winds
+Rank of Soln
+True Wind Flow
+Outer Zone 
+(No ranking)
+1 
+2 
+3 
+4
+Across-Track
+Along-
+Track
+ 
+Figure 12: Role of model winds in tagging ranks to direction solutions over outer swath 
+  
+ 
+26
+In this process, certain weights are assigned to wind solutions depending upon its 
+distance from the outer edge of the swath of inner beam, otherwise, ambiguity filter 
+process will yield wind field more resembling to the model winds loosing the impact of 
+measurements. Further details given by Stiles et al, (2002) are being worked out.  
+ 
+5.2.4 Testing of algorithms with Quikscat data:  
+ 
+The present algorithm has been tested with Quikscat data (MGDR NRT Version 
+in BUFR format at 25 km spatial resolution) for one orbit (#29820) on March 11, 2005, at 
+12.00 GMT over inner beam swath only. Based on median filter, the directional 
+ambiguity is removed using a two-step filtering at given and coarser spatial resolutions. 
+Quikscat data derived wind fields using NSD and MLE algorithms are depicted in figures 
+(13a) and (13b), respectively.  
+ 
+ 
+ 
+Figure 13: Ocean surface wind vector field derived from Quikscat radar backscatter data 
+(NRT BUFR-25 km) over inner beam swath for March 11, 2005 over Indian 
+region using, a) NSD algorithm, b) MLE algorithm 
+  
+ 
+27
+ 
+The derived winds are found to be very similar to each other as well with those of 
+finished product winds (not depicted here). More so, the computational efficiency of the 
+present algorithm is found to be higher (about 2 to 3 times) as compared to that of MLE 
+algorithm during simulation studies as well as testing with Quikscat data (Gohil et al, 
+2006). 
+ 
+6.0 Flagging: 
+ 
+Retrieval of ocean surface wind vector from scatterometer is affected in the 
+presence of rain due to modification of measured radar backscatter in two ways. During 
+rain, the drops falling on water surface create crater, crown, stalk and ring waves. Out of 
+these, ring waves contribute the most towards radar backscatter through Bragg resonance. 
+Besides, rain attenuates the radar signal as well as contributes through volume 
+backscattering. A study of rain impact on backscatter and associated wind vector retrieval 
+is required for rain flagging of backscatter data. 
+Due to the directional symmetry of ring waves and the scattering from water drops 
+in rain column the backscatter signals are depolarized causing diminishing difference of 
+radar backscatter in vertical and horizontal polarizations. However, high intensity winds 
+under rain-free conditions also lead to depolarization. The normalized polarization 
+difference is found to have a potential for pre-retrieval rain flagging. Under moderate and 
+high rain conditions, pre-retrieval rain flagging is feasible. Light rain and high wind 
+conditions lead to false/missing rain flagging. The impact of rain is also observed in terms 
+of drastic changes in retrieved wind speed and direction. Retrieval of wind vector under 
+raining conditions is highly erroneous and mostly renders retrieval meaningless. This 
+needs rain affected data to be ignored (or flagged out). In the present study, only rain 
+flagging of data using the retrieval algorithm by Gohil et al (2006) has been attempted 
+following procedures given by Portabella and Stoffelen (2001) yielding different success 
+rates for rain-free and rainy conditions. The rain-flagging scheme has been tested with 
+simulated data and the success rate of rain flagging under rain-free and rainy situations 
+has been evaluated under different noise scenario. Under rain-free situations it is observed 
+that the false reporting of rain cases is significantly low while for rainy cases, the missing 
+rain events are, to some extent, high but are comparable with the studies made elsewhere. 
+Spatial analysis of real data may further improve flagging. 
+  
+ 
+28
+ 
+6.1 Rain impact model and its development: 
+ 
+An empirical rain impact model for QuikSCAT to calculate rain affected radar 
+backscatter over ocean is given by Draper and Long (2004) as 
+ 
+ σ0
+m = αrain(σ0
+wind  + σ0
+rainstrike)+ σ0
+rain 
+19 
+ 
+Where σ0
+m is the measured Quikscat backscatter, σ0
+wind is the rain-free wind-induced 
+radar backscatter, σ0
+rainstrike is the surface backscatter perturbation due rain striking the 
+ocean surface,
+rain
+α
+ is the two way atmospheric rain attenuation, and σ0
+rain is the volume 
+scattering due to falling rain droplets. The model is further simplified by summing the 
+attenuated surface perturbation and the atmosphere scattering terms, creating a single 
+(lump) effective rain backscatter. The resultant rain impact model is 
+ 
+σ0
+m = αrain.σ0
+wind + σ0
+rainy 
+20 
+with 
+ αrain = Σ 
+2 
+k=0 AkRk 
+21 
+ 
+σ0
+rain = Σ 
+2 
+k=0 SkRk 
+22 
+ 
+where R (km.mm/hr) is integrated rain rate. The σ0
+wind information is obtained from 
+QSCAT-1 GMF for a known wind vector. Based on the above model, variations of 
+atmospheric transmittance (τ=e-α) and lump rain backscatter varying with integrated rain 
+rate, for horizontal and vertical polarizations, are depicted in figure (14). 
+ 
+  
+ 
+29
+ 
+Figure (14): Variation of atmospheric transmittance (solid lines) and lump rain 
+backscatter (dotted lines) with integrated rain for Quikscat scatterometer 
+ 
+It indicates that for both the polarizations, atmospheric transmittance nonlinearly 
+decreases while lump rain backscatter nonlinearly increases with increasing rain rate. This 
+empirical rain impact model is developed using simultaneously observed radar 
+backscatter from Quikscat scatterometer, path integrated attenuation and rain rate profile 
+from TRMM Precipitation Radar (PR), oceans surface wind vector from NCEP model 
+analysis and the QSCAT-1 GMF. Development of such model specific to Oceansat-2 
+scatterometer will be essential in which radar backscatter data from Oceasat-2 
+scatterometer will be used along with rain and attenuation information from TRMM-PR 
+and model wind data from ECMWF/NCEP. Prior to developing rain impact model, 
+development of GMF specific to Oceansat-2 scatterometer will be necessary. The data 
+requirements for rain impact model development are the same as reflected in table (3) 
+with additional data of path-integrated attenuation from TRMM-PR. 
+ 
+6.2 Impact of rain on wind vector retrieval:  
+ 
+The impact of rain is studied through wind vectors retrieved by the method 
+mentioned above by using simulated radar backscatter under rainy conditions obtained 
+through equation (20). The impact of rain is observed in terms of drastic changes in 
+retrieved wind speed and direction as shown in figures (15). The retrieved wind speed 
+  
+ 
+30
+below and above 15 m/s are over- and under- estimated, respectively as seen in figure 
+(15a), while retrieved directions are aligned towards direction normal to sub-satellite 
+track as observed in figure (15b). These observed characteristics under rainy conditions 
+are utilized to flag the retrievals under rainy situations as mentioned subsequently.  
+ 
+(a)
+   (b)
+ 
+Figure 15: Impact of rain on retrieval, (a) on retrieved speed, (b) on retrieved direction 
+ 
+6.3 Rain flagging: 
+ 
+Retrieval of wind vector under raining conditions is highly erroneous and is 
+rendered meaningless. This needs rain affected data to be ignored (or flagged). Under 
+very low intensity rain situations, winds can be retrieved with due corrections to 
+backscatter through simultaneous retrieval of wind and rain using MLE (Draper and Long 
+2004a). Presently, only rain flagging of data using NSD algorithm has been attempted 
+following the approach by Portabella and Stoffelen (2001) yielding different success rates 
+for rain-free and rainy conditions. For rain flagging, the NSD values under rain-free and 
+rainy situations have been compared keeping the observed behavior of the derived wind 
+vectors in view. Rain rates from 0 to 50 km.mm/hr with an interval of 10 km.mm/hr are 
+considered. The trends of variation of rank-1 SD values under rain-free and rainy 
+conditions as shown in figure (16a) are found to be separable, hence, can be used for rain 
+flagging. The SD values for rain-free and under low to moderate rain conditions are 
+overlapping which primarily lead to such rain events undetected. However, apart from 
+this, another useful clue used here is that the retrieved wind directions under rainy 
+situations are mostly found to be around directions normal to the sub-satellite track. Thus 
+a criterion is chosen to flag out possible raining situations in the data based on the above 
+  
+ 
+31
+information. The trends of wind speed binned mean and standard deviation of rank-1 SD 
+with corresponding wind speed are established for all WVC as shown in figure (16b). The 
+nonlinearly fitted mean and standard deviation of rank-1 SD are used for rain flagging 
+(Portabella and Stoffelen, 2001). The rank-1 retrieved wind vector solution is assumed to 
+be referring to raining condition if the following conditions are satisfied: 1) the retrieved 
+wind speed WS1
+PRCN is above 7.0 m/s, 2) the difference of retrieved wind direction χ1
+PRCN 
+with direction normal to sub-satellite track (∆χ1
+PRCN) satisfies the condition 
+|Cos(∆χ1
+PRCN)| ≤ 0.275 and, 3) the difference of observed SD1
+PRCN and calculated rain-
+free SDRFAVG satisfies the condition ∆SD1
+PRCN > 0.7.MSD.SDRFSD, with ∆SD1
+PRCN = 
+|SD1
+PRCN - SDRFAVG|, while SDRFAVG and SDRFSD are given by 
+ 
+SDRFAVG = Σ
+3 
+Q=0AQ( WS1
+PRCN)Q   and   SDRFSD = Σ
+3 
+Q=0DQ( WS1
+PRCN)Q 
+23 
+ 
+where, AQ and DQ are the polynomial coefficients for average (solid line through 
+“ diamond” symbols) and standard deviation (dotted line through “ plus” symbols) fitted 
+curves of SD, respectively, as shown in figure (16b). 
+The fitted curves used for calculating SDRFAVG and SDRFSD are shown in figure 
+(16b). The threshold multiplier MSD varying from 1.8 to 2.2 is used for rain detection and 
+has impact on rain detection under rain-free and rainy situations as shown in figure (16c). 
+The above scheme has been tested with simulated data and the performance of rain 
+flagging under rain-free and rainy situations has been evaluated as depicted in figure 
+(16c). The overall proportionate success is a weighted success considering fractions of 
+rain-free (about 90 percent) and rainy (about 10 percent) events at any given time over the 
+globe as reported in literature (Portabella and Stoffelen, 2001; Stiles and Yueh, 2002; 
+Draper and Long, 2004; Huddleston and Stiles, 2000). For no-rain situations it is 
+observed that the false reporting of rain cases is significantly low while for raining cases, 
+the missing rain events are, to some extent, high but are comparable with the studies 
+made elsewhere (Portabella and Stoffelen, 2001; Huddleston and Stiles, 2000). 
+ 
+  
+ 
+32
+          
+              
+ 
+ 
+         
+ 
+ 
+Figure (16): Rain flagging using NSD algorithm at K=1.5, a) Scatter plots of rank-1 SD 
+and rank-1 wind speed under rain-free and rain conditions, b) Trends of rain-free 
+mean and standard deviation of rank-1 SD for binned wind speed considering all 
+WVC, c) Rain flagging performance for rain-free and rainy situations for different 
+flagging thresholds. 
+ 
+6.4 Sea-ice flagging (Brief introduction): 
+ 
+Sea-ice altering the radar backscatter measurements affects the wind retrieval. The 
+radar backscattered signal from the earth’s surface is dependent on the roughness at the 
+scale of the radar wave length, the incidence angle, and the dielectric properties of the 
+surface, which for sea ice means ice salinity, temperature, air inclusion, liquid water 
+fraction in snow and ice, and snow cover (Haarpaintner et al, 2004). At low wind speeds, 
+horizontal polarization backscatter from the ocean is generally lower than backscatter 
+  
+ 
+33
+from ice but higher wind speed may produce ambiguities for ice-ocean discrimination 
+because ice and ocean may exhibit similar mean backscatter values. Haarpaintner et al 
+(2004) have given an approach (referred hereafter as HA) for sea-ice delineation making 
+use of active polarization ratio (APR) and radar backscatter values. The APR is given as 
+ 
+APR = (σ0H - σ0V)/ (σ0H + σ0V) 
+24 
+ 
+Where σ0H, σ0V are radar backscatter on linear scale. Based on a number of criteria given 
+in HA, the ice-flagging scheme is being considered for Oceanat-2 scatterometer. A 
+limited number of criteria given in HA used here, are given in table (5). 
+ 
+ Table 5: Ice-ocean thresholds 
+Parameter 
+Value 
+APR 
+>-0.02 
+V0V 
+>-25 dB 
+V0H 
+>-25 dB 
+Data satisfying these conditions is treated as ice
+ 
+Some of the results, on the basis of a limited criterion of HA, obtained from 
+Quikscat radar backscatter products (BYU products) are presented here as a preliminary 
+effort towards sea-ice flagging for Oceansat-2 (Rao, 2007). Shown in figure (17) are APR 
+values obtained using Quikscat data for different dates during year 2000 indicating the 
+presence of sea ice.  
+ 
+(a)
+        (b)
+ 
+Figure 17: Quikscat backscatter BYU product derived APR over Southern Polar region 
+indicating sea-ice coverage for different dates (a) 11-02-2000, and (b) 17-08-2000 
+  
+ 
+34
+However, over ocean, some of the spurious data indicating sea-ice are also seen 
+which may be due to higher winds as well as APR calculated at the edge of inner beam 
+swath. Given here is only an introduction to the activity while detailed plan is being 
+worked out separately (not a part of wind retrieval). 
+ 
+7.0 Initial phase validation: 
+This aspect to some extent is taken care during GMF development phase which 
+will also include limited validation of GMF and the derived winds. However, 
+calibration/validation activities are being pursued separately. 
+ 
+8.0 Limitations: 
+ 
+The major limitation is that the retrievals under cyclonic conditions are highly 
+erroneous in terms of wind speed and direction as the cyclones are mostly associated with 
+rain. This needs cyclonic data to be properly identified and processed in a proper manner 
+taking care of rain (simultaneous retrievals). Apart from this, regions with highly variable 
+wind fields like fronts, cols, vortices and others in the presence of large noise the 
+directional ambiguities may not be properly filtered out. Due to different processes to be 
+incorporated for outer and nadir regions, discontinuities in the direction fields may occur 
+in some cases. 
+ 
+9.0 Acknowledgements 
+ 
+Authors wish to thank Dr. R. R. Navalgund, Director, Space Applications Centre 
+(SAC), for his keen interest, encouragement and guidance. We thankfully acknowledge 
+Dr. Ramrattan, Associate Director, SAC and Deputy Director, RESIPA, Dr. V.K. 
+Agarwal, Group Director, MOG-RESIPA, and Dr. A. Sarkar, Head, OSD-MOG-RESIPA 
+and Project Director OCEANSAT-II Utilization Program, for valuable suggestions on the 
+document. Discussions with Dr. N.K. Vyas on sea-ice are thankfully acknowledged. 
+Authors would like to thankfully acknowledge NASA-JPL and NOAA for the 
+Quikscat data and QSCAT-1 model functions used in studies reported in this document. 
+ECMWF is thankfully acknowledged for making the BUFR data reading routines 
+accessible. We wish to thank Drs. R.P. Sinha and Jeff Augenbaum associated to NOAA 
+for their cooperation in providing sample Quikscat MGDR data and relevant information.  
+  
+ 
+35
+ 
+10.0 References: 
+ 
+1. Chi, C. and F.K. Li, (1988), “ Comparative study of several wind estimation 
+algorithms for spaceborne scatterometers”, IEEE Tran. Geosci. Remote Sens., 26, 
+pp. 115-12 
+ 
+2. Draper, D.W. and D.G. Long, (2004a), “ Simultaneous wind and rain retrieval 
+using SeaWinds data”, IEEE Trans. Geosci. Remote Sens., vol 42, No.. 7, pp 
+1411-1423 
+ 
+3. Draper, D.W. and D.G. Long, (2004), “ Evaluating the effect of rain on SeaWinds 
+scatterometer measurements”, J. Geophy. Res., Vol. 109, C02005, doi: 
+10.1029/20021C001741, pp. 1-12 
+ 
+4. Dunbar, S (1999), available online from http://aspera.jpl.nasa.gov/download/pub/ 
+ocean_wind/quikscat/model_ function. 
+ 
+5. Fischer, R.E., (1972), “ Standard deviation of scatterometer measurements from 
+space”, IEEE Trans. Geosci. Electronics, Vol. GE-10, No. 2, pp. 106-113 
+ 
+6. Gohil, B.S. and P.C. Pandey, (1985), “ An algorithm for retrieval of oceanic wind 
+vectors from the simulated SASS normalized radar cross-section measurements”, 
+J. Geophy. Res., Vol 90, No. C4, pp. 7307-7311 
+ 
+7. Gohil, B.S.,(1992), “ Extraction of ocean surface wind field from simulated ERS-1 
+scatterometer data”, International J. Remote Sensing, Vol 13, No. (17), pp. 3311-
+3327 
+ 
+8. Gohil, B.S. and P.C. Pandey, (1994), “ A supplementary method for removing 
+localised wind directional ambiguities in oceanic wind vector derived from ERS-1 
+scatterometer data”, 15th Asian Conference on Remote Sensing, November 17-23, 
+Bangalore 
+ 
+  
+ 
+36
+9. Gohil, B.S. and P.C. Pandey, (1995), “ An atlas of surface wind vectors in the seas 
+around India during August 1992 - July 1993 from ERS-1 scatterometer”, Special 
+Publication SP-76-95, ISRO-SAC-SP-76-95, Indian Space Research Organisation, 
+Bangalore 
+ 
+10. Gohil, B.S., A. Sarkar, A.K. Varma and V.K. Agarwal, (2006), “ Wind vector 
+retrieval algorithm for Oceansat-2 scatterometer”, Proc. SPIE, vol. 6410, doi: 
+0.1117/12.693563 
+ 
+11. Haarpaintner, J., R.T. Tonboe, D.G. Long, and M.L. Van Woert, (2004), 
+“ Automatic detection and validity of the sea-ice edge: An application of 
+enhanced-resolution quikscat/ seawinds data”, IEEE Trans. Geosci.  Remote Sens, 
+Vol. 42, No. 7, pp 1433-1443 
+ 
+12. Huddleston, J.N. and B.W. Stiles, (2000), ‘‘Multidimensional histogram 
+rain-flagging 
+technique 
+for 
+SeaWinds 
+on 
+QuikSCAT’’, 
+Proc. 
+IGARSS2000, vol. 3, pp. 1232-1234 
+ 
+13. Long, D.E. and J.M. Mendel, (1991), “ Identifiability in wind estimation from 
+wind scatterometer measurements”, IEEE Trans. Geosci. Remote Sensing., 29(2), 
+pp. 268-276 
+ 
+14. NASA, (2006), “ QuikSCAT Science Data Product User's Manual, Overview & 
+Geophysical Data Products”, Version 3.0, D-18053 – Rev A, JPL, NASA, 
+September 
+ 
+15. Oliphant, T.E. and D.G. Long, (1999), “ Accuracy of scatterometer-derived winds 
+using the Cramer-Rao Bound”, IEEE Trans. Geosci. Remote Sen., vol. 37, No. 6, 
+pp. 2642 – 2652 
+ 
+16. Pierson, W.J., (1989), “ Probabilities and statistics for backscatter estimates 
+obtained by a scatterometer”, J. Geophy. Res., vol. 94, C7, pp. 9743-9759 
+ 
+  
+ 
+37
+17. Portabella, M. and A. Stoffelen, (2001), “ Rain detection and quality control of 
+SeaWinds”, J. Atmos. and Ocean Technol., Vol. 18, pp. 1171-1183 
+ 
+18. Rao, U.N., (2007), “ Ice-flagging of Quikscat scatterometer data”, Report No. 
+SAC/RESIPA/MOG/SR/04/2007, April. 
+ 
+19. SAC Report, (2005), “ Oceansat-II scatterometer payload, Preliminary Design 
+Review Document”, SAC/SCATT/PDR/01, October 
+ 
+20. Schroeder, L., D.H. Boggs, G. Dome, I.M. Halberstam, W.L. Jones, W.J. Pierson, 
+and F.J. Wentz, (1982), "The Relationship Between the Wind Vector and the 
+Normalized Radar Cross Section Used to Derive Seasat-A Satellite Scatterometer 
+Winds," J. Geophys. Res., Vol. 87, No. C5, pp. 3318-3336 
+ 
+21. Stiles, B.W. and S.H. Yueh, (2002), ‘‘Impact of rain on spaceborne Ku-
+band wind scatterometer data’’, IEEE Trans. Geosci. Remote Sensing, 
+vol. 40, pp. 1973-1983 
+ 
+22. Stiles, B.W., B.D. Polland and R. S. Dunbar, (2002), “ Direction interval retrieval 
+with thresholded nudging: A method for improving the accuracy of QuikSCAT 
+winds”, IEEE Trans. Geosci. Remote Sensing, 40(1), pp. 79-89 
+ 
+23. Stoffelen, A. and D. Anderson, (1997), “ Scatterometer data interpretation: 
+measurement space and inversion”, J. Atmos. and Ocean Technol., vol. 14(6), pp. 
+1298-1313 
+ 
+24. Stoffelen, A. and M. Portabella, (2006), “ On Bayesian scatterometer wind 
+inversion”, IEEE Trans. Geosci. Remote. Sensing, Vol. 44, No. 6, pp. 1523-1533 
+ 
+25. Tiwari, P. and B.S. Gohil, (2005), “ Impact of empirical model function on 
+retrieval of ocean surface wind vector from space-borne microwave 
+scatterometer”, Report No. SAC/RESIPA/MOG/OSD/Oceansat-II/SR/01/2005, 
+October 
+  
+ 
+38
+ 
+26. Ulaby, F.T., R. K. Moore, and A. K. Fung, (1981), “ Microwave Remote Sensing -
+- Active and Passive”, Vols. 1 and 2, Addison-Wesley Pub. Co., Reading, Mass. 
+ 
+27. Wentz, F.J., S. Peteherych, and L.A. Thomas, (1984), "A Model Function for 
+Ocean Radar Cross-sections at 14.6 GHz," J. Geophys. Res., Vol. 89, pp 3689-
+3704 
+ 
+28. Wentz, F.J. and D.K. Smith, (1999), “ A model function for the ocean-normalized 
+radar cross section at 14 GHz derived from NSCAT observations,” Jou. Geophys. 
+Res., 104(C5), pp 11,499-11,514 
+ 
+ 

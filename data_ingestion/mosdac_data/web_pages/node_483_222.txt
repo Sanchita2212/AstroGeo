@@ -1,0 +1,98 @@
+URL: https://www.mosdac.gov.in/node/483/222
+
+--- EXTRACTED TEXT ---
+Skip to main Content
+Secondary menu
+SignUp
+Login
+Logout
+Home
+Missions INSAT-3DR INSAT-3D KALPANA-1 INSAT-3A MeghaTropiques SARAL-AltiKa OCEANSAT-2 OCEANSAT-3 INSAT-3DS SCATSAT-1
+INSAT-3DR
+INSAT-3D
+KALPANA-1
+INSAT-3A
+MeghaTropiques
+SARAL-AltiKa
+OCEANSAT-2
+OCEANSAT-3
+INSAT-3DS
+SCATSAT-1
+Catalog Satellite Insitu (AWS) RADAR
+Satellite
+Insitu (AWS)
+RADAR
+Galleries Satellite Products Weather Forecast Ocean Forecast RADAR (DWR) Global Ocean Current
+Satellite Products
+Weather Forecast
+Ocean Forecast
+RADAR (DWR)
+Global Ocean Current
+Data Access Order Data Open Data Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy Cal-Val Forecast RSS Feeds
+Order Data
+Open Data Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy
+Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties
+Bayesian based MT-SAPHIR rainfall
+GPS derived Integrated water vapour
+GSMap ISRO Rain
+METEOSAT8 Cloud Properties
+Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture
+3D Volumetric TERLS DWRproduct
+Inland Water Height
+River Discharge
+Soil Moisture
+Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy
+Global Ocean Surface Current
+High Resolution Sea Surface Salinity
+Indian Mainland Coastal Product
+Ocean Subsurface
+Oceanic Eddies Detection
+Sea Ice Occurrence Probability
+Wave based Renewable Energy
+Cal-Val
+Forecast
+RSS Feeds
+Reports Calibration Insitu Relative Validation Data Quality Weather
+Calibration Insitu Relative
+Insitu
+Relative
+Validation
+Data Quality
+Weather
+Atlases
+Tools
+Sitemap
+Help
+You are here
+Data Quality
+Search
+Follow Us
+
+
+
+Website owned and maintained by MOSDAC, Space Applications Centre, Indian Space Research Organisation, Govt. of INDIA.
+
+Feedback
+About Us
+Contact Us
+Copyright Policy
+Data Access Policy
+Hyperlink Policy
+Privacy Policy
+Website Policies
+Terms & Conditions
+FAQs
+
+
+
+
+
+
+"Ver 3.0; Last reviewed and updated on
+07 Aug, 2025& Served By:
+Web-Srv-Pri
+
+
+--- EXTRACTED TABLES ---
+Headers: ['', 'Display name', 'modified']
+Data: [['', 'insitu', 'Sat, 2022-05-28 23:57'], ['', 'upload', 'Wed, 2025-07-09 12:20'], ['', 'web', 'Mon, 2024-06-24 11:36'], ['', 'live', 'Tue, 2025-01-07 10:08'], ['', 'srv', 'Tue, 2024-06-25 19:58'], ['', 'opt', 'Fri, 2025-01-17 22:43'], ['', 'mnt', 'Tue, 2024-06-25 19:58'], ['', 'media', 'Tue, 2024-06-25 19:58'], ['', 'home', 'Fri, 2024-12-27 14:51'], ['', 'afs', 'Tue, 2024-06-25 19:58'], ['', 'lib64', 'Tue, 2025-01-21 17:28'], ['', 'lib', 'Thu, 2024-11-28 09:47'], ['', 'sbin', 'Fri, 2024-12-13 11:28'], ['', 'bin', 'Mon, 2025-01-20 12:04'], ['', 'usr', 'Thu, 2024-11-28 09:41'], ['', 'var', 'Thu, 2025-01-30 09:22'], ['', 'etc', 'Tue, 2025-08-05 16:55'], ['', 'tmp', 'Thu, 2025-08-07 20:51'], ['', 'sys', 'Tue, 2025-02-04 11:08'], ['', 'run', 'Thu, 2025-05-01 17:14'], ['', 'proc', 'Tue, 2025-02-04 11:08'], ['', 'dev', 'Tue, 2025-02-04 11:08'], ['', 'data', 'Tue, 2025-08-05 12:02'], ['', 'boot', 'Thu, 2024-11-28 09:55'], ['', 'Go up', 'Thu, 2025-01-30 08:53']]

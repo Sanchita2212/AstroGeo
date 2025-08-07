@@ -1,0 +1,36 @@
+URL: https://www.mosdac.gov.in/internal/event-heavyrain
+
+--- EXTRACTED TEXT ---
+DISTRICTS HAVING HIGH RAIN(>5mm/h)
+AREA HAVING HIGH RAIN(>10mm/h)
+DISTRICTS HAVING HIGH RAIN(>5mm/h)
+AREA HAVING HIGH RAIN(>10mm/h)
+For More Detail... Algorithm
+©Space Applications Centre, ISRO      Developed & Maintained By: DWD/SAC
+Credits for following information/layers/data used in this website is dually acknowledged
+											
+											
+											* OpenStreetMap: @OpenStreetMap Contributors (www.openstreetmap.org/copyright) * True Marble: Unearthed Outdoors, LLC * India River Basins/ State/ District Boundaries and World Coastlines : India Meteorological Department, Delhi (www.imd.gov.in) * INSAT 3D Algorithm : AOSG/SAC
+
+
+--- EXTRACTED TABLES ---
+Headers: []
+Data: [[''], ['{{applicationName}}Rainfall (mm): {{datetime}} GMT', '']]
+Headers: []
+Data: [['']]
+Headers: []
+Data: [['Tools', 'Analysis', 'Legends']]
+Headers: []
+Data: [['', '{{generalMessage.infoMsg.toolsNoBtn.message}}']]
+Headers: []
+Data: [['', '{{generalMessage.infoMsg.analysisNoBtn.message}}'], ['']]
+Headers: []
+Data: [['{{generalMessage.infoMsg.noLegends.message1}}', '']]
+Headers: ['District Name', 'Met-subdivision', 'Rain(mm/h)']
+Data: [['{{item1}}']]
+Headers: ['Area(Km*2)', 'Highest Rain(mm/h)', 'Lat/Long']
+Data: [['{{item1_t2}}']]
+Headers: ['District Name', 'Met-subdivision', 'Rain(mm/h)']
+Data: [['{{item1}}']]
+Headers: ['Area(Km*2)', 'Highest Rain(mm/h)', 'Lat/Long']
+Data: [['{{item1_t2}}']]

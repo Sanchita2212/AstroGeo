@@ -1,0 +1,5453 @@
+ISRO/SAC/MT-UP/Retrieval-03/ September-2012 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ALGORITHM THEORETICAL BASIS DOCUMENT 
+ 
+ 
+ 
+RETRIEVAL OF GEOPHYSICAL PARAMETERS 
+FROM MEGHA-TROPIQUES 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Space Applications Centre 
+Indian Space Research Organization 
+Ahmedabad – 380015 
+ 
+September 2012 
+ 
+Megha-Tropiques ATBD Ver 3.0 
+1
+ 
+ 
+ 
+GOVERNMENT OF INDIA 
+ 
+INDIAN SPACE RESEARCH ORGANISATION 
+SPACE APPLICATIONS CENTRE 
+AHMEDABAD – 380 015 
+ 
+ 
+ 
+DOCUMENT CONTROL AND DATA SHEET 
+ 
+1 
+Date 
+September 25, 2012 
+2 
+Title 
+Algorithm Theoretical Basis Document: Retrieval of 
+Geophysical Parameters from Megha-Tropiques 
+3 
+Version 
+3.0 
+4 
+Document No. 
+ISRO/SAC/MT-UP/Retrieval-03/ September-2012 
+5 
+Type of Report Scientific 
+6 
+No. of pages 
+80 
+7 
+Authors 
+MT-UP Geophysical Parameter Retrieval Task Team 
+8 
+Originating 
+Unit 
+Space Applications Centre, Ahmedabad 
+9 
+Abstract 
+This document describes the theoretical basis for the 
+retrieval of various geophysical parameters from 
+various sensors of Megha-Tropiques satellite. 
+10 Classification 
+General 
+11 Circulation 
+All concerned 
+Megha-Tropiques ATBD Ver 3.0 
+2
+ 
+ 
+ 
+Table of Contents 
+ 
+ 
+ 
+ 
+1. 
+Introduction .................................................................................................. 4 
+2. 
+Retrieval of Rainfall from MADRAS .......................................................... 7 
+3. 
+Retrieval of Ocean Surface Geophysical Parameters over oceans from             
+           MADRAS ................................................................................................... 29 
+4. 
+Retrieval of Humidity Profiles from SAPHIR ........................................... 44 
+5          Top-of-Atmosphere Radiative Flux from ScaRaB .................................... 54 
+6          Temperature and Humidity Profiles from ROSA ...................................... 67 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Megha-Tropiques ATBD Ver 3.0 
+3
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1.0 Introduction 
+Megha-Tropiques ATBD Ver 3.0 
+4
+ 
+1. 
+Introduction 
+ 
+Megha-Tropiques (MT) a satellite realized under ISRO-CNES collaborative 
+mission was launched on October 12, 2011 using ISRO’s PSLV (Polar Satellite 
+Launch Vehicle) in an inclined 20 orbit at an altitude of 867 km to understand the 
+energy and water cycles in the global tropical region. The MT satellite frequently 
+measures radiation emitted by the Earth-Atmosphere System in the visible, 
+infrared and microwave spectrum through its four sensors onboard namely, 
+MADRAS (Microwave Analysis and Detection of Rain and Atmospheric 
+Structures), SAPHIR (Sondeur Atmosphérique du Profil d'Humidité Intertropical 
+par Radiométrie), ScaRaB (Scanner for Radiation Budget) and ROSA (Radio 
+Occultation Sensor for Atmosphere). The MADRAS system is a five-channel 
+(18.7 GHz, 23.8 GHz, 36.5 GHz, 89 GHz and 157 GHz), dual polarized (except 
+23.8 GHz), self-calibrating, microwave radiometer system with azimuth scanning 
+of 65 yielding data swath of 1700 kms at local incidence angle of 53.5 at the 
+Earth’s surface. The SAPHIR sensor is a microwave humidity sounder operating 
+around 183.31 GHz with six-channels (±0.2, ±1.1, ±2.8, ±4.2, ±6.8 and ±11 GHz) 
+with cross-track scanning of 43 yielding data swath of 1705 Km with variable 
+local incidence angle at the Earth’s surface. The ScaRaB sensor operates in four 
+bands (0.55-0.65 m, 0.2-4.0 m, 0.2-50.0 m and 10.5-12.5 m) with a swath of 
+2242 km with cross-track scanning of  48.9. ROSA tracks the dual-frequency L-
+band signals, transmitted by the GPS-GNSS, in both the fore and aft direction 
+from limb sounding geometry giving 1-dimensional (vertical) profile of 
+geophysical parameters at various geo-locations of the earth. 
+ 
+ 
+The major task is the retrieval of various geophysical parameters from MT sensors 
+involving complexities of the inverse problem and the characteristics of the 
+instruments. This draft document describes the theoretical basis of the algorithms 
+for retrieving various geophysical parameters from these sensors. These 
+algorithms are planned for the implementation on the operational basis for 
+geophysical data product generation from MT satellite data. Algorithms for each 
+sensor are provided in separate sections as presented in this document. 
+ 
+Section 2 describes the details of rainfall retrieval from MADRAS which includes 
+the state of the art of algorithms for retrieving rainfall rate using microwave 
+radiometers, scattering based radiative transfer model, necessity of environmental 
+and hydrometeor data sets, inversion techniques, prevailing retrieval accuracies 
+and validation techniques. 
+ 
+Section 3 deals with the retrieval of geophysical parameters namely, atmospheric 
+total water vapour content, cloud liquid water content and ocean surface wind 
+speed from MADRAS. It describes the global scenario including Indian heritage, 
+emission based radiative transfer model, simulation of environmental data, 
+simulation based retrieval techniques, fine-tuning and validation techniques. 
+ 
+Megha-Tropiques ATBD Ver 3.0 
+5
+Section 4 is devoted to the retrieval of atmospheric humidity profile from 
+SAPHIR sensor. It deals with the emission based radiative transfer model suitable 
+for sounding purpose, simulation of synthetic atmospheric profiles, sensitivity 
+studies, simulation results, inversion techniques and preliminary analysis of 
+limited AMSU-B sounder data. 
+ 
+Section 5 describes the complexities of processes needed for estimation of top-of-
+atmosphere radiation flux from the radiance measurements over the different 
+portions of the electromagnetic spectrum by ScaRaB.  
+ 
+Section 6 deals with the retrieval of atmospheric profiles of temperature and 
+humidity using the information about the refractivity as an input made available 
+from ROSA measurements. 
+Megha-Tropiques ATBD Ver 3.0 
+6
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2.0 Retrieval of Rainfall from MADRAS 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Megha-Tropiques ATBD Ver 3.0 
+7
+2. 
+Retrieval of Rainfall from MADRAS 
+ 
+2.1 
+Algorithm configuration information 
+2.1.1 Algorithm name:  
+Rainfall Retrieval (RAINRET) 
+2.1.2 Algorithm Identifier:  
+ISRO_MT_RAINRET_A001 
+2.1.3 Algorithm Specification 
+ 
+Version Prepared by 
+Description 
+2.0 
+R.M. Gairola and 
+A.K. Varma 
+ATBD for Rainfall Retrieval from MADRAS 
+2.2 Introduction 
+  
+Rainfall is a highly discontinuous process both in space and time. Accurate 
+and reliable measurements of rainfall over extensive areas of oceans present a 
+formidable challenge to meteorologists. In addition to large uncertainties in the 
+derived estimates, there are problems related to nonuniformities of coverage, 
+quality and logistics of operations etc. The global observations and monitoring of 
+clouds from space using remote sensing techniques, has the potential of providing 
+global rainfall information on desired time and space scales (Kummerow et al. 
+1995, Adler et al. 1994). Precipitation is associated with various atmospheric 
+phenomena both in small and large scale. Assessment of precipitation contributes 
+to improve weather forecasting, in small and large spatial scales, and a study of 
+global rainfall leads to better understanding of global climate variability. 
+In addition, one of the strongest links between ocean, land and atmosphere 
+is the fresh water fluxes due to evaporation and precipitation process. Evaporation 
+("E") controls the loss of fresh water and precipitation ("P") governs most of the 
+gain of fresh water. Inputs from rivers and melting ice can also contribute to fresh 
+water gains. Evaporation minus precipitation is usually referred to as the net flux 
+of fresh water or the total fresh water in or out of the oceans and can be 
+determined from satellite remotes sensing methods (Gairola et al. 2007). E-P 
+determines surface salinity of the ocean, which helps determine the stability of the 
+water column. Salinity and temperature determine the density of ocean water, and 
+density influences the circulation. Precipitation also affects the height of the ocean 
+surface indirectly via salinity and density. The global increase in oceanic 
+evaporation (E) is determined by the increase in surface heating and this controls 
+the global increase in precipitation (P). With the global warming scenario, it has 
+been argued that increased moisture content of the atmosphere favours stronger 
+rainfall events, thus increasing risk of flooding over land and more fresh water 
+fluxes (E-P) over the oceans. It changes the buoyancy of the sea waters and also 
+acts as a forcing function in OGCM.   
+ 
+Megha-Tropiques ATBD Ver 3.0 
+8
+The development of rainfall estimation techniques based on remote 
+sensing measurements from space has registered tremendous progress and realistic 
+achievements over the last three decades. Like any other fields of endeavor, 
+however, there are limitations too and newer and better measurement and 
+estimation techniques are developed on a continuous basis. The ability of space 
+based  measurements to provide a 2-D distribution of rainfall over large areas with 
+sufficiently frequent sampling in time, especially over data sparse oceanic regions, 
+facilitates us with a tremendously powerful tool to detect, closely monitor 
+monsoon system and study the genesis and evolution of the furious tropical 
+cyclonic storm. 
+Most tropical rainfall that has an impact over more than world's two-third 
+population occurs as a result of convective processes.  Understanding rainfall and 
+its variability will contribute significantly to making reliable monsoon forecast. In 
+addition, the knowledge of precipitation as one of the initial state of the 
+atmosphere is necessary in weather prediction for  physical  initialization of 
+numerical models. For years the need for diabetic initialization of precipitation in 
+numerical models is being fulfilled by the infrared measurements by polar and 
+geostationary satellites, since IR/VI measurements are continuously available with 
+larger viewing areas and high resolution. 
+  
+Microwaves  can penetrate clouds and to some extent rain, and thus 
+provide another source for rainfall estimation over both land and oceans. Over the 
+years, passive microwave (PM) instruments on earth orbiting platforms have been 
+providing valuable information for precipitation estimation. The applications that 
+benefited from microwave rainfall estimates include weather forecasting, climate 
+analysis, and hydrological studies. The successful use of PM-based rain estimates 
+in applications from various fields encourages the continuation of efforts toward 
+the development of more advanced rain retrieval algorithms, despite obvious 
+limitations associated with the low sampling frequency of orbiting platforms 
+carrying PM sensors. The recent availability of detailed precipitation observations 
+jointly obtained by the first space-borne precipitation radar (PR) and a 
+multifrequncy passive microwave radiometer, the TRMM Microwave Imager 
+(TMI), on NASA-USA and NASDA-Japan’s Tropical Rainfall Measuring 
+Mission (TRMM) satellite offers an excellent opportunity for studying such 
+issues. It  can also supplement the  observations from the IR/VIS measurements if 
+properly integrated/unified and brings out the finer details than any one alone. 
+ 
+ 
+2.2.1 Overview and Background: Measurement of Rain by Space-Based 
+Methods: 
+ 
+VIS/IR Measurements of Rain : 
+Digital image data from polar orbiting and geostationary meteorological 
+satellites with synoptic coverage and quasi-continuous sampling in time have now 
+become the major tools for attempts to monitor rainfall from space. The most 
+common and easily exploited image data - cloud images in the visible and thermal 
+IR bands - provide reasonably direct information on cloud areal extent, cloud type 
+and cloud growth and decay. However, cloud formation to rainfall is an involved 
+process. The Visible/IR sensing from space does not permit direct measurement of 
+raindrops and hence provides essentially indirect inferences from which useful 
+estimates of rain falling below the cloud may be derived. 
+Megha-Tropiques ATBD Ver 3.0 
+9
+Encouraged by the overpowering advantages of spacebased observations, 
+even these proxy indicators have been exploited to severe as a basis for 
+development of a variety of techniques for estimation of rainfall. The basic 
+assumption that underlies all rainfall estimation techniques which utilize satellite 
+images in the Visible and IR band is that raining clouds can be distinguished from 
+non-raining ones : the former are usually thick and tall producing high visible 
+band reflectance and cold cloud top temperatures. The possible physical basis for 
+this lies mainly in the fact that cold high clouds represent signatures of upward 
+motion in  a locally saturated atmosphere indicating deep convection. 
+The available schemes use visible and/or IR imagery and time evolution of 
+cloud characteristics e.g. merging of cumulus clouds, cloud bands, anvils etc. seen 
+in hourly/half hourly images. Many of these schemes are interactive in nature. 
+Over the Indian region, monthly average rainfll information in the form of 
+quantitative precipitation estimate (QPEs) maps with spatial resolution of 
+2.50x2.50 are produced on a regular basis since 1986 using INSAT-VHRR IR 
+images collected eight times daily (Arkin et al. 1989). These maps are produced 
+following the Arkin and Miesner (1987) tecnique. Currently rainfall estimation 
+from IR and Water Vapour channels of KALPANA and INSAT-3A are being 
+utilized for the development of advanced algorithms for rainfall estimation over 
+land and oceanic regions at 2.50x2.50 and sub-grid scale (0.250x0.250) by Gairola 
+et al. (2007) by both GPI and INSAT Multi Spectral Rainfall Algorithm (IMSRA) 
+(Gairola et al. 2007). 
+  
+Microwave Measurements of Rain: 
+Satellite microwave radiometers have been successfully used to monitor 
+the temporal and spatial variations of sea surface and atmospheric properties on 
+global scale since the launch of the Soviet Cosmos-243 instrument in 1969. The 
+process of using satellite data for such applications is complex. Grody (1993) 
+provided a complete review of past, present and planned future satellite 
+microwave 
+instruments, 
+including 
+their 
+operational 
+characteristics 
+and 
+applications. Among all the geophysical parameters, rainfall is the most difficult 
+parameter to be retrieved from satellite remote sensing due to the intermittent 
+nature of the processes of rain occurrence and its highly complex 
+emission/absorption and scattering properties. 
+Microwave, due to their long wavelengths  achieve better penetration and 
+interact strongly with the raindrops present in the cloud. These measurements 
+provide a direct physical basis for rain estimation. Also microwaves are largely 
+intensive to the presence of ice in thin cirrus clouds but only suffers its poor 
+resolution capability. The precipitation monitoring capability of SSM/I has been 
+demonstrated by many investigators. Wilheit et al. (1991) used multichannel 
+microwave measurements for the rainfall retrieval. Negri et al. (1989) discussed 
+meteorological interpretations with the false color images of 85 GHz (HH, VV) 
+and 37 GHz (VV) for precipitation processes and clarification of land, ocean and 
+sea ice types with SSM/I. Berg (1992) estimated and analyze inter-annual 
+variations in the tropical oceanic rainfall using data from SSM/I. ).  
+Microwave radiances reaching satellite altitudes from precipitating clouds 
+containing aspherical ice, combined phase hydrometeors and the background 
+atmosphere (cloud liquid water, water  vapor and gaseous constituents etc.) within 
+the instrument field of view. The upwelling radiation observed by a microwave 
+radiometer is expressed as an equivalent brightness temperature Tb and the ability 
+Megha-Tropiques ATBD Ver 3.0 
+10
+of passive microwave radiometer to infer rainfall depends largely on the contrast 
+between the observed brightness temperatures over raining and non-raining areas. 
+Some of the sensitivity studies have been carried out through radiative transfer 
+simulation by (Swaminathan et al. 2005, Deiveegan et al. 2007, Viltard et al. 
+1998, Bauer et al. 1993, Gairola et al. 2001, 2005 etc) and through the empirical 
+approach (Varma et al. 2003, Pokhrel et al. 2004 etc.) and  showed the possibility 
+of rainfall over Ocean and land regions. 
+Utilizing the frequency and polarization discrimination of passive 
+microwave measurements from space, it has been successfully demonstrated that 
+satisfactory rainfall retrievals both over land and oceanic areas are feasible. It has 
+been seen that satellite estimates based on passive measurements portray the 
+rainfall as accurately as radar both in terms of relative intensity and spatial 
+distribution. 
+ 
+Rainfall over the oceans are retrieved relatively more reliably than over 
+land. In total, the applications that benefited from microwave rainfall estimates 
+include weather forecasting (Xiao et al. 2000), climate analysis (Hou et al. 2000), 
+and hydrological studies (Petty and Krajwski 1996). The successful use of PM-
+based rain estimates in applications from various fields encourages the 
+continuation of efforts towards the development of more advanced rain retrieval 
+algorithms, despite obvious limitations associated with the low sampling 
+frequency of orbiting platforms carrying PM sensors. The recent availability of 
+detailed precipitation observations jointly obtained by the first space-borne 
+precipitation radar (PR) and a multifrequency passive microwave radiometer, 
+TMI, on NASA and NASDA’s TRMM satellite (Simpsion et al. 1996) offers such 
+an excellent opportunity for studying such issues. 
+Still with such missions dedicated to rainfall estimation, rain retrieval 
+algorithms from PM radiometry suffer from various limitations. These limitations 
+originate in the multiple hydrometeor profiles that can be associated with a set of 
+multifrequency PM measurements (i.e., lack of unique solution The indeterminacy 
+is more ever for overland retrievals because of the warm background brightness 
+temperatures that limit the use of lower-frequency observations (i.e., 10, 19, and 
+22 GHz). Some algorithms, referred to as physically based, are derived using 
+radiative transfer calculations through cloud-model simulated fields (Kummerow 
+et al. 1996, Haferman et al. 1997). The physically based algorithms were mainly 
+investigated in over ocean retrievals. Such physically based retrieval over land are 
+few and have not indicated better performance relative to purely statistical 
+algorithms (Druen and Heinemann 1998), which are conceptually simpler and 
+more practical for applications. 
+In the beginning an algorithm for oceanic rainfall was developed   for 
+19.35 GHz observations from Nimbus-5 Electrically Scanning Microwave 
+Radiometer (ESMR) by Wilheit et al. (1977). Further modification to the 
+algorithm was made by using statistical technique for multichannel data in the 
+Nimbus-7 Scanning Multichannel  Microwave Radiometer  (SMMR) data 
+(Wilheit and Chang 1980). Currently the 85 GHz channel in DMSP-SSM/I (F10, 
+F11, F12, F13) and TRMM-TMI offers better possibilities of rainfall estimation. 
+The optimal combination of integrated MW and IR observations offers a unique 
+opportunity for rainfall retrieval more accurately (Gairola and Krishnamurti 1992, 
+Gairola et al. 2005, Jobard and Desbois 1994, Adler et al. 1994, Liu et al. 1995). 
+However it requires the rainfall from individual streams (either IR or MW based) 
+Megha-Tropiques ATBD Ver 3.0 
+11
+rain algorithms well placed.  In addition to various SSM/I sensors  presently 
+available for the rainfall estimation, the Tropical Rainfall Measuring Mission 
+(TRMM) provides the best opportunity with all type of passive (MW and VIS/IR) 
+and active (MW) sensors onboard as a prelude to the Megha-Tropiques. 
+ 
+ 
+2.3. System Description 
+ 
+MADRAS (Microwave Analysis and Detection of Rain and Atmospheric 
+Structures)  
+ 
+The proposed MADRAS system is a five-channel, self-calibrating, microwave 
+radiometer system.  This radiometer is designed to estimate atmospheric water 
+parameters in the tropical belt.  The choice of the channels has been driven by 
+their potential contribution to the measurement of the parameters defined above, 
+from the experience of processing other radiometer data. Table 1 below shows the 
+brief description of MADRAS sensor. 
+ 
+Table 1: Channel of MADRAS and their related mission objectives 
+ 
+Channel No. 
+Frequency 
+ 
+Polarization 
+NE
+T 
+Spatial 
+Resolution 
+Mission 
+M1 
+18.7 GHz 
+H+V 
+0.5 K 
+40km 
+Rain 
+ 
+above  
+oceans 
+M2 
+23.8 GHz 
+V  
+0.5 K 
+40km 
+Integrated 
+water  
+vapour 
+M3 
+36.5 GHz 
+H + V 
+0.5 K 
+40km 
+Liquid water in 
+clouds, rain above 
+sea 
+M4 
+89 GHz 
+H + V 
+1.0 K 
+10km 
+Convective 
+rain 
+areas 
+over 
+land 
+and sea 
+M5  
+157 GHz  
+H + V 
+1.0 K 
+6km 
+Ice at cloud tops 
+ 
+ 
+2.4. 
+Inputs 
+2.4.1 Static Data: 
+Parameter 
+Resolution 
+Accuracy 
+Source 
+Land/coast/sea flag 
+On the 
+Footprints of 
+each channel 
+-- 
+DP 
+Global training dataset for 
+temperature and humidity, RH, 
+and hydrometeor profiles)  
+Surface to  50 
+hPa levels 
+-- 
+ TBD 
+Ground Truth, In-Situ  
+Data 
+Point and pixel 
+data of RG, 
+MRR, AWS 
+and DWR resp. 
+ 
+IMD, ISRO 
+Megha-Tropiques ATBD Ver 3.0 
+12
+ 
+ 
+ 
+2.4.2 Dynamic data: 
+Parameter 
+Resolution 
+Quantization 
+Accuracy 
+Source 
+Radiometric 
+Brightness 
+Temperature 
+values 
+of 
+MADRAS  channels #1-157 
+GHz 
+Each Pixel 
+ TBD 
+-- 
+Derived 
+from 
+raw 
+data by DP 
+Geolocation information 
+each pixel 
+ 
+1 pixel 
+Derived by 
+DP 
+ 
+2.4.3 Other Auxiliary data: 
+Sensor error estimates from sensor group. 
+2.5.  Algorithm functional specifications 
+2.5.1  Overview: 
+Microwave brightness temperatures measured from a satellite-borne radiometer 
+results from the integrated effects of surface emission and reflection, absorption 
+and emission by atmospheric gases, and absorption, emission and multiple 
+scattering of cloud and precipitation particles. Once scattering in the atmosphere 
+becomes important (at 85.5 GHz, in particular for cases two and four), the 
+influence of the model treatment of multiple scattering overrides the surface 
+effect. To accurately describe the microwave signatures, a radiative transfer model 
+with full inclusion of the aforementioned effects, particularly the multiple 
+scattering by precipitation particles, is required.   
+  
+The Theory of radiative transfer basically describes the interaction and 
+propagation of radiative energy in a medium. As radiation is the most important 
+source of energy for driving all the atmospheric processes and also atmospheric 
+dynamics is strongly influenced by how solar and the terrestrial radiations are 
+scattered, absorbed and emitted by the earth’s surface and the atmosphere. Thus 
+the knowledge of radiative transfer is most fundamental in the retrieval of 
+atmospheric and earth’s surface parameters in space-borne remote sensing. The 
+extensive coverage of radiative transfer formulations has been made by 
+Chandrasekhar (1960). 
+ 
+2.5.2 Theoretical Background: 
+It is the fundamental integro-differential equation, which governs the variation of 
+intensity in a medium characterized by a spectral volumetric absorption 
+coefficient, K(s), and a spectral volumetric scattering coefficient, (s), where s 
+is the distance along the absorbing path.  
+Let us define the spectral volumetric extinction coefficient as 
+)s(
+σ
+)s(
+K
+)s(
+β
+ν
+ν
+ν
+
+
+                                                                                                   
+Finally dividing 3 equation by 
+)s(
+βν
+we get 
+)
+Ω
+,s(
+J
+)
+Ω
+,s(
+I
+ds
+)
+Ω
+,s(
+dI
+)s(
+β
+1
+ν
+ν
+ν
+ν
+
+
+                                                                     (1) 
+Megha-Tropiques ATBD Ver 3.0 
+13
+Where 
+'
+'
+Ω
+ν
+ν
+ν
+ν
+ν
+ν
+Ω
+d
+)
+Ω
+,s(
+I)
+θ
+(cos
+P
+π
+4
+ω
+)
+T
+(
+B
+)
+ω
+1(
+)s(
+β
+j
+J
+'
+
+
+
+
+                                        (2) 
+is referred to as the source function and  
+)s(
+β
+)s(
+σ
+ω
+ν
+ν
+ν 
+                                                                                                            (3) 
+is called the single-scattering albedo, or particle albedo and expresses the fraction 
+of the attenuated beam which is lost to scattering alone. 
+Equation 5 is the general equation of transfer and it is fundamental in the 
+discussion of any radiative transfer process. 
+ 
+The RTE for Plane-Parallel Atmosphere 
+ In plane-parallel atmospheres the medium is stratified in planes 
+perpendicular to a given direction z, such that the optical properties of the medium 
+are functions of z and  only. Since thickness of a planetary atmosphere is 
+generally small compared with its radius, thus this assumption is universally 
+applied. 
+From figure we have  
+dz
+)
+(
+d
+μ
+dz
+)
+(
+d
+θ
+cos
+ds
+)
+(
+d
+
+
+  
+Thus equation 3 in terms of z, μ , and φ : 
+  
+)
+φ
+,
+μ
+,z(
+J
+)
+φ
+,
+μ
+,z
+(
+I
+dz
+)
+φ
+,
+μ
+,z
+(
+dI
+)z
+(
+β
+μ
+ν
+ν
+ν
+ν
+
+
+                                                         (4) 
+here in J, 
+ 
+'φ
+d'μ
+d
+'φ
+d'θ
+d'θ
+sin
+'
+Ω
+d
+
+
+
+                                                                                 (5) 
+so that 
+ 
+
+
+
+
+
+
+1
+1
+ν
+0
+π
+2
+0
+ν
+ν
+ν
+ν
+'φ
+d'μ
+d
+)'φ
+,'μ
+,z
+(
+I)
+θ
+(cos
+P
+π
+4
+ω
+)]
+z(
+T
+[
+B
+)
+ω
+1(
+)
+φ
+,
+μ
+,z
+(
+J
+                   (6) 
+For convenience, introducing the concept of optical depth, 
+ντ , measured from the 
+outer boundary downward as 
+ 
+
+
+
+z
+ν
+ν
+'
+dz
+)'z
+(
+β
+τ
+                                
+dz
+)z
+(
+β
+τ
+d
+ν
+ν
+
+
+                                                                                                    (7) 
+Thus replacing height variable z by optical depth 
+ντ in equation (2.18) we have 
+ 
+)
+φ
+,
+μ
+,
+τ(
+J
+)
+φ
+,
+μ
+,
+τ(
+I
+τ
+d
+)
+φ
+,
+μ
+,
+τ(
+dI
+μ
+ν
+ν
+ν
+ν
+ν
+ν
+ν
+
+
+
+or 
+ 
+)
+φ
+,
+μ
+,
+τ(
+J
+)
+φ
+,
+μ
+,
+τ(
+I
+τ
+d
+)
+φ
+,
+μ
+,
+τ(
+dI
+μ
+ν
+ν
+ν
+ν
+ν
+ν
+ν
+
+
+                                                           (8) 
+with 
+
+
+
+
+
+
+1
+1
+ν
+ν
+0
+π
+2
+0
+ν
+ν
+ν
+ν
+ν
+ν
+'φ
+d'μ
+d
+)'φ
+,'μ
+,
+τ(
+I)
+θ
+(cos
+P
+π
+4
+ω
+)]
+τ(
+T
+[
+B
+)
+ω
+1(
+)
+φ
+,
+μ
+,
+τ(
+J
+              (9)   
+Equation (8) is the basic equation for the problem of radiative transfer in the 
+plane-parallel atmosphere, which is extremely difficult to solve. Part of difficulty 
+is due to the azimuthal dependence of I through the phase function. By expanding 
+Megha-Tropiques ATBD Ver 3.0 
+14
+the phase function in a Legendre polynomial series, the azimuthally dependent 
+terms in the function can be uncoupled. Only the azimuthally independent 
+equation contributes to the flux calculations, which is of greatest interest in most 
+atmospheric applications. Thus confining our solution for the azimuthally 
+independent equation. 
+ 
+Radiative transfer models: 
+ 
+The following two radiative transfer models are being used at SAC for simulations 
+and sensitivity studies. 
+ 
+1. Eddington approximations 
+                  
+In Eddington approximation it is assumed that for an isotropic field the ratio of the 
+second moment of the radiation field to the mean intensity is everywhere equal to 
+1/3.  
+In the plane parallel Eddington approximation, radiances are expanded in a series 
+of Legendre and associated Legendre functions: 
+.....
+θ
+cos
+)z(
+I
+)z
+(
+I
+)
+φ
+,θ
+,
+τ(
+I
+1
+0
+ν
+ν
+
+
+
+                                                                   (10) 
+and the phase function is similarly expanded in Legendre polynomials 
+ 
+..........
+θ
+cos
+ω
+1
+)
+θ
+(cos
+P
+ω
+)
+θ
+(cos
+P
+0
+1
+N
+0
+l
+0
+l
+l
+0
+
+
+
+
+
+                                           (11) 
+where 
+0
+θ is the angle from ’, ’ to , , and the source function J(z, , ) can be 
+written as 
+]
+θ
+cos
+)z
+(
+I)z(
+g
+)z(
+I
+)[
+z
+(
+ω
+)z(
+T
+)]
+z
+(
+ω
+1[
+)
+φ
+,θ
+,z(
+J
+1
+0
+ν
+
+
+
+
+                                  (12) 
+where the asymmetry factor is given by 
+3
+ω
+g
+1
+
+. Using this expression the 
+isotropic component of the diffuse radiance I0 can be deduced following 
+(Weinman and Davies, 1978) 
+  
+2. Discrete Ordinate Approximations 
+The radiative transfer equation 15 in terms of polarization p (H or V) can 
+be expressed as (Tsang and Kong, 1977): 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1
+1
+)τ(
+B
+)
+ω
+1(
+'μ
+d
+)
+μ
+,τ(
+I
+)
+μ
+,τ(
+I
+P
+P
+P
+P
+2
+ω
+)
+μ
+,τ(
+I
+)
+μ
+,τ(
+I
+)
+μ
+,τ(
+I
+)
+μ
+,τ(
+I
+τ
+d
+d
+μ
+0
+1
+1
+H
+V
+HH
+HV
+VH
+VV
+0
+H
+V
+H
+V
+      
+(13) 
+Where all the symbols have their usual meaning. Here Plank function B( is 
+assumed to be linearly varying function of from the top of the layer (B0) to the 
+bottom of the layer i.e., B(B0+B1he four scattering phase functions (PVV, 
+PVH, PHV and PHH) are the ones integrated over all azimuthal directions.  Thus 
+there exists cross-polarization scattering in the scattering source term because PVH 
+and PHV are not zero. The exact solution of Ip(is obtained by solving equation 
+using the discrete ordinate method with sufficient streams. In this DOM model it 
+is assumed that cross-polarization scattering in the scattering source term is 
+negligible and the scattering phase function is assumed to follow Henyey-
+Greenstein equation, and is expended with Legendre polynomial (pl) as 
+Megha-Tropiques ATBD Ver 3.0 
+15
+
+
+
+
+
+
+
+
+
+
+
+N
+0
+0
+N
+0
+0
+2
+3
+0
+2
+2
+0
+)
+θ
+(cos
+p
+A
+)
+θ
+(cos
+p
+g
+)1
+2
+(
+)
+θ
+cos
+g
+2
+g
+1(
+g
+1
+)
+θ
+(cos
+P
+
+
+
+
+
+
+
+  (14) 
+For azimuth-independent case (spheres, randomly-orientated irregular particles), 
+the cosine of the scattering angle 
+0
+θ
+cos
+can be denoted as ’ (Liou, 1974), so 
+that 
+
+
+
+
+
+
+
+
+N
+0
+N
+0
+0
+)'μ
+(
+p
+)
+μ
+(
+p
+A
+)'μ
+(
+p
+)
+μ
+(
+p
+g
+)1
+2
+(
+)'μ
+,
+μ
+(
+P
+)
+θ
+(cos
+P
+
+
+
+
+
+
+
+
+
+                  (15) 
+Where asymmetry factor g is calculated following Mie theory (Bohren and 
+Huffman, 1983), 
+)
+μ
+(
+p
+is the lth order Legendre polynomial and N is the number 
+of terms to add. In DOM, N=2n-1 (2n is the stream number). To minimize the 
+error associated with this cutoff, a -adjustment (scaling g, , and 0) is applied  
+following (Fu and Liou, 1992). 
+In performing numerical calculations, we divide the atmosphere into many 
+layers and assume that all microphysical properties (e.g., particle concentration, 
+liquid/ice water content, etc.) are uniform within each layer, but temperature 
+varies linearly with optical depth. By solving the Ljs the radiances at quadrature 
+angles (i) are obtained.    A boundary condition at the surface allows us to 
+calculate the upward radiation at surface given the surface emissivity and 
+temperature. Using this analogy of calculating downward radiation from top layer 
+to surface, upward radiance can be can continuously calculated from the bottom of 
+the layer to the top of the layer  and letting  = 0 until the radiance at the top of the 
+layer is solved. The satellite observed radiance at the top of the atmosphere is then 
+obtained. Brightness temperature can be calculated from the radiance using 
+Plank’s function. Horizontally and Vertically polarized radiances are calculated 
+separately because of the difference of their surface emissivity. 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  Fig. 1 Schematic Diagram Showing a  Passive Microwave Signal for Rain 
+Detection 
+Megha-Tropiques ATBD Ver 3.0 
+16
+ 
+ 
+Some results of the simulation and sensitivity studies are carried out for different 
+frequencies (6.6, 10, 18, 21, 37 and 85 GHz), for various weather conditions that 
+include raining and non-raining atmosphere and different sea states. Three 
+components of the troposphere are important absorbers. Water vapor, liquid water 
+and molecular Oxygen. Frequencies where absorption due to molecular Oxygen is 
+important (roughly 50 to 70 GHz and near 119 GHz) are used for temperature 
+sounding but are not often used for rainfall sensing. For our purposes, the 
+absorption due to molecular Oxygen is a minor correction needed to be 
+quantitatively correct but not necessary for conceptual understanding.   
+ 
+2.5.3 Algorithm Description: 
+Based on the above brief presentation of the formulation of both emission and 
+scattering based radiative transfer, it is highly desirable to create a  data based of 
+input and output field vectors for the algorithm development to estimate rainfall 
+using the MADRAS frequency channels. However the algorithm is required to be 
+derived from radiative transfer calculations through an atmospheric cloud model 
+(Tripoli et al.1992, Tao et al. 1993) specifying vertical distributions of ice, 
+graupels,  and other liquid hydrometeors as a function of rain rate. Such data base 
+from cloud resolving models is very rare and is being explored. In liu of this, the 
+algorithm is structured in two main classes. 1. Physically based: based on 
+simulated data base as an advanced R & D and 2. Empirically based, based on the 
+collocated matched data sets of MADRAS and Ground/Ocean truth data from 
+various sources. Fig. 1 shows the schematic diagram of the rain detection from a 
+passive microwave sensor. The Flow diagram is given in Fig. 2 (2.1 and 2.2) 
+respectively. The complete algorithm steps are mentioned below:  
+ 
+1. Sensitivity studies through simulations of  brightness temperatures for 
+MADRAS frequency channels. Till the cloud microphysical data base is 
+obtained, the artificially created data base along with ECMWF data will be 
+used for radiative transfer simulations following (Liu et al.1998).  
+2. To ascertain the sensitivity of different channels to rainfall and other ocean 
+and atmospheric variables, to decouple their influence for using in a rain-
+rate calculations in particular based on the above data base.  
+3. The screening process to distinguish between different land types, raining-
+nonraining background conditions associated with the emission and 
+scattering characteristics of hydrometeors etc. using multichannel 
+brightness temperatures from MADRAS (Following Ferraro et al. 1996 for 
+SSM/I). 
+4. A matched data base of radiometer brightness temperatures and 
+ground/ocaen rainfall from various sources (TRMM-PR, DWR, AWS, RG 
+etc.) would be created. Based on the radiative transfer simulations as a 
+bench mark, sensitivity studies and screening criterion mentioned above, 
+would be applied to the data. 
+5. Following the background conditions and emission and scattering 
+associated with hydrometeors,  separate algorithms for land and oceans 
+Megha-Tropiques ATBD Ver 3.0 
+17
+will be developed based on the Scattering Index (SI) Method (by Ferraro et 
+al. 1996). 
+6. Finally the rain rates will be retrieved using SI along with the collocated 
+ground/ocean based data following multiple regression and/or Neural 
+Network approach.  
+7. The resulting rain-rate estimates will be compared to four Doppler 
+Weather Radars (DWR) as well as to  buoys and  shipboard measurements 
+over a first 6-month period (during calibration/validation phase). 
+8. The retrieval algorithm would be attempted for the complete global 
+estimates from the MADRAS based on the ground truth data availability 
+from various continental and oceanic buoy and ship based sources.  
+9. The algorithm will be tested for its accuracy to describe both localized 
+instantaneous rainfall events and global rainfall patterns over both land and 
+oceans.  
+ 
+ 
+ 
+ 
+ 
+Fig. 2 Flow Diagrams showing the Concept of Rainfall Retrieval: 
+ 
+ 
+2.5.4 The inverse problem: 
+ 
+In the last decade, there has been a growing interest in developing rain profile 
+retrieval algorithms trained by cloud radiative databases (Smith et al.1994). This 
+Megha-Tropiques ATBD Ver 3.0 
+18
+approach is based upon the use of radiative transfer models applied to cloud-
+resolving hydrometeor profile outputs. The appeal to develop fast inversion 
+algorithms using pre-generated physically consistent cloud radiative  databases has 
+been largely exploited for spaceborne microwave radiometry of rainfall (Mugnai 
+1988 et al. and Kummero et al. 1996). Following this approach, the accuracy of 
+rainfall estimates are basically linked to the accuracy of both forward and inverse 
+models. In particular, the reliability and consistency of the various radiative transfer 
+models, used for building retrieval databases, is a crucial problem to be investigated 
+within this framework. As indicated, the simulations will be carried out as a 
+reference bench mark for the proper selection of channels and their combinations. 
+The real data base would be the collocated matched data base of TBs and ground 
+based rainfall measurements.  
+Regarding empirical approach, a matched data sets of the MADRAS radiometric 
+observations will be attempted in conjunction with the ground based observations 
+from rain gauges, Doppler Weather Radars (DWR) etc. There are a couple of 
+empirical approaches that could be attempted for the retrievals. These are simple 
+multiple regressions between the rainfall and the brightness temperatures from 
+MADRAS channels. Other methods are based on the SI, PCT and D approaches 
+mentioned above section which are highly applicable for the rainfall retrievals. In 
+order to demonstrate the applicability of empirical approaches, the existing data of 
+TRMM radar and radiometric observations will be utilized and compared with the 
+standard TRMM products of rainfall. The Fig. 3 shows the Logical Flow of 
+Algorithm Development and Validation diagram to be used conceptually. 
+ 
+ 
+ 
+ 
+ 
+Megha-Tropiques ATBD Ver 3.0 
+19
+ 
+ 
+Fig. 3 Logical Flow of Algorithm Development and Validation 
+ 
+ 
+2.5.5   Instantaneous Ocean Rainfall 
+  
+As is shown earlier that DOM based Radiative transfer calculations represents 
+better simulations to determine a brightness temperature, Tb, given a temperature, 
+water vapor and hydrometeor profile. An inversion procedure, however, is needed 
+to find a rainfall rate, R, given a brightness temperature Tb. The double valued 
+nature of the relations is encountered in 19 to 37 GHz channels as is shown in 
+sensitivity section; however it could be resolved by a combination of two or more 
+channels. Since Tbs are sensitive to the vertical structure of precipitation, the 
+vertical structure cannot be ignored when instantaneous retrievals are sought. The 
+sensitivity to the assumed profile gets larger as the frequency increases and the 
+scattering in the upper layers of the cloud begin to play a larger role. The objective 
+of the instantaneous rainfall algorithm over ocean is to be achieved using one of 
+the suitable retrieval techniques, such as ANN, MR or Bayesian approach. 
+Predefined cloud structures, however, may be utilized to overcome the 
+uncertainties in the accuracies of the retrievals. Cloud resolving models such as 
+the Goddard Cumulus Ensemble model (GCE), which is a cloud microphysical 
+model developed mainly by Tao and Simpson, (1993), or the Tripoli, (1992), 
+model are used to supply the required cloud structures. For each cloud model time 
+step, radiative transfer computations are supposed to be performed at high 
+resolution.  
+Megha-Tropiques ATBD Ver 3.0 
+20
+Databases are generated separately for different freezing heights to capture the 
+different 
+dynamics of tropical rainfall systems. Once a database of profiles and associated 
+brightness temperatures is established, the retrieval employs a straightforward 
+inversion methodology. In the absence of a suitable cloud model data base this 
+approach will be taken up as a R & D effort.  
+Meanwhile, for an alternate operational algorithm development, an equally 
+workable approach of the detection of rain over ocean would be employed. 
+following For this purpose the data base of TRMM-TMI, and SSM/I radiometric 
+TBs will be collocated with TRMM-Precipitation Radar over the global oceans. 
+This data base will be used to develop a robust set of relationships with the SSM/I 
+sensor (since the frequency channels and footprints of SSM/I are similar to 
+MADRAS compared to TRMM-TMI). A matched data base of SSM/I-TBs and 
+buoy and ship based rainfall would also be created based on the observations all 
+over the tropical oceanic regions. 
+Further refinement of the technique is described in Ferraro et al. (1994) and 
+Ferraro et al. (1998). The rationale was to first develop a relationship which could 
+best predict the 85 GHz Tb under "nonscattering" conditions for the ocean surface 
+in question. Then, by estimating this value and subtracting the actual 85 GHz Tb, 
+a measure of the depression due to scattering by precipitation ice/rain drops could 
+be determined. 
+ 
+ 
+The form of the Scattering Index method (SI) is as follows: 
+With the seven channels of SSM/I, we name E(19V, 21V)85v as the estimated 
+value of TB85v by TB19v and TB21v. Based on the data set of rain free areas, we 
+will regress a formula E(19v, 21V)85v as follows, which was used to estimate the 
+value of TB85v: 
+ 
+E(19V, 21V)85v = a + bTB19v + cTB21v + TB21v2 
+ 
+It has been well established (Yao et al. 2001, Mishra et al. 2007) that when it is 
+not raining, E(19V, 21V)85v can represent well the value of TB85v. The Scatering 
+Index over the ocean thus can be defined as the difference between E(19V, 
+21V)85v (the estimated value of TB85v) and TB85v (the observed value of TB85v): 
+ 
+SIO = E(19V, 21V)85v –TB85v  
+ 
+SIO = a + bTb19v + cTb21v + d Tb21222v – Tb85v 
+ 
+ where the coefficients a,b,c, and d were derived by assembling a global data set 
+of SSM/I observations under scatter-free conditions. Through an exhaustive 
+evaluation, it could be found that a threshold SI value could be a good, global 
+indicator of rain. A lower threshold does detect more rain; however, it also causes 
+the detection of false alarms to increase. Because snow and deserts can cause a 
+similar scattering signature, a set of "screens" would be developed to remove such 
+features based on the screening approach of Ferraro et al. 1996. . The desert check 
+involves the use of polarization information at 19 GHz, while the separation of 
+rain from snow utilizes two relationships involving the Tb at 22 and 85 GHz.  
+Megha-Tropiques ATBD Ver 3.0 
+21
+Specifically, the following type of relationship would be attempted based on PR 
+rain rate and SSM/I based SIO   to work best for tropical Indian Ocean and  global 
+oceanic regions. 
+ 
+RR mm/hr . = a SIOb 
+ 
+This method to retrieve rain rate would be compared with the standard products of 
+rainfall from SSM/I and TRMM. TRMM provides various data sets on rain rates 
+over both land and oceans in the form of surface rain rate, total rain in 3 hourly 
+etc. Similarly SSM/I provides oceanic rain rates  on instantaneous and 
+accumulation on daily basis. 
+ 
+2.5.6. Instantaneous Land Rainfall 
+ 
+Over land, rainfall retrievals are far more complex and difficult than oceanic 
+retrievals due to the large and variable emissivity of the land surface. Specifically, 
+the high emissivity masks the emission signature that is related directly to the 
+water content in the atmosphere. Instead, only the brightness temperature 
+depression due to scattering in the upper portion of clouds is observed. The 
+scattering, as shown in Figure 3, increases with increasing frequencies. 
+Consequently, brightness temperature depressions at the 89 GHz channel of 
+MADRAS will contain the least ambiguous signal of scattering by ice and/or large 
+raindrops. The brightness temperature depression will be converted to an expected 
+rainfall rate through the retrieval scheme where databases of hydrometeor profiles 
+(associated with a variety of rain systems) will be developed for different 
+climatological zones. Recent results from TRMM indicate that the relationship of 
+lightning flashes (which is highly correlated with the 85 GHz scattering signature) 
+and rainfall varies over the global land regions. Development of profile databases 
+for different climatological zones can account for regional differences. However, 
+as a starting point, we will insure that these retrievals match closely with 
+established algorithms developed for the SSM/I and TMI sensors. 
+  
+A further complication that arises over land is the lack of consistent backgrounds 
+against 
+which to compare the Tb depression. To alleviate this problem caused by the 
+varying emissivity associated with changes in surface characteristics (e.g., surface 
+wetness, snow 
+cover, vegetation, etc.), a rain/no-rain temperature depression threshold is 
+required. The “screening” issue has always been one of modest controversy in the 
+land-based retrievals because of the empirical nature of their form. Intuitively, one 
+immediately thinks that such screens will vary greatly with sensor. However, as is 
+described later, these screens (i.e., Tb relationships separating rainfall from other 
+surfaces) seem to hold valid for other sensors, with only minor modifications 
+needed. Additionally, one school of thought in physical retrievals is that the rain 
+rate retrieval becomes a two-step process: rain identification and rain rate 
+determination.  
+The basis for the retrieval over land comes from the work of Grody (1991), who 
+developed a global scattering index (SI) at 85 GHz for use with the SSM/I sensor. 
+Further refinement of the technique is described in Ferraro et al. (1994) and 
+Ferraro et al. (1998). The rationale was to first develop a relationship which could 
+Megha-Tropiques ATBD Ver 3.0 
+22
+best predict the 85 GHz Tb under "nonscattering" conditions for the land surface 
+in question. Then, by estimating this value and subtracting the actual 85 GHz Tb, 
+a measure of the depression due to scattering by precipitation ice/rain drops could 
+be determined. The form of the SI is as follows: 
+ 
+SI85v = a + bTb19v + cTb21v + d Tb21222v – Tb85v 
+ 
+ where the coefficients a,b,c, and d were derived by assembling a global data set 
+of SSM/I observations under scatter-free conditions. Through an exhaustive 
+evaluation, Grody (1991) found that an SI value of 10 K or greater was a good, 
+global indicator of rain. A lower threshold does detect more rain; however, it also 
+causes the detection of false alarms to increase. Because snow and deserts can 
+cause a similar scattering signature, a set of "screens" were developed to remove 
+such features. The desert check involves the use of polarization information at 19 
+GHz, while the separation of rain from snow utilizes two relationships involving 
+the Tb at 22 and 85 GHz. 
+Ferraro et al., (1994), built upon the Grody (1991) study, and developed a more 
+robust set 
+of relationships to be used for the detection of rain over land from the SSM/I. In 
+this study, separate relationships were developed for land and ocean, improving 
+the sensitivity to scattering. In addition, the original relationships derived by 
+Grody (1991) used antenna temperatures which were convolved to the 19 GHz 
+FOV; the updated study used the more conventional Tb values and preserved the 
+original SSM/I footprint sizes, allowing for easy implementation by the scientific 
+community. An alternative method to retrieve rain rate has been to calibrate the SI 
+with ground-based radar measurements from the United States, Japan, and the 
+United Kingdom (Ferraro and Marks, 1995). Similar to the oceans, the following 
+relationship would be attempted to work best for global oceans: 
+ 
+RR mm/hr . = a SIL
+ 
+where RR is in mm/hr. Since these relationships increase rapidly for higher values 
+of SIL, 
+any retrieval above 35 mm/hr is set to 35 mm/hr. Although somewhat arbitrary, 
+practice 
+shows that this is the upward limit of rain rates retrievable from the 85 GHz 
+measurements (e.g., the maximum mean rain rate that could exist in a 13 by 15 km 
+FOV). Using the 10K minimum threshold for the SIL values, the minimum 
+retrievable rain rate is approximately 0.5 mm/hr. This algorithm was implemented 
+by FNMOC in 1995 as the operational SSM/I rain rate algorithm, and continues to 
+operate in that capacity. In addition, the monthly derived rainfall from this 
+algorithm (Ferraro, 1997) is used as a component of the GPCP blended analysis 
+(Huffman et al., 1996)The MADRAS instrument will contain nearly similar 
+frequencies to the SSM/I. Initially the SSM/I based coefficients will be used and 
+later fine tuned for MADRAS, based on a large data base to be co-located during 
+raining episodes.  
+ 
+2.6. Operational Implementation: At MOSDAC 
+ 
+Megha-Tropiques ATBD Ver 3.0 
+23
+2.7. Outputs:   Rainfall along the sub satellite tracks. 
+  
+2.7.1 Format of the output and the domain: TBD 
+ 
+2.8 Validation   
+Extensive validation campaign is required during the first six months of the 
+satellite launch.  To compare retrieved rainfall totals with rainfall totals obtained 
+by other satellites like TRMM and SSM/I will be attempted. Some more direct 
+means, often called "Ground Truth", may also be attempted based on the avialility 
+of well calibrated data from AWS and DWR’s. The initial six months will be the 
+calibration-validation phase with limited distribution of data. The validation is 
+possible with: 
+ 
+1. Other satellite data sets from regional and global sources (land & 
+ocean). 
+2. Rainfall data from well calibrated DWR data from Indian 
+Meteorological Department 
+ 
+The traditional approach has been to take a 2 dimensional rain field derived from 
+radar measurements, assume it is constant in the third dimension and use the 
+resultant pseudo 3 dimensional rain field for the simulation. This initial averaging 
+step reduces the variability of the rain field and thereby reduces both the value and 
+uncertainty of the BFC.   
+ 
+2.8.1 Data Required 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2.8.2  Methods of Validation   
+ 
+Point Measurements 
+Micro Rain Radars
+Through Internet
+Orbital & analyzed data
+MADRAS/ TRMM 
+/SSM/I Data
+All daily obs. sites of IMD 
+& to plan for oceanic 
+locations
+Usual point 
+measurements over land 
+& oceans
+Fast Response Rain 
+Gauge
+From IMD at all DWR 
+locations (every 1-3 
+hours)
+0.250 x 0.250
+Doppler Weather 
+Radar
+Source
+Resolution
+Parameter
+Megha-Tropiques ATBD Ver 3.0 
+24
+The level 1a and level 1b products are required for above-mentioned approaches for 
+the rainfall retrievals. The database created in an offline process will act as a tool 
+for the algorithm development. During the initial six months of calibration-
+validation phase the knowledge of the noise characteristics of the different 
+horizontal and vertical polarization channels will be applied for the improvement of 
+the algorithm. This period will also help in creating a database of ground-based 
+networks like rain gages, Automatic Weather Stations and Doppler Weather Radars 
+in consistency with the MADRAS observations for the empirical algorithm 
+development. The satellite overpasses in and around DWR and rain gauge sites will 
+be utilized for the validation purposes. One complete iteration of TRMM rainfall 
+validation campaign was exercised using the SHAR and IMD DWR at Chennai 
+(Gairola et al. 2004) in a compaign mode. TRMM radar and radiometric 
+observations of rainfall were compared with DWR on various grid scales. This 
+needs to be augmented during the Megha-Tropiques time frame using all the five 
+DWRs in the country, AWS and the fast response rain gauges. The error statistics 
+will be generated with a possible feedback mechanism to correct for some biases 
+etc. to make the algorithm more robust. 
+ 
+2.9 Technical Issues 
+For the instantaneous rainfall error there are some major sources of error: 
+ 
+1) Availability of Cloud resolving model simulations 
+2) Coastal boundaries.  
+3) Beam Filling Error 
+4) Vertical distribution of Hydrometeors 
+5) The freezing level retrieval 
+ 
+These error sources are very critical and needs to be followed with active groups 
+working at various places elsewhere (in country or abroad). 
+ 
+2.10 Future Scope: 
+In the present document the possibilities of both physical and empirical algorithms 
+for rainfall retrieval are highlighted. However due to certain limitations the 
+empirical algorithm has been emphasized as an operational one. It would be based 
+on the radiatiatve transfer simulations as the pointers to optimize the frequency 
+channels. This is also important in view of the different noise scenario of the 
+different channels to be known only after the launch of the satellite. Based on the 
+performance of the algorithm over global tropical ocean and land, the fine tuning 
+will be carried out. The ongoing advanced research on radiative transfer based 
+algorithm will be worked out in future to generate the data base for retrievals. 
+However, in any case an algorithm would be in place for its global applicability at 
+par with the algorithms elsewhere for different satellite sensors like TRMM, 
+SSM/I and GPM.  
+ 
+2.11 Reference 
+ 
+1. Adler,  R. F.,   G.J. Huffman and P.R., Keehn, 1994., “Global tropical rain 
+estimates from microwave adjusted geosynchronous IR data”, Remote Sensing 
+Rev. 11, 125-152.  
+Megha-Tropiques ATBD Ver 3.0 
+25
+2. Bauer, P. and P. Schluessel, 1993, “Rainfall, total water, ice water, and water 
+vapor over sea from polarized microwave simulations and special sensor 
+microwave/imager data”, J. Geophys. Res., Vol 98, pp. 20,737.  
+3. Berg, W. and R. Chase, 1992: Determination of mean rainfall from the Special 
+Sensor Microwave/Imager (SSM/I) using a mixed lognormal distribution, J. 
+Atm. Oceanic Tech., 9, 129-141.  
+4. Chandrasekhar (1960). Radiative Transfer. Dover Publications, Inc.. ISBN 0-
+486-60590-6.  
+5. Deiveegan M, C. Balaji, and S. P. Venkatesha, Comparison of Various 
+Methods for simultaneous Retrieval of Surface Emissivities and Gas 
+Properties in Gray Participating Media 
+6. Druen, B. and G. Heinemann, 1998, “Rain rate estimation from synergetic use 
+of SSM/I, AVHRR and meso-scale numerical model data”, Meteor. Atmos. 
+Phys., 66, 65-85.  
+7. Ferraro, R.R. and G.F. Marks, 1995, “The development of SSM/I rain-rate 
+retrieval algorithms using ground-based radar measurements”, J. Atmos. 
+Oceanic Technol., Vol 12, pp. 755.  
+8. Ferraro RR, F. Weng, NC Grody and A. Basist, An eight year (1986-1994) 
+time series of rainfall, clouds, water vapour, snow cover and sea ice derived 
+from SSM/I measurements, Bulletin American Met. Soc. 77, 5, 1996. 
+9. Ferraro RR, NC Grody and GF Marks, Effects of surface conditions on rain 
+identification using the DMSP-SSM/I, Rem. Sens. Rev. 1994, 11, 195-209. 
+10. Gairola RM, C Mallet, N. Viltard and E Moreau, 2001, “Rainfall from 
+TRMM-TMI, 
+2nd 
+ISRO-CNES 
+Science 
+Workshop 
+on 
+MEGHA-
+TROPIQUES”, Paris, France, 1-5 July. 
+11. Gairola R.M., A.K. Varma, B.S. Gohil  and  V.K. Agarwal, “Sensitivity of 
+radiative transfer to the oceanic surface roughness and rainfall for TRMM 
+radiometric channels over Indian Oceanic regions”, IJRSP 2005. 
+12. Gairola R.M., Samir Pokhrel, A.K. Varma, and V.K. Agarwal, A combine 
+passive-active microwave retrievals of quantitative rainfall for TOPEX 
+altimeter and TOPEX microwave radiometer, , Int. Jour. Remote Sensing, 
+Vol. 20, April, 2005.  
+13. Gairola R.M.  and T.N. Krishnamurti,  1992, “Rain rates based on SSM/I,  
+OLR  and  Rain gauge data sets”, Meteor.  and  Atmospheric  Physics.  50, 
+165-174. 
+14. Gairola R.M., Anoop Mishra and A.K. Varma, Rainfall estimation from 
+INSAT/KALPANA IR data using GPI approach and initial validations using 
+AWS-data OSD/MOG/INSAT-3D/PR/SAC-2007 
+15. Gairola R.M., Samir Pokhrel, A.K. Varma, Vijay K. Agarwal and M.S. 
+Narayanan,G. Viswanathan, Sanjay Sharma, Digant Sharma, Validation of 
+TRMM Radar and Radiometric bservations of Rainfall using SHAR Doppler 
+Weather Radar, Feb. 2004. 
+16. Gairola R.M. et. Al. (2007) Rainfall estimation from INSAT Multispectral 
+Rainfall Algorithm (IMSRA) method, MOG Report. (under preparation). 
+17.  Gairola R.M., Anoop Mishra, A.K. Varma, and V.K. Agarwal, Rainfall 
+estimation using satellite MW and IR measurements over Indian land and 
+oceanic regions, Submitted to Geophysical Research Letters, Sept. 2007. 
+18. Gairola R.M. and A.K. Varma, S. Pokhrel, V.K. Agarwal, Integrated satellite 
+microwave and infrared measurements of precipitation during a Bay of Bengal 
+cyclone, Ind. Jour. Radio & Space Physics, 33, 115-124, 2004. 
+Megha-Tropiques ATBD Ver 3.0 
+26
+19. Gairola, R.M., Samir Pokhrel*,  A.K. Varma, Abhijit Sarkar and Vijay K. 
+Agrwal, Evaporation and Precipitation Estimates from TRMM Microwave 
+Measurements, International Conference on Monsoon, IISc, Bangalore, 2007. 
+20. Haferman, J.L., E.N. Anagnostou, D. Tsintikidis, W.F. Krajewski, T.F. Smith, 
+1996: Physically Based Satellite Retrieval of Precipitation Using a 3D Passive 
+Microwave Radiative Transfer Model. Journal of Atmospheric and Oceanic 
+Technology: Vol. 13, No. 4, pp. 832–850.  
+21. Hou, Arthur Y., Sara Q. Zhang, Arlindo M. da Silva, William S. Olson, 2000: 
+Improving Assimilated Global Datasets Using TMI Rainfall and Columnar 
+Moisture Observations. Journal of Climate: Vol. 13, No. 23, pp. 4180–4195. 
+22. HuffmanG.J., R.F. Adler, P.A. Arkin, A. Chang, R. Ferraro, A. Gruber, J.J. 
+Janowiak, R.J. Joyce, A. McNab, B. Rudolf, U. Schneider, and P. Xie, 1997: 
+The Global Precip. Climatology Project (GPCP) Combined Precipitation Data 
+Set. Bull. Amer. Meteor. Soc., 78, 5-20. 
+23. Jobard I. And M. Desbois, 1994, “Satellite estimation of the tropical 
+precipitation using METEOSAT and SSM/I data”, Atm. Res. 34, 285-298.  
+24. Kummerow C.W., and L. Giglio, 1995, A method for cmbining passive 
+microwave and infrared rainfall observations J. Atmos. Ocean. Technol., 12, 
+33-45. 
+25. Kummerow C., 1993, “On the accuracy of Eddington approximation for 
+radiative transfer in the microwave frequencies”, Jour. Geophy. Res. 98, D2, 
+2757-2765.  
+26. Kummerow,  C. D. W. S. Olson, and L. Giglio, “A simplified scheme for 
+obtaining precipitation and vertical hydrometeor profiles from passive 
+microwave sensors,” IEEE Trans. Geosci. Remote Sensing, vol. 34, pp. 1213–
+1232, Sept. 1996. 
+27. Liu, G, 1998, A fast and accurate model for microwave radiance calculation, J. 
+Meteor. Soc. Japan, 76, 335-343.  
+28. Liu G., J.A. Curry and R.S. Sheu, Classification of clouds over western 
+equatorial Pacific Ocean using combined infrared and microwave satellite 
+data, JGR, 100, 13,811-13,826, 1995.  
+29. Liu, G. and J.A. Curry, 1998, “An investigation of the relationship between 
+emission and scattering signals in SSM/I data”, Jour. Atmos. Sci., 1628-1643. 
+30. Mugnai A. and E. A. Smith, “Radiative transfer to space through a 
+precipitating cloud at multiple microwave frequencies. Part I: Model 
+description,” J. Appl. Meteor., vol. 27, pp. 1055–1073, 1988.  
+31. Negri, Andrew J., Robert F. Adler, Christian D. Kummerow, 1989: False-
+Color Display of Special Sensor Microwave/Imager (SSM/I) Data. Bulletin of 
+the American Meteorological Society: Vol. 70, No. 2, pp. 146–151.  
+32. Petty, G.W., and W. Krajewski, 1996: Satellite rainfall estimation over land. 
+Hydrolog. Sci. Journ., 41, 433-451. 
+33. Pokhrel S., AK Varma, RM Gairola, VK Agarwal, Distribution and 
+intraseasonal variability of rain over Indian Oceanic region from Indian 
+Remote Sensing Satellite IRS-P4 Multifrequency Scanning Microwave 
+RadiometerJour. Geoph. Res.,   108,   C10, 3314, doi:10.1029/2003JC001886, 
+2003.  
+34. Simpson, J., C. Kummerow, W.K. Tao, and R.F. Adler, 1996: On the Tropical 
+Rainfall Measuring Mission (TRMM). Meteorology and Atmospheric Physics: 
+Vol. 60, pp. 19-36. 
+Megha-Tropiques ATBD Ver 3.0 
+27
+35. Smith E. A., C. D. Kummerow, and A. Mugnai, “The emergence of inversion-
+type profile algorithms for estimation of precipitation from satellite passive 
+microwave measurements,” Remote Sens. Rev., vol. 11, pp. 211–242, 1994.  
+36. Spencer R.W., H.M. Goodman, and R.E. Hood,  Precipitation retrieval over 
+land and ocean with the SSM/I: identification and characteristics of the 
+scattering signal. J. Atmos. Oceanic Tech., 6, 254-273, 1989. 
+37. Swaminathan V., R. M. Gairola, C. Balaji, S P Venkateshan, Estimation of 
+microwave radiation intensity from a multi-layered cloud model,"AIAA 
+Journal of Thermophysics and Heat Transfer ,19, 3, July-Sept, 2005. 
+38. Tao, W. K. and Simpson J., 1993, “Goddard Cumulus Ensemble Model. Part 
+I: Model Description”, Terr. Atmos. Oceanic Sci., 4, 35-72 
+39. Tripoli, G.J., 1992, “An explicit 3-D non-hydrostatic numerical simulation of 
+a tropical cyclone”, Meteor. Atmos. Phys., 49, 229-254.  
+40. Tsang L. and J. A. Kong, "Radiative transfer theory for active remote sensing 
+of half-space random media," Radio Science, 13(5), 763-773, September-
+October 1978. 
+41. Varma, A.K., R.M. Gairola., A.K. Mathur, S. Pokrel, B.S. Gohil, and 
+Agarwal, V.K., 2002, “Rain rate measurements over global oceans from IRS-
+P4 MSMR”, Proceedings of Indian Academy of Sciences – Earth and 
+Planetary Sciences 111, 257-266. 
+42. Varma, A. K., G. Liu, and Y.-J. Noh, 2004: Sub-pixel scale variability of 
+rainfall and its application to mitigate the beam-filling problem. J. Geophys. 
+Res. 109, D18210, doi:10.1029/2004JD004968.  
+43. Viltard, N., E. Obligis, V. Marecal and C. Klapisz, 1998, “Retrieval of 
+precipitation from microwave airborne sensors during TOGA COARE”, J. 
+Appl. Meteor., 37, 701-717.  
+44. Weinman JA, Davies R. Thermal microwave radiances from horizontally 
+finite clouds of hydrometeors. J Geophys. Res 1978;83(6):3099–107. 
+45. Wilheit, TT, A.T.C. Chang, M.S.V. Rao, E.B. Rodgers and J.S. Theon, 1977, 
+“A satellite technique for quantitatively mapping rainfall rates over the 
+oceans”, J. Appl. Meteor. 16, 551-560. 
+46. Wilheit, TT,, ATC Chang, and LS Chiu, Retrieval of monthly rainfall from 
+microwave radiometric measurement using probability distribution functions, 
+J.Atm. Ocean. Tech. 8, 118-136, 1991.  
+47. Wilheit, T. T., and A. T. C. Chang, 1980: An algorithm for retrieval of ocean's 
+surface and atmospheric parameters from the observations of the Scanning 
+Multichannel Microwave Radiometer. Radio Science, 15, 525-544. 
+ 
+   
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Megha-Tropiques ATBD Ver 3.0 
+28
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3.0 Retrieval of Geophysical Parameters over oceans from 
+MADRAS 
+Megha-Tropiques ATBD Ver 3.0 
+29
+3. 
+Retrieval of Ocean Surface Geophysical Parameters over 
+oceans from MADRAS 
+3.1 
+Algorithm configuration information 
+3.1.1 Algorithm Name:  
+ Retrieval of Ocean Surface Geophysical Parameters over oceans from 
+MADRAS 
+3.1.2 Algorithm Identifier: 
+ISRO_MT_GPRET_A001 
+3.1.3  Algorithm Specifications: 
+ 
+Version Prepared by 
+Description 
+3.0 
+Atul K. Varma, R.M. Gairola and 
+B.S. Gohil 
+Other Parameters from MT 
+3.2 
+ Introduction: 
+With the advent of well-calibrated satellite microwave radiometers, it is now 
+possible to obtain long time series of geophysical parameters that are important 
+for studying various atmospheric and oceanic processes. In order to strengthen the 
+observation base to provide impetus to the studies concerning tropical processes, 
+India and France have jointly proposed the Megha-Tropiques (MT) mission. In 
+addition to a radiation budget instrument (SCAnner for RAdiative Budget: 
+SCRAB), an atmospheric sounding instrument (SAPHIR), and a GPS receiver for 
+occultation based profile measurements, the MT mission will also be carrying a 
+microwave radiometer that designed specifically to measure rainfall and cloud/sea 
+ice, and also the cloud liquid water, wind speed and water vapor over the global 
+oceans.  This radiometer is referred as MADRAS (Measurement and Detection of 
+rain and Atmospheric Systems). 
+Microwave remote sensing program in ISRO started with the launch of its first 
+microwave radiometer SAMIR-I onboard Bhaskara-I satellite in 1979 followed by 
+similar payload SAMIR-II launched onboard Bhaskara-2 satellite in 1981. After a 
+gap of nearly two decades, India launched microwave radiometer MSMR onboard 
+Oceansat-1 (IRS-P4) satellite in May 1999. The MSMR provided the measured 
+the measurements of radiances at 6.6, 10, 19 and 22 GHz channels.  Gohil (1999) 
+and Gohil et al. (2000a, 2000b) provided the description of the retrieval 
+Megha-Tropiques ATBD Ver 3.0 
+30
+algorithms for geophysical parameters like integrated water vapor (IWV), cloud 
+liquid water (CLW), wind speed (WS) and sea surface temperature (SST) from the 
+MSMR. Apart from these parameters MSMR was also exploited for rain 
+measurements (Varma et al., 2002a, Varma et al., 2003, Pokhrel et al., 2003, 
+Gairola et al, 2004)) even in the severe weather conditions like cyclone (Varma et 
+al., 2006). The MSMR derived geophysical parameters were found to be in good 
+agreement with ground and the other satellite observations (Varma et al., 2002b). 
+ 
+3.3  Overview and Background 
+This Algorithm Theoretical Basis Document (ATBD) focuses on the MADRAS 
+microwave radiometer that is scheduled to fly in 2008/2009 on the MT mission. 
+MADRAS will measure the Earth’s radiation over the spectral range from 19 to 
+157 GHz. over the entire globe within tropics. The channel details and expected 
+accuracies are given in the Table 1 (Desbois, 1999). For convenience, we will 
+refer 18.7, 23.8, 36.5, 89 and 157 GHz frequencies as 19, 24, 37, 89 and 157 GHz, 
+respectively.  It will be possible to retrieve the three important geophysical 
+parameters, IWV, WS and CLW. Rainfall can also be retrieved, which is 
+discussed in a separate MT ATBD. The parameters are to be retrieved under the 
+non-raining situations because at the microwave frequencies used for retrieval of 
+the above parameters the emission due to rain is very strong and than obscure the 
+effect of the other parameters. The table-2 provides the radiative transfer model 
+calculated change in the brightness temperatures at 19, 21 and 37 GHz frequencies 
+due to 1 mm h-1 of rain rate. It may be noted that a low raining condition of rain 
+rate 1 mm h-1, can even change the brightness temperature significantly.  
+ 
+Table: 1: Megha-tropiques sensor characteristics 
+Frequency 
+Polarization 
+Pixel size 
+NEDT sensitivity at 
+300 K 
+18.7 
+V & H 
+~ 50 km 
+0.5 K 
+23.8 
+V (or H) 
+~ 40 km 
+0.5 K 
+36.5 
+V & H 
+~ 25 km 
+0.5 K 
+89 
+V & H 
+~ 10 km 
+1 K 
+157 
+V & H 
+~ 6 km 
+1 K 
+Megha-Tropiques ATBD Ver 3.0 
+31
+ 
+ 
+ 
+ 
+Table 2: Brightness temperature for non-raining and low raining atmosphere. 
+For, SST =300 K, WS = 5 mm s-1, CLW = 20 mg cm-2 
+  
+For Rain Rate = 0 mm h-
+1 
+For Rain Rate = 1 mm h-
+1 
+difference 
+Tb19 GHz V 216.16 K 
+228.57 K 
+12.41 K 
+Tb19 GHz H 160.06 K 
+182.40 K 
+22.34 K 
+21 GHz V 
+242.15 K 
+251.18 K 
+9.03 K 
+37 GHz V 
+236.27 K 
+257.16 K 
+20.89 K 
+37 GHz H 
+188.40 K 
+234.07 K 
+45.67 K 
+  
+The sensitivity of the geophysical parameters to observing frequency is studied  
+by Wilheit and Chang (1980). The study indicates high sensitivity for SST only at 
+frequencies < 10 GHz. Hence the SST retrieval from MADRAS is not included in 
+this document. The wind has high senstivity at 19 and 37 GHz channels but these 
+channels are also affected by water vapor and cloud liquid water in the 
+atmosphere. Gohil et al. (2000a) have shown that inclusion of lower frequency 
+channels (6 GHz) in the wind retrieval algorithm improves the accuracy. This is 
+mainly due to less influence of the water vapor and cloud liquid water on the 
+lower frequency channels. Due to the absence of 10 and 6 GHz channels on 
+MADRAS, wind retrieval accuracy will be slightly poorer compared to MSMR or 
+TMI. The rms accuracies given in Table 3 come from SSM/I experience. We are 
+hopeful that the retrieval accuracies for IWV, WS, and CLW will be almost 
+similar to that available from SSM/I due to nearly identical lower frequency 
+channels which are used for retrieval of the parameters being discussed in this 
+document. However, the radiometer noise is crucial to achieve this accuracy.   
+ 
+Table -3: RMS error budget for retrieved parameters from SSM/I (Wentz, 1997) 
+Retrieval` Atmospheric 
+Model 
+Wind 
+Direction 
+Radiometer 
+Noise 
+Sampling 
+Mismatch 
+Other 
+Total 
+Observed 
+IWV 
+0.81 
+0.21 
+0.43 
+3.68 
+0.74 
+3.87 
+Megha-Tropiques ATBD Ver 3.0 
+32
+(m/s) 
+WS (mm) 
+0.51 
+0.35 
+0.53 
+0.94 
+0.41 
+1.31 
+CLW 
+(mm) 
+0.019 
+0.004 
+0.007 
+0 
+0.014 
+0.025 
+ 
+3.4  Objectives:  
+ 
+ Development of Algorithms for the retrieval of Integrated Water Vapor, 
+Cloud Liquid Water and Wind Speed over oceans from Mega-Tropiques 
+MADRAS. 
+ 
+3.5 Inputs 
+ 
+3.5.1  Static Data 
+ 
+We need following datasets for the retrieval of  GPs. The datasets must represent 
+global variability of the parameters.  
+ 
+ Temperature profiles 
+ Pressure Profiles 
+ Relative Humidity profiles 
+ Sea Surface Temperature 
+ Surface Wind Speed 
+ 
+ 
+We use the NCEP GFS reanalyzed model fields at 61 vertical levels with 500 m 
+separation as input database for the RT model.  
+ 
+ 
+3.5.2 Dynamic Data 
+ 
+Following geolocated datasets are required. 
+Table -4 
+Parameter 
+Resolution 
+Quantization 
+Accuracy 
+Source 
+Tb 19 GHz 
+V 
+Standard 
+swath data 
+with same 
+grid (cell) 
+size for all 
+Tbs 
+0.01o 
+Standard dataset 
+with 
+predefined/proposed 
+accuracy 
+DP 
+Tb 19 GHz 
+H 
+Tb 37 GHz 
+V 
+Tb 37 GHz 
+H 
+Tb 24GHz V 
+ 
+ 
+3.5.3: Other auxiliary data 
+ 
+ Sensor error estimates from sensor group. 
+Megha-Tropiques ATBD Ver 3.0 
+33
+ 
+3.6. Algorithm Functional Specifications: 
+ 
+3.6.1: Theoretical background 
+ 
+Radiative Transfer Model 
+The brightness temperature received by microwave radiometer looking towards 
+earth in non-scattering atmosphere in a thermodynamic equilibrium is given by:  
+ 
+Tb(,p) = TbDN () (1-(Ts, ,p)) +Ts (Ts, ,p) ()+TbUP 
+ 
+Where, Tbν = brightness temperature measured at frequency ν 
+ 
+TbDN = downwelling radiances 
+ 
+TbUP = upwelling radiances 
+ 
+= frequency of observation 
+ 
+ = angle of incidence 
+ 
+ = transmittance 
+ 
+ = emissivity 
+ 
+Ts = surface temperature 
+ 
+p = polarization 
+ 
+TbDN
+TbUP
+Surface
+Ts, 
+Tb
+TbS
+
+
+ 
+Fig. 1 
+The total brightness temperature has three components as mentioned in expression 
+above and also in Fig. 1. First, the emitted radiation by the atmosphere directly 
+reaching to the radiometer which mainly depends upon the absorption by 
+atmospheric constituents like dominantly absorbing gases (oxygen and water 
+Megha-Tropiques ATBD Ver 3.0 
+34
+vapor) and the hydrometeors (water drops of cloud and rain). Second, the 
+atmospheric radiation reaching the earth surface and gets reflected by it and 
+reaches to the radiometer after having attenuated by the intervening atmosphere. 
+Third, the radiation emitted by the earth surface after attenuated by the intervening 
+atmosphere reaches to the radiometer. Thus, the total radiation received by the 
+radiometer is affected by both atmosphere and earth surface. 
+ 
+We propose to use the standard stat-of-art radiative transfer models from Florida 
+State University (Liu, 1998).  In Liu’s model the absorption models by 
+Rosenkranz (1998) for oxygen and Rosenkranz (1993) for water vapour are used. 
+Absorption due to non precipitating cloud is calculated using the model given by 
+(Paris, 1971). The clouds will be simulated as given in the next paragraph. Liu’s 
+model (1992) utilizes Guillon et al. (1998) for calculating the ocean surface 
+emissivity. The brightness temperatures thus simulated from the known 
+atmospheric and surface geophysical variables are used to establish suitable 
+statistical or physiostatistical relationships between them and atmpsheric 
+parameters for retrieval purpose. 
+ 
+Masking the rainy area 
+A radiative transfer based method for rain identification over global oceans is 
+developed prior the launch of the Megha-Tropiques satellite to avoid the retrieval 
+of other GPs over oceans. The scheme is based on developing step-by-step 
+procedures for transforming MADRAS based scattering index (SI) to equivalent 
+SSM/I based scattering index with high accuracy (Varma et al., 2011).   
+ 
+Ferraro and Mark (1995) and Ferraro et al. (1996) provided a rain identification 
+and retrieval algorithm over land and oceans. Their algorithm is based on 
+empirical relationship between rain rate and scattering index which is originally 
+proposed by Grody (1991). The Ferraro and Mark (1995) algorithm is developed 
+for SSM/I channels and is not directly portable to MADRAS which is having 
+different sensor characteristics. According to Grody (1991), scattering index (SI) 
+is defined as depression in the SSM/I 85 GHz V polarized Tb (Tb85V) due to 
+scattering in the presence of rain. They calculated the depression by taking the 
+difference between observed rain-affected Tb85V and its expected value (Fs) 
+Megha-Tropiques ATBD Ver 3.0 
+35
+under rain free conditions. The expected Tb85V (Fs) under rain free conditions is 
+worked out by establishing a relationship between SSM/I Tbs at 85.5 GHz V and 
+at 19.35 GHz V & H and 22.23 GHz V channels that are essentially emission 
+channels and are considered not to be affected by scattering. The relationship that 
+they proposed for scattering index (SI) is as follows: 
+ 
+SI = Fs – TbiV,                   
+ 
+where, TbiV is Tb from high frequency 85.5 GHz V polarized SSM/I channel, and 
+Fs is expected TbiV under rain free conditions. The Fs is defined as,  
+Fs= a1*Tb1+a2*Tb2+a3*Tb3+a0    
+ 
+These coefficients for SSM/I and MADRAS are calculated using radiative transfer 
+simulated database of brightness temperatures under raining and non-raining 
+conditions.  This is shown schematically in Fig. 2 below.  
+ 
+ 
+ 
+Fig. 2: Scheme for simulation of brightness temperatures for SSM/I and 
+MADRAS using NCEP environment fields and finding regression relation 
+for expected brightness temperature at 85.5 GHz (SSM/I) / 89 GHz 
+(MADRAS).  
+ 
+In the next step a regression based relationship is established between SI (SSM/I) 
+and SI (MADRAS). This relationship is used to estimate expected SI (SSM/I) for 
+given SI (MADRAS). According to Ferraro and Mark (1995) and Ferraro et al. 
+(1996), rain is expected when SI > 10. We use the same value of SI for identifying 
+rain event. 
+ 
+Cloud Liquid Water Masking: 
+Simulation of Tbs for SSMI 
+over oceans 
+Simulation of Tbs for MT 
+over oceans 
+NCEP GDAS 
+Model fields 
+within ±30o 
+Latitudes 
+Fs (SSM/I) 
+Fs (MADRAS) 
+Including SSM/I sensor 
+characteristics 
+Including MADRAS sensor 
+characteristics 
+Megha-Tropiques ATBD Ver 3.0 
+36
+The high amount of CLW affects less to TPW retrieval but more to WS retrieval 
+for WS being a surface parameter (Wentz, 1997). We therefore restrict the CLW 
+value for the retrieval of the TPW and WS to 50 mg cm-2 and 18 mg cm-2, 
+respectively (Wentz, 1997). Thus if CLW exceeds these thresholds values, the 
+TPW and WS are not retrieved. 
+ 
+Inversion Techniques: 
+Inversion techniques that are proposed to be employed have their heritage from 
+MSMR, are essentially statistical techniques in which relationships between the 
+predictors and the predictants are established. A general inversion technique is 
+mathematically represented by the following expression: 
+
+
+Tb
+D
+G
+
+*
+
+ 
+Here, G is a vector whose elements are various geophysical parameters which is 
+related to a measurement basis function vector φ(Tb) of simulated brightness 
+temperatures Tb by a matrix D. The measurement basis function vector contains 
+the elements which could either be pure or functions of TB. The matrix D is given 
+by: 
+
+
+
+
+
+
+
+
+,
+,
+1
+
+
+
+C
+C
+D
+ 
+where C is a correlation matrix and is obtained from geophysical variables' 
+statistics.  
+Separate inversion coefficients are established for each geophysical variable. 
+Different combinations of channels and polarization are required for different 
+variable as the dependence of brightness temperature on these variables is 
+different. Sensitivity studies and effect of errors in measurements on retrieval is 
+also required for finalization of suitable combinations. 
+ 
+Effect of Sensor-Satellite System errors on retrievals: 
+As seen above that the retrieval coefficient matrix D is dependent on geophysical 
+parameters as well as on the corresponding simulated brightness temperatures, the 
+matrix D is affected by chosen statistics of geophysical parameters and on various 
+errors in the brightness temperatures typical of a particular radiometer system and 
+satellite attitude. It is always better for a stable retrieval to include the wide 
+statistics of geophysical parameters and to account for various errors in the 
+measurements of brightness temperatures by a radiometer and satellite attitude. 
+Megha-Tropiques ATBD Ver 3.0 
+37
+The dominant errors in the brightness temperature measurements are the system 
+noise at antenna and radiometer system, calibration, uncertainties in knowing the 
+actual measurement geometry (viz. incidence angle and polarization etc). Thus 
+knowledge of total error in measurements is must for establishing the retrieval 
+matrix which enables to provide better estimates of geophysical parameters with 
+known errors as far as possible. The point to be noted here is that the retrieval will 
+have errors in geophysical estimates from the erroneous data; however, the errors 
+will be still more if we underestimate the overall error in brightness temperature 
+and use such retrieval matrix D with actual data having even higher errors. On the
+ 
+other hand, the errors will also be more in parameters retrieved with matrix 
+D established using overestimated errors and using it with less erroneous data. 
+Therefore, it is must to know the true behavior of radiometer, system in terms of 
+total error in brightness temperatures and the biases in the measurements. The 
+next step is to fine-tune the retrieval matrix using the insitu data widely spread 
+over space and time. Moreover, the theoretical errors (mostly of non-random 
+nature) due to radiative transfer model are taken care by fine tuning of retrieval 
+matrix through validation data. 
+ 
+General Form of Retrieval Algorithms for MADRAS 
+The MADRAS retrieval algorithms for various geophysical parameters would 
+have the following general form: 
+
+
+
+
+
+
+
+N
+i
+i
+i
+o
+Tb
+f
+c
+c
+G
+1
+ 
+where, G = Desired geophysical parameter (WS, IWV, CLW), and co & ci = 
+retrieval coefficients for parameter G for ith channel 
+Post-Launch Scenario  
+After MT-MADRAS is launched and the collocated in situ data are available, we 
+will calibrate the pre-launch algorithm by making small adjustments to the 
+coefficients of the retrieval algorithms presented in section 3.5. This will be 
+carried out based on validation results. 
+ 
+ 
+Megha-Tropiques ATBD Ver 3.0 
+38
+3.6.2  Flow chart 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 3 
+ 
+3.7 Outputs 
+ 
+The output units, range and also the theoretical accuracy based on simulation 
+results is as follows: 
+Table -5 
+ 
+Parameter 
+Unit 
+Min 
+Max 
+Accuracy 
+Resolution 
+IWV 
+gm cm-2 
+0 
+10 
+0.48 g/cm2 
+Pixel 
+WS 
+m s-1 
+0 
+25 
+1.60 m/s 
+Pixel 
+CLW 
+mg cm-2 
+0 
+600 
+5.32 
+mg/cm2 
+Pixel 
+3.7.1 Format of the output and the domain 
+The output format is as follows (Table 6): 
+Atmospheric Profiles, 
+SST, WS 
+RT Model 
+Simulated data set of 
+Tbs 
+Development of statistical relationship 
+between Tbs and the GPs 
+Tb measurements from 
+MT 
+Retrieval of GPs using 
+relationships derived  
+Senstivity 
+study of GPs 
+with Tbs 
+Instrument 
+Error budget 
+Theoretical Accuracy of 
+the retrieval algorithms 
+Comparison with insitu  
+Post launch accuracy 
+after fine tuning 
+Fine tuning 
+Megha-Tropiques ATBD Ver 3.0 
+39
+ 
+Table -6 
+Name and Description 
+Type value 
+Output file name 
+Same as input file name with extension replaced by 
+“gp.txt” 
+Output file containing 
+Latitude, longitude, day, 
+hour, 
+min, 
+seconds, 
+CLW, TPW, WS and 
+Flag 
+Latitude, longitude, day, hour, min, seconds from input 
+file 
+CLW range 0-600 mg cm-2,   
+TPW range > 0-10 g cm-2,   
+WS range > 0 – 25 m s-1,  
+Possible Flag values:  
+0:  good retrievals with ranges specified above,  
+1: one or more Tbs out-of range; All GPs set to -99.99,  
+2: Surface type not oceanic; All GPs set to -99.99,  
+3: Rain present; All GPs set to -99.99,  
+4: CLW > 50 mg cm-2; TPW and WS set to -99.99,  
+5: CLW > 18 mg cm-2; WS set to -99.99,  
+6: One of the GPs exceeding valid range and set to -
+99.99 
+ 
+3.8 Validation 
+A separate ATBD for validation is submitted. However, the limited validation (in 
+collaboration with validation team) for fine tuning of the retrieval algorithm will 
+be carried out and the details of which are presented below.  
+3.8.1 Data required 
+ Measurement of GPs from other satellites 
+ Surface insitu measurements over global oceans. 
+3.8.2 Method of validation 
+ 
+ Collocated pointwise comparison statistics to be generated. 
+ Histogram of GPs over given area and season to be compared. 
+ Variability and Trends to be studied. 
+3.9 Technical issues: 
+In this document we have provided the details of the various components of the 
+retrieval algorithm for deriving the cloud liquid water, wind speed and integrated 
+water vapor over oceans using MT-MADRAS channels. We hope to achieve the 
+accuracies as provided for SSM/I. In view of our past experience of deriving the 
+same parameters using MSMR observation, we do not foresee any practical 
+difficulty in deriving the same using MT-MADRAS. The derived parameters need 
+Megha-Tropiques ATBD Ver 3.0 
+40
+to be validated   extensively over different regions and seasons of the year so that 
+complete dynamic range of the parameters could be validated. We expect a 
+separate team will be looking for the validation aspect. We, however, need their 
+feedback for fine tuning the retrieval algorithms in the post launch phase. 
+3.10 Future Scope 
+Retrieval algorithms have to be validated and then if necessary fine tuning of the 
+algorithms have to be carried out.  This will be done by adjusting the coefficients 
+in the D-matrix by minimizing the errors between observations and the 
+estimations. 
+3.11 References 
+Alishouse, J.C., S. Synder, J. Vongsathorn, and R.R. Ferraro, Determination of 
+oceanic total precipitable water from the SSM/I, IEEE Trans. Geoscience and 
+Remote Sensing, 28, 811-816, 1990. 
+Desbois, M, 1999, Megha-Tropiques: Science objectives and general mission 
+requirements, Proc. of Megha-Tropiques: First science workshop, Eds., 
+Narayanan, M S, Manikiam, B, and Gairola R M, 19-22 May 1999, ISRO-HQ, 
+Bangalore, pp 1.1-1.7. 
+Ferraro  R R, F Weng, N C Grody, and A Basist, 1996, An eight-year (1987-1994) 
+time series of rainfall, clouds, water vapour, snow cover and sea ice derived from 
+SSM/I measurements, Bulletin of American Meteorological Society, 77 (5), 891-
+905. 
+Ferraro R  R, and G F Marka, 1995, The development of SSM/I rain rate 
+algorithms using ground-based radar measurements, Journal of Atmospheric and 
+Oceanic Technology, 12, 755-770. 
+Gairola, R. M., A. K. Varma, S. Pokhrel and V. K. Agarwal, Sensitivity of 
+Brightness Temperatures to the Oceanic Surface Roughness and Rainfall for the 
+TRMM and IRS-P4-MSMR Radiometric Channels over the Indian Ocean,  
+Indian Journal of Radio and Space Physics, 33, pp 61 -70, 2004. 
+Gohil, B.S., A.K. Mathur and A.K. Varma, A non-statistical algorithm for 
+geophysical parameter retrieval from microwave radiometer onboard Oceansat-1 
+and DMSP satellite, Proc. of TROPMET-2000, Ed. by Joseph et al., pub. by IMS, 
+Cochin Chapter, 1-4 Feb., 2000, Cochin Univ., 286-290, 2000a. 
+Megha-Tropiques ATBD Ver 3.0 
+41
+Gohil, B.S., A.K. Mathur and A.K. Varma, Geophysical Parameters Retrieval 
+over Oceans from IRS-P4 MSMR, Proc. of Pacific Ocean Remote Sensing 
+Conference (PORSEC-2000), 5-8 Dec, 2000 at NIO, Goa, 207-211, 2000b. 
+Goodberlet, M.A., C.T. Swift, and J.C. Wilkerson, Remote sensing of ocean 
+surface winds with the SSM/I, J. Geophys. Res., 94, 14547-14555, 1989. 
+Grody, N.C, 1991, Classification of snow cover and precipitation using Special 
+Sensor Microwave Imager (SSM/I), Journal of Geophysical Research, 96, 7423-
+7435. 
+Guilliou, C, W Ellison, L Eymard, K Lamkaouchi, C Prigent, G. Delbos, G 
+Balana, S A Boukabara, Emissivity modeling in Microwave, Radio Science, 33, 
+649-667, doi: 10.1029/97RS02744, 1998. 
+Liu, G, A fast and accurate model for Microwave Radiance calculations, J. 
+Meteorol. Soc. Japan, 76 (2), 335-345, 1998. 
+Paris, J.F., (1971), Transfer of thermal microwave atmosphere in the I and II, 
+Department of Meteorology, Texas A& M university, Texas.  
+Pokhrel, S., A. K. Varma, R. M. Gairola, , Vijay K. Agarwal, Distribution and 
+intraseasonal variability of rain over Indian Oceanic region from Indian Remote 
+Sensing Satellite IRS-P4 Multifrequency Scanning Microwave Radiometer, 
+Journal of Geophysical Research,  108 (C10), 3314, doi:10.1029/2003JC001886, 
+2003. 
+Rosenkranz, P. W., Absorption of microwaves by atmospheric gases, Chapter-2 
+and Appendix, in Atmospheric Remote Sensing by Microwave Radiometry, M. A. 
+Janssen, Ed, Wiley, New York, 1993. 
+Rosenkranz, P.W., Water vapor microwave continuum absorption: A comparison 
+of measurements and models, Radio Science, 33(4), 919-928, 1998.  
+Varma, A.K., R.M. Gairola, A.K. Mathur, B.S. Gohil and V.K. Agarwal, 
+Intercomparison of IRS-P4-MSMR derived geophysical products with DMSP-
+SSM/I and TRMM-TMI finished products, Proceedings of Indian Academy of 
+Sciences – Earth and Planetary Sciences, 111 (3), 247-256, 2002. 
+Varma, A.K., R.M. Gairola, Samir Pokhrel, A.K. Mathur, B.S. Gohil and V.K. 
+Agarwal, Rain Rate Measurements over global oceans from IRS-P4 MSMR, 
+Megha-Tropiques ATBD Ver 3.0 
+42
+Proceedings of Indian Academy of Sciences – Earth and Planetary Sciences, 111 
+(3), 257-266, 2002. 
+Varma, A K, B S Gohil, R M Gairola and P K Pal,  A new radiative transfer based 
+rain retrieval algorithm for rain identification and measurement from MT-
+MADRAS: Initial Results, internal report no.: 
+SAC/EPSA/AOSG/MT/SR/76/2011, p 26., 2011. 
+Varma, A.K., Samir Pokhrel, Rakesh Mohan Gairola, and Vijay K. Agarwal, An 
+Empirical Algorithm for Cloud Liquid Water From MSMR and Its Utilization in 
+Rain Identification, IEEE Transactions on Geosciences and Remote Sensing, 41 
+(8), 1853-1858, 2003. 
+Varma, A. K., S. Pokhrel, R. M. Gairola and V. K. Agarwal, Study of geophysical 
+parameters associated with the Orissa super cyclone using active and passive 
+microwave remote sensing measurements, International. Journal of Remote 
+Sensing, 27 (18), doi: 10.1080/01431160410001705060, 3753-3765, 2006. 
+Wentz, F. J., A well-calibrated ocean algorithm for special sensor microwave / 
+imager, Journal of Geophysical Research, 102 (C4), 8703-8718, 1997. 
+Wilheit, T. T., and Chang, A. T. C., An algorithm for retrieval of ocean surface 
+and atmospheric parameters from the observations of the scanning multichannel 
+microwave radiometer, Radio Science, 15 (3), 525-544, 1980. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Megha-Tropiques ATBD Ver 3.0 
+43
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4.0 Retrieval of Humidity profiles from SAPHIR 
+Megha-Tropiques ATBD Ver 3.0 
+44
+4. 
+Retrieval of Humidity Profiles from SAPHIR 
+4.1 
+Algorithm Configuration Information 
+4.1.1 Algorithm Name  
+Humidity profile 
+4.1.2 Algorithm Identifier 
+ISRO_MT_HUMP_A001 
+4.1.3 Algorithm Specification 
+ 
+Version Prepared by 
+Description 
+2.0 
+A.K. Mathur and B.S. Gohil Humidity profile Baseline Document 
+3.0 
+A.K. Mathur, R.K.Gangwar 
+and B.S. Gohil 
+Revised inversion technique for 
+humidity profile 
+ 
+4.2 
+Introduction 
+The Megha-Tropiques (MT) satellite is designed to study the impact of water 
+cycle on atmospheric climate processes and energy exchanges over the Tropics.  
+Megha-Tropiques was launched into a circular 867-kilometer orbit inclined at 20 
+degrees to the equatorial plane on 12th October 2011. From this orbit; the satellite 
+is able to collect frequent data over the Inter-tropical Convergence Zone to 
+complement and augment those obtained by satellites in geostationary and polar 
+orbits. The MT satellite payloads are high-technology sensors viz. Microwave 
+Analysis and Detection of Rain and Atmospheric Structures (MADRAS), a 
+millimeter wave humidity profiler (SAPHIR), an optical-IR radiometer for 
+radiation budget (ScaRAB) and a radio occultation sensor (GPS-ROS). All the 
+sensors have been integrated with IRS platform and primarily developed under 
+ISRO-CNES joint collaboration. 
+4.2.1 Overview and background: 
+The Sondeur Atmosphérique du Profil d'Humidité Intertropicale par Radiométrie 
+(SAPHIR) instrument is developed by IPSL and Observatoire de Paris as part of 
+the MEGHA-TROPIQUES payload to study the vertical distribution of water 
+vapour in the tropical troposphere, with two specific objectives: 
+ 
+1. Analysis of the diurnal cycle of the water vapour distribution, to evaluate the 
+vertical   transports associated with convective structures at the mesoscale and the 
+large scale, and to understand the scale-to-scale interactions in the meridional flux 
+2. Study of the role of the space-time distribution of humidity on the development 
+of deep convection. 
+ 
+An additional aim is to improve parameterizations of humidity related processes 
+in AGCM. The need for such an instrument on the Megha Tropiques platform was 
+driven by the following main reasons: 
+ 
+Megha-Tropiques ATBD Ver 3.0 
+45
+a) Scarcity of accurate and frequent water vapour profile measurements in tropical      
+latitudes for studying convective system life cycle. 
+b) Existing and other future sounders are planned to be onboard polar orbiting 
+satellites   leading to heterogeneous data. 
+4.2.2 Objectives 
+ 
+ To retrieve humidity profile in 6 layers of the atmosphere from 
+1000 to 100 mb. 
+ To validate the retrieved profiles with concurrent radiosonde, 
+satellites observations and NWP model fields. 
+ To improve the retrievals based on the validation feedback. 
+4.3 
+Instrument characteristics: 
+Six SAPHIR channels are centered on major water vapour absorbing band at 
+183.31 GHz. The following table shows the details of its bandwidths etc. 
+ 
+Table1: SAPHIR Channels characteristics 
+ 
+ 
+4.4 
+Inputs: 
+4.4.1 Static Data  
+ 
+Parameter 
+Resolution 
+Accuracy 
+Source 
+Land /Sea Mask  Pixel ( ~4 km) 
+1 pixel 
+ USGS 
+ 
+Megha-Tropiques ATBD Ver 3.0 
+46
+ 
+4.4.2 Image and preprocessing data (Dynamic) 
+Parameter 
+Resolution 
+Quantization 
+Accuracy 
+Source 
+Radiometric 
+and geometric 
+corrected 
+brightness 
+temperatures  
+of 6 SAPHIR 
+channels  
+Each pixel 
+/Grid 
+16-bit 
+<1K 
+Derived 
+from raw 
+data by DP 
+Geolocation of 
+all the 
+SAPHIR 
+channels 
+Each pixel/ 
+Grid 
+16-bit 
+1 pixel 
+Derived by 
+DP 
+Geolocated 
+Total Water 
+vapour 
+Content from 
+MADRAS 
+Each Pixel/ 
+Grid 
+16-bit 
+ 
+Derived by 
+MADRAS 
+Algorithm 
+ 
+Quality 
+Flag(surface, 
+geo-location 
+quality, BT 
+validitity) 
+Each Pixel 
+16-bit 
+ 
+Provided by 
+DP 
+ 
+4.5 
+Algorithm functional specifications 
+4.5.1 Basic principle 
+The scientific objective of SAPHIR calls for determination of humidity with an 
+accuracy of 10 to 20% in 6 layers of the troposphere with 10 km of spatial 
+resolution.  For realizing that goal, it is necessary to choose channels for which the 
+atmospheric contribution to the radiance comes from different levels of the 
+troposphere.  This can be obtained by sampling an absorption line of water vapour 
+by channels more or less close to the centre of the line.  A candidate line, already 
+chosen for other instruments, is the line at 183.3 GHz.  It is possible to get 
+contribution functions peaking from heights of 2 km up to 12 km in tropical 
+atmospheres.  However, the width of the contribution functions makes it 
+redundant to use more than 5 channels.  A sixth complementary channel, in a 
+window region, has to be used to correct for the surface effects in the lower 
+channels. 
+The SAPHIR humidity sounder operates at six channels around 183.31 GHz 
+designated as S1, S2, S3, S4, S5 and S6. given in Table-1.The final selection of 
+layers is carried out by first building a learning data base, consisting of 
+meteorological profiles, and brightness temperatures simulated by running a 
+radiative transfer model on the profiles; then a multiple regression  inversion 
+scheme is applied to retrieve the humidity in each layer. 
+Megha-Tropiques ATBD Ver 3.0 
+47
+ 
+ 
+Figure 1b: Weighting functions of the 6 SAPHIR channels for a mean 
+tropical atmosphere over sea, at nadir. Channels are numbered as shown on 
+figure1a 
+4.5.1.1 Radiative Transfer Model 
+For a non-scattering atmosphere under LTE, total brightness temperature received 
+by an earth-viewing microwave radiometer 
+ 
+    
+(1) 
+ 
+Where 
+
+
+
+
+
+0
+}
+)
+,
+(
+sec
+exp{
+)
+,
+(
+z
+z
+
+
+
+
+
+
+                                                                                        (2) 
+ 
+Megha-Tropiques ATBD Ver 3.0 
+48
+
+
+
+
+
+0
+)
+0,
+,
+(
+).
+,
+(
+).
+(
+sec
+)
+,
+(
+z
+z
+z
+z
+T
+TBdn
+
+
+
+
+
+
+
+
+                                                          (3) 
+ 
+
+
+
+
+
+
+0
+)
+,
+,
+(
+).
+,
+(
+).
+(
+sec
+)
+,
+(
+z
+z
+z
+z
+T
+TBup
+
+
+
+
+
+
+
+
+                                                        (4) 
+ 
+and 
+
+
+
+
+
+2
+1
+}
+)
+,
+(
+sec
+exp{
+)
+2
+1
+,
+,
+(
+z
+z
+z
+z
+z
+z
+
+
+
+
+
+
+                                                                       (5) 
+ 
+Where ,  are atmospheric absorption and transmittance, respectively, Ts,  are 
+sea surface temperature and emissivity, , , p are incidence angle, frequency of 
+SAPHIR channel and polarization. Tbup, TBdn are upwelling and down-welling 
+atmospheric brightness temperatures. The models used are those of Liebe (1993) 
+for atmospheric absorption, Hollinger (1973) for calm, Stogryn (1972) for wind 
+roughened and Wilheit (1979) for foam covered sea surface emissivity, 
+respectively. Low frequency wing of SAPHIR channels have been considered for 
+the simulations of brightness temperatures. 
+For the microwave frequencies in the resonance region of dominant absorbers like 
+water vapour and oxygen, the transmittance is very low or negligible so that the 
+contribution to the total radiation to the radiometer by reflected down-welling and 
+surface radiations becomes negligible. Therefore, the total brightness temperature 
+is expressed as 
+ 
+                                         (6) 
+ 
+The product of absorption due to a thin atmospheric layer and the transmittance of 
+the overlying atmosphere is known as the weighting function as given below 
+ 
+                                                                                                    
+                                                                                                                           (7) 
+ 
+with  
+ 
+ 
+The profile of weighting function with altitude is characterized by the absorption 
+profile for a specific frequency. The weighting function profile has a peak at a 
+particular altitude for a particular frequency in resonance region. This implies the 
+maximum sensitivity of a channel at the peak altitude of weighting function. This 
+forms the basis for the sounding of the atmosphere at various altitudes using 
+different channels in the resonance region. On the other hand, the radiation 
+received by the radiometer is the weighted contribution by different layers of the 
+atmosphere with maximum contributions from the layers having peak weighting 
+function. The peak of the weighting function shifts towards higher altitude as the 
+channel frequency nears the resonance line of an absorber. Contrary to it, the peak 
+of weighting function shifts towards surface for transparent or window channels 
+and the atmospheric contributions also reduce to greater extents. The window 
+channels are used for surface sensing. 
+Megha-Tropiques ATBD Ver 3.0 
+49
+ 
+4.5.1.2 Retrieval techniques: 
+The sensitivity of simulated brightness temperatures on humidity has been studied 
+under varying atmospheric conditions. This experiment is useful in selecting the 
+atmospheric thick-overlapping layers (TOL) influencing maximum number of 
+channels to be considered for better retrievals. Additionally, these TOL  are also 
+innovatively utilized to derive humidity for thin-isolated layers (TIL) which 
+otherwise will have large retrieval errors when directly derived from the channel 
+brightness temperatures (due to broad overlapping nature of channel’s Weighting 
+Functions (WFs) as shown in Figure 1b). Retrieval has been performed for the 7 
+TOL’s lying between the pressure values (1000-550) mb, (1000-400) mb, (850-
+400) mb, (850-250) mb, (700-250) mb, (700-100) mb and (550-100) mb 
+respectively on the basis of their sensitivity with SAPHIR chennels’ brightness 
+tempratures. From these seven TOL’s, the LARH for six TIL’s lying between 
+pressure values (1000-850) mb, (850-700) mb, (700-550) mb, (550-400) mb, 
+(400-250) mb, and (250-100) mb have been derived. 
+ 
+Definitions of the TOL and TIL are given below. 
+ 
+The layer-average relative humidity (LARH) for TOL is the relative humidity 
+(RH) averaged with respect to logarithm of pressure over a layer between two 
+pressure limits “p1” and “p2” as defined below  
+ 
+                 (8) 
+ 
+As mentioned above, thin-isolated layers (TILs) have also been derived from two 
+Thick-overlapping layers (TOLs) as follows. From known LARH values for two 
+TOLs with pressure levels “p1” to “p3” and “p2” to “p3”, the LARH value for a 
+TIL with pressure levels “p1” to “p2” can be derived as   
+ 
+                                                        
+                                                                                                   (9a) 
+ 
+         
+                                                                                                                            (9b)   
+ 
+                                                
+                                                                                                   (9c) 
+ 
+The LARH for TIL between “p1” to “p2” is derived using expressions (9b and 9c) 
+as   
+ 
+ 
+ 
+Megha-Tropiques ATBD Ver 3.0 
+50
+    
+                                     
+(9d) 
+ 
+The relationship between brightness temperature and TOL for SAPHIR channels 
+is established as given as 
+ 
+                              (10) 
+ 
+Where TOL is the layer averaged relative humidity in percent, A0,p is the retrieval 
+constant for pth layer, A1i,p  and A2i,p are retrieval coefficient for ith channel, TBi is 
+brightness temperatures of ith SAPHIR channel with six channels. The coefficients 
+have been established using the simulated BT from the simulated clear sky 
+atmospheres mentioned above. The noise in all BT’s has been introduced as per 
+the noise characteristics of SAPHIR instrument.  
+ 
+TIL are derived from TOL from the following relationship 
+ 
+                                                                           (11) 
+ 
+Where, these TOL’s are those having the desired TIL as their difference.  
+4.5.2 Flow-chart: 
+ 
+ 
+                
+ 
+Megha-Tropiques ATBD Ver 3.0 
+51
+Figure 2: Flow chart of the Retrieval Algorithm for Humidity profile from 
+SAPHIR 
+4.6 
+Operational implementation 
+Operational implementation of the retrieval scheme for SAPHIR Sounder includes 
+the following procedures: 
+ Development of forward radiative transfer model to compute SAPHIR 
+channels brightness temperatures given various atmospheric and surface 
+conditions as input. 
+ Identification of cloud and rain free pixels  
+ Derivation of retrieval coefficients for layer averaged relative humidity at 
+different layers from SAPHIR brightness temperatures using statistical 
+regression. 
+4.7 
+Outputs 
+ 
+LARH (TIL) 
+Unit 
+ 
+Min  Max 
+Expected 
+Accuracy 
+(%) 
+Resolution-
+horizontal (km) 
+Layer-1(1000-850) 
+mb 
+% 
+0.1 
+100 
+~20 
+10 
+Layer-2 
+(850-700) 
+mb 
+% 
+0.1 
+100 
+~20 
+10 
+Layer-3 
+(700-550) 
+mb 
+% 
+0.1 
+100 
+~20 
+10 
+Layer-4 
+(550-400) 
+mb 
+% 
+0.1 
+100 
+~20 
+10 
+Layer-5 
+(400-250) 
+mb 
+% 
+0.1 
+100 
+~20 
+10 
+Layer-6 
+(250-100) 
+mb 
+% 
+0.1 
+100 
+~20 
+10 
+Layer-1 
+(1000-850) 
+mb 
+% 
+0.1 
+100 
+~20 
+10 
+ 
+4.8 
+Validation 
+Validation of the derived humidity profiles will be done using all the available 
+data from radiosonde, special cruises over oceans and available similar products 
+from various satellite missions. 
+4.8.1   Data required: 
+Radiosonde and ship data for validation should consists of following parameter 
+ Station/Ship ID 
+ Location of the measurement 
+ Time of the measurement 
+ Relative humidity in %  
+ Height/pressure at which measurement is taken 
+ Air Temperature at the same height 
+Megha-Tropiques ATBD Ver 3.0 
+52
+ Instrument accuracy of humidity. 
+ 
+4.8.2   Methods of validation 
+From the observed profiles of humidity for clear sky conditions, brightness 
+temperatures corresponding to SAPHIR channels will be computed with the help 
+of  radiative transfer model used in the retrieval algorithm. The computed 
+brightness temperatures are analysed with SAPHIR-observed brightness 
+temperatures to estimate the bias (slope and intercept of the linear regression 
+equation) for each of the sounder channels. These bias-corrections will be 
+implemented in the regression retrieval routines to remove the bias between 
+sounder observations and the radiative transfer model computations. 
+4.9 
+Future scope: 
+The present study does not include the sensitivity of SAPHIR channels to land 
+emissivity variations and clouds. Inclusion of such cases will definitely improve 
+the quality of humidity profiles. In order to minimize the surface contribution in 
+the lower frequency SAPHIR channels inclusion of 150 GHz brightness 
+temperature from MADRAS is also desirable that will be taken up in future..  
+ 
+4.10 References 
+1. Gohil, B.S., B.G. Vasudevan, S.K. Basu, A.K. Mathur and V.K. Agarwal 
+(2001), “Simulation studies of humidity profiles retrieval from Megha-
+Tropiques SAPHIR”, presented at 2nd ISRO-CNES Science Workshop on 
+Megha-Tropiques held during July 1-6, 2001, PARIS, France. 
+ 
+2. Gohil, B.S., and A.K. Mathur(2005),  “Atmospheric Humidity Profile 
+Retrieval Algorithms for Megha-Tropiques SAPHIR: A simulation Study 
+and Analysis of AMSU-B Data”, presented at 3rd  ISRO-CNES Science 
+Workshop on Megha-Tropiques held during October 17-20, 2005, 
+Ahmedabad 
+ 
+3. Gohil, B.S., A.K. Mathur, A. Sarkar and Vijay K. Agarwal (2006), 
+‘Atmospheric humidity profile retrieval algorithms for Megha-Tropiques 
+SAPHIR: A simulation study and analysis of AMSU-B data’, Proceedings 
+of SPIE Conference on Remote Sensing and Modeling of the Atmosphere, 
+Oceans, and Interactions, edited by T N. Krishnamurti, B. N. Goswami 
+and T Iwasaki, Vol. 6404, 13-17 Nov. 2006. 
+ 
+4. Hollinger J.P. (1973), “Microwave properties of calm sea”, NRL Report 
+No 71-71102-2, Naval Research Laboratory, Washington. D.C. 
+ 
+5. Liebe, H.J., G. A. Hufford, and M. G. Cotton (1993), "Propagation 
+modeling of moist air and suspended water/ice particles at frequencies 
+below 
+1000 
+GHz", 
+Proceedings 
+of 
+AGARD 
+Conference 
+on 
+Electromagnetic Wave Propagation, pp-3/1-10, Palma De Mallorca, Spain. 
+ 
+6. Rosenkranz P W (2001),’Retrieval of temperature and moisture profiles 
+from AMSU-A and AMSu-B measurements’, IEEE Trans. Geo. Rem. 
+Megha-Tropiques ATBD Ver 3.0 
+53
+Sens.,vol 39, 2429-2435 pp. 
+ 
+7. Sohn, B. and Chung E, (2003) “Estimating Upper-Tropospheric water 
+vapour from SST-2 satellite measurements”, Jou. App.  Met., Vol 42, pp 
+488-504. 
+ 
+8. Spencer, R.W. and W.D. Braswell (1997), “How dry is the tropical free 
+troposphere? Implications for global warming theory”, Bull. American 
+Meteor. Society, vol 78, No. 6, pp 1097-1106.  
+ 
+9. Stogryn, A., (1972) “The emissivity of sea foam at microwave 
+frequencies”, Jou.  Geophys. Research, vol 77, pp 1650-1666. 
+ 
+10. Wang J R, J D Spinhirne, P Racette, L A Chang and W Hart(1997), ‘ The 
+effect of clouds on water vapour profiling from the millimeter-wave 
+radiometric measurements’, J App. Met., Vol.36, 1232-1244 pp. 
+ 
+11. Wilheit, T.T (1979), “A model for microwave emissivity of the oceans 
+surface as function of wind speed”, IEEE Trans. Geosci. Elec., GE-17, pp 
+244-249. 
+ 
+12. Wilheit T T (1990), ‘An algorithm for retrieving water vapor profiles in 
+clear and cloudy atmospheres from 183 GHz Radiometric measurements: 
+Simulation studies’, J. App. Met.,Vol. 29, 508-515 pp. 
+ 
+ 
+Megha-Tropiques ATBD Ver 3.0 
+54
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+5.0 Top-of-Atmosphere Radiative Flux from ScaRaB 
+Megha-Tropiques ATBD Ver 3.0 
+55
+ 
+5       Top-of-Atmosphere Radiative Flux from ScaRaB  
+5.1 
+Algorithm configuration information 
+5.1.1 Algorithm name:  
+Top of Atmosphere Flux Computation (TOA_FLUX) 
+5.1.2 Algorithm Identifier:  
+ISRO_MT_TOAFLUX_A001 
+5.1.3 Algorithm Specification 
+ 
+Version 
+Prepared by 
+Description 
+3.0 
+V. Sathiyamoorthy 
+Bipasha Paul Shukla 
+ATBD for top of atmosphere 
+radiance-to-flux computation 
+5.2 
+Introduction 
+An understanding of the radiation budget of the earth is fundamental because the 
+weather/climate system is a heat engine, with absorbed solar radiation being the 
+energy source and Earth-emitted radiation being the energy sink necessary to 
+drive the system. Earth Radiation Budget studies are of paramount importance in 
+the context of global climate change. The delicate balance of the incoming and the 
+outgoing radiation, which is being disturbed by anthropogenic activities, mark 
+their signatures in the top of atmosphere radiation budget quantities. Top of 
+atmosphere radiation budget quantities can be estimated from satellites using well-
+calibrated broadband radiometers.  
+ 
+Scanner for Radiation Budget (ScaRaB) onboard Megha-Tropiques is a 4-channel 
+cross-track scanning radiometer. The four channels include two broad spectral 
+bands (Channel-2 and Channel-3) from which the reflected shortwave and emitted 
+longwave radiances are derived and two narrow bands (Channel-1 and Channel-4) 
+one corresponding to the infrared atmospheric window, other to the visible (green 
+to red) portion of the solar spectrum (Table.1). Purpose of keeping the two narrow 
+band channels are: (i) R&D activities and (ii) estimate the errors associated with 
+the narrow band to broad band extrapolations. 
+ 
+Table-1 ScaRaB Channels 
+Channel  
+No. 
+Description 
+Wavelength Range 
+1 
+Visible (VIS) 
+0.55 - 0.65 m 
+2 
+Solar (SW) 
+0.2 – 4.0 m 
+3 
+Total (T) 
+0.2 – 100 m 
+4 
+IR Window (IR) 
+10.5 – 12.5m 
+ 
+Satellite measurement of the earth–atmosphere radiations are usually confined to 
+certain local times and specific directions of view depending on orbital constraints 
+Megha-Tropiques ATBD Ver 3.0 
+56
+and instrument scanning capabilities. Due to the smaller spatial view of the 
+ScaRaB, only limited angular coverage is possible by each observation. In the 
+case of ScaRaB, the direct measurement is radiance while the desired 
+measurement is radiative flux at the top of atmosphere.  Derivation of the radiative 
+flux using the ScaRaB radiance observations then requires the use of measured 
+satellite radiances and assumptions about the anisotropy of the earth’s radiation 
+field. The primary modification of the earth’s anisotropy is caused by the 
+variations in cloud properties. In this document details about the ScaRaB/Megha-
+Tropiques data processing system that can compute top of atmosphere shortwave 
+(SW) and Longwave (LW) fluxes from measured radiances is described. 
+ 
+5.2.1 Overview and Background: 
+The ScaRaB/Megha-Tropiques data processing system corresponds to the ERBE-
+like data processing system, already used and assessed by the former ERBE, 
+ScaRaB and CERES experiments. In this system, the ‘maximum likelihood 
+estimation’ algorithm (Wielicki and Green, 1989) is used for scene identification. 
+The 12-scene classification is based on five geo-types [ocean, land, snow-ice, 
+desert and coast] and four cloud types [clear, partly cloudy, mostly cloudy and 
+overcast]. The raw radiances are first corrected for spectral filtering effects as a 
+function of identified scene. Next scene-type dependent angular correction models 
+(anisotropic factor from Suttles et al, 1988; 1989) are used to deduce the SW and 
+LW fluxes of the pixel as a function of measured radiances. 
+ 
+ 
+Three important steps involved in the ScaRaB radiance to flux computation are: 
+ 
+1. Spectral correction 
+ 
+2. Scene Identification and 
+3. Flux computation (by applying scene-type dependent ADM). 
+ 
+5.2.1.1 Spectral Correction 
+The calibrations of the filtered radiances LTf  and LSWf    are normalized to precise 
+radiation sources: blackbodies at temperature respectively 310 K and 5800 K. 
+Then the unfiltered radiances are equal to filtered radiances only if the observed 
+targets have similar or proportional emission spectra.   Otherwise the unfiltered 
+radiances are calculated from the filtered radiances 
+ 
+scene
+f
+scene
+scene
+F
+L
+L
+
+  
+ 
+ 
+ 
+-- (1) 
+ 
+where Fscene is the filtering factor, varying around 1 according to the spectral shape 
+or colour of the scene.  
+5.2.1.2 Scene Identification 
+Unlike the CERES instrument on TRMM, Aqua and Terra missions, the 
+ScaRaB/MeghaTropiques will not have an imager payload for scene 
+identification. To identify the scene, the indirect ERBE scene identification 
+method (Wieliecki et al., 1989) will be utilized.  This is a statistical approach 
+Megha-Tropiques ATBD Ver 3.0 
+57
+called Maximum Likelihood Estimation (MLE) technique and uses only the 
+unfiltered LLW and LSW radiances measured by ScaRaB for scene identification. 
+ 
+ 
+5.2.1.2.1 ERBE Angular Model 
+Both the scene identification and the flux computation use the ERBE Angular 
+Dependence Model (ADM) generated by Suttles et al. (1989). From statistical 
+analysis of  satellite measurement (mainly seven months of Nimbus 7 radiance 
+measurements), the radiance anisotropy is described for 12 scene types, 
+combination of 5 geo-types and 4 cloud cover categories (Table 2). In the LW, the 
+ADM depends on latitude and season. The ADM are not continuous functions of 
+the angles, but discrete values corresponding to the angular intervals. 
+  
+Table-2 ERBE 12-Scene types 
+No. 
+Scene Type 
+Cloud 
+Fraction (%) 
+1 
+Clear Ocean 
+0-5 
+2 
+Clear Land 
+0-5 
+3 
+Clear snow/ice 
+0-5 
+4 
+Clear Desert 
+0-5 
+5 
+Coastal 
+0-5 
+6 
+Partly cloudy ocean 
+5-50 
+7 
+Partly cloudy land 
+5-50 
+8 
+Partly cloudy coastal 
+5-50 
+9 
+Mostly cloudy ocean 
+50-95 
+10 
+Mostly cloudy Land 
+50-95 
+11 
+Mostly cloudy coastal 
+50-95 
+12 
+Overcast 
+95-100 
+ 
+ 
+In the following, subscript Mod stands for Modelled (ADM). 
+R is the LW anisotropy function 
+  is the SW anisotropic function (bidirectional reflection) 
+ 
+The LW ADM contains: 
+1. Flux Mmod (Iscn, Colat) 
+2. Anisotropy function R (Iscn, ’, Colat) 
+3. Standard-deviation of radiances in the corresponding angular bin  (Iscn, 
+’, Colat) 
+ 
+The SW ADM contains: 
+1. Albedo amod (Iscn, ’) 
+2. SW anisotropy function  (Iscn, ’, ’, ’) 
+3. Standard-deviation of radiances    (Iscn, ’, ’, ’)  
+4. The LW-SW correlation coefficient 
+ 
+Megha-Tropiques ATBD Ver 3.0 
+58
+Here  Iscn  
+= scene 
+ 
+Colat = colatitude 
+ 
+’  
+= view zenith angle (VZA) 
+ 
+’ 
+= solar zenith angle (SZA) 
+ 
+’ 
+= relative azimuth (RA) 
+ 
+Instead of using amod  it is practical to define the angular dependence of the 
+albedo: 
+   
+ (Iscn, ’) = amod (Iscn, ’)/ amod (Iscn, ’=0) 
+ 
+ 
+ 
+ 
+ 
+ 
+Where the denominator is the ‘overhead’ albedo or albedo for sun at zenith 
+ 
+5.2.1.2.2 Maximum Likelihood Estimator 
+From the ADM tables, the modelled radiances with their associated standard 
+deviations can be easily calculated for the four cloud categories. In the LW/SW 
+graph (Figure-1), the centre of the ellipse represents the average SW-LW 
+radiances and the areas describe the standard deviation. The cloud fraction of a 
+measurement is determined by its location on this plane. For each ScaRaB 
+measured SW-LW pair, probabilities for being each case are calculated. The 
+highest probability identifies the cloud fraction.   
+ 
+Figure-1:  Equiprobability Ellipses for MLE. Clr (clear), PC (partly cloudy), MC 
+(mostly cloudy), OV (overcast).  (From Wielicki and Green, 1989). 
+5.2.1.3 LW Scene Identification 
+This scene identification is done for night-time. The algorithm proceeds with the 
+following steps: 
+ 
+Step-1 Search the geographic information Ngeo 
+From latitude and longitude, the following variables are searched: 
+Ngeo  :  Geo-type (ocean, land, desert, snow-ice, coast)  
+Megha-Tropiques ATBD Ver 3.0 
+59
+Mgeo :  Outgoing clear sky flux (Wm-2) 
+ 
+For the earlier ScaRaB missions, the geo-type map was updated each month to 
+take into account the variation of snow at high latitudes. For Megha-Tropiques 
+such an update may be not necessary due to the negligible snow cover variation in 
+the 30 tropical coverage belt. 
+The Mgeo dataset is also defined on monthly basis. Then the Mgeo corresponding to 
+land and desert regions are corrected for diurnal variations. 
+ 
+Step-2 Compute the theoretical outgoing flux M from Mgeo and ADM   
+For each cloud category ( 1 to 4): 
+ 
+    M(Iscn, Colat) =   Mmod  (Iscn, Colat)                
+ 
+ 
+ 
++ Fc [Mgeo(Colat, Lon) -    Mmod  (Ngeo, Colat)]    ---(2) 
+ 
+where Fc is is related to the cloud fraction 
+Fc  = 1 for clear  
+Fc  = 0.75 for partly cloudy 
+Fc  = 0.25 for mostly cloudy  
+Fc  = 0 for overcast 
+It is easy to check:    
+M (Iscn, Colat) =   Mmod  (Iscn, Colat)   for overcast 
+M (Iscn, Colat) =   Mgeo(Colat, Lon) for clear sky 
+ 
+Step-3 Compute the theoretical LW radiance LLW                                                          
+ 
+LLW = [ R (Iscn, ’, Colat) . M(Iscn, Colat) ] / 
+ 
+                    ---(3) 
+ 
+where R is the anisotropic factor 
+ 
+Step-4 Compare the measured radiance to theoretical radiance  
+For each cloud category (1 to 4): 
+ 
+Compute the probability 
+ 
+)
+,
+(
+,'
+ 
+(Iscn,
+ 
+2
+)
+2
+exp(
+)
+(
+Pr
+Colat
+Iscn
+AP
+colat
+L
+Q
+Iscn
+ob
+LW
+Mes
+
+
+
+
+
+
+
+ 
+       ---(4) 
+ 
+ 
+ 
+where AP is the a priori probability and  
+ 
+ 
+2
+LW
+^
+)
+,'
+ 
+(Iscn,
+ 
+'
+ 
+(Iscn,
+
+
+
+
+
+
+
+
+
+
+
+colat
+Colat
+L
+L
+Q
+LW
+Mes
+
+
+
+ 
+                             ---(5) 
+
+Keep the case for which Probability is the highest. 
+ 
+ 
+Megha-Tropiques ATBD Ver 3.0 
+60
+5.2.1.4 Scene Identification for day time 
+The algorithm is similar to night time algorithm, except it deals with the LW - SW 
+pair instead to LW alone. 
+ 
+Step-1 Search the geographic information Ngeo 
+From latitude and longitude, the following variables are searched: 
+Ngeo  : geotype (ocean, land, desert, snow-ice, coast)  
+Mgeo : the outgoing clear sky flux (Wm-2) 
+ageo  : the clear sky albedo  
+The Mgeo  and ageo dataset are defined on monthly basis. The Mgeo corresponding 
+to land and desert are corrected for diurnal variations. 
+ 
+Step-2 Compute the theoretical albedo â from ageo and ADM 
+For each cloud category ( 1 to 4): 
+ 
+    â (Iscn, ’) =   amod  (Iscn, ’)                
+ 
+ 
++ Fc [ageo(Colat, Lon). ( ’ )  -   amod   (Ngeo, ’)]      ---(6) 
+ 
+where Fc is related to the cloud fraction, and has been defined above in the ‘night 
+time’ section 
+ 
+It is easy to check:    
+ 
+ â (Iscn, ’) =   amod  (Iscn, ’)   for overcast 
+â (Iscn, ’) =  ageo(Colat, Lon). ( ’ ) for clear sky 
+ 
+ 
+Step-3 Compute the theoretical SW radiance LSW  
+LSW = [ (Iscn, ’, ’, ’) â (Iscn, ’)] (E0 cos(’) /                   ---(7) 
+ 
+ 
+where  is the anisotropic bi-directional factor 
+ 
+Step-4 Compute the theoretical LW radiance LLW  
+Similarly as in the night-time section 
+ 
+LLW = [ R (Iscn, ’, Colat) . M(Iscn, Colat) ] / 
+
+                    ---(8) 
+ 
+where R is the anisotropic factor 
+ 
+Step-5 Compare the pair of measured radiances to theoretical radiances  
+ 
+For each cloud category ( 1 to 4): 
+ 
+Compute the probability 
+Megha-Tropiques ATBD Ver 3.0 
+61
+)
+,
+(
+,'
+ 
+(Iscn,
+ 
+o
+2
+)
+2
+exp(
+)
+(
+Pr
+Colat
+Iscn
+AP
+colat
+scn
+L
+L
+Q
+Iscn
+ob
+LW
+SW
+LW
+Mes
+SW
+Mes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ---(9) 
+ 
+ where AP is the a priori probability  and  
+ 
+2
+LW
+^
+2
+SW
+^
+)
+,'
+ 
+(Iscn,
+ 
+'
+ 
+(Iscn,
+)
+o
+o
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+colat
+Colat
+L
+L
+scn
+scn
+L
+L
+Q
+LW
+Mes
+SW
+SW
+Mes
+
+
+
+
+
+
+
+
+
+
+---(10)
+
+and keep the case for which Prob. is the highest.
+ 
+5.2.1.5 Flux Computation 
+The flux density F() is the integration of the radiances in the hemisphere 
+ 
+ 
+                                                                                                                 ---(11) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+As discussed earlier, the radiance-to-flux computation is based on the ‘angular 
+dependence model’ (ADM), which depends on the type of the observed scene (J). 
+The ADM is defined by the anisotropy function RJ,  
+ 
+ 
+                                                                                                                 ---(12) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+which yields the formula for the radiance-to-flux conversion 
+ 
+ 
+                                                                                                                 ---(13) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+For the LW domain, the formulas are simplified since they don’t depend on the 
+solar direction (). 
+ 
+5.3 
+Inputs 
+5.3.1 Static Data 
+ 
+ 
+Parameter 
+Resolution 
+Source 
+Geotype [ocean, land, 
+desert, snow-ice, coast] 
+2.5 Deg 
+ERBE 
+Outgoing clear-sky LW 
+flux 
+- 
+Suttles et al. (1989) 
+Clear sky albedo 
+- 
+Suttles et al. (1989) 
+'
+'
+'
+sin
+'
+cos
+)'
+,'
+,'
+(
+)'
+(
+2
+/
+0
+2
+0
+
+
+
+
+
+
+
+
+
+
+d
+d
+L
+F
+O
+O
+
+
+'
+'
+'
+sin
+'
+cos
+)'
+,'
+,'
+(
+)'
+,'
+,'
+(
+)'
+,'
+,'
+(
+2
+/
+0
+2
+0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+d
+d
+L
+L
+R
+O
+O
+J
+O
+J
+
+
+)'
+,'
+,'
+(
+)'
+,'
+,'
+(
+)'
+(
+
+
+
+
+
+
+
+
+O
+J
+O
+O
+R
+L
+F
+
+Megha-Tropiques ATBD Ver 3.0 
+62
+5.3.2 Shortwave ADM 
+ 
+For each of the twelve scene types, the SW anisotropic factor, SW Standard 
+deviation and correlation of LW and SW are available at discrete intervals of 
+Solar Zenith Angle (SZA), Viewing Zenith Angle (VZA) and Relative Azimuth 
+(RA) given in Table. 
+ 
+Solar Zenith 
+Angle (Deg) 
+Viewing Zenith 
+Angle (Deg) 
+Relative Azimuth 
+Angle (Deg) 
+0 - 25.84 
+0 - 15 
+0 - 9 
+25.84 - 36.87 
+15 - 27 
+9 - 30 
+36.87 - 45.57 
+27 - 39 
+30 - 60 
+45.57 - 53.13 
+39 - 51 
+60 - 90 
+53.13 - 60.00 
+51 - 63 
+90 - 120 
+60.00 - 66.42 
+63 - 75 
+120 - 150 
+66.42 - 72.54 
+75 - 90 
+150 - 171 
+72.54 - 78.46 
+ 
+171 - 180 
+78.46 - 84.26 
+ 
+ 
+84.26 - 90.00 
+ 
+ 
+ 
+ 
+5.3.3 Long wave ADM 
+For each of the twelve scene types, the LW anisotropic factor and LW Standard 
+deviation are available at the following co-latitude and VZA intervals: 
+ 
+ 
+ 
+Co-latitude (Deg) 
+Viewing Zenith Angle 
+(Deg) 
+0 – 18 
+0 - 15 
+18 – 36 
+15 - 27 
+36 – 54 
+27 - 39 
+54 – 72 
+39 - 51 
+72 – 90 
+51 - 63 
+90 – 108 
+63 - 75 
+108-126 
+75-90 
+126-144 
+ 
+144-162 
+ 
+162-180 
+ 
+ 
+ 
+Megha-Tropiques ATBD Ver 3.0 
+63
+5.3.4 Main Input data 
+ 
+Parameter 
+Resolution 
+Source 
+Co-latitude of sample 
+Pixel 
+Level-1 file 
+Longitude of sample 
+Pixel 
+Level-1 file 
+Filtered Shortwave Radiance  
+[Wm-2sr-1] 
+Pixel 
+Level-1 file  
+Filtered Synthetic LW Radiance 
+[Wm-2sr-1] 
+Pixel 
+Level-1 file  
+Sample acquired time 
+Pixel 
+Level-1 file 
+Solar Zenith Angle  
+Pixel 
+Level-1 file 
+View Zenith Angle  
+Pixel 
+Level-1 file 
+Relative Azimuth  
+Pixel 
+Level-1 file 
+Quality Flag – Filtered SW (Solar) 
+Radiance 
+Pixel 
+Level-1 file 
+Quality Flag – Filtered Synthetic LW 
+Radiance 
+Pixel 
+Level-1 file 
+ 
+5.4 
+Operational implementation  
+The level-2 data processing system processes successively all the observations of 
+one satellite dump (consists of few orbits) or one complete orbit data whichever is 
+provided. It has the important module called the INV module. It does data 
+inversion by identifying scene and computing flux. 
+ 
+They proceed according to the following flow-chart (Fig.2). The input is Level-1 
+file (output from level-0 data processing) and the output is Level-2 file (equivalent 
+of CERES ES-8 file). 
+5.5 
+Output 
+ 
+Parameter 
+Unit 
+Accuracy 
+Resolution 
+Co-latitude 
+Deg 
+- 
+Pixel 
+Longitude 
+Deg 
+- 
+Pixel 
+Unfiltered SW 
+Radiance 
+Wm-2sr-1 
+- 
+Pixel 
+Unfiltered LW 
+(synthetic) Radiance 
+Wm-2sr-1 
+- 
+Pixel 
+SW flux 
+Wm-2 
+20 % 
+Pixel 
+LW flux 
+Wm-2 
+5 % 
+Pixel 
+Scene Type 
+- 
+- 
+Pixel 
+ 
+In addition to the above parameters, Solar Zenith Angle(sun), View Zenith(view), 
+Relative Azimuth() and sample acquired time are also provided. 
+ 
+Megha-Tropiques ATBD Ver 3.0 
+64
+ 
+ 
+ 
+Fig. 2: Flow chart of Level-2 data processing system. 
+ 
+ 
+5.6 
+References: 
+ 
+1. Duvel, J. P.,  M. Viollier,  P. Raberanto, R. Kandel, M. Haeffelin, L. A. 
+Pakhomov, V. A. Golovko, J. Mueller,R. Stuhlmann, and the International 
+ScaRaB Scientific Working Group, 2001: The ScaRaB-Resurs Earth 
+Radiation Budget Dataset and First Results. Bull. Amer. Meteor. Soc., 82, 
+1397-1408. 
+ 
+2. Suttles, J. T., and Coauthors, 1988: Angular Radiation Models for the 
+Earth–Atmosphere System. Vol. 1. NASA, 147 pp. 
+ 
+3. ——, R. N. Green, G. L. Smith, B. A. Wielicki, I. J. Walker, V. R. Taylor, 
+and L. L. Stowe, 1989: Angular Radiation Models for the Earth–
+Atmosphere System. Vol. II. NASA, 87 pp. 
+ 
+Megha-Tropiques ATBD Ver 3.0 
+65
+4. M. Viollier, P. Raberanto and V. Sathiyamoorthy 2007: MeghaTropiques – 
+ScaRaB flux computation: summary of the former data processing. LMD 
+Report, LMD, Ecole Polytechnique, Palaiseau Cedex (France). 
+ 
+5. Wielicki, B. A., and R. N. Green, 1989: Cloud identification for ERBE 
+radiative flux retrieval. J. Appl. Meteor., 28, 1133–1146. 
+ 
+ 
+Megha-Tropiques ATBD Ver 3.0 
+66
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+6.0 Temperature and Humidity Profiles from 
+ROSA  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Megha-Tropiques ATBD Ver 3.0 
+67
+ 
+6 Temperature and Humidity Profiles from ROSA  
+This section deals with the description of retrieval algorithm developed in-house 
+for deriving profile of temperature and water vapor partial pressure from profile of 
+refractivity derived in turn from raw measurements by GPS-based Radio 
+Occultation sensor-ROSA on board MEGHA-TROPIQUES satellite.  
+6.1 Algorithm Configuration Information: 
+ 
+6.1.1. Algorithm Name 
+Retrieval of profiles of temperature (T), Pressure (P) and water vapor partial 
+pressure (e) from ROSA derived refractivity profiles for the neutral atmosphere 
+using a conventional iteration-based method. 
+6.1.2 Algorithm Identifier 
+ISRO_MT_OSM_A001 
+6.1.3 Algorithm Specification  
+Version 
+Prepared By 
+Description 
+3.0 
+Abhineet Shyam and 
+B S Gohil 
+ATBD for Temperature 
+and water vapor partial 
+pressure retrieval from 
+ROSA-derived refractiv- 
+–ity  
+ 
+6.2 Introduction 
+Temperature, pressure and humidity information are, inter-alia, vital information 
+as to the state of the atmosphere, of critical importance to studies of weather and 
+climate. GPS-Radio Occultation (GPS-RO) based retrieval of these atmospheric 
+parameters is a relatively novel approach to limb sounding technique, with the 
+constellation of GPS satellites and deployed Low Earth Orbit (LEO) receiver/s 
+constituting its gross measurement system.  
+ROSA, onboard MEGHA-TROPIQUES, is the deployed GPS receiver in context 
+tracking L-band dual-frequency signals transmitted by GPS satellites.  
+Operating frequency 
+Specification 
+ 
+L1 C/A code signal 
+L1 P-code signal 
+L2 P-code signal 
+ 
+1575.42 MHz 
+1575.42 MHz 
+1227.60 MHz 
+ 
+The orbital specification of Megha-Tropiques combined with ROSA receiver 
+specification, is likely to result in occultation event frequency in excess of 500 per 
+day with spatial coverage from 30S – 30N latitude. Multiple space-based GPS 
+receivers are configured to give increased occultation events. Currently, COSMIC, 
+which is a constellation of six receivers, is a multiple-receiver mission yielding 
+between 1800-2500 occultations per day and a dense coverage of mid-latitude 
+region.  
+This document is primarily concerned with the delineation and description of 
+conceptual constructs in the retrieval of afore-mentioned geophysical parameters 
+Megha-Tropiques ATBD Ver 3.0 
+68
+from GPS-RO derived refractivity and the associated elements in development of 
+the algorithm for the same and its operational implementation. A meaningful 
+starting point for this purpose is the relationship, also called forward model, 
+between the derived refractivity and geophysical parameters to be retrieved viz. 
+temperature (T), pressure (P) and water vapor partial pressure (e). However, a 
+brief overview of the theoretical background of the GPS-RO technique, beginning 
+with the raw measurements to the derivation of refractivity, is given for greater 
+comprehension and continuity. 
+ 
+6.2.1 Theoretical Background 
+The basic observables of this technique are the phase and amplitude of the dual-
+frequency signals transmitted by a GPS satellite and received by the LEO receiver 
+in an occulting geometry as depicted in Fig.1. The recorded phase, corresponding 
+to a single frequency, is the sum of vacuum phase and an excess phase, due to the 
+intervening atmosphere. Obtaining excess phase delay involves precise 
+measurement of GPS and LEO satellite orbits (position and velocities) and phase 
+delays of GPS signals (at L1 and L2 frequencies) to a very high accuracy. From 
+the time series of excess phase delay (obtained after removing vacuum phase 
+delay from measured phase delay) and position and velocities of GPS and LEO, 
+bending angle profile as a function of impact parameter is computed.       
+                                        
+ 
+Figure 1. A schematic diagram of radio occultation sounding geometry 
+The main steps involved in the retrieval of refractivity and related atmospheric 
+parameters are as follows (Steiner et al., 1999):  
+1. Calculation of the atmospheric bending angle profile from the observed 
+L1/L2 excess phase path time series (including dual-frequency ionospheric 
+correction). 
+2. Retrieval of the refractive index profile from the atmospheric bending 
+angle profile and conversion to refractivity profile. 
+3. Calculation of pressure, and temperature based on the refractivity profile 
+(assuming dry air). The pressure and temperature so calculated are the dry 
+pressure and dry temperature, distinct from real pressure and temperature 
+in the water vapor dominant region (i.e. lower troposphere). 
+4. Deriving water vapor partial pressure with a simultaneous refinement of 
+dry temperature and pressure to get real state parameters.  
+Megha-Tropiques ATBD Ver 3.0 
+69
+6.2.1.1 Bending angle calculation: 
+GPS-LEO occultation geometry defining the atmospheric bending angle (), the 
+impact parameter (a), and the radius of the ray tangent point (r) is shown in Figure 
+1. The impact parameter (a) is defined, assuming spherical symmetry, as the 
+perpendicular distance between the center of the Earth (more precisely the center 
+of local curvature at the perigee of the occultation ray) and the ray asymptote at 
+the GPS or LEO satellite. The atmospheric Doppler shift, f, can be related to the 
+direction of the transmitted and received signals by the expression 
+]ˆ
+).
+(
+ˆ.
+ˆ.
+[
+k
+v
+v
+k
+v
+k
+v
+f
+dt
+d
+r
+t
+r
+r
+t
+t
+
+
+
+
+
+
+
+                                    (1) 
+vt and vr – the transmitter (GPS) and receiver’s (LEO) velocity respectively. 
+kt and kr – unit vectors in the direction of transmitted and received signal, 
+respectively. 
+kˆ  - Unit vector in the direction from the transmitter to the receiver. 
+Equation (1) is difference of Doppler shift observed in the presence of the 
+atmosphere and the Doppler shift that would be observed for the same transmitter-
+receiver geometry in the absence of the atmosphere. The first order relativistic 
+contributions to the Doppler are identical in the two situations and cancel out. 
+Equation (1) holds for atmosphere of any shape. However, (1) also has infinite 
+number of solutions, since kt and kr are unknown, corresponding to four 
+independent parameters. Therefore, certain assumptions have to be made on the 
+shape of the atmosphere in order to derive the atmospheric bending from equation 
+(1).To a good approximation, the neutral atmosphere is spherically symmetric. In 
+order to account for the ellipticity of the Earth, the center of symmetry is taken to 
+correspond to the circle of occultation plane which best fits the geoid near the 
+tangent point. With the spherical symmetry assumption, equation (1) reduces to 
+two equations in two unknowns  
+)
+cos
+cos
+(
+))
+cos(
+)
+cos(
+(
+r
+r
+t
+t
+r
+r
+r
+t
+t
+t
+v
+v
+v
+v
+dt
+d
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 2(a)                                
+)
+sin(
+)
+sin(
+r
+r
+r
+r
+t
+t
+t
+t
+n
+r
+n
+r
+a
+
+
+
+
+
+
+
+
+ 
+                                      2(b) 
+Equation 2(b) is Bouger’s law (equivalent to Snell’s law in a spherically 
+symmetric medium). 
+rr  and rt are the vectors from the center of curvature to transmitter and receiver, 
+respectively; rr =| rr|, rt=| rt| and nr and nt are indices of refraction at the transmitter 
+and receiver, respectively. 
+ 
+Figure 2. Occultation geometry defining the angles used in equations 2(a, b). 
+Megha-Tropiques ATBD Ver 3.0 
+70
+ 
+At the heights of the transmitter (~ 20000 km) and receiver (low earth orbit), the 
+indices of refraction are assumed to be equal to 1. This approximation can be 
+shown to introduce a very small error in the estimated bending in the ionosphere 
+and it cancels completely after doing ionospheric calibration to estimate neutral 
+atmospheric bending. The angles t and r are determined by simultaneously 
+solving equations 2(a) and 2(b) (easily accomplished using Newton’s method and 
+a first guess of t=0 and r=0). The total bending angle is =t+r and the 
+corresponding impact parameter ‘a’ is obtained by equation 2(b). 
+If 1(a1) and 2(a2) be the bending angle as a function of the asymptotic miss 
+distance for the L1 and L2 signals, respectively, then the linear combination  
+)
+(
+)
+(
+)
+(
+)
+(
+)
+(
+0
+2
+2
+2
+2
+1
+2
+2
+0
+1
+2
+2
+2
+1
+2
+1
+0
+a
+f
+f
+f
+a
+f
+f
+f
+a
+neut
+
+
+
+
+
+
+
+                  (3), 
+where 1 and 2 are interpolated to the same value of a0, removes first-order 
+ionospheric bending (which is proportional to f  -2). The calibration should not 
+continue above a certain height, when the neutral atmosphere signature on the 
+occulted signal is comparable to residual ionospheric effects or the receiver’s 
+thermal noise. 
+Deeper in the atmosphere, due to defocusing effects and the weakening of the 
+signal, the L2 signal is not used when the signal to noise ratio drops below a 
+certain limit. In that case, an extrapolation of the ionosphere correction is used 
+from higher altitudes to correct for the ionosphere (Hocke 1997, Hocke et al., 
+1997). 
+6.2.1.2 Retrieval of refractive index profile: 
+Inverse Abel transform technique is used to retrieve refractive index profile from 
+bending angle profile (Hajj et al., 1995; Kursinski et al., 1996; Hocke 1997). 
+Bending angle i(ai) and the refractive index n at the perigee location of the ray is 
+given by the forward Abel transform (e.g. Fjeldbo et al., 1971):  
+2
+2
+(
+)
+(ln
+2
+i
+a
+x
+i
+i
+a
+x
+dx
+dx
+n
+d
+a
+i
+
+
+
+
+
+ 
+ 
+                                       (4) 
+Using inverse Abel transform, refractive index (n) is given as: 
+dx
+a
+x
+x
+a
+n
+a
+
+
+
+2
+2
+)
+(
+1
+))
+(
+ln(
+
+
+ 
+                                                  (5) 
+The upper limit of integral equation (5) requires knowledge of bending angle as a 
+function of impact parameter up to the top of the atmosphere. In practice however, 
+the estimated bending is reasonably accurate only up to a certain upper height, au. 
+The refractivity profile is calculated by upward scaling of refractive index profile 
+as:        
+6
+10
+)1
+)
+(
+(
+)
+(
+
+
+
+a
+n
+a
+N
+                                                                        (6) 
+The refractivity, derived as a function of impact parameter, is redefined on a mean 
+sea level altitude relative to the Earth’s geoid so as to relate it to the geophysical 
+parameters of temperature, pressure and water vapor partial pressure in the geoid 
+frame. 
+Megha-Tropiques ATBD Ver 3.0 
+71
+6.3 Algorithm Functional Specifications 
+6.3.1 Retrieval of temperature (T), pressure (P) and water vapor        partial 
+pressure (e) from refractivity: Theoretical background 
+The refractivity, N, is related to temperature (T), pressure (P) and water vapor 
+partial pressure (e) via (Gorbunov et al., 1996; Ware et al., 1996; Rocken et al., 
+1997; Kursinski et al., 1997; Steiner et al., 1999) 
+i
+i
+w
+w
+e
+W
+a
+W
+a
+f
+O
+f
+n
+T
+e
+a
+T
+P
+a
+N
+
+
+
+
+
+
+
+)
+1
+(
+10
+3.
+40
+2
+1
+3
+2
+6
+2
+                         
+                                                                                                                         (7) 
+with a1=77.6 K/mbar; a2=3.73x105 K2/mbar; P – the total pressure; T – 
+temperature; e – water vapor partial pressure; ne – electron number density (m-
+3); f – operating frequency (Hz); Ww and Wi  being liquid water and ice content 
+respectively in grams per cubic meter, aw and ai are 1.4 and 0.6 (cubic 
+meter/grams) respectively. The first (second) term in equation (7) is usually 
+known as hydrostatic (or, dry) term (wet term).  
+For realistic suspensions of water and ice, the last two terms of (7) are small in 
+comparison with other terms and are neglected for practical purposes (Hajj et al. 
+2002). When the signal is passing through the ionosphere the first two terms of 
+(7) can be ignored, as well as higher order ionospheric terms. Therefore, 
+measurement of n directly corresponds to electron density in the ionosphere. 
+In the neutral atmosphere (tangent point height < 60 km), the ionospheric 
+calibration process effectively removes the first order ionosphere term (1/f2) in 
+(7). In order to solve for P, T and/or e, given N, one has to use additional 
+constraints of hydrostatic equilibrium and the ideal gas law: 
+
+g
+dh
+dP
+
+
+                                                                                             (8) 
+TR
+e
+m
+m
+TR
+P
+m
+d
+w
+d
+w
+d
+)
+(
+
+
+
+
+
+
+
+
+                                        (9) 
+Where, h is height; g is the acceleration due to gravity;  
+, d, w total, dry air 
+and water vapor densities respectively; md, mw the mean molecular mass of dry 
+air (28.97 g/mole) and water vapor (18.0 g/mole), respectively; R is the 
+universal gas constant.  
+Combining (8) and (9) and, using (7) (ignoring ionospheric, ice and liquid water 
+terms) to substitute for P/T, we obtain 
+T
+e
+R
+m
+m
+g
+T
+e
+R
+a
+gm
+a
+N
+R
+a
+gm
+dh
+dP
+w
+d
+d
+d
+)
+(
+1
+2
+1
+2
+
+
+
+
+
+                          (10) 
+Given N, we have a system of two equations ((7) and (10)) and three unknowns 
+(T, P, and e). Since saturation vapor pressure decreases rapidly with decreasing 
+temperature, e can be ignored above the tropospheric height corresponding to 
+230 K; therefore given N, both T and P can be solved for in the upper 
+troposphere and stratosphere from (7) and (10) and a boundary condition 
+(usually taken to be a temperature boundary condition at ~60 km estimated from 
+a climatology or an atmospheric model). What we get are the “dry” temperature 
+and pressure, accurate to real temperature and pressure in the water vapor scarce 
+Megha-Tropiques ATBD Ver 3.0 
+72
+region obtained in the upper troposphere and beyond. The “dry” T has a cold 
+bias in the lower troposphere below 230K as shown in figure 3.  
+                      
+ 
+Figure 3. A depiction of cold bias in “dry” temperature below 10km  
+Realistic temperature and pressure profile require inclusion of water vapor 
+pressure (e) term in equation (7) and (10) for retrieval below 230K. This 
+demarcation at  
+230K temperature is defined as the water vapor point (O’ Sullivan et al. 2000). 
+The water vapor point is observed to vary in different latitude zones. For the 
+tropics (30S-30N), the water vapor point at 230K is determined through  a 
+sensitivity study of the error statistics of retrieved T, P and e from refractivity, N 
+to different choices of water vapor point (Shyam et al., 2009). In altitude terms, 
+the water vapor point for the tropics range from 10-12km. Below this altitude, 
+water vapor has a non-negligible concentration and contributes significantly to 
+refractivity. Thus, the algorithm goes for a composite retrieval (to be called “Wet 
+retrieval”) of all the three unknowns simultaneously.  
+“Wet” Retrieval   
+The algorithm approximates temperature, for the region below the “water vapor 
+point (wvp)”, to be a quadratic function of the natural logarithm of atmospheric 
+pressure.  Between the estimated water vapor point and the surface (or, the lowest 
+altitude at which a’ priori P and T are available), temperature is assumed to vary 
+as a quadratic function of natural logarithm of P (denoted by σ) i.e. T (σ) = a + 
+b*σ + c*σ2. We have T and σ at water vapor point, where the dry temperature and 
+pressure are approximated as actual temperature and pressure and the surface 
+(known from meteorological observations or reanalysis of Numerical weather 
+prediction models like ECMWF or NCEP), giving two equations for the 
+temperature quadratic i.e., 
+ 
+2
+)
+(
+s
+s
+s
+c
+b
+a
+T
+
+
+
+
+
+
+  
+                         
+ 
+(11) 
+ Where 
+s
+ is the natural logarithm of surface pressure. 
+  
+2
+)
+(
+wv
+wv
+wv
+c
+b
+a
+T
+
+
+
+
+
+
+ 
+                           
+ 
+(12) 
+Where 
+wv
+
+is the natural logarithm of pressure at the water vapor point. 
+A third equation is written using hydrostatic approximation as given under                                       
+Megha-Tropiques ATBD Ver 3.0 
+73
+   
+dz
+R
+g
+d
+T
+w
+w
+z
+z
+air
+
+
+
+
+
+
+
+
+0
+0
+)
+(
+                          
+ 
+(13)   
+The right hand side of (13) is evaluated by approximating the gas constant for air 
+(Rair), as that of dry air (Rdry), as we do not have any knowledge of water vapor in 
+the beginning. Solving equations (11) to (13), one obtains the three coefficients 
+for the temperature quadratic. Once a first estimate of temperature quadratic is 
+made, temperature profile in the first iteration is evaluated using dry pressure and 
+water vapor pressure is calculated using the equation  
+    
+5
+2
+10
+73
+.
+3
+6
+.
+77
+
+
+
+PT
+N
+T
+e
+                                     
+ 
+ (14) 
+Once a first estimate of e is made water vapor mixing ratio (w) is calculated using 
+the formula  
+   
+P
+e
+w
+
+
+622
+.
+0
+                                                
+ 
+ (15)                              
+Thereafter, the virtual temperature (Tv) profile is calculated using the formula 
+   
+)
+0
+.
+1
+(
+))
+*
+61
+.
+1
+(
+0
+.
+1
+(
+w
+w
+T
+Tv
+
+
+
+                               
+ 
+(16) 
+Once a virtual temperature profile is estimated, the pressure profile is re-estimated 
+using the hydrostatic equation 
+  
+)
+exp(
+dz
+T
+R
+g
+P
+P
+z
+z
+dry
+w
+w
+
+
+                         
+ 
+(17) 
+Where, Pw is pressure at the water vapor point zw. 
+ 
+ Re-estimated pressure is then used to calculate temperature, water vapor (and 
+virtual temperature) profiles in successive iterations until the three profiles 
+converge. It is worth noting that two options are possible here (not pointed out by 
+O’Sullivan et al. (2000)): (i) keep the coefficients of temperature quadratic same 
+throughout the iterations with R=Rdry approximation in equation (13), and (ii) 
+update the right hand side integral in equation (13) with water vapor information 
+and hence solve for fresh temperature quadratic coefficients in each iteration 
+which requires refractivity profile available up to the surface or lower altitude. 
+Currently, only the first option is considered as the radio occultation derived 
+refractivity profiles do not reach the surface and are often available only up to 
+altitudes of 1 km and above only. Also, knowledge of near-surface refractivity 
+requires information on surface specific humidity and hence in practice the second 
+option is not feasible. 
+6.4 Operational Implementation  
+For ease of operational implementation, the algorithm will be formalized into a 
+software to be designed and developed in a modular fashion. Different functions 
+of the algorithm, as compositely shown in the flowchart in the following sub-
+section, will be divided into five sub-modules, the first four sub-modules 
+performing specific pre-processing of the principal input (i.e. Level-1 refractivity 
+profile) as well as the auxiliary data, dry computation and water vapor point 
+Megha-Tropiques ATBD Ver 3.0 
+74
+location before feeding into the fifth module for “wet retrieval”. The next sub-
+section depicts a detailed flowchart of the algorithm 
+ 
+6..4.1 Algorithm Flowchart 
+ 
+ 
+6.4.2 Inputs:  
+The inputs for the algorithm can be classified as static and dynamic as detailed in 
+the next sub-sections: 
+ 
+ 
+ 
+6.4.2.1 Static Data 
+Parameter 
+Resolution 
+Accuracy 
+Source 
+Meteorological 
+constants  
+N.A. 
+Upto 3 decimal place 
+Hajj et al. 
+2002 
+Coefficients of 
+Forward model 
+N.A. 
+Upto 3 decimal place 
+-Do- 
+6.4.2.2 Dynamic Data  
+Parameter 
+Resolution 
+Accuracy 
+Source 
+Neutral atmospheric 
+Refractivity profile from 
+ROSA;  
+0.1 – 1.5 km (vertical); 
+200-300 km 
+(Horizontal) 
+~ 3-5% (below 
+5km); 
+~1-2% (above 
+5km) 
+ROSA 
+operational 
+chain front-
+end 
+Megha-Tropiques ATBD Ver 3.0 
+75
+Spatial (Latitude & 
+Longitude profile); 
+Temporal (Time) data 
+0.1 – 1.5 km (vertical); 
+scalar 
+N.A 
+ROSA 
+operational 
+chain front-
+end 
+zonal mean temperature & 
+pressure   
+5km (vertical) ;  
+10deg (horizontal) 
+5-10K (20- 
+50km);  
+CIRA-86 
+(Fleming et 
+al., 1990) 
+Surface mean monthly 
+temperature & pressure 
+1
+
+1
+
+ 
+Up to 1K ; 
+0.05-2hPa  
+Generated 
+in-house 
+using 
+NCEP 
+analyses 
+Surface altitude  
+
+
+1
+1 
+ 
+Less than 1m 
+Generated 
+using 
+NCEP data 
+ 
+6.4.3 Outputs 
+Parameter 
+Unit 
+Min 
+Max 
+Accuracy  
+Resolution 
+Temperature 
+ K 
+123.15 
+373.15 
+3-5 K (below 5km); 
+ 
+1-2 K ( 5-20 km); 
+ 
+1.5-3 K ( > 20km) 
+~ 300 km 
+horizontal 
+and  0.2 – 
+1.5 km in 
+the vertical 
+Pressure  
+hPa 
+~0.0 
+1200.0 
+2 – 10 hPa 
+Same 
+as 
+above 
+Water 
+Vapor 
+Partial Pressure 
+hPa 
+0.0 
+60.0 
+0.5 to 1 hPa 
+Same 
+as 
+above 
+and 
+limited 
+to 
+altitudes 
+below ~10 
+km 
+First-Cut Parameters (from “Dry Retrieval”) 
+Dry Temperature 
+K 
+123.15 
+300.0 
+Same as Temperature 
+( > 15 km); 
+Same 
+as 
+above 
+Megha-Tropiques ATBD Ver 3.0 
+76
+Dry Pressure 
+hPa 
+~0.0 
+1200.0 
+5-15hPa 
+Same 
+as 
+above 
+   Depends on the expected refractivity accuracy (Ao et al., 2003) 
+6.4.4 Format of the Output: 
+Following are the output parameters to be generated by this operational algorithm 
+in the output file: Latitude, longitude, height, refractivity, temperature, pressure 
+and water vapor partial pressure, dry temperature and dry pressure. In addition to 
+the profile of output parameters, time and location are mentioned in the file as  
+scalars. The overall format of the output file is in standard netcdf.  
+6.5 Validation: 
+6.5.1 Data Required:  
+i) Comparison with collocated radiosonde measurements of temperature, pressure 
+and water vapor pressure profile. 
+ii) Comparison with collocated NCEP/ECMWF or both. 
+iii) Comparison with existing COSMIC data, collocated in space and time. 
+6.5.2 Methods of Validation: 
+The validation is to be carried out between the various "truth" data, as mentioned 
+above, and ROSA retrieved geophysical parameters, collocated spatially and 
+temporally as per the following collocation criteria. 
+Collocation criteria for each parameter: 
+               Spatial   
+ 
+Temporal  
+(hr)  
+       1 ˚ 
+ 
+        2 ˚ 
+        3˚ 
+       0.5  
+ water vapor 
+profiles 
+ 
+water vapor 
+profiles 
+ 
+Temperature & 
+water vapor 
+profiles  
+       1 
+ water vapor 
+profiles 
+water vapor 
+profiles 
+--------DO-------- 
+       2  
+water vapor 
+profiles 
+water vapor 
+profiles 
+ ------ DO------- 
+The validation results will be expressed in terms of arithmetic mean and standard 
+deviation of the difference of parameter at each level using the formulae: 
+Mean deviation at each pressure/height level, 
+    
+)
+(l
+X
+
+ = 
+
+
+
+
+
+)
+(
+1
+)
+,
+(
+)
+,
+(
+)
+(
+1
+l
+M
+i
+True
+Test
+l
+i
+X
+l
+i
+X
+l
+M
+ 
+And its standard deviation at each pressure/height level, 
+Megha-Tropiques ATBD Ver 3.0 
+77
+   
+
+
+)
+(l
+X
+
+    
+
+
+
+
+)
+(
+1
+2
+))
+,
+(
+)
+,
+(
+(
+1
+)
+(
+1
+l
+M
+i
+True
+Test
+l
+i
+X
+l
+i
+X
+l
+M
+             
+Where, l  is the pressure level, i the collocation pair index and 
+)
+(l
+M
+is the 
+number of collocation pairs at level l   
+6.6 Technical Issues: 
+ Radio occultation measurements are over a location of the earth depending 
+on the position of GPS and LEO satellites. The exact location over which 
+radio occultation measurements are possible, require prior knowledge of 
+GPS and Megha-Tropiques orbit. One may expect 500 to 800 occultations 
+per day spread in the domain (30S-30N; 180W-180E) with dense 
+occurrence around 10-20S/N. 
+ Theoretically, the GPS-RO data of reliable quality may range from 0 – 
+60km in the neutral atmosphere. Practically, the measurements are reliable 
+between altitudes of 5 to 30 km height, irrespective of the atmospheric 
+dynamics. Since, ROSA coverage will be confined to the tropics where 
+moisture gradients creates multipath conditions, advanced techniques to 
+retrieve refractivity profile by an open-loop processing as implemented in 
+global missions like COSMIC, GRAS etc., may be required to penetrate to 
+near surface altitudes ~ 0.1 km or less. Examination of COSMIC profiles 
+over the ocean indicates that more than 90% of the radio occultation 
+refractivity measurements are available up to an altitude of 0.5 km from 
+the mean sea level. 
+ The algorithm uses the CIRA-86 COSPAR upper-air atmospheric model 
+data of zonal mean temperature and pressure available up to 120km for the 
+computation of hydrostatic integral. The accuracy of the upper-air data as 
+quoted by COSPAR has been assumed suo motu, in the absence of ways to 
+validate them. 
+ The monthly mean surface temperature, pressure and altitude data are 
+generated from NCEP analyses at global grid of 1deg x1 deg resolution as 
+first guess estimates. The standard deviations (all months and for 30S-
+30N) of mean surface temperature and mean surface pressure are ~ 1K and 
+0.05-2.0hPa respectively. To get a more accurate first guess, the use of 
+daily forecast of NCEP, nearest to ROSA occultation event time and 
+location is imperative.  
+6.7 References: 
+1. Ao, C.O., T. K. Meehan, G.A. Hajj, A.J. Mannucci, and G. Beyerle, 2003. 
+Lower-troposphere refractivity bias in GPS occultation retrievals. J. Geophys. 
+Res., 48, 4577, doi:10.1029/2002JD003216.  
+Megha-Tropiques ATBD Ver 3.0 
+78
+2. Beyerle, G., M.E. Gorbunov, and C.O. Ao, 2003. Simulation studies of GPS 
+radio 
+occultation 
+measurements. 
+Radio 
+Sci., 
+38, 
+1084, 
+doi:10.1029/2002RS002800. 
+3. Fjeldbo G., A. J. Kliore, and Von R. Eshleman, 1971. The neutral atmosphere 
+of Venus as studied with the Mariner V Radio Occultation Experiments. The 
+Astronomical Journal, 76, 123-140. 
+4. Fleming, E.L., S. Chandra, J.J. Barnett, and M. Corney, 1990. Zonal mean 
+temperature, pressure, zonal wind and geopotential heights as functions of 
+latitude. COSPAR International Reference Atmosphere: 1986, Part-II, Middle 
+atmosphere models. Advance Apace Res. 10, No. 12, 11-59, 1990.  
+5. Gorbunov M. E., A. S. Gurvich, and L. Bengtsson, 1996. Advanced algorithm 
+of inversion of GPS/MET satellite data and their application to reconstruction 
+of temperature and humidity, Rep. 211, Max-Planck-Institut fur Meteorologie, 
+Hamburg, Germany. 
+6. Hajj G.A., E. R. Kursinski, W. I. Bertiger, S. S. Leroy, T. K. Meehan, L. J. 
+Romans, and J. T. Schofield, 1995. Initial results of GPS-LEO occultation 
+measurements of Earth’s atmosphere obtained with the GPS-MET experiment. 
+Paper presented at the IUGG XX1 General Assembly, Int. Union of Geod. 
+And Geophys., Boulder, CO, Jul.2-14, 1995. 
+7. Hocke K, 1997. Inversion of GPS meteorology data, Ann. Geophysicae, 15, 
+443-450. 
+8. Hocke K., G. Kirchengast and A. K. Steiner, 1997. Ionospheric correction and 
+inversion of GNSS occultation data: problems and solutions, IMG/UoG Tech. 
+Rep. For ESA/ESTEC No.2/97, Inst. of Meteorol. and Geophys., Univ. of 
+Graz, Austria., 35 pp. 
+9. Kirchengast, G., J. Hafner, and W. Poetzi, 1999. The CIRA-86aQ_UoG 
+model: An extension of the CIRA-86 monthly tables including humidity tables 
+and a Fortran 95 global moist air climatology model. Eur. Space Agency, 
+IMG/UoG Techn. Rep. 8. 
+10. Kursinski E. R., G. A. Hajj, W. I. Bertiger, S. S. Leroy, T. K. Meehan, L. J. 
+Romans, J. T. Schofield, D. J. McCleese, W. G. Melbourne, C. L. Thrnton, T. 
+P. Yunck, J. R. Eyre, and N. Nagatani, 1996. Initial results of radio occultation 
+observations of Earth’s atmosphere using the global positioning system, 
+Science, 271, 1107-1110. 
+11. Kursinski E. R., G. A. Hajj, K. R. Hardy, J. T. Schofield, and R. Linfield, 
+1997. Observing Earth’s atmosphere with radio occultation measurements 
+using the Global Positioning System, J. Geophys. Res., 102, 23429-23465. 
+12. O’Sullivan, D. B., B. M. Herman, D. Feng, D. E. Flittner, and D. M. Ward, 
+2000: Retrieval of water vapor profiles from GPS/MET radio occultations. 
+Bull. Amer. Meteor. Soc., 81, 1031-1040. 
+13. Rocken, C., R. Anthes, M. Exner, D. Hunt, S. Sokolovsky, R. Ware, M. 
+Gorbunov, W. Schreiner, D. Feng, B. Herman, Y. H. Kuo, and X. Zou, 1997. 
+Analysis and validation of GPS/MET data in the neutral atmosphere, J. 
+Geophys. Res., 102, 29849-29866. 
+Megha-Tropiques ATBD Ver 3.0 
+79
+14. Steiner A. K., G. Kirchengast, and H. P. Ladreiter, 1999. Inversion, error 
+analysis, and validation of GPS/MET occultation data, Ann. Geophysicae., 17, 
+122-138. 
+15. 15. Shyam A., D. Jagadeesha and P C Joshi, 2009. Sensitivity studies in 
+retrieval of geophysical parameters from radio occultation derived refractivity, 
+IITP-18 Report, Space Applications Centre (ISRO), Ahmedabad. 
+16. Ware R., M. Exner, D. Feng, M. Gorbunov, K. Hardy, B. Herman, Y. Kuo, T. 
+Meehan, W. Melbourne, C. Rocken, W. Schreiner, S. Sokolovsky, F. Solheim, 
+X. Zou, R. Anthes, S. Businger, and K. Trenberth, 1996. GPS sounding of the 
+atmosphere from Low Earth Orbit: preliminary results, Bull. Am. Meteorol. 
+Soc., 77. 
+ 
+ 
+ 

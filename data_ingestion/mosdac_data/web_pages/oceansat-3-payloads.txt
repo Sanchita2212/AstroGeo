@@ -1,0 +1,135 @@
+URL: https://www.mosdac.gov.in/oceansat-3-payloads#main-content
+
+--- EXTRACTED TEXT ---
+Skip to main Content
+Secondary menu
+SignUp
+Login
+Logout
+Home
+Missions INSAT-3DR INSAT-3D KALPANA-1 INSAT-3A MeghaTropiques SARAL-AltiKa OCEANSAT-2 OCEANSAT-3 INSAT-3DS SCATSAT-1
+INSAT-3DR
+INSAT-3D
+KALPANA-1
+INSAT-3A
+MeghaTropiques
+SARAL-AltiKa
+OCEANSAT-2
+OCEANSAT-3
+INSAT-3DS
+SCATSAT-1
+Catalog Satellite Insitu (AWS) RADAR
+Satellite
+Insitu (AWS)
+RADAR
+Galleries Satellite Products Weather Forecast Ocean Forecast RADAR (DWR) Global Ocean Current
+Satellite Products
+Weather Forecast
+Ocean Forecast
+RADAR (DWR)
+Global Ocean Current
+Data Access Order Data Open Data Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy Cal-Val Forecast RSS Feeds
+Order Data
+Open Data Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy
+Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties
+Bayesian based MT-SAPHIR rainfall
+GPS derived Integrated water vapour
+GSMap ISRO Rain
+METEOSAT8 Cloud Properties
+Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture
+3D Volumetric TERLS DWRproduct
+Inland Water Height
+River Discharge
+Soil Moisture
+Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy
+Global Ocean Surface Current
+High Resolution Sea Surface Salinity
+Indian Mainland Coastal Product
+Ocean Subsurface
+Oceanic Eddies Detection
+Sea Ice Occurrence Probability
+Wave based Renewable Energy
+Cal-Val
+Forecast
+RSS Feeds
+Reports Calibration Insitu Relative Validation Data Quality Weather
+Calibration Insitu Relative
+Insitu
+Relative
+Validation
+Data Quality
+Weather
+Atlases
+Tools
+Sitemap
+Help
+You are here
+OCEANSAT-3 Payloads
+The scientific payload contains three instruments.
+
+• Ku-band Scatterometer (SCAT-3)
+
+• 13-band Ocean Colour Monitor (OCM-3)
+
+• 2-band Sea Surface Temperature Monitor (SSTM)
+
+• ARGOS by CNES French Space Agency
+Ocean Colour Monitor (OCM-3) :
+
+OCM-3 is a 13-band multi-spectral camera operating in the Visible and Near IR spectral range. It has 13 narrow ( 10-20 nm) spectral bands. T his camera provides an instantaneous geometric field of view of 368 meter and a swath of ~ 15000 km. OCM can be tilted up to + 20 degree along track. OCM-3 is planned to be operated in two modes:
+1. Local Area Coverage (LAC) mode at 366 m resolution
+2. Global Area Coverage (GAC) mode at 1.1 km resolution
+
+Scatterometer (SCAT-3) :
+
+SCAT-3 is an active microwave device designed and developed at ISRO/SAC, Ahmedabad. It is used to determine ocean surface level wind vectors through estimation of radar
+backscatter. Following are the sensor characteristics:
+• Ku-band, HH/VV (Swath 1400km), VV (1400-1800km)
+• High-resolution mode for ocean surface wind vectors at 12.5 km for the first time in addition to 25 km.
+• Experimental mode of high resolution wind @5km
+• Accuracy (RMSE): Speed ~ 1.5 m/s, Direction: ~15 deg.
+• Noise Equivalent s 0 improved by ~5dB to -39.5dB (-35dB) for H-beam, and -35dB (-31dB) for V-beam
+Sea Surface Temperature Monitoring (SSTM) :
+
+
+
+2-band Sea Surface Temperature Monitor (SSTM) is a new instrument on-board Oceansat-3.
+
+Oceansat-3 Menu
+Missions OCEANSAT-3 Introduction Objectives SpaceCraft Payloads Data Products Documents
+OCEANSAT-3 Introduction Objectives SpaceCraft Payloads Data Products Documents
+Introduction
+Objectives
+SpaceCraft
+Payloads
+Data Products
+Documents
+Search
+Follow Us
+
+
+
+Website owned and maintained by MOSDAC, Space Applications Centre, Indian Space Research Organisation, Govt. of INDIA.
+
+Feedback
+About Us
+Contact Us
+Copyright Policy
+Data Access Policy
+Hyperlink Policy
+Privacy Policy
+Website Policies
+Terms & Conditions
+FAQs
+
+
+
+
+
+
+"Ver 3.0; Last reviewed and updated on
+07 Aug, 2025& Served By:
+Web-Srv-Pri
+
+
+--- EXTRACTED TABLES ---

@@ -1,0 +1,10 @@
+URL: https://www.mosdac.gov.in/opendata/bayesian_saphir_rainfall/
+
+--- EXTRACTED TEXT ---
+Hindi
+English
+मॉस्डैक, अंतरिक्ष उपयोग केंद्र, इसरो, भारत सरकार द्वारा निर्मित और संचालित
+Owned and maintained by MOSDAC, Space Applications Centre, Indian Space Research Organisation, Govt. of INDIA.
+
+
+--- EXTRACTED TABLES ---

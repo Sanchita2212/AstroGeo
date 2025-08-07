@@ -1,0 +1,110 @@
+URL: https://www.mosdac.gov.in/scatsat-1-payloads
+
+--- EXTRACTED TEXT ---
+Skip to main Content
+Secondary menu
+SignUp
+Login
+Logout
+Home
+Missions INSAT-3DR INSAT-3D KALPANA-1 INSAT-3A MeghaTropiques SARAL-AltiKa OCEANSAT-2 OCEANSAT-3 INSAT-3DS SCATSAT-1
+INSAT-3DR
+INSAT-3D
+KALPANA-1
+INSAT-3A
+MeghaTropiques
+SARAL-AltiKa
+OCEANSAT-2
+OCEANSAT-3
+INSAT-3DS
+SCATSAT-1
+Catalog Satellite Insitu (AWS) RADAR
+Satellite
+Insitu (AWS)
+RADAR
+Galleries Satellite Products Weather Forecast Ocean Forecast RADAR (DWR) Global Ocean Current
+Satellite Products
+Weather Forecast
+Ocean Forecast
+RADAR (DWR)
+Global Ocean Current
+Data Access Order Data Open Data Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy Cal-Val Forecast RSS Feeds
+Order Data
+Open Data Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy
+Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties
+Bayesian based MT-SAPHIR rainfall
+GPS derived Integrated water vapour
+GSMap ISRO Rain
+METEOSAT8 Cloud Properties
+Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture
+3D Volumetric TERLS DWRproduct
+Inland Water Height
+River Discharge
+Soil Moisture
+Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy
+Global Ocean Surface Current
+High Resolution Sea Surface Salinity
+Indian Mainland Coastal Product
+Ocean Subsurface
+Oceanic Eddies Detection
+Sea Ice Occurrence Probability
+Wave based Renewable Energy
+Cal-Val
+Forecast
+RSS Feeds
+Reports Calibration Insitu Relative Validation Data Quality Weather
+Calibration Insitu Relative
+Insitu
+Relative
+Validation
+Data Quality
+Weather
+Atlases
+Tools
+Sitemap
+Help
+You are here
+SCATSAT-1 Payloads
+T he scientific payload contains the Scanning Scatterometer (SCAT) instrument.
+Scanning Scatterometer (SCAT)
+
+SCAT is an active microwave device designed and developed at SAC/ISRO, Ahmedabad. It is used to determine ocean surface level wind vectors through estimation of radar backscatter. The scatterometer system has a 1-m parabolic dish antenna and a dual feed assembly to generate two pencil beams and is scanned at a rate of 20.5 rpm to cover the entire swath. The Ku-band pencil beam scatterometer is an active microwave radar operating at 13.515 GHz providing a ground resolution cell of size 25 x 25 km. The parabolic dish antenna of 1 meter diameter is offset mounted with a cant angle of about 46 degree with respect to earth viewing axis. This antenna is continuously rotated at 20.5 rpm using a scan mechanism with the scan axis along the +ve Yaw axis. By using two offset feeds at the focal plane of the antenna, two beams are generated which will conically scan the ground surface. The back scattered power in each beam from the ocean surface is measured to derive wind vector. The inner beam makes an incidence angle of 48.90 0 and the outer beam makes an incidence angle of 57.60 0 on the ground. It covers a continuous swath of 1400 km for inner beam and 1840 km for outer beam respectively. The inner and outer beams are configured in horizontal and vertical polarization respectively for both transmit and receive modes. The aim is to provide global ocean coverage and wind vector retrieval with a revisit time of 2 days.
+Missions SCATSAT-1 Introduction Objectives SpaceCraft Payloads Data Products Documents
+SCATSAT-1 Introduction Objectives SpaceCraft Payloads Data Products Documents
+Introduction
+Objectives
+SpaceCraft
+Payloads
+Data Products
+Documents
+Search
+Follow Us
+
+
+
+Website owned and maintained by MOSDAC, Space Applications Centre, Indian Space Research Organisation, Govt. of INDIA.
+
+Feedback
+About Us
+Contact Us
+Copyright Policy
+Data Access Policy
+Hyperlink Policy
+Privacy Policy
+Website Policies
+Terms & Conditions
+FAQs
+
+
+
+
+
+
+"Ver 3.0; Last reviewed and updated on
+07 Aug, 2025& Served By:
+Web-Srv-Pri
+
+
+--- EXTRACTED TABLES ---
+Headers: []
+Data: [['Parameter', 'Inner beam', 'Outer beam'], ['Orbital altitude', '720 km'], ['Instrument frequency', '13.515 GHz (Ku-band)'], ['Wind speed range', '3-30 m/s, accuracy of 1.8 m/s (rms) or 10%'], ['Wind direction', '00to 3600, accuracy of 200rms'], ['Wind vector cell size (resolution)', '25 km x 25 km grid'], ['Polarization', 'HH', 'VV'], ['Swath width', '1400 km', '1840 km'], ['Scanning circle radius', '700 km', '920 km'], ['Scanning rate', '20.5 rpm']]

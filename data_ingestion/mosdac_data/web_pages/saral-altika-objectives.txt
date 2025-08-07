@@ -1,0 +1,112 @@
+URL: https://www.mosdac.gov.in/saral-altika-objectives
+
+--- EXTRACTED TEXT ---
+Skip to main Content
+Secondary menu
+SignUp
+Login
+Logout
+Home
+Missions INSAT-3DR INSAT-3D KALPANA-1 INSAT-3A MeghaTropiques SARAL-AltiKa OCEANSAT-2 OCEANSAT-3 INSAT-3DS SCATSAT-1
+INSAT-3DR
+INSAT-3D
+KALPANA-1
+INSAT-3A
+MeghaTropiques
+SARAL-AltiKa
+OCEANSAT-2
+OCEANSAT-3
+INSAT-3DS
+SCATSAT-1
+Catalog Satellite Insitu (AWS) RADAR
+Satellite
+Insitu (AWS)
+RADAR
+Galleries Satellite Products Weather Forecast Ocean Forecast RADAR (DWR) Global Ocean Current
+Satellite Products
+Weather Forecast
+Ocean Forecast
+RADAR (DWR)
+Global Ocean Current
+Data Access Order Data Open Data Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy Cal-Val Forecast RSS Feeds
+Order Data
+Open Data Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy
+Atmosphere Bayesian based MT-SAPHIR rainfall GPS derived Integrated water vapour GSMap ISRO Rain METEOSAT8 Cloud Properties
+Bayesian based MT-SAPHIR rainfall
+GPS derived Integrated water vapour
+GSMap ISRO Rain
+METEOSAT8 Cloud Properties
+Land 3D Volumetric TERLS DWRproduct Inland Water Height River Discharge Soil Moisture
+3D Volumetric TERLS DWRproduct
+Inland Water Height
+River Discharge
+Soil Moisture
+Ocean Global Ocean Surface Current High Resolution Sea Surface Salinity Indian Mainland Coastal Product Ocean Subsurface Oceanic Eddies Detection Sea Ice Occurrence Probability Wave based Renewable Energy
+Global Ocean Surface Current
+High Resolution Sea Surface Salinity
+Indian Mainland Coastal Product
+Ocean Subsurface
+Oceanic Eddies Detection
+Sea Ice Occurrence Probability
+Wave based Renewable Energy
+Cal-Val
+Forecast
+RSS Feeds
+Reports Calibration Insitu Relative Validation Data Quality Weather
+Calibration Insitu Relative
+Insitu
+Relative
+Validation
+Data Quality
+Weather
+Atlases
+Tools
+Sitemap
+Help
+You are here
+SARAL-AltiKa Objectives
+S ARAL/AltiKa main scientific objective is to provide data products to oceanographic research user community in studies leading to improve our knowledge of the ocean meso-scale variability, thanks to the improvement in spatial and vertical resolution brought by SARAL/AltiKa.
+Ocean meso-scale variability is defined as a class of high-energy processes, with wave lengths within a 50km to 500km range, and with periods of a few days to one year. Kinetic energy of mesoscale variability is one order of magnitude more than mean circulation's one. Description of mesoscale is thus essential for understanding ocean dynamics, including mean circulation and its climatic effects (through interactions of meso-scale turbulence with the mean flow).
+SARAL/AltiKa main scientific objective is divided in sub-themes including:
+Intrinsic scientific studies of ocean at meso-scale dynamics: observations, theoretical analyses, modelling, data assimilation, parameterization, ...
+Improvement of our understanding of the oceanic component in the climate system: investigation of local processes at small or medium scale poorly known and understood at present, but which have an impact on the modelling of climate variability at large spatial and temporal scales.
+Contribution to the study of coastal dynamic processes, especially small or medium scale phenomena, whose retrieval will enable to anticipate many downstream applications.
+Contribution to operational oceanography which is seeking large amounts of in situ and space observation data.
+SARAL/AltiKa secondary objectives are notably the monitoring of the main continental waters level (lakes, rivers, closed seas), the monitoring of mean sea level variations, the observation of polar oceans, the analysis and forecast of wave and wind fields, the study of continental ices (thanks to improved performances of Ka-band) and sea ices, the access to low rains climatology (enabled in counterpart to the sensitivity of Ka-band to clouds and low rains) and the marine biogeochemistry (notably through the role of the meso and sub-meso-scale physics).
+Missions SARAL-AltiKa Introduction Objectives SpaceCraft Payloads Data Products Documents
+SARAL-AltiKa Introduction Objectives SpaceCraft Payloads Data Products Documents
+Introduction
+Objectives
+SpaceCraft
+Payloads
+Data Products
+Documents
+Search
+Follow Us
+
+
+
+Website owned and maintained by MOSDAC, Space Applications Centre, Indian Space Research Organisation, Govt. of INDIA.
+
+Feedback
+About Us
+Contact Us
+Copyright Policy
+Data Access Policy
+Hyperlink Policy
+Privacy Policy
+Website Policies
+Terms & Conditions
+FAQs
+
+
+
+
+
+
+"Ver 3.0; Last reviewed and updated on
+07 Aug, 2025& Served By:
+Web-Srv-Pri
+
+
+--- EXTRACTED TABLES ---

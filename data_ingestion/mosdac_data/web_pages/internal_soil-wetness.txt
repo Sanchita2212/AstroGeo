@@ -1,0 +1,16 @@
+URL: https://www.mosdac.gov.in/internal/soil-wetness
+
+--- EXTRACTED TEXT ---
+
+
+--- EXTRACTED TABLES ---
+Headers: []
+Data: [['', 'Time Series']]
+Headers: []
+Data: [['Submit']]
+Headers: []
+Data: [['', '', '']]
+Headers: []
+Data: [['{{generalMessage.infoMsg.noLegends.message1}}', '']]
+Headers: []
+Data: [['Legends']]

@@ -1,0 +1,54 @@
+URL: https://www.mosdac.gov.in/internal/varsha
+
+--- EXTRACTED TEXT ---
+MOSDAC-LIVE is a web enabled data and Information visualization and analysis system of MOSDAC, SAC/ISRO. LIVE provides access to Satellite Data Products and Information products derived from Satellite and model forecast in near real time basis.
+The information contained in this website is currently a Beta site under development. Some of the information, layers may not have been completely validated. This information is to be used along with other reliable data sources for interpretation and derivation of weather and oceanographic events. The information is provided on best effort basis and while we endeavor to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the absolute accuracies of information, data products, services, or related graphics contained on the website for any purpose unless and until explicitly mentioned. In no event will we be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this website.
+The information is provided on best effort basis and while we endeavor to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the absolute accuracies of information, data products, services, or related graphics contained on the website for any purpose unless and until explicitly mentioned.
+The maps are only for gross indication of locations.
+Every effort is made to keep the website up and running smoothly. However, we take no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.
+                    Contact: admin@mosdac.gov.in
+Credits for following information/layers/data used in this website is dually acknowledged
+
+
+
+
+
+
+
+--- EXTRACTED TABLES ---
+Headers: []
+Data: [['Enter Keyword', '', 'Search']]
+Headers: []
+Data: [['{{entry.display_name}} ({{entry.type}})']]
+Headers: []
+Data: [['{{layer.dateval}} {{layer.timeval}} {{layer.sensor}}/{{layer.satellite}} {{layer.name}}{{layer.dateval_local}} {{layer.timeval_local}} {{layer.sensor}}/{{layer.satellite}} {{layer.name}}', '{{layer.dateval}} {{layer.timeval}} {{layer.sensor}}/{{layer.satellite}} {{layer.name}}{{layer.dateval_local}} {{layer.timeval_local}} {{layer.sensor}}/{{layer.satellite}} {{layer.name}}', '', '', '{{timezone}}', '3D'], ['{{layer.dateval}} {{layer.timeval}} {{layer.sensor}}/{{layer.satellite}} {{layer.name}}{{layer.dateval_local}} {{layer.timeval_local}} {{layer.sensor}}/{{layer.satellite}} {{layer.name}}']]
+Headers: []
+Data: [['{{layer.dateval}} {{layer.timeval}} {{layer.sensor}}/{{layer.satellite}} {{layer.name}}{{layer.dateval_local}} {{layer.timeval_local}} {{layer.sensor}}/{{layer.satellite}} {{layer.name}}']]
+Headers: []
+Data: [['{{layer.dateval_gmt}} {{layer.timeval_gmt}}{{layer.dateval_local}} {{layer.timeval_local}}', '']]
+Headers: []
+Data: [['', '']]
+Headers: []
+Data: [['{{layer.dateval}} {{layer.timeval}}{{layer.dateval_local}} {{layer.timeval_local}}', ''], ['{{layer.sensor}}/{{layer.satellite}}']]
+Headers: []
+Data: [['Elevation :-', ''], ['', '']]
+Headers: []
+Data: [['Range:', 'From:', '', 'To:', '']]
+Headers: []
+Data: [['{{item.label}}'], ['']]
+Headers: []
+Data: [['', '', '', '', '', '']]
+Headers: []
+Data: [['']]
+Headers: []
+Data: [['']]
+Headers: []
+Data: [['', '', '', '', '', '', ''], ['', '', '', '', '']]
+Headers: []
+Data: [[''], ['', ''], ['{{slider_button_text}}']]
+Headers: []
+Data: [['Quick Layers', 'Tools', 'Animation', 'Analysis', 'Legends']]
+Headers: []
+Data: [['', '', 'PLevel max:PLevel min:', 'PLevel:']]
+Headers: []
+Data: [['', '{{view_configuration[2].params.title}}', '']]
