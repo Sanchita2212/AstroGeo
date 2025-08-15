@@ -1,0 +1,18 @@
+URL: https://vedas.sac.gov.in/vedas_new/view/south_pole.jsp
+
+--- EXTRACTED TEXT ---
+Loading...
+
+Layer Panel
+User Layer
+Indian Station
+Antarctica Boundary
+RISAT-1 CRS MOSAIC(36m)
+Average Antarctic Winter [Jun-Aug] Oscat Backscatter
+
+
+--- EXTRACTED TABLES ---
+Headers: []
+Data: [['Select Theme', 'Sea Ice ProbabilitySea Ice ProbabilitySea Ice TrendSea Ice MapsElevation'], ['Select Month', 'JanuaryJanuaryFebruaryMarchAprilMayJuneJulyAugustSeptemberOctoberNovemberDecember'], ['Select Day', '0101020304050607080910111213141516171819202122232425262728293031'], ['Select Date', ''], ['Select Cycle132 [29-Jul-2019 To 02-Sep-2019]132 [29-Jul-2019 To 02-Sep-2019]131 [24-Jun-2019 To 29-Jul-2019]130 [20-May-2019 To 24-Jun-2019]129 [15-Apr-2019 To 20-May-2019]128 [11-Mar-2019 To 15-Apr-2019]127 [04-Feb-2019 To 11-Mar-2019]126 [31-Dec-2018 To 04-Feb-2019]125 [26-Nov-2018 To 31-Dec-2018]124 [22-Oct-2018 To 26-Nov-2018]123 [17-Sep-2918 To 22-Oct-1018]122 [13-Aug-2018 To 17-Sep-2018]121 [09-Jul-2018 To 13-Aug-2018]120 [04-Jun-2018 To 09-Jul-2018]119 [30-Apr-2018 To 04-Jun-2018]118 [26-Mar-2018 To 30-Apr-2018]117 [19-Feb-2018 To 26-Mar-2018]116 [15-Jan-2018 To 19-Feb-2018]115 [11-Dec-2017 To 15-Jan-2018]114 [06-Nov-2017 To 11-Dec-2017]113 [02-Oct-2017 To 06-Nov-2017]112 [28-Aug-2017 To 02-Oct-2017]111 [24-Jul-2017 To 28-Aug-2017]110 [19-Jun-2017 To 24-Jul-2017]109 [15-May-2017 To 19-Jun-2017]108 [10-Apr-2017 To 15-May-2017]107 [06-Mar-2017 To 10-Apr-2017]106 [30-Jan-2017 To 06-Mar-2017]105 [26-Dec-2016 To 30-Jan-2017]104 [21-Nov-2016 To 26-Dec-2016]103 [17-Oct-2016 To 21-Nov-2016]102 [12-Sep-2016 To 17-Oct-2016]101 [08-Aug-2016 To 12-Sep-2016]100 [04-Jul-2016 To 08-Aug-2016]34 [12-May-2016 To 16-Jun-2016]33 [07-Apr-2016 To 12-May-2016]32 [03-Mar-2016 To 07-Apr-2016]31 [28-Jan-2016 To 03-Mar-2016]30 [24-Dec-2015 To 28-Jan-2016]29 [19-Nov-2015 To 24-Dec-2015]28 [15-Oct-2025 To 19-Nov-2015]27 [10-Sep-2015 To 15-Oct-2025]26 [06-Aug-2015 To 10-Sep-2015]25 [02-Jul-2015 To 06-Aug-2015]24 [28-May-2015 To 02-Jul-2015]23 [23-Apr-2015 To 28-May-2015]22 [19-Mar-2015 To 23-Apr-2015]21 [12-Feb-2015 To 19-Mar-2015]20 [08-Jan-2015 To 12-Feb-2015]19 [04-Dec-2014 To 08-Jan-2015]18 [30-Oct-2014 To 04-Dec-2014]17 [25-Sep-2014 To 30-Oct-2014]16 [21-Aug-2014 To 25-Sep-2014]15 [17-Jul-2014 To 21-Aug-2014]14 [12-Jun-2014 To 17-Jul-2014]13 [08-May-2014 To 12-Jun-2014]12 [03-Apr-2014 To 08-May-2014]11 [27-Feb-2014 To 03-Apr-2014]10 [23-Jan-2014 To 27-Feb-2014]09 [19-Dec-2013 To 23-Jan-2014]08 [14-Nov-2013 To 19-Dec-2013]07 [10-Oct-2013 To 14-Nov-2013]06 [05-Sep-2013 To 10-Oct-2013]05 [01-Aug-2013 To 05-Sep-2013]04 [27-Jun-2013 To 01-Aug-2013]03 [23-May-2013 To 27-Jun-2013]02 [18-Apr-2013 To 23-May-2013]01 [14-Mar-2013 To 18-Apr-2013]']]
+Headers: []
+Data: [['From Date', ''], ['To Date', '']]

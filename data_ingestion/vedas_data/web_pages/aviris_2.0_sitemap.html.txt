@@ -1,0 +1,13 @@
+URL: https://vedas.sac.gov.in/aviris_2.0/sitemap.html
+
+--- EXTRACTED TEXT ---
+AVIRIS-NG Sites Visualization and Data Download
+Layers
+
+
+
+--- EXTRACTED TABLES ---
+Headers: ['', 'Site ID', 'Area Name', 'Theme', 'Level 0 (Raw)', 'Level 1 (Radiance)', 'Level 2 (Reflectence)']
+Data: [['', '114', 'Vuyyuru', 'Soil & Crop (Sugarcane)', 'No Data Available', 'NASA-version1NASA-version2ISRO-version2ISRO-version1', 'NASA-version1NASA-version2ISRO-version2ISRO-version1'], ['', '115', 'raichur', 'Soil & Crop (Rice)', 'No Data Available', 'NASA-version1NASA-version2ISRO-version2ISRO-version1', 'NASA-version1NASA-version2ISRO-version2ISRO-version1'], ['', '119', 'Yellapur', 'Forestry', 'No Data Available', 'No Data Available', 'No Data Available'], ['', '128', 'Sakoli', 'Geology (Tungsten)', 'No Data Available', 'NASA-version1NASA-version2ISRO-version2ISRO-version1', 'NASA-version1NASA-version2ISRO-version2ISRO-version1'], ['', '142', 'Shimoga forest division', 'Forestry', 'No Data Available', 'No Data Available', 'No Data Available']]
+Headers: ['', 'Site ID', 'Area Name', 'Theme', 'Level 0 (Raw)', 'Level 1 (Radiance)', 'Level 2 (Reflectence)']
+Data: [['', '2', 'Kanha National Park, MP', 'Forest Ecosystem', 'No Data Available', 'No Data Available', 'No Data Available'], ['', '3', 'Kass Plateau, Maharashtra', 'Forest Ecosystem', 'No Data Available', 'No Data Available', 'No Data Available'], ['', '4', 'Lagoon Area banagaram, Agatti', 'Biological Oceanography', 'No Data Available', 'No Data Available', 'No Data Available'], ['', '6', 'Gulf of Kutch', 'CRZ studies', 'No Data Available', 'ISRO-version1NASA-version2NASA-version1', 'ISRO-version1NASA-version2NASA-version1'], ['', '8', 'Selected Coastal Metropolitan cities, Mumbai', 'CRZ studies', 'No Data Available', 'No Data Available', 'No Data Available']]

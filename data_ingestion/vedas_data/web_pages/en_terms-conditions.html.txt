@@ -1,0 +1,57 @@
+URL: https://vedas.sac.gov.in/en/terms-conditions.html
+
+--- EXTRACTED TEXT ---
+Home
+About Us About Us Organisation Chart Who's Who
+Applications API-Centre Satellite Data Visualisation (NRT) Vegetation and Crop Monitoring Krishi-DSS : Drought Portal New and Renewable Energy Dashboard : Desertification & Land Degradation Air Quality Monitoring Snow and Glaciers Urban Sprawl Information System Ahmedabad City GIS Application Hydrological Science & Applications Wetlands Coastal Environment Polar Science North Pole (Ice melt product) North Pole Safer Ship Navigation South Pole Forest Biomass Ladakh Portal (LAMA) Bihar Portal (BODHI) Sangrahi - Field Data Collection (Viewer) Coral Bleaching Alert Geospatial Energy Maps of India Wetland Information System Ionosphere Monitoring
+North Pole (Ice melt product)
+North Pole
+Safer Ship Navigation
+South Pole
+Atlas Exploring the Antarctic A Gimpse of India by RISAT-1 Space Based Observation of Indian Wetlands National Wetland Inventory and Assessment (NWIA) Atlas Desertification Status Mapping (DSM) Atlas Coral Reef Atlas Shoreline Change Atlas Himalayan Glacier Inventory Atlas Snow Cover Atlas of India Planetary Science Atlas Moon Mars Polar Science Atlas Archaeology from Space Atlas Spectrum of India - AVIRIS-NG Coffee table book Wave Atlas/Samudra
+Moon
+Mars
+Downloads
+Site Map
+Contact Us
+Terms And Conditions
+Terms And Conditions
+Visualisation of Earth Observation  Data and Archival System
+By accessing this website, you agree that ISRO will not be liable for any direct or indirect loss arising from the use of the information and the material contained in this website.
+The copyright of the material of ISRO contained in this website belongs to and remains solely with ISRO. If any user is interested to use the material of ISRO featured in this Website, 
+              then, the user is required to take the permission from ISRO. Nevertheless, the material has to be reproduced accurately and not to be used in a derogatory manner or in a misleading context.
+               Users are requested to acknowledge appropriately for the material used.
+These terms and conditions shall be governed by and construed in accordance with the Indian Laws.
+               Any dispute arising under these terms and conditions shall be subject to the exclusive jurisdiction of the courts of India.
+This Website provides links to other web pages that are not part of ISRO domain, ISRO does not exercise any control over the information on these external links. 
+              External links are provided for your convenience and for reasons consistent with ISRO's mission. Once you link to another site, you are subject to the privacy policy of that new site.
+Contact Us
+Space Applications Centre (ISRO)
+Opposite DPS School, Bopal Ahmedabad 380 058, INDIA
+Email: vedas[at]sac[dot]isro[dot]gov[dot]in
+Phone: +91-79-2691-6202 / 6205
+
+Policies
+Disclaimer
+Feedback
+Acknowledgement
+Hyperlinking Policy
+Help
+Copyright Policy
+Security Policy
+Terms and Conditions
+Privacy Policy
+Last Updated on 23-07-2025 10:38:31
+Important Links
+Energy Map of India
+AVIRIS
+MOSDAC
+Internship,Training and Research
+Social Media
+Copyright © 2022 - All Rights Reserved – Official website of Visualisation of Earth Observation Data and Archival System,
+                Space Applications Centre, Indian Space Research Organisation, Government of India
+Note: Content on this website is published and managed by Space Applications Centre, Indian Space Research
+                Organisation (ISRO)
+
+
+--- EXTRACTED TABLES ---

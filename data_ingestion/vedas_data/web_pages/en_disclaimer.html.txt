@@ -1,0 +1,56 @@
+URL: https://vedas.sac.gov.in/en/disclaimer.html
+
+--- EXTRACTED TEXT ---
+Home
+About Us About Us Organisation Chart Who's Who
+Applications API-Centre Satellite Data Visualisation (NRT) Vegetation and Crop Monitoring Krishi-DSS : Drought Portal New and Renewable Energy Dashboard : Desertification & Land Degradation Air Quality Monitoring Snow and Glaciers Urban Sprawl Information System Ahmedabad City GIS Application Hydrological Science & Applications Wetlands Coastal Environment Polar Science North Pole (Ice melt product) North Pole Safer Ship Navigation South Pole Forest Biomass Ladakh Portal (LAMA) Bihar Portal (BODHI) Sangrahi - Field Data Collection (Viewer) Coral Bleaching Alert Geospatial Energy Maps of India Wetland Information System Ionosphere Monitoring
+North Pole (Ice melt product)
+North Pole
+Safer Ship Navigation
+South Pole
+Atlas Exploring the Antarctic A Gimpse of India by RISAT-1 Space Based Observation of Indian Wetlands National Wetland Inventory and Assessment (NWIA) Atlas Desertification Status Mapping (DSM) Atlas Coral Reef Atlas Shoreline Change Atlas Himalayan Glacier Inventory Atlas Snow Cover Atlas of India Planetary Science Atlas Moon Mars Polar Science Atlas Archaeology from Space Atlas Spectrum of India - AVIRIS-NG Coffee table book Wave Atlas/Samudra
+Moon
+Mars
+Downloads
+Site Map
+Contact Us
+Disclaimer
+Disclaimer
+Visualisation of Earth Observation Data and Archival System website (https://vedas.sac.gov.in) is designed, developed and maintained by Space Applications Centre, Indian Space Research Organisation, Department of Space, Government of India.
+Though all efforts have been made to ensure the correctness, accuracy and currency of the content on this portal or of this website, the same should not be construed as a statement of law or used for any legal purposes.
+               Data on this website are intended for information only. Visualisation of Earth Observation  Data and Archival System (VEDAS) makes no guarantee, claims or promises about accuracy, timeliness or completeness of information. The data have not been independently verified. 
+               The data on this site should not be considered authoritative and are neither official records nor legal documents.
+Under no circumstances the Visualisation of Earth Observation  Data and Archival System (VEDAS) will be liable for any expense, loss or damage including, without limitation, indirect or consequential loss or damage, or any expense, loss or damage whatsoever arising from use,
+               or loss or use, of data, arising out of or in connection with use of this website.
+These terms and conditions shall be governed by and construed in accordance with the Indian Laws.
+                Any dispute arising under these terms and conditions shall be subject to the exclusive jurisdiction of the courts of India.
+Contact Us
+Space Applications Centre (ISRO)
+Opposite DPS School, Bopal Ahmedabad 380 058, INDIA
+Email: vedas[at]sac[dot]isro[dot]gov[dot]in
+Phone: +91-79-2691-6202 / 6205
+
+Policies
+Disclaimer
+Feedback
+Acknowledgement
+Hyperlinking Policy
+Help
+Copyright Policy
+Security Policy
+Terms and Conditions
+Privacy Policy
+Last Updated on 23-07-2025 10:38:31
+Important Links
+Energy Map of India
+AVIRIS
+MOSDAC
+Internship,Training and Research
+Social Media
+Copyright © 2022 - All Rights Reserved – Official website of Visualisation of Earth Observation Data and Archival System,
+                Space Applications Centre, Indian Space Research Organisation, Government of India
+Note: Content on this website is published and managed by Space Applications Centre, Indian Space Research
+                Organisation (ISRO)
+
+
+--- EXTRACTED TABLES ---

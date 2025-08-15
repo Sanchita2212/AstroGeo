@@ -1,0 +1,26 @@
+URL: https://vedas.sac.gov.in/air-quality-monitoring/index.html
+
+--- EXTRACTED TEXT ---
+Aerosol Optical Depth (AOD) (or Aerosol Optical Thickness) is the measure
+						of aerosols (particles suspended in the air) distributed with in the column of air from
+						instrument to top of the atmosphere or from space-borne sensor to surface. AOD is the degree to
+						which particles in air (aerosols) prevent the transmission of light by absorption and scattering
+						of sun light and is defined as integrated extinction coefficient over a vertical atmospheric
+						column of unit cross-section. As Aerosols prevent the transmission of light by absorption and
+						scattering of sun light therefore reduces the visibility.
+⋄ AOD < 0.1 represents "clean atmosphere" (clear blue sky, bright sun
+							and maximum visibility).
+⋄ 0.1 < AOD < 0.5 represents "moderately hazy atmosphere"
+									(moderate pollution and visibility).
+⋄ As AOD increases to greater than 0.5, distribution
+										of
+										particles in the air become so dense that sun is obscured (very low visibility,
+										highly
+										polluted atmosphere).
+⋄ For more info, click
+											here . (PDF Size:1126KB Language:English)
+
+
+--- EXTRACTED TABLES ---
+Headers: []
+Data: [['X'], ['Aerosol Optical Depth (AOD) (or Aerosol Optical Thickness) is the measure\n\t\t\t\t\t\tof aerosols (particles suspended in the air) distributed with in the column of air from\n\t\t\t\t\t\tinstrument to top of the atmosphere or from space-borne sensor to surface. AOD is the degree to\n\t\t\t\t\t\twhich particles in air (aerosols) prevent the transmission of light by absorption and scattering\n\t\t\t\t\t\tof sun light and is defined as integrated extinction coefficient over a vertical atmospheric\n\t\t\t\t\t\tcolumn of unit cross-section. As Aerosols prevent the transmission of light by absorption and\n\t\t\t\t\t\tscattering of sun light therefore reduces the visibility.'], ['⋄ AOD < 0.1 represents "clean atmosphere" (clear blue sky, bright sun\n\t\t\t\t\t\t\tand maximum visibility).⋄ 0.1 < AOD < 0.5 represents "moderately hazy atmosphere"\n\t\t\t\t\t\t\t\t\t(moderate pollution and visibility).⋄ As AOD increases to greater than 0.5, distribution\n\t\t\t\t\t\t\t\t\t\tof\n\t\t\t\t\t\t\t\t\t\tparticles in the air become so dense that sun is obscured (very low visibility,\n\t\t\t\t\t\t\t\t\t\thighly\n\t\t\t\t\t\t\t\t\t\tpolluted atmosphere).⋄ For more info,click\n\t\t\t\t\t\t\t\t\t\t\there.(PDF Size:1126KB Language:English)']]

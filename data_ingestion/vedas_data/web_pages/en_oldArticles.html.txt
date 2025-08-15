@@ -1,0 +1,151 @@
+URL: https://vedas.sac.gov.in/en/oldArticles.html
+
+--- EXTRACTED TEXT ---
+Home
+About Us About Us Organisation Chart Who's Who
+Applications API-Centre Satellite Data Visualisation (NRT) Vegetation and Crop Monitoring Krishi-DSS : Drought Portal New and Renewable Energy Dashboard : Desertification & Land Degradation Air Quality Monitoring Snow and Glaciers Urban Sprawl Information System Ahmedabad City GIS Application Hydrological Science & Applications Wetlands Coastal Environment Polar Science North Pole (Ice melt product) North Pole Safer Ship Navigation South Pole Forest Biomass Ladakh Portal (LAMA) Bihar Portal (BODHI) Sangrahi - Field Data Collection (Viewer) Coral Bleaching Alert Geospatial Energy Maps of India Wetland Information System Ionosphere Monitoring
+North Pole (Ice melt product)
+North Pole
+Safer Ship Navigation
+South Pole
+Atlas Exploring the Antarctic A Gimpse of India by RISAT-1 Space Based Observation of Indian Wetlands National Wetland Inventory and Assessment (NWIA) Atlas Desertification Status Mapping (DSM) Atlas Coral Reef Atlas Shoreline Change Atlas Himalayan Glacier Inventory Atlas Snow Cover Atlas of India Planetary Science Atlas Moon Mars Polar Science Atlas Archaeology from Space Atlas Spectrum of India - AVIRIS-NG Coffee table book Wave Atlas/Samudra
+Moon
+Mars
+Downloads
+Site Map
+Contact Us
+Old Articles
+Old Articles
+India is blessed with an enormous diversity of wetland ecosystems which play a critical role in regulating carbon and hydrological
+                    cycles, resilience in climate change and land degradation, water related disasters, nutrient cycling,
+                    local economy etc. The concern for conservation and management of wetlands is increasing all over
+                    the world including India, due to burgeoning population pressure and developmental activities. Therefore,
+                    Space Applications Centre has carried out National wetland inventory and assessment-2nd cycle under
+                    SARITA (SAtellite based RIver hydrological Techniques and Application) programme of SAC, funded by
+                    Department of Space. This National wetland geo-database is developed using multi-date Resourcesat-2/2A,
+                    LISS-III datasets and with the support of many partner Institutions. Nation-wide mapping of wetlands
+                    at 1:50000 scale provides current status of wetlands, its type, extent, size, location, distribution,
+                    as well as decadal changes. Wetlands inventory statistics along with geospatial analysis has been
+                    brought out in the form of an atlas titled “Space based observation of Indian wetlands”.
+Click here to Know more (PDF Size:471MB Language: English)
+Drought is a complex natural phenomenon which impact agriculture enormously. Early detection of drought
+                        helps stakeholders to take counter measures and provide timely advisories. VEDAS has newly added
+                        drought monitoring functionality in its basket by providing widely used Standard Precipitation
+                        Index (SPI) and Vegetation Condition Index (VCI).
+VEDAS is providing monthly and running 1-month weekly SPI at state as well as taluka levels. Monthly
+                        SPI is being calculated using CHIRPS precipitation data while running 1-month weekly SPI is being
+                        calculated using NOAA and CHIRPS rainfall data based on 1981-2018 CHIRPS precipitation data.
+                        It is available at its vegetation condition dashboard. It is also enabled with spatial analysis
+                        (map) as well as data analysis (pie chart and bar chart) functionalities.
+Click here to visualise SPI
+A fully automated procedure is now established for downloading, processing and publishing of Sentinel1-A&B SAR data on VEDAS.
+                        The data Sentinel1_SAR(IW)_GRD is automatically downloaded from Bhoonidhi portal; processed using
+                        SNAP tool and published on VEDAS for users. User can perform web-based visualisation and analysis
+                        at very high speed. Following functionalities are available on VEDAS for Sentinel-1 SAR data : 1. Visualisation of daily data for a selected date for VV and VH polarisation. 2. Temporal
+                        profile for a pixel is available on click for both polarisations. 3. User defined dynamic
+                        mosaic of SAR data can be generated for any number of days. 4. RGB composite for any three
+                        dates and polarisation can be generated. 5. Water spread of reservoirs of flooded area can
+                        be generated with user defined thresholds.
+This book presents the highlights of various scientific studies in the Antarctic region undertaken
+                        by Space Applications Centre (SAC-ISRO) using the earth observation data and decade long experience
+                        (2009-2019) of participation in the expeditions to Antarctica coordinated by National Centre
+                        of Polar and Ocean Research (ESSO-NCPOR). The studies include technique development and analysis
+                        of sea ice, ice sheet and ice shelves using sensors launch by ISRO such as AltiKa, SCATSAT-1,
+                        OSCAT, MSMR, RISAT, AWiFS, LISS-III, LISS-IV etc. Field studies include measurements at Bharati
+                        and Maitri stations
+Click here to read book (PDF Size:35.1MB Language: English)
+Click here to Know more (PDF Size:418KB Language: English)
+Yaas cyclone induced flash floods influenced many low-lying areas in the coastal regions and changed the turbidity of the
+                        wetlands. Study was carried out to assess the impact of cyclone on various Hydrological aspects
+                        including surface inundation, rainfall, and water quality. Surface inundation was estimated using
+                        synthetic aperture radar Sentinel-1 and Advanced Microwave Scanning Radiometer (AMSR-2) dataset.
+                        Optical dataset of Sentinel-2 was analysed to understand the changes in the turbidity of the
+                        nearby rivers and lakes. Accumulated rainfall showed a high amount (> 300 mm) of precipitation
+                        received at the landfall location in Odisha during the period of 23 May 2021 to 28 May 2021.
+                        Heavy flooding was observed in the coastal districts of Orissa including Bhadrak, Kendrapara.
+                        Near Digha coast, a high amount of river discharge at the ocean mouth was observed in comparison
+                        to pre cyclone time. The turbidity of the water was also observed to be high due to sediments
+                        carried by the river.
+Click here to Know more (PDF Size:743KB Language: English)
+Flood is a devastating natural disaster experienced generally during monsoon months due to torrential
+                            rainfall over different regions of India. This not only leads to large impact on the socio-economic
+                            life of the country but also result in large-scale destruction of life and property.
+Click here to Downlaod PDF (PDF Size:667KB Language:
+                                    English)
+Rift Propagation and ice calving of Larsen C Ice Shelf in Antarctica. Calving of ice took place between
+                            July 10th and 12th. AMHTDG Team was watching the event closely. Ice disintegration was of the
+                            order of ~ 6200 km2 out of ~ 50000 km2. The event presently will not raise the sea level, but
+                            the instability of the shelf and increased ice flow from Ice Sheet may altogether change the
+                            scenario.
+The Android App for Solar Calculator is very useful to know the Solar energy potential at any given place. It
+                also gives forecast for next 72 hours.
+This animated gif shows flood progression and receding pattern over India during 19 June to 26 July
+                            2017 using Ku band SCATSAT-1 observations.
+Scatterometer observations provide information on wetness which is modelled at the catchment scale to estimate
+                basin wetness index and subsequently river water level fluctuations.
+Shifting pattern of irrigation practices due to Punjab water act has been monitored using the passive microwave
+                observations.
+The optical depth of Martian atmosphere as a function of altitude derived above two opposing walls (Northern
+                and Southern walls of the Valles Marineris near Coprates Chasma region) of valley from stereo images that
+                were taken with MCC on December 5, 2014.
+The albedo of the surface is defined as the fraction of incident solar radiation reflected by the surface. The
+                magnitude and spatial distribution of Martian surface albedo are important inputs for characterization of
+                Martian surface and Atmospheric circulation.
+The North Pole of Mars has a large ice cap on it. Mars Colour Camera (MCC) on-board MOM captured many images
+                of north pole of Mars. Topographically corrected MCC reflectance mosaic is prepared using nine MCC images
+                observed during 16 December 2015 to 26 January 2016.
+Using Mars Orbiter Mission-Mars Colour Camera (MOM-MCC), area of North Pole Ice Cap has been measured for retreat
+                of Northern Polar Ice Cap during northern summer of Mars.
+SARAL-Altika is detecting water level fluctuations in 10 reservoirs since March 2013. A detailed study on Ukai
+                reservoir reveals lowest water levels in 2016 as compared to previous years.
+MCC has acquired many high and low resolution images for Valles Marineris. The datasets from MCC for the study
+                area were geo corrected by using MOLA data. During photometric correction total six images of the surface
+                of Valles Marineris were processed.
+Contact Us
+Space Applications Centre (ISRO)
+Opposite DPS School, Bopal Ahmedabad 380 058, INDIA
+Email: vedas[at]sac[dot]isro[dot]gov[dot]in
+Phone: +91-79-2691-6202 / 6205
+
+Policies
+Disclaimer
+Feedback
+Acknowledgement
+Hyperlinking Policy
+Help
+Copyright Policy
+Security Policy
+Terms and Conditions
+Privacy Policy
+Last Updated on 23-07-2025 10:38:31
+Important Links
+Energy Map of India
+AVIRIS
+MOSDAC
+Internship,Training and Research
+Social Media
+Copyright © 2022 - All Rights Reserved – Official website of Visualisation of Earth Observation Data and Archival System,
+                Space Applications Centre, Indian Space Research Organisation, Government of India
+Note: Content on this website is published and managed by Space Applications Centre, Indian Space Research
+                Organisation (ISRO)
+
+
+--- EXTRACTED TABLES ---
+Headers: []
+Data: [['India is blessed with an enormous diversity of wetland ecosystems which play a critical role in regulating carbon and hydrological\n                    cycles, resilience in climate change and land degradation, water related disasters, nutrient cycling,\n                    local economy etc. The concern for conservation and management of wetlands is increasing all over\n                    the world including India, due to burgeoning population pressure and developmental activities. Therefore,\n                    Space Applications Centre has carried out National wetland inventory and assessment-2nd cycle under\n                    SARITA (SAtellite based RIver hydrological Techniques and Application) programme of SAC, funded by\n                    Department of Space. This National wetland geo-database is developed using multi-date Resourcesat-2/2A,\n                    LISS-III datasets and with the support of many partner Institutions. Nation-wide mapping of wetlands\n                    at 1:50000 scale provides current status of wetlands, its type, extent, size, location, distribution,\n                    as well as decadal changes. Wetlands inventory statistics along with geospatial analysis has been\n                    brought out in the form of an atlas titled “Space based observation of Indian wetlands”.Click here to Know more(PDF Size:471MB Language: English)', '']]
+Headers: []
+Data: [['Drought is a complex natural phenomenon which impact agriculture enormously. Early detection of drought\n                        helps stakeholders to take counter measures and provide timely advisories. VEDAS has newly added\n                        drought monitoring functionality in its basket by providing widely used Standard Precipitation\n                        Index (SPI) and Vegetation Condition Index (VCI).VEDAS is providing monthly and running 1-month weekly SPI at state as well as taluka levels. Monthly\n                        SPI is being calculated using CHIRPS precipitation data while running 1-month weekly SPI is being\n                        calculated using NOAA and CHIRPS rainfall data based on 1981-2018 CHIRPS precipitation data.\n                        It is available at its vegetation condition dashboard. It is also enabled with spatial analysis\n                        (map) as well as data analysis (pie chart and bar chart) functionalities.Click here to visualise SPI', '']]
+Headers: []
+Data: [['A fully automated procedure is now established for downloading, processing and publishing of Sentinel1-A&B SAR data on VEDAS.\n                        The data Sentinel1_SAR(IW)_GRD is automatically downloaded from Bhoonidhi portal; processed using\n                        SNAP tool and published on VEDAS for users. User can perform web-based visualisation and analysis\n                        at very high speed.Following functionalities are available on VEDAS for Sentinel-1 SAR data :1. Visualisation of daily data for a selected date for VV and VH polarisation.2. Temporal\n                        profile for a pixel is available on click for both polarisations.3. User defined dynamic\n                        mosaic of SAR data can be generated for any number of days.4. RGB composite for any three\n                        dates and polarisation can be generated.5. Water spread of reservoirs of flooded area can\n                        be generated with user defined thresholds.', '']]
+Headers: []
+Data: [['This book presents the highlights of various scientific studies in the Antarctic region undertaken\n                        by Space Applications Centre (SAC-ISRO) using the earth observation data and decade long experience\n                        (2009-2019) of participation in the expeditions to Antarctica coordinated by National Centre\n                        of Polar and Ocean Research (ESSO-NCPOR). The studies include technique development and analysis\n                        of sea ice, ice sheet and ice shelves using sensors launch by ISRO such as AltiKa, SCATSAT-1,\n                        OSCAT, MSMR, RISAT, AWiFS, LISS-III, LISS-IV etc. Field studies include measurements at Bharati\n                        and Maitri stationsClick here to read book(PDF Size:35.1MB Language: English)', '']]
+Headers: []
+Data: [['Click here to Know more(PDF Size:418KB Language: English)', '']]
+Headers: []
+Data: [['Yaas cyclone induced flash floods influenced many low-lying areas in the coastal regions and changed the turbidity of the\n                        wetlands. Study was carried out to assess the impact of cyclone on various Hydrological aspects\n                        including surface inundation, rainfall, and water quality. Surface inundation was estimated using\n                        synthetic aperture radar Sentinel-1 and Advanced Microwave Scanning Radiometer (AMSR-2) dataset.\n                        Optical dataset of Sentinel-2 was analysed to understand the changes in the turbidity of the\n                        nearby rivers and lakes. Accumulated rainfall showed a high amount (> 300 mm) of precipitation\n                        received at the landfall location in Odisha during the period of 23 May 2021 to 28 May 2021.\n                        Heavy flooding was observed in the coastal districts of Orissa including Bhadrak, Kendrapara.\n                        Near Digha coast, a high amount of river discharge at the ocean mouth was observed in comparison\n                        to pre cyclone time. The turbidity of the water was also observed to be high due to sediments\n                        carried by the river.Click here to Know more(PDF Size:743KB Language: English)', '']]
+Headers: []
+Data: [['Flood is a devastating natural disaster experienced generally during monsoon months due to torrential\n                            rainfall over different regions of India. This not only leads to large impact on the socio-economic\n                            life of the country but also result in large-scale destruction of life and property.Click here to Downlaod PDF(PDF Size:667KB Language:\n                                    English)', '']]
+Headers: []
+Data: [['Rift Propagation and ice calving of Larsen C Ice Shelf in Antarctica. Calving of ice took place between\n                            July 10th and 12th. AMHTDG Team was watching the event closely. Ice disintegration was of the\n                            order of ~ 6200 km2 out of ~ 50000 km2. The event presently will not raise the sea level, but\n                            the instability of the shelf and increased ice flow from Ice Sheet may altogether change the\n                            scenario.Download Presentation(PDF Size:475KB Language: English)Download Report(PDF Size:3.35MB Language:\n                                English)', '']]
+Headers: []
+Data: [['This animated gif shows flood progression and receding pattern over India during 19 June to 26 July\n                            2017 using Ku band SCATSAT-1 observations.', '']]

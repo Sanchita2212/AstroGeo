@@ -1,0 +1,31 @@
+URL: https://vedas.sac.gov.in/forest/index.html
+
+--- EXTRACTED TEXT ---
+© OpenStreetMap contributors.
+Aphid population is above ETL, farmers are advised to spray Thiamethoxam 25% WG @ 1
+									g / l water (around 500-1000 l water/ ha; 15 ml per 15 l sprayer tank).
+Add 1 spoon full of washing powder or any sticker in the solution before spraying
+									per 15 lit tank.
+Spraying should be done in the afternoon for avoidance of toxicity to pollinators.
+Chlorpyrifos 20% EC @ 1 ml / l water (around 500-1000 l water/ ha; 15 ml per 15 l
+									sprayer tank)
+Dimethoate 30% EC @ 1 ml / l water (around 500-1000 l water/ ha; 15 ml per 15 l
+									sprayer tank)
+Add 1 spoon full of washing powder or any sticker in the solution before spraying
+									per 15 lit tank.
+Spraying should be done in the afternoon for avoidance of toxicity to pollinators.
+Dimethoate 30% EC @ 1 ml / l water (around 500-1000 l water/ ha; 15 ml per 15 l
+									sprayer tank)
+Add 1 spoon full of washing powder or any sticker in the solution before spraying
+									per 15 lit tank.
+Spraying should be done in the afternoon for avoidance of toxicity to pollinators.
+Dimethoate 30% EC @ 1 ml / l water (around 500-1000 l water/ ha; 15 ml per 15 l
+									sprayer tank)
+Add 1 spoon full of washing powder or any sticker in the solution before spraying
+									per 15 lit tank.
+Spraying should be done in the afternoon for avoidance of toxicity to pollinators.
+
+
+--- EXTRACTED TABLES ---
+Headers: ['Level', 'Advisory']
+Data: [['Mild', 'Farmers are advised to destroy the aphid affected part along\n\t\t\t\t\t\t\twith aphid population\n\t\t\t\t\t\t\t(preferably plucked within wet cloth bag) in the initial stage.'], ['Low', 'Aphid population is above ETL, farmers are advised to spray Thiamethoxam 25% WG @ 1\n\t\t\t\t\t\t\t\t\tg / l water (around 500-1000 l water/ ha; 15 ml per 15 l sprayer tank).Add 1 spoon full of washing powder or any sticker in the solution before spraying\n\t\t\t\t\t\t\t\t\tper 15 lit tank.Spraying should be done in the afternoon for avoidance of toxicity to pollinators.'], ['Moderate', 'Looking to the increase in aphid population, farmers are advised\n\t\t\t\t\t\t\tto sprayChlorpyrifos 20% EC @ 1 ml / l water (around 500-1000 l water/ ha; 15 ml per 15 l\n\t\t\t\t\t\t\t\t\tsprayer tank)orDimethoate 30% EC @ 1 ml / l water (around 500-1000 l water/ ha; 15 ml per 15 l\n\t\t\t\t\t\t\t\t\tsprayer tank)Add 1 spoon full of washing powder or any sticker in the solution before spraying\n\t\t\t\t\t\t\t\t\tper 15 lit tank.Spraying should be done in the afternoon for avoidance of toxicity to pollinators.'], ['High', 'For the management of aphids, farmers are advised to sprayDimethoate 30% EC @ 1 ml / l water (around 500-1000 l water/ ha; 15 ml per 15 l\n\t\t\t\t\t\t\t\t\tsprayer tank)Add 1 spoon full of washing powder or any sticker in the solution before spraying\n\t\t\t\t\t\t\t\t\tper 15 lit tank.Spraying should be done in the afternoon for avoidance of toxicity to pollinators.'], ['Very High', 'For the management of aphids, farmers are advised to sprayDimethoate 30% EC @ 1 ml / l water (around 500-1000 l water/ ha; 15 ml per 15 l\n\t\t\t\t\t\t\t\t\tsprayer tank)Add 1 spoon full of washing powder or any sticker in the solution before spraying\n\t\t\t\t\t\t\t\t\tper 15 lit tank.Spraying should be done in the afternoon for avoidance of toxicity to pollinators.']]

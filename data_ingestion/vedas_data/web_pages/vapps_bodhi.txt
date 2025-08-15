@@ -1,0 +1,20 @@
+URL: https://vedas.sac.gov.in/vapps/bodhi/
+
+--- EXTRACTED TEXT ---
+B ihar O riented Geospatial D ataset and H azard I nformation - BODHI is a specialized geoportal designed for Bihar, focusing on geospatial datasets and hazard information to enhance disaster preparedness and resource management along with the visualization of geospatial dataset related to various themes. It leverages Earth Observation (EO) technology to support decision-making for Bihar’s administration.
+In BODHI, applications are developed for following themes:
+Agriculture
+Desertification & Land Degradation
+Drought Monitoring
+Environment (Air Quality)
+Hydrology
+Lightning Forecast
+Lightning Probability (EUMETSAT)
+Satellite Data Visualization
+Solar Energy
+Urban Studies
+Weather Forecast
+Space Applications Centre (ISRO) Opposite DPS School, Bopal Ahmedabad-380 058, Gujarat. Email: vedas[at]sac[dot]isro[dot]gov[dot]in Phone: +91-79-2691-6202/6205 Fax: +91-79-2691-6287
+
+
+--- EXTRACTED TABLES ---

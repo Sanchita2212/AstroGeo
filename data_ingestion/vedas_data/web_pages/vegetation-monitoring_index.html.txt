@@ -1,0 +1,50 @@
+URL: https://vedas.sac.gov.in/vegetation-monitoring/index.html
+
+--- EXTRACTED TEXT ---
+Vegetation is a very complex eco-system and is influenced by, besides
+						management practices, many environmental factors
+						such temperature, rainfall, soil moisture. A web-based geo-spatial processing and visualization
+						system is developed
+						to assist practitioners and resource managers in making informed decisions about current season
+						vegetation performance.
+Actual field level information is sparce and not available in near-real
+						time. To overcome the limitation of timely availability
+						of field information, it is a recent trend to use information derived from space borne platform
+						which provides repetitive
+						and synoptic coverage of area. One of the most important indicators of evaluating performance of
+						vegetation is the
+						Normalised Vegetation Difference Index (NDVI) which is ratio of difference of NIR and red
+						reflectance over their sum.
+						Vast amount of historical and current data on NDVI is available from various sensors such as
+						AWiFS, OCM, MODIS, PROBA.
+						It is well known that there are considerable year to year variations in performance of
+						vegetation system – mainly due
+						to changing crop growing conditions. To account for them, information on temperature, rainfall
+						and soil moisture is
+						also provided.
+The main outcome of the developed system is the platform it provides for
+						monitoring of crop growth. With the use of
+						developed web-based platform and analytical functionalities, it is possible to infer vegetation
+						condition at various
+						spatial and temporal scales. It is possible to compare area / region that is deviating from the
+						average and / or particular
+						year along with temperature and moisture condition. The developed web-GIS analysis platform can
+						be exploited by the
+						stake holders to make informed policy and / or management interventions at the right time.
+There are three sections on this webpage (on Bottom strip). The section on
+						reference layers has static information such
+						as SOI administrative boundaries, Infrastructure (roads, railway lines), India mosaics prepared
+						using microwave and
+						optical data, DEM and rivers. Under “data visualization”, historical as well as most recent
+						image data (Indian as well
+						as global) of NDVI, Soil Moisture, Rainfall, Temperature are populated. Under “data analysis”,
+						web based geospatial
+						processing / functionalities for NDVI difference, range analysis, temporal classification, long
+						term statistics can
+						be performed on web.
+© OpenStreetMap contributors.
+
+
+--- EXTRACTED TABLES ---
+Headers: []
+Data: [['X'], ['Vegetation is a very complex eco-system and is influenced by, besides\n\t\t\t\t\t\tmanagement practices, many environmental factors\n\t\t\t\t\t\tsuch temperature, rainfall, soil moisture. A web-based geo-spatial processing and visualization\n\t\t\t\t\t\tsystem is developed\n\t\t\t\t\t\tto assist practitioners and resource managers in making informed decisions about current season\n\t\t\t\t\t\tvegetation performance.Actual field level information is sparce and not available in near-real\n\t\t\t\t\t\ttime. To overcome the limitation of timely availability\n\t\t\t\t\t\tof field information, it is a recent trend to use information derived from space borne platform\n\t\t\t\t\t\twhich provides repetitive\n\t\t\t\t\t\tand synoptic coverage of area. One of the most important indicators of evaluating performance of\n\t\t\t\t\t\tvegetation is the\n\t\t\t\t\t\tNormalised Vegetation Difference Index (NDVI) which is ratio of difference of NIR and red\n\t\t\t\t\t\treflectance over their sum.\n\t\t\t\t\t\tVast amount of historical and current data on NDVI is available from various sensors such as\n\t\t\t\t\t\tAWiFS, OCM, MODIS, PROBA.\n\t\t\t\t\t\tIt is well known that there are considerable year to year variations in performance of\n\t\t\t\t\t\tvegetation system – mainly due\n\t\t\t\t\t\tto changing crop growing conditions. To account for them, information on temperature, rainfall\n\t\t\t\t\t\tand soil moisture is\n\t\t\t\t\t\talso provided.The main outcome of the developed system is the platform it provides for\n\t\t\t\t\t\tmonitoring of crop growth. With the use of\n\t\t\t\t\t\tdeveloped web-based platform and analytical functionalities, it is possible to infer vegetation\n\t\t\t\t\t\tcondition at various\n\t\t\t\t\t\tspatial and temporal scales. It is possible to compare area / region that is deviating from the\n\t\t\t\t\t\taverage and / or particular\n\t\t\t\t\t\tyear along with temperature and moisture condition. The developed web-GIS analysis platform can\n\t\t\t\t\t\tbe exploited by the\n\t\t\t\t\t\tstake holders to make informed policy and / or management interventions at the right time.There are three sections on this webpage (on Bottom strip). The section on\n\t\t\t\t\t\treference layers has static information such\n\t\t\t\t\t\tas SOI administrative boundaries, Infrastructure (roads, railway lines), India mosaics prepared\n\t\t\t\t\t\tusing microwave and\n\t\t\t\t\t\toptical data, DEM and rivers. Under “data visualization”, historical as well as most recent\n\t\t\t\t\t\timage data (Indian as well\n\t\t\t\t\t\tas global) of NDVI, Soil Moisture, Rainfall, Temperature are populated. Under “data analysis”,\n\t\t\t\t\t\tweb based geospatial\n\t\t\t\t\t\tprocessing / functionalities for NDVI difference, range analysis, temporal classification, long\n\t\t\t\t\t\tterm statistics can\n\t\t\t\t\t\tbe performed on web.']]

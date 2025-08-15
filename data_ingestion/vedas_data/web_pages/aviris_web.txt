@@ -1,0 +1,36 @@
+URL: https://vedas.sac.gov.in/aviris_web/
+
+--- EXTRACTED TEXT ---
+
+HOME
+Sites Visualization and Data Download
+Registration Form
+Change Password
+AVIRIS-NG Phase – 2 Airborne campaign commenced from 24th Feb, 2018.
+Space Applications Centre (SAC), Indian Space Research Organisation (ISRO),
+                                            Department of Space (DOS), Government of India, declares an “Announcement of
+                                            Opportunity (AO)” to carry out scientific research for the utilisation of science data to be
+                                            acquired from Airborne flights of Hyperspectral sensor called AVIRIS Next Generation
+                                            (NG) over India in collaboration with Jet Propulsion Laboratory (JPL), NASA.
+The AVIRIS-NG flights for phase -1 over Indian sub‐continent were conducted during October – November, 2015 and
+                                            January ‐ February, 2016. Presently, this AO is targeted towards utilizing the data to be
+                                            acquired from AVIRIS NG flights. To know more about AVIRIS-NG Phase-1 Campaign Click Here (PDF Size:1566KB Language: English)
+AVIRIS-NG phase-2 campaign  is divided into two parts: Phase - 2A and Phase - 2B. To know more about AVIRIS-NG Phase-2 Campaign Click Here (PDF Size:457KB Language: English)
+The AVIRIS‐NG can take observations over a continuous electromagnetic spectrum spread
+                                            over 380 – 2510 nm at 5 nm band interval. This is capable of providing hyperspectral
+                                            observations at 6 m pixel resolution over a flight swath of 6 km when the flight altitude is
+                                            about 6 – 7 km.
+In the past, ISRO has developed and launched hyperspectral satellite sensor such as HySI in Indian Mini Satellite 1 (IMS‐1) mission and Chandrayan‐1 mission. 
+                                            In the past ISRO has carried out hyperspectral applications using ground, airborne and space borne sensors in various fields.
+Registered and Authorized user can download AVIRIS data from this web site.
+Download Spectrum of India - AVIRIS-NG Coffee table book -> Click Here (PDF Size:27.6MB Language: English)
+Download AVIRIS-NG Science Results from Phase - I -> Click Here (PDF Size:19.9MB Language: English)
+AVIRIS Website and Data Download User Guide -> Click Here (PDF Size:2.07MB Language: English)
+Download AVIRIS Data User's Guide -> Click Here (PDF Size:0.99MB Language: English)
+Download Announcement of Opportunity (Hyper AO) -> Click Here (PDF Size:708KB Language: English)
+Download ISRO-NASA AVIRIS Science Plan Document (Draft) -> Click Here (PDF Size:3.45MB Language: English)
+Overview of First Phase of AVIRIS-NG -> Click Here (PDF Size:1.52MB Language: English)
+Overview and Brief status of AVIRIS-NG Phase–2 campaign -> Click Here (PDF Size:456KB Language: English)
+
+
+--- EXTRACTED TABLES ---

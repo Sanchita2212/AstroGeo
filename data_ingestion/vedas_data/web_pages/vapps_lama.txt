@@ -1,0 +1,21 @@
+URL: https://vedas.sac.gov.in/vapps/lama/
+
+--- EXTRACTED TEXT ---
+La dakh Specific M odelling and Space A pplications – LAMA is a dynamic Ladakh specific geoportal for assessment
+			and management of natural resources by utilizing EO technology for improving decision support activities for
+			the Ladakh Administration.
+In LAMA, applications are developed for following themes:
+3D City Model - Leh
+Agriculture
+Environment
+Geology
+Hydrology
+Snow & Glacier
+Land Degradation
+Weather & Climate
+Urban Studies
+Weather Forecast
+Space Applications Centre (ISRO) Opposite DPS School, Bopal Ahmedabad-380 058, Gujarat. Email: vedas[at]sac[dot]isro[dot]gov[dot]in Phone: +91-79-2691-6202/6222 Fax: +91-79-2691-6287
+
+
+--- EXTRACTED TABLES ---

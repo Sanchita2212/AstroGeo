@@ -1,0 +1,56 @@
+URL: https://vedas.sac.gov.in/energymap/index.jsp
+
+--- EXTRACTED TEXT ---
+Overview [[hi]]अवलोकन
+Geospatial Maps
+Meta Data [[hi]]मेटाडाटा
+User Guide [[hi]]उपयोगकता गाइड
+Disclaimer [[hi]]अस्वीकरण
+Gallery [[hi]]गैलरी
+Important Links [[hi]] महत्वपूर्ण लिंक IESS Tool                      ; [[hi]]              आईईएसएस टूल ICED Portal [[hi]]             आईसीईडी पोर्टल Solar Site Selection Tool [[hi]]      सोलर साइट सिलेक्शन टूल Solar Calculator [[hi]]            सोलर कैलकुलेटर Wind Power Site Selection Tool [[hi]]       पवन ऊर्जा साइट सिलेक्शन टूल
+
+The geospatial energy map of India integrates energy data provided by various third party data custodians compiled by Nodal Officers representing Ministry of Power, Ministry of New and Renewable Energy, Ministry of Coal, Ministry of Petroleum and Natural Gases and Department of Atomic Energy.
+The information and data provided on the portal:
+•	are entirely dependent on the accuracy of the information and data which has been provided by the third party data custodians;
+•	are not necessarily complete;
+NITI Aayog and ISRO do not warrant, and are not liable for the accuracy of the information and data on the geospatial energy map of India.
+
+
+
+
+
+
+
+
+
+Overview
+Geo-spatial energy map of India shows spatial and non-spatial data of conventional power plants ( thermal and hydro ) , renewable energy power plants at district-level, coal mines , petroleum refineries , solar energy and wind energy resource potential and other                                             energy related assets of India.
+This information system aims to provide inputs for 
+                                formulating and evaluating policies, assisting Energy Ministries and Departments 
+                                in policy formulation, and encourage private sector participation in the energy sector.
+More Info
+[[hi]]और जानकारी
+Portfolio Details
+Duis aute irure dolor in reprehenderit in voluptate
+Data Snapshot
+Associated Department and Ministries
+Government of India
+List of Nodal Officers
+Cookies are blocked or not supported by your browser. Make sure your cookies are enabled and try again.
+
+
+--- EXTRACTED TABLES ---
+Headers: []
+Data: [['A+AA-LoginHindiEnglishHindi']]
+Headers: ['Thematic Layer Name', 'Number', 'Installation Capacity (MW)', 'Year', 'Total', '511', '271714']
+Data: [['Coal Power Plants', '209', '192961', '2020'], ['Hydro Power Plants', '198', '40913', '2020'], ['Diesel Power Plants', '17', '1035', '2020'], ['Natural Gas Power Plants', '71', '24540', '2020'], ['Nuclear Power Plants', '7', '7480', '2020'], ['Pumped Storage Hydro Power Plants', '9', '4785', '2020'], ['']]
+Headers: ['Thematic Layer Name', 'Number', 'Installation Capacity (MW)', 'Year', 'Total', '15580', '87598']
+Data: [['Wind Power Plants', '10324', '38293', '2021'], ['Solar Power Plants', '3042', '34401', '2021'], ['Small Hydro Power Plants', '1079', '4390', '2021'], ['Biomass Power Plants', '816', '10114', '2021'], ['Waste to Energy Power Plants', '319', '400', '2021'], ['']]
+Headers: ['Thematic Layer Name', 'Number', 'Year']
+Data: [['Coal Fields', '35', '2020'], ['Coal Blocks', '781', '2020'], ['Captive Coal Mines', '65', '2020'], ['Coal Mines', '410', '2020'], ['Lignite Mines', '15', '2020']]
+Headers: ['Thematic Layer Name', 'Number', 'Year']
+Data: [['Oil and Gas Wells', '18949', '2020'], ['Refineries', '23', '2020'], ['Ethanol Plants', '320', '2023'], ['LNG Terminals', '6', '2021'], ['LPG Bottling Plants', '191', '2020'], ['POL Terminals', '306', '2021']]
+Headers: []
+Data: [['Ministry of Power', 'Ministry of New & Renewable Energy', 'Ministry of Coal', 'Ministry of Petroleum and Natural Gas', 'Department of Atomic Energy']]
+Headers: ['Sr.No', 'Name of Nodal Officer', 'Designation', 'Department', 'Ministry', 'Phone', 'Email']
+Data: [['1', 'Rajnath Ram', 'Adviser (Energy)', 'NITI Aayog', 'Government of India', '9911145318', 'rajnath-pc@nic.in'], ['2', 'M A K P Singh', 'Chief Engineer (IT)', 'Central Electricity Authority (CEA)', 'Ministry of Power', '011-26732321', 'itcea@nic.in'], ['3', 'Pankaj Saxena', "Scientist 'F' & Director", 'Planning and Coordination', 'Ministry of New and Renewable Energy', '011-24368910', 'spankaj@nic.in'], ['4', 'Pankaj Sharma', 'Additional Director (D&ES), PPAC', 'Planning and Analysis Cell', 'Ministry of Petroleum and Natural Gases', '011-24306181', 'epankaj.sharma@ppac.gov.in'], ['5', 'S. K. Agrawal', 'SO/G', 'Nuclear Controls & Planning Wing', 'Department of Atomic Energy', '022-22862728', 'agrawal.sk@dae.gov.in'], ['6', 'S. M. Basha', 'SO/G', 'Nuclear Controls & Planning Wing', 'Department of Atomic Energy', '022-22862728', 'basha.sm@dae.gov.in'], ['7', 'V P Singh', 'Dy Director', "Coal Controller's Office", 'Ministry of Coal', '', 'coalcont-wb@nic.in'], ['8', 'Shashikant A. Sharma', 'Scientist G and Group Director, GAWG', 'Space Applications Centre (SAC)', 'Indian Space Research Organisation', '079-26916202', 'sasharma@sac.isro.gov.in'], ['9', 'Navin Vidyarthi', 'Director (Energy)', 'NITI Aayog', 'Government of India', '', 'navin.vidyarthi@nic.in']]

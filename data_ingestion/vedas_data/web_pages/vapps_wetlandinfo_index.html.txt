@@ -1,0 +1,12 @@
+URL: https://vedas.sac.gov.in/vapps/wetlandinfo/index.html
+
+--- EXTRACTED TEXT ---
+Base Layers NWIA Wetland Hydrological Boundaries Bhuvan Imagery Admin Boundaries
+NWIA Wetland
+Hydrological Boundaries
+Bhuvan Imagery
+Admin Boundaries
+Overlays
+
+
+--- EXTRACTED TABLES ---

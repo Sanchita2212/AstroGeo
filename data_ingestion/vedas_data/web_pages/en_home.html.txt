@@ -1,0 +1,199 @@
+URL: https://vedas.sac.gov.in/en/home.html#maincontent
+
+--- EXTRACTED TEXT ---
+Home
+About Us About Us Organisation Chart Who's Who
+Applications API-Centre Satellite Data Visualisation (NRT) Vegetation and Crop Monitoring Krishi-DSS : Drought Portal New and Renewable Energy Dashboard : Desertification & Land Degradation Air Quality Monitoring Snow and Glaciers Urban Sprawl Information System Ahmedabad City GIS Application Hydrological Science & Applications Wetlands Coastal Environment Polar Science North Pole (Ice melt product) North Pole Safer Ship Navigation South Pole Forest Biomass Ladakh Portal (LAMA) Bihar Portal (BODHI) Sangrahi - Field Data Collection (Viewer) Coral Bleaching Alert Geospatial Energy Maps of India Wetland Information System Ionosphere Monitoring
+North Pole (Ice melt product)
+North Pole
+Safer Ship Navigation
+South Pole
+Atlas Exploring the Antarctic A Gimpse of India by RISAT-1 Space Based Observation of Indian Wetlands National Wetland Inventory and Assessment (NWIA) Atlas Desertification Status Mapping (DSM) Atlas Coral Reef Atlas Shoreline Change Atlas Himalayan Glacier Inventory Atlas Snow Cover Atlas of India Planetary Science Atlas Moon Mars Polar Science Atlas Archaeology from Space Atlas Spectrum of India - AVIRIS-NG Coffee table book Wave Atlas/Samudra
+Moon
+Mars
+Downloads
+Site Map
+Contact Us
+Dashboard : Desertification & Land Degradation (New)
+3D City Model and Rooftop Solar Potential
+Global Solar Calculator (Beta-version)
+Space Applications Centre, ISRO honoured with four awards at National Geospatial Awards 2025 (Edition II), organized by IIT
+                            Bombay’s FOSSEE GIS team under the aegis of the National Mission on Education through ICT (NMEICT),
+                            Ministry of Education, Government of India. The awards were conferred during the Open Source
+                            GIS Day 2025 celebrations held at IIT Bombay on 17th July 2025, in the august presence of Shri
+                            A. S. Kiran Kumar, Former Chairman, ISRO. 1) National Geospatial
+                            Enabler Award: Space Applications Centre (SAC), ISRO. 2) Best Geospatial Platform: Visualisation
+                            of Earth Observation Data and Archival System (VEDAS) portal, SAC-ISRO. 3) National Geospatial
+                            Professional (Leadership) Fellow: Mr. Shashikant A. Sharma, Group Director, GAWG-EPSA. 4)
+                            National Award for Women of Excellence in Geospatial Science and Technology: Ms. Shweta Mishra,
+                            Scientist/Engineer-SF, VWAD-GAWG-EPSA.
+Click here to Know more (PDF Size: 1.7MB Language: English)
+Built-up area serves as an important indicator of socio-economic growth of a country. Several studies require built-up area
+                            for quantifying anthropogenic impacts on environment and climate change. The built-up surfaces
+                            are very dynamic and therefore require regular monitoring. The 5.8 m spatial resolution of Resourcesat-2/2A
+                            LISS-4 sensor is not only suitable for mapping core urban areas, but is also effective in capturing
+                            small scattered growth in urban periphery. The built-up area of 500 cities of India (identified
+                            under AMRUT programme) was extracted from Resourcesat-2 LISS-IV data for 2023-2024 timeframe
+                            using Artificial Intelligence (AI). The AI-model uses Convolutional Neural Network (CNN) architecture
+                            based on UNet and Atrous Spatial Pyramid Pooling (ASPP) concept. A web-based application on VEDAS
+                            portal was created to enable visualisation and analysis of built-up area. It enables state and
+                            national level comparison of built-up area of cities.
+Click here to go to Urban Sprawl Information System
+Click here to Know more (PDF Size:2.5MB Language: English)
+A collaborative webinar on the VEDAS API Centre was conducted by the Space Applications Centre (SAC) and Indian National
+                            Space Promotion and Authorization Center (InSpace) to engage with private industry stakeholders.
+                            The session aimed to introduce the capabilities of VEDAS (Visualization of Earth Observation
+                            Data and Archival System) and its API services, fostering industry participation in space-based
+                            applications. The event featured insightful keynote addresses from distinguished leaders in the
+                            space sector: Shri Nilesh M. Desai, Director, SAC, highlighted the significance of Earth observation
+                            data in various sectors and how VEDAS can empower industry professionals with advanced analytical
+                            tools. Dr. Vinod Kumar, Director, PD, InSpace, emphasized the role of private industry in leveraging
+                            VEDAS API for innovation and commercial applications. Dr. Rashmi Sharma, Deputy Director, EPSA/SAC,
+                            provided an overview of SAC’s vision for enabling geospatial intelligence and industry collaboration.
+                            The webinar included a series of technical presentations by experts from SAC, elaborating on
+                            the functionalities and applications of VEDAS and the VEDAS API Centre. Shri Shashikant Sharma,
+                            Group Director, GAWG/EPSA provided a demo of VEDAS applications, showcasing its practical usage
+                            across different domains. Shri Pankaj Bodani, Deputy Head, VWAD/GAWG, discussed the VEDAS API
+                            Centre, its applications, available APIs and the future scope of the platform. Shri Arpit Agarwal,
+                            Scientist, VWAD, gave a step-by-step demo for registering on the platform and creating a first
+                            key to use the API services. The webinar concluded with an engaging Q&A session, where participants
+                            had the opportunity to seek clarifications and explore potential collaborations. Experts addressed
+                            queries regarding API access, data formats, application domains, and industry partnerships. With more
+                            than 150 participants from various private industries, the webinar marked a significant step
+                            toward strengthening industry-academia collaboration in the geospatial and space-tech sectors.
+                            The event provided a platform for stakeholders to understand the capabilities of VEDAS and explore
+                            its potential in domains such as agriculture, urban planning, disaster management, and environmental
+                            monitoring. The successful execution of this webinar underscores SAC and InSpace’s commitment
+                            to fostering innovation, promoting industry participation, and advancing India’s space ecosystem
+                            through cutting-edge geospatial solutions.
+Click here to go to API Centre
+INterferometric SAR Data Analysis and Usage Software (INDUS) is a SAC developed software for interferometric analysis of
+                            SAR datasets. INDUS is a self-sufficient, portable and containerized software developed in C++
+                            and Python. All the required libraries are available in the container and can be run by any software
+                            capable to load the container. The software is capable of generating the deformation map as well
+                            as the relative elevation map. It also generates the coherence map that can be used for various
+                            change detection analysis. Currently, this software caters to interferometric analysis of ISRO
+                            EOS-04 SAR mission. Support to upcoming missions like EOS-09 and NISAR will be extended in the
+                            software for interferometric analysis.
+Click here to download user manual (PDF Size:1.3MB Language: English)
+Click here to download INDUS Software (ZIP Size: 2.75GB Language: English)
+Solar power plants are extracted for ten Indian states (Haryana, Punjab, Gujarat, Madhya Pradesh, Rajasthan, Maharashtra,
+                            Karnataka, Telangana, Andhra Pradesh and Tamil Nadu). Combined installed capacity of solar power
+                            for these states is 81.87GW which is about is 90.2% of India's total solar capacity (90.76GW)
+                            . Automatic extraction of these Solar power plants are done using artificial intelligence based
+                            deep learning neural networks for the year (Jan-April) 2023. Indian Remote sensing (IRS) Resourcesat-2A
+                            LISS IV satellite data is used with 5m ground spatial resolution and three spectral bands green,
+                            red and NIR. The study also includes temporal change analysis of Solar Plants from 2018 till
+                            2023. It is found that in the past five years solar power plants inventories have increased nearly
+                            6.3 times in Rajasthan, 2.5 times in Gujarat, 1.5 times in Madhya Pradesh, 1.57 times in Maharashtra,
+                            1.25 times in Karnataka, 0.3 times in Telangana, 1.87 times in Andhra Pradesh and 2.31 times
+                            in Tamil Nadu. This work is carried out under TDP- 202302021, titled “Deep learning Based Solar
+                            Plants Identification using high-resolution remote sensing data”.
+Click here to go to New and Renewable Energy
+Click here to Know more (PDF Size:1.20MB Language: English)
+India is blessed with an enormous diversity of wetland ecosystems which play a critical role in regulating carbon and hydrological
+                            cycles, resilience in climate change and land degradation, water related disasters, nutrient
+                            cycling, local economy etc. The concern for conservation and management of wetlands is increasing
+                            all over the world including India, due to increasing population pressure and developmental activities.
+                            Space Applications Centre, ISRO has generated National wetlands geospatial dataset using multi-date
+                            and multi-seasonal Resourcesat-2/2A LISS-IV datasets of 5m spatial resolution (approx. 4000 scenes).
+                            A wetland classification system based on IUCN/RAMSAR definition and amenability on remotely sensed
+                            data was used to classify the wetlands. Total twenty types of wetlands were mapped. Nation-wide
+                            mapping of wetlands at 1:10000 scale provides current status of wetlands, its type, extent, area,
+                            perimeter, location, distribution etc. Total wetland area estimated is 16.89 Mha, which is around
+                            5.12 % of the total geographic area of the country. A total of 3.58 Million wetlands in number
+                            with 2.49 Million wetlands (area >= 0.1 ha) as polygon features and another 1.09 Million wetlands
+                            (< 0.1 ha) as point features have been mapped. Wetlands statistics along with geospatial analysis
+                            is being brought out in the form of an atlas. This National wetlands work is done under SARITA
+                            (SAtellite based RIver basin hydrological Techniques and Application) programme with the support
+                            of state remote sensing centres and various academic institutions. For more details about the
+                            geospatial data please visit (https://vedas.sac.gov.in/wetlands/index.html).
+Click here to Visualise Wetlands
+Click here to Download Atlas (PDF Size:709MB Language: English)
+The Geospatial Energy Map of India was launched by Dr. Rajiv Kumar, Vice Chairman, NITI Aayog on October 18, 2021. The occasion
+                        was graced by Dr. K. Sivan, Chairman, ISRO, Shri Amitabh Kant, CEO, NITI Aayog, Dr. V.K. Saraswat,
+                        Member, NITI Aayog and Shri Nilesh M Desai, Director SAC. NITI Aayog and ISRO jointly developed the
+                        Geospatial Energy Map of India, in association with Ministry of Power, Ministry of Coal, Ministry
+                        of New and Renewable Energy, Ministry of Petroleum and Natural Gas, and Department of Atomic Energy.
+                        The website currently provides access to 27 thematic layers of energy sector in India.
+Click here to go to Geospatial Energy Map of India
+Click here to watch the inauguration
+                            event (YouTube)
+(Developed by Microwave Techniques Development Division, AMHTDG, EPSA, SAC)
+Microwave Data Analysis Software (MIDAS) is a SAC developed software for the study and analysis of Microwave remote sensing
+                            data. MIDAS is a self-sufficient, portable software developed in C++ and Java. It has gsl2, tqdm,
+                            libtiff and GDAL as its dependencies. These are provided with MIDAS and it is not required to
+                            install them prior to using MIDAS. This software caters to ISRO SAR missions like, RISAT-1, Chandrayaan-2
+                            DFSAR, LS-ASAR (airborne precursor to NISAR mission), etc. Apart from that, MIDAS also supports
+                            processing of ALOS-1, RADARSAT-2 and UAVSAR datasets too. It has several polarimetric data analysis
+                            features, by providing support to convert data into C3/T3/C4 matrices, speckle-filtering, polarimetric
+                            decompositions (Pauli, Yamaguchi, H-A-Alpha etc). MIDAS supports Wishart classification by user-defined
+                            RoI selection.
+Click here to download MIDAS
+Click here to download MIDAS RISAT1A Time Series Processor
+(Developed by Hyperspectral Techniques Development Division (AMHTDG, EPSA, SAC, ISRO, Ahmedabad, Gujarat-380015)
+AdVance HYperspectral data Analysis Software (AVHYAS-version-1) is an in-house developed tool for the processing, analysis
+                            and visualization of hyperspectral data. AVHYAS tool has been plugged in with QGIS platform which
+                            is an open source GIS environment to have the GIS capabilities and extend QGIS for hyperspectral
+                            image analysis. AVHYAS is built on back end framework Python 3.7, Scikit-learn, GDAL, tensor
+                            flow while front end is QGIS 3.14 with QT designer. Major modules of AVHYAS are atmospheric correction,
+                            deep learning classification, data fusion, spectral unmixing, feature extraction, target detection,
+                            geophysical applications etc. along with data quality evaluation, preprocessing and basic tools.
+Being the highest specific discharge river system in the world, the Brahmaputra river experiences
+                            number of long-duration flood waves during the monsoon season annually. Therefore, WRF-Hydro
+                            model is setup and is used to predict 3-day water level and inundation probability during the
+                            monsoonal flood condition in the Brahmaputra river at Guwahati gauge station and this prediction
+                            is visualised on VEDAS.
+Water level of various waterbodies over India derived from satellite altimetry is also visualised
+                            in Hydrology Application.
+Click here to visualise Hydrology Application and forecast
+Contact Us
+Space Applications Centre (ISRO)
+Opposite DPS School, Bopal Ahmedabad 380 058, INDIA
+Email: vedas[at]sac[dot]isro[dot]gov[dot]in
+Phone: +91-79-2691-6202 / 6205
+
+Policies
+Disclaimer
+Feedback
+Acknowledgement
+Hyperlinking Policy
+Help
+Copyright Policy
+Security Policy
+Terms and Conditions
+Privacy Policy
+Last Updated on 23-07-2025 10:38:31
+Important Links
+Energy Map of India
+AVIRIS
+MOSDAC
+Internship,Training and Research
+Social Media
+Copyright © 2022 - All Rights Reserved – Official website of Visualisation of Earth Observation Data and Archival System,
+                Space Applications Centre, Indian Space Research Organisation, Government of India
+Note: Content on this website is published and managed by Space Applications Centre, Indian Space Research
+                Organisation (ISRO)
+
+
+--- EXTRACTED TABLES ---
+Headers: []
+Data: [['Space Applications Centre, ISRO honoured with four awards at National Geospatial Awards 2025 (Edition II), organized by IIT\n                            Bombay’s FOSSEE GIS team under the aegis of the National Mission on Education through ICT (NMEICT),\n                            Ministry of Education, Government of India. The awards were conferred during the Open Source\n                            GIS Day 2025 celebrations held at IIT Bombay on 17th July 2025, in the august presence of Shri\n                            A. S. Kiran Kumar, Former Chairman, ISRO.1) National Geospatial\n                            Enabler Award: Space Applications Centre (SAC), ISRO.2) Best Geospatial Platform: Visualisation\n                            of Earth Observation Data and Archival System (VEDAS) portal, SAC-ISRO.3) National Geospatial\n                            Professional (Leadership) Fellow: Mr. Shashikant A. Sharma, Group Director, GAWG-EPSA.4)\n                            National Award for Women of Excellence in Geospatial Science and Technology: Ms. Shweta Mishra,\n                            Scientist/Engineer-SF, VWAD-GAWG-EPSA.Click here to Know more(PDF Size: 1.7MB Language: English)', '']]
+Headers: []
+Data: [['Built-up area serves as an important indicator of socio-economic growth of a country. Several studies require built-up area\n                            for quantifying anthropogenic impacts on environment and climate change. The built-up surfaces\n                            are very dynamic and therefore require regular monitoring. The 5.8 m spatial resolution of Resourcesat-2/2A\n                            LISS-4 sensor is not only suitable for mapping core urban areas, but is also effective in capturing\n                            small scattered growth in urban periphery. The built-up area of 500 cities of India (identified\n                            under AMRUT programme) was extracted from Resourcesat-2 LISS-IV data for 2023-2024 timeframe\n                            using Artificial Intelligence (AI). The AI-model uses Convolutional Neural Network (CNN) architecture\n                            based on UNet and Atrous Spatial Pyramid Pooling (ASPP) concept. A web-based application on VEDAS\n                            portal was created to enable visualisation and analysis of built-up area. It enables state and\n                            national level comparison of built-up area of cities.Click here to go to Urban Sprawl Information SystemClick here to Know more(PDF Size:2.5MB Language: English)', '']]
+Headers: []
+Data: [['A collaborative webinar on the\xa0VEDAS API Centre\xa0was conducted by the\xa0Space Applications Centre (SAC)\xa0and\xa0Indian National\n                            Space Promotion and Authorization Center (InSpace)\xa0to engage with private industry stakeholders.\n                            The session aimed to introduce the capabilities of VEDAS (Visualization of Earth Observation\n                            Data and Archival System) and its API services, fostering industry participation in space-based\n                            applications. The event featured insightful keynote addresses from distinguished leaders in the\n                            space sector: Shri Nilesh M. Desai, Director, SAC, highlighted the significance of Earth observation\n                            data in various sectors and how VEDAS can empower industry professionals with advanced analytical\n                            tools. Dr. Vinod Kumar, Director, PD, InSpace, emphasized the role of private industry in leveraging\n                            VEDAS API for innovation and commercial applications. Dr. Rashmi Sharma, Deputy Director, EPSA/SAC,\n                            provided an overview of SAC’s vision for enabling geospatial intelligence and industry collaboration.\n                            The webinar included a series of technical presentations by experts from SAC, elaborating on\n                            the functionalities and applications of VEDAS and the VEDAS API Centre. Shri Shashikant Sharma,\n                            Group Director, GAWG/EPSA provided a demo of VEDAS applications, showcasing its practical usage\n                            across different domains. Shri Pankaj Bodani, Deputy Head, VWAD/GAWG, discussed the VEDAS API\n                            Centre, its applications, available APIs and the future scope of the platform. Shri Arpit Agarwal,\n                            Scientist, VWAD, gave a step-by-step demo for registering on the platform and creating a first\n                            key to use the API services. The webinar concluded with an engaging\xa0Q&A session, where participants\n                            had the opportunity to seek clarifications and explore potential collaborations. Experts addressed\n                            queries regarding API access, data formats, application domains, and industry partnerships. With\xa0more\n                            than 150 participants\xa0from various private industries, the webinar marked a significant step\n                            toward\xa0strengthening industry-academia collaboration\xa0in the geospatial and space-tech sectors.\n                            The event provided a platform for stakeholders to understand the capabilities of VEDAS and explore\n                            its potential in domains such as agriculture, urban planning, disaster management, and environmental\n                            monitoring. The successful execution of this webinar underscores SAC and InSpace’s commitment\n                            to fostering innovation, promoting industry participation, and advancing India’s space ecosystem\n                            through cutting-edge geospatial solutions.Click here to go to API Centre', '']]
+Headers: []
+Data: [['INterferometric SAR Data Analysis and Usage Software (INDUS) is a SAC developed software for interferometric analysis of\n                            SAR datasets. INDUS is a self-sufficient, portable and containerized software developed in C++\n                            and Python. All the required libraries are available in the container and can be run by any software\n                            capable to load the container. The software is capable of generating the deformation map as well\n                            as the relative elevation map. It also generates the coherence map that can be used for various\n                            change detection analysis. Currently, this software caters to interferometric analysis of ISRO\n                            EOS-04 SAR mission. Support to upcoming missions like EOS-09 and NISAR will be extended in the\n                            software for interferometric analysis.Click here to download user manual(PDF Size:1.3MB Language: English)Click here to download INDUS Software(ZIP Size: 2.75GB Language: English)', '']]
+Headers: []
+Data: [["Solar power plants are extracted for ten Indian states (Haryana, Punjab, Gujarat, Madhya Pradesh, Rajasthan, Maharashtra,\n                            Karnataka, Telangana, Andhra Pradesh and Tamil Nadu). Combined installed capacity of solar power\n                            for these states is 81.87GW which is about is 90.2% of India's total solar capacity (90.76GW)\n                            . Automatic extraction of these Solar power plants are done using artificial intelligence based\n                            deep learning neural networks for the year (Jan-April) 2023. Indian Remote sensing (IRS) Resourcesat-2A\n                            LISS IV satellite data is used with 5m ground spatial resolution and three spectral bands green,\n                            red and NIR. The study also includes temporal change analysis of Solar Plants from 2018 till\n                            2023. It is found that in the past five years solar power plants inventories have increased nearly\n                            6.3 times in Rajasthan, 2.5 times in Gujarat, 1.5 times in Madhya Pradesh, 1.57 times in Maharashtra,\n                            1.25 times in Karnataka, 0.3 times in Telangana, 1.87 times in Andhra Pradesh and 2.31 times\n                            in Tamil Nadu. This work is carried out under TDP- 202302021, titled “Deep learning Based Solar\n                            Plants Identification using high-resolution remote sensing data”.Click here to go to New and Renewable EnergyClick here to Know more(PDF Size:1.20MB Language: English)", '']]
+Headers: []
+Data: [['India is blessed with an enormous diversity of wetland ecosystems which play a critical role in regulating carbon and hydrological\n                            cycles, resilience in climate change and land degradation, water related disasters, nutrient\n                            cycling, local economy etc. The concern for conservation and management of wetlands is increasing\n                            all over the world including India, due to increasing population pressure and developmental activities.\n                            Space Applications Centre, ISRO has generated National wetlands geospatial dataset using multi-date\n                            and multi-seasonal Resourcesat-2/2A LISS-IV datasets of 5m spatial resolution (approx. 4000 scenes).\n                            A wetland classification system based on IUCN/RAMSAR definition and amenability on remotely sensed\n                            data was used to classify the wetlands. Total twenty types of wetlands were mapped. Nation-wide\n                            mapping of wetlands at 1:10000 scale provides current status of wetlands, its type, extent, area,\n                            perimeter, location, distribution etc. Total wetland area estimated is 16.89 Mha, which is around\n                            5.12 % of the total geographic area of the country. A total of 3.58 Million wetlands in number\n                            with 2.49 Million wetlands (area >= 0.1 ha) as polygon features and another 1.09 Million wetlands\n                            (< 0.1 ha) as point features have been mapped. Wetlands statistics along with geospatial analysis\n                            is being brought out in the form of an atlas. This National wetlands work is done under SARITA\n                            (SAtellite based RIver basin hydrological Techniques and Application) programme with the support\n                            of state remote sensing centres and various academic institutions. For more details about the\n                            geospatial data please visit (https://vedas.sac.gov.in/wetlands/index.html).Click here to Visualise WetlandsClick here to Download Atlas(PDF Size:709MB Language: English)', '']]
+Headers: []
+Data: [['The Geospatial Energy Map of India was launched by Dr. Rajiv Kumar, Vice Chairman, NITI Aayog on October 18, 2021. The occasion\n                        was graced by Dr. K. Sivan, Chairman, ISRO, Shri Amitabh Kant, CEO, NITI Aayog, Dr. V.K. Saraswat,\n                        Member, NITI Aayog and Shri Nilesh M Desai, Director SAC. NITI Aayog and ISRO jointly developed the\n                        Geospatial Energy Map of India, in association with Ministry of Power, Ministry of Coal, Ministry\n                        of New and Renewable Energy, Ministry of Petroleum and Natural Gas, and Department of Atomic Energy.\n                        The website currently provides access to 27 thematic layers of energy sector in India.Click here to go to Geospatial Energy Map of IndiaClick here to watch the inauguration\n                            event(YouTube)', '']]
+Headers: []
+Data: [['(Developed by Microwave Techniques Development Division, AMHTDG, EPSA, SAC)Microwave Data Analysis Software (MIDAS) is a SAC developed software for the study and analysis of Microwave remote sensing\n                            data. MIDAS is a self-sufficient, portable software developed in C++ and Java. It has gsl2, tqdm,\n                            libtiff and GDAL as its dependencies. These are provided with MIDAS and it is not required to\n                            install them prior to using MIDAS. This software caters to ISRO SAR missions like, RISAT-1, Chandrayaan-2\n                            DFSAR, LS-ASAR (airborne precursor to NISAR mission), etc. Apart from that, MIDAS also supports\n                            processing of ALOS-1, RADARSAT-2 and UAVSAR datasets too. It has several polarimetric data analysis\n                            features, by providing support to convert data into C3/T3/C4 matrices, speckle-filtering, polarimetric\n                            decompositions (Pauli, Yamaguchi, H-A-Alpha etc). MIDAS supports Wishart classification by user-defined\n                            RoI selection.Click here to download MIDASClick here to download MIDAS RISAT1A Time Series Processor', '']]
+Headers: []
+Data: [['(Developed by Hyperspectral Techniques Development Division (AMHTDG, EPSA, SAC, ISRO, Ahmedabad, Gujarat-380015)AdVance HYperspectral data Analysis Software (AVHYAS-version-1) is an in-house developed tool for the processing, analysis\n                            and visualization of hyperspectral data. AVHYAS tool has been plugged in with QGIS platform which\n                            is an open source GIS environment to have the GIS capabilities and extend QGIS for hyperspectral\n                            image analysis. AVHYAS is built on back end framework Python 3.7, Scikit-learn, GDAL, tensor\n                            flow while front end is QGIS 3.14 with QT designer. Major modules of AVHYAS are atmospheric correction,\n                            deep learning classification, data fusion, spectral unmixing, feature extraction, target detection,\n                            geophysical applications etc. along with data quality evaluation, preprocessing and basic tools.Click here to download(ZIP 2.0 GB)', '']]
+Headers: []
+Data: [['Being the highest specific discharge river system in the world, the Brahmaputra river experiences\n                            number of long-duration flood waves during the monsoon season annually. Therefore, WRF-Hydro\n                            model is setup and is used to predict 3-day water level and inundation probability during the\n                            monsoonal flood condition in the Brahmaputra river at Guwahati gauge station and this prediction\n                            is visualised on VEDAS.Water level of various waterbodies over India derived from satellite altimetry is also visualised\n                            in Hydrology Application.Click here to visualise Hydrology Application and forecast', '']]

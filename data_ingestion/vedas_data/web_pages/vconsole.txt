@@ -1,0 +1,23 @@
+URL: https://vedas.sac.gov.in/vconsole
+
+--- EXTRACTED TEXT ---
+WMS API
+Access high-quality geospatial imagery with our WMS API, offering False Color Composite (FCC) data for
+                AWIFS(Resourceset) and Sentinel-2,
+                as well as True Color Composite (TCC) for Sentinel-2. This API enables users to view imagery for any
+                specific date or
+                instantaneously temporal composites over a desired timeframe, creating seamless mosaics tailored to your
+                needs.
+                Whether you're a researcher or a developer,
+                the WMS API provides flexible and reliable satellite imagery for visualizing temporal changes in
+                landscapes.
+Temporal API
+Unlock detailed vegetation analysis with the Temporal API. This API delivers Normalized Difference
+                Vegetation Index (NDVI) time-series data for specific point locations and polygonal regions. Users can
+                analyze vegetation health trends and calculate temporal metrics over desired timeframes, leveraging
+                Sentinel-2's high-resolution imagery. Ideal for agriculture, ecology, and land-use studies, this API
+                empowers users to track vegetation dynamics with precision and ease. In future more temporal datasets
+                will be made available through this API.
+
+
+--- EXTRACTED TABLES ---

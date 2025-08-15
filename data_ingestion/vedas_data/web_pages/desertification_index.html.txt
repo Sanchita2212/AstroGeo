@@ -1,0 +1,39 @@
+URL: https://vedas.sac.gov.in/desertification/index.html
+
+--- EXTRACTED TEXT ---
+Desertification Status Opacity Metadata Legend Desertification Status Map [2018-19] Opacity Metadata Legend Desertification Status Map [2011-13] Opacity Metadata Legend Desertification Status Map [2003-05] Opacity Metadata Legend Desertification Status Map (1:50k) [2011-13] Opacity Metadata Legend Desertification Status Map (1:50k) [2003-05]
+Opacity Metadata Legend Desertification Status Map [2018-19]
+
+
+Opacity Metadata Legend Desertification Status Map [2011-13]
+
+
+Opacity Metadata Legend Desertification Status Map [2003-05]
+
+
+Opacity Metadata Legend Desertification Status Map (1:50k) [2011-13]
+
+
+Opacity Metadata Legend Desertification Status Map (1:50k) [2003-05]
+
+
+Reference Layers Administrative Administrative Boundary (SOI : March 2025) Base Map (MapMyIndia - Hybrid) Imagery AWIFS FCC
+Administrative Administrative Boundary (SOI : March 2025) Base Map (MapMyIndia - Hybrid)
+Administrative Boundary (SOI : March 2025)
+Base Map (MapMyIndia - Hybrid)
+Imagery AWIFS FCC
+AWIFS FCC
+
+
+© OpenStreetMap contributors.
+LULC
+Desertification Process
+Severity
+Top Ten Statistics
+
+
+--- EXTRACTED TABLES ---
+Headers: []
+Data: [['For Technical Queries'], ['Shweta Mishra - Scientist/Engineer-SF', '079-2691 6237/6218', 'jaiswals[at]sac[dot]isro[dot]gov[dot]in'], ['Pankaj A. Bodani - Deputy Head-VWAD', '079-2691 6205', 'pankajb[at]sac[dot]isro[dot]gov[dot]in'], ['Shashikant A. Sharma - Group Director-GAWG', '079-2691 6202', 'sasharma[at]sac[dot]isro[dot]gov[dot]in'], ['For Desertification Data Related Queries'], ['Manish Parmar - Scientist/Engineer-SF', '079-2691 4028', 'manish[dot]parmar[at]sac[dot]isro[dot]gov[dot]in'], ['R.J.Bhanderi - Scientist/Engineer-SF', '079-2691 6220', 'rjbhanderi[at]sac[dot]isro[dot]gov[dot]in']]
+Headers: []
+Data: [['Help Manual(PDF Size:13.8MB Language: English)', ''], ['Land Degradation Vulnerability Atlas(PDF Size:36MB Language: English)', ''], ['Desertification and Land Degradation Atlas of India 2021(PDF Size:94.9MB Language: English)', ''], ['Desertification Land Degradation Atlas 2018 SAC-ISRO Vol-1(PDF Size:57.4MB Language: English)', ''], ['Desertification Land Degradation Atlas 2018 SAC-ISRO Vol-2(PDF Size:63.9MB Language: English)', ''], ['DSM Technical Guideline(PDF Size:4.0MB Language: English)', ''], ['Desertification and Land Degradation Atlas of India 2016(PDF Size:131MB Language: English)', '']]

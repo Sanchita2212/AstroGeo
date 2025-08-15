@@ -1,0 +1,28 @@
+URL: https://vedas.sac.gov.in/vstatic_1/ionosphere
+
+--- EXTRACTED TEXT ---
+Source
+
+Long-term yearly average of daily totals' of GHI,DNI and DHI [250m]: “Global
+								Solar Atlas 2.0, a free,
+								web-based application developed and operated by the company Solargis s.r.o. on behalf of
+								the World Bank Group, utilizing Solargis data, with funding provided by the ESMAP. For
+								additional information: https://globalsolaratlas.info
+
+
+Monthly Insolation/Annual Insolation[25 km] : CERS NASA
+
+
+DEM [90 m]: NASA, NIMA, DLR and ASI,2000, SRTM Data Collection
+
+
+Landuse/Landcover : NASA/ARC New Media Team
+
+
+Roads and Gridlines : Open Street Maps
+
+
+
+--- EXTRACTED TABLES ---
+Headers: []
+Data: [['X'], ['Source'], ["Long-term yearly average of daily totals' of GHI,DNI and DHI [250m]:“Global\n\t\t\t\t\t\t\t\tSolar Atlas 2.0, a free,\n\t\t\t\t\t\t\t\tweb-based application developed and operated by the company Solargis s.r.o. on behalf of\n\t\t\t\t\t\t\t\tthe World Bank Group, utilizing Solargis data, with funding provided by the ESMAP. For\n\t\t\t\t\t\t\t\tadditional information:https://globalsolaratlas.infoMonthly Insolation/Annual Insolation[25 km] :CERS NASADEM [90 m]:NASA, NIMA, DLR and ASI,2000, SRTM Data CollectionLanduse/Landcover :NASA/ARC New Media TeamRoads and Gridlines :Open Street Maps"]]

@@ -1,0 +1,28 @@
+URL: https://vedas.sac.gov.in/vstatic/3D_CITY/index.html
+
+--- EXTRACTED TEXT ---
+
+
+
+
+A 3D city model is a detailed digital representation of city’s infrastructure such as buildings in a three dimension
+                scale. It can be used for simulation, impact assessment and analysis of socio-economic plans and natural
+                disaster events. One of the most important application is the estimation of solar potential for 3D roof surfaces
+                of cities, which enables cities to function using renewable sources of energy and take a step towards sustainable
+                development goals.
+The solar rooftop potential for an individual rooftop is the amount of solar energy that can be installed based
+                on rooftop size, shading, direction, location and construction. The rooftop area available for solar installation
+                and is not under the influence of shadow is calculated using building height, solar, azimuth and elevation
+                angle. It is calculated at every 15 minutes interval from sunrise up till sunset on equinox, winter and summer
+                solstice days. The optimal location of solar panel installation is also derived for identifying areas on
+                rooftop having maximum solar energy available throughout the year. It will be helpful for optimisation of
+                energy generation and usage from solar panels.
+The model is developed for level of detail (LOD)-1 using very-high resolution remote sensing satellite data.
+                The building footprints in the model are delineated from Indian Cartosat-3 satellite imageries with 1m spatial
+                resolution. It is extracted using Artificial Intelligence based deep learning model trained on huge amount
+                of hand labelled Cartosat-3 pixels data for heterogenous location and types of building distributed in the
+                city. The height of each building is derived from Cartosat-2 stereo pair satellite data with 2.5m spatial
+                resolution. The output are then composited into final representative model for year between 2018 to 2020.
+
+
+--- EXTRACTED TABLES ---

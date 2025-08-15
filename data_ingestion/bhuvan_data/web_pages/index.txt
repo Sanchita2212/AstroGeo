@@ -1,0 +1,35 @@
+URL: https://bhuvan.nrsc.gov.in/
+
+--- EXTRACTED TEXT ---
+State
+District
+Taluk
+Village
+Cadastral Boundary
+Rail
+Road
+Drainage
+Basin
+Subbasin
+Watershed
+WaterBody
+Label
+
+Sat Data
+Base Map
+Hybrid
+Terrain
+Overlay
+Standard Navigation & Natural Resources
+Navigation & Natural Resources
+Thematic Visualisation & Data Services
+Visualisation & Data Services
+Data Hub Data Hub & Analytics
+Data Hub & Analytics
+Governance Ministry & Societal Applications
+Ministry & Societal Applications
+Disaster Disaster Services
+Disaster Services
+
+
+--- EXTRACTED TABLES ---
