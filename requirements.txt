@@ -4,6 +4,14 @@ pandas
 plotly
 folium
 streamlit-folium
+fastapi
+uvicorn[standard]
+gradio
+gensim==4.3.2
+setuptools
+wheel
+cython
+
 
 # For the Data Ingestion Agent (Web Crawling & PDF processing)
 requests
