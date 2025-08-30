@@ -5,12 +5,15 @@ plotly
 folium
 streamlit-folium
 fastapi
-uvicorn[standard]
+uvicorn
+gensim==4.3.3
+numpy
+pydantic
 gradio
-gensim==4.3.2
 setuptools
 wheel
 cython
+YOUR_SECRET==>REMOVED
 
 
 # For the Data Ingestion Agent (Web Crawling & PDF processing)
