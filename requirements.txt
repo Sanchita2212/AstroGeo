@@ -13,8 +13,6 @@ gradio
 setuptools
 wheel
 cython
-YOUR_SECRET==>REMOVED
-
 
 # For the Data Ingestion Agent (Web Crawling & PDF processing)
 requests
