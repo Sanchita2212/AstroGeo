@@ -11,7 +11,7 @@ app = FastAPI()
 gradio_app = create_astrogeo_interface()
 
 # ✅ Mount Gradio at /astrogeo
-app = gr.mount_gradio_app(app, gradio_app, path="astrogeo")
+app = gr.mount_gradio_app(app, gradio_app, path="/astrogeo")
 
 # ✅ Redirect root URL to /astrogeo
 @app.get("/")
