@@ -1,14 +1,14 @@
 
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
-import gradio as gr
-from app_gradio import create_astrogeo_interface
+from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
-gradio_app = create_astrogeo_interface()
-app = gr.mount_gradio_app(app, gradio_app, path="/astrogeo")
+# Serve frontend files from 'static'
+app.mount("/astrogeo", StaticFiles(directory="static", html=True), name="astrogeo")
 
-@app.get("/", include_in_schema=False)
-def root():
+@app.get("/")
+async def root():
+    # Instead of redirect loop, directly serve /astrogeo
     return RedirectResponse(url="/astrogeo/")
